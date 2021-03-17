@@ -6,7 +6,7 @@
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
-                src="Image/logo_navbar.png" alt="logo_navbar"></a>
+                src="../Image/logo_navbar.png" alt="logo_navbar"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Panier
                             <button type="button" class="nav_btn_panier btn position-relative">
-                                <img id="img_nav_panier" src="Image/panier.png" alt="panier"> <span
+                                <img id="img_nav_panier" src="../Image/panier.png" alt="panier"> <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
                                     <span class="visually-hidden">unread messages</span></span>
                             </button>
@@ -56,7 +56,7 @@
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                         <a class="nav-link" href="connexion.php">
-                            <img id="img_nav_user" src="Image/user.png" alt="panier">
+                            <img id="img_nav_user" src="../Image/user.png" alt="panier">
                         </a>
                     </li>
                 </ul>
@@ -98,7 +98,7 @@
         
         <div class="inscription_contenu position-absolute bottom-0 start-0">
 
-            <form action="register.php" method="POST">
+            <form action="../Bdd/register.php" method="POST">
                 <div class="row inscription_contenu_acheteur">
                     <div class="col-1"></div>
 
@@ -168,7 +168,7 @@
                 </div>
             </form>
 
-            <form action="register.php" method="POST">
+            <form action="../Bdd/register.php" method="POST">
                 <div class="row inscription_contenu_vendeur">
                     <div class="col-1"></div>
 

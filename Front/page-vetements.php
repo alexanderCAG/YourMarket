@@ -8,7 +8,7 @@
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
-                src="Image/logo_navbar.png" alt="logo_navbar"></a>
+                src="../Image/logo_navbar.png" alt="logo_navbar"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Panier
                             <button type="button" class="nav_btn_panier btn position-relative">
-                                <img id="img_nav_panier" src="Image/panier.png" alt="panier"> <span
+                                <img id="img_nav_panier" src="../Image/panier.png" alt="panier"> <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
                                     <span class="visually-hidden">unread messages</span></span>
                             </button>
@@ -58,7 +58,7 @@
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                         <a class="nav-link" href="connexion.php">
-                            <img id="img_nav_user" src="Image/user.png" alt="panier">
+                            <img id="img_nav_user" src="../Image/user.png" alt="panier">
                         </a>
                     </li>
                 </ul>
@@ -68,9 +68,9 @@
 </nav>
 
 <div class="vetement_general">
-    <img class="image_vetement_general position-relative" src="Image/vetement-general.png" alt="vetement-general">
+    <img class="image_vetement_general position-relative" src="../Image/vetement-general.png" alt="vetement-general">
     <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
-        <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="Image/icon_sale.png" alt="icon_sale">
+        <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../Image/icon_sale.png" alt="icon_sale">
         <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">vêtements</p> 
     </div>
     <div class="class_separation"></div>
@@ -97,7 +97,7 @@
         <div class="row">
             <div class=" vetement_liste_un_par_un col-3">
                 <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="Image/chaussure.png" alt="chaussure">
+                    <img class="img_vetement_sale" src="../Image/chaussure.png" alt="chaussure">
                     <div class="class_separation2"></div>
                 </div>
 
@@ -115,7 +115,7 @@
 
             <div class=" vetement_liste_un_par_un col-3">
                 <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="Image/chaussure.png" alt="chaussure">
+                    <img class="img_vetement_sale" src="../Image/chaussure.png" alt="chaussure">
                     <div class="class_separation2"></div>
                 </div>
 
@@ -142,7 +142,7 @@
 
             <div class=" vetement_liste_un_par_un col-3">
                 <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="Image/chaussure.png" alt="chaussure">
+                    <img class="img_vetement_sale" src="../Image/chaussure.png" alt="chaussure">
                     <div class="class_separation2"></div>
                 </div>
 
@@ -160,7 +160,7 @@
 
             <div class=" vetement_liste_un_par_un col-3">
                 <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="Image/chaussure.png" alt="chaussure">
+                    <img class="img_vetement_sale" src="../Image/chaussure.png" alt="chaussure">
                     <div class="class_separation2"></div>
                 </div>
 
