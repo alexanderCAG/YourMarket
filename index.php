@@ -310,7 +310,95 @@
     </button>
 </div>
 
+<div class="row mt-4 presentation_vetement">
 
+    <div class="col-md-4 col-lg-4">
+        <br><br><br>
+        <h2 class="centrer texte_style mt-4">VETEMENT</h2><br><br>
+        <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
+            aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
+            quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
+        <button class="btn_presentation">DECOUVRIR</button>
+    </div>
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="Image/t-shirt_homme.png"
+            alt="t-shirt_homme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
+            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+        </div>
+        
+        <div class="information_presentation_premier">
+            <div class="information_presentation_prix">20,99 €</div>
+            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_nom">T-shirt</div>
+        </div>
+    </div>
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" src="Image/t-shirt_femme.png" alt="t-shirt_femme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
+            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+        </div>
+        
+        <div class="information_presentation_deuxieme">
+            <div class="information_presentation_prix">20,99 €</div>
+            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_nom">T-shirt</div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4 presentation_maison">
+
+    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="Image/t-shirt_homme.png"
+            alt="t-shirt_homme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
+            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+        </div>
+        
+        <div class="information_presentation_premier">
+            <div class="information_presentation_prix">20,99 €</div>
+            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_nom">T-shirt</div>
+        </div>
+    </div>
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" src="Image/t-shirt_femme.png" alt="t-shirt_femme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
+            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+        </div>
+        
+        <div class="information_presentation_deuxieme">
+            <div class="information_presentation_prix">20,99 €</div>
+            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_nom">T-shirt</div>
+        </div>
+    </div>
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-4 texte_presentation_div">
+        <br><br><br>
+        <h2 class="centrer texte_style mt-4">MAISON</h2><br><br>
+        <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
+            aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
+            quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
+        <button class="btn_presentation">DECOUVRIR</button>
+    </div>
+</div>
 
 <div class="presentation_marque mt-5 position-relative">
     <div class="container">
