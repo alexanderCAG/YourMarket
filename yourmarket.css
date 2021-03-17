@@ -1,0 +1,1035 @@
+/********************************
+            GENERAL
+*********************************/
+.centrer{
+    text-align: center;
+}
+.image_ronde{
+    border-radius: 50%;
+}
+.white{
+    color: white;
+}
+.texte_style{
+    font-family: Impact, fantasy;
+}
+.detail_style{
+    font-family: FreeMono, monospace;
+}
+.class_separation{
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(-45deg, black 25%, white 25%, white 50%, black 50%, black 75%, white 75%, white);
+    background-size:20px 20px;
+}
+
+
+/********************************
+            NAVBAR
+*********************************/
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255,0.5);
+}
+.navbar-nav a{
+    font-weight: bold;
+    color: #14003f!important;
+}
+.navbar-nav a:hover{
+    color: rgb(122, 138, 153)!important;
+}
+.nav-item{
+    margin-right: 50px;
+    font-size: 15px;
+}
+.nav_regul{
+    margin-top: 6px;
+}
+.dropdown-menu a{
+    color: #14003f!important;
+}
+.dropdown-menu a:hover{
+    color: rgb(70, 77, 83)!important;
+}
+.nav_btn_panier{
+    width: 40px;
+    margin-right: 50px;
+}
+.nav_user{
+    width: 70px;
+    height: 80px;
+    background-color: #14003f;
+    
+}
+.last_nav_title{
+    margin-right: 80px!important;
+}
+
+        /********************************
+                    IMAGE
+        *********************************/
+        #img_logo_navbar{
+            width: 350px;
+            height: 80px;
+        }
+        #img_nav_panier{
+            width: 20px;
+            height: 20px;
+            margin-right: 50px;
+        }
+        #img_nav_user{
+            width: 60px;
+            height: 60px;
+        }
+
+
+
+
+/********************************
+            FOOTER
+*********************************/
+.mon_footer1{
+    background-color: #14003f;
+}
+.image_payment_footer{
+    width: 70px;
+    height: 50px;
+}
+.monfotter2{
+    font-size: 15px;
+}
+        /********************************
+                ACCUEIL-RESEAUX
+        *********************************/
+        .suivez_reseaux{
+            background-color: #f2f2f2;
+            margin-top: 100px;
+            font-size: 25px;
+        }
+        .image_reseau{
+            width: 150px;
+            height: 80px;
+        }
+
+
+
+
+/********************************
+        ACCUEIL-CAROUSEL
+*********************************/
+.img_carousel{
+    width: 100%;
+}
+.div_deco{
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 140px;
+    left: 66%;
+}
+.carouseul_info{
+    width: 500px;
+    height: 300px;
+    background-color: rgb(51, 87, 117,0.8);
+    margin-top: 50px;
+}
+.text_carousel{
+    padding-top: 70px;
+    font-size: 45px;
+}
+.btn_carousel{
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+    padding-top: 12px;
+    border: none;
+}
+
+        /********************************
+                    IMAGE
+        *********************************/
+
+        #img_carousel_panier{
+            width: 20px;
+            height: 20px;
+            float: left;
+        }
+
+
+
+/********************************
+        ACCUEIL-PRESENTATION
+*********************************/
+
+        /********************************
+            ACCUEIL-PRESENTATION-INFO
+        *********************************/
+        .presentation_vetement{
+            padding-left: 50px;
+        }
+        .texte_presentation{
+            text-align: justify;
+        }
+        .btn_presentation{
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: #3d83b6;
+            color: white;
+        }
+        .presentation_maison{
+            padding-left: 50px;
+        }
+
+        /********************************
+            ACCUEIL-PRESENTATION-IMAGE
+        *********************************/
+        .presentation_nouveau_col{
+            width: 370px!important;
+            height: 600px!important;
+        }
+        .image_presentation_nouveau{
+            width: 350px;
+            height: 500px;
+            opacity: 0.5;
+        }
+        .image_presentation_nouveau:hover{
+            opacity: 1;
+        }
+        .presentation_nouveau_texte{
+            font-size: 30px;
+        }
+        .presentation_nouveau_ajout{
+            font-size: 20px;
+            border: none;
+            background-color: rgb(0, 0, 0,0);
+        }
+        .information_presentation_premier{
+            text-align: right;
+        }
+        .information_presentation_deuxieme{
+            text-align: right;
+        }
+        .information_presentation_prix{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .information_presentation_categorie,
+        .information_presentation_nom{
+            font-size: 13px;
+        }
+
+
+
+/********************************
+        ACCUEIL-PRODUIT
+*********************************/
+.presentation_marque{
+    background-color: #b0b0b0;
+    padding-bottom: 200px;
+}
+.image_produit{
+    width: 200px;
+    height: 200px;
+}
+#btn_presentation_produit{
+    width: 300px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #3d83b6;
+    color: white;
+    margin-bottom: 100px;
+}
+
+
+
+/********************************
+        ACCUEIL-CONNECTION
+*********************************/
+.information_connection{
+    background-color: #14003f;
+    padding-bottom: 200px;
+}
+.info_connection_texte{
+    width: 900px;
+    text-align: justify;
+}
+.info_connection_class{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #f2f2f2;
+}
+
+
+
+/********************************
+        VETEMENTS/MAISON
+*********************************/
+.deco_marque_general{
+    margin-top: 100px!important;
+    background-color: rgb(255, 255, 255,0.5);
+    width: 400px;
+    height: 90px;
+    border-radius: 30px 0 0 30px;
+}
+.texte_deco_marque_general{
+    font-size: 50px;
+    margin-left: 30px!important;
+}
+            /********************************
+                        IMAGE
+            *********************************/
+            .image_vetement_general{
+                width: 100%;    
+            }
+            .img_icon_sale{
+                float: left;
+                width: 80px;
+                height: 80px;
+                margin-left: 20px!important;
+            }
+            .img_separation{
+                width: 100%;
+                height: 22px;
+            }
+.navbar_vetement{
+    background-color: #f2f2f2;
+}
+.navbar_vetement{
+    list-style-type: none;
+}
+.navbar_vetement_details li{
+    display: inline-block;
+    padding: 20px 0 20px 0;
+}
+.navbar_vetement_details li a{
+    text-decoration: none;
+    color: black;
+    margin-right: 60px;
+    font-size: 17px;
+}
+.navbar_vetement_details li :hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/********************************
+    LISTE-VETEMENT/MAISON
+*********************************/
+.maison_liste_total,
+.vetement_liste_total{
+    margin-top: 70px!important;
+}
+            /********************************
+                        IMAGE
+            *********************************/
+            .img_maison_presentation,
+            .img_vetement_presentation{
+                margin-left: 20px!important;
+            }
+            .img_vetement_sale{
+                width: 250px;
+                height: 350px;
+            }
+            .img_maison_sale{
+                width: 250px;
+                height: 250px;
+            }
+.class_separation2{
+    width: 250px;
+    height: 5px;
+    background: linear-gradient(-45deg, black 25%, white 25%, white 50%, black 50%, black 75%, white 75%, white);
+    background-size:10px 10px;
+}
+.maison_liste_details,
+.vetement_liste_details{
+    margin-left: 20px;
+    width: 250px;
+    height: 90px;
+}
+.maison_liste_details_gauche,
+.vetement_liste_details_gauche{
+    float: left;
+}
+.maison_liste_details_droite,
+.vetement_liste_details_droite{
+    float: right;
+}
+.btn_ajouter_article{
+    width: 120px;
+    background-color: #a0a0a0;
+    border-radius: 30px;
+    color: white;
+}
+
+
+
+/********************************
+            ENCHERE
+*********************************/
+.genale_page_enchere{
+    width: 100%;
+    height: 500px;
+    background-color: #3678ab;
+}
+.titre_general_enchere{
+    font-size: 150px;
+    color: white;
+}
+.info_general_enchere{
+    color: white;
+    font-size: 20px;
+}
+/********************************
+        ENCHERE-LISTE
+*********************************/
+
+    /********************************
+            LISTE-GAUCHE
+    *********************************/
+    .enchere_liste_total{
+        background-color: #ececec;
+        padding: 50px 0 50px 0;
+    }
+    .enchere_liste_un_par_un{
+        background-color: white;
+        border-radius: 30px;
+        padding: 10px 0 10px 0;
+        margin-top: 40px!important;
+    }
+    .enchere_liste_details{
+        border-left: solid 4px black;
+    }
+    .enchere_info_titre{
+        font-size: 35px;
+    }
+    .enchere_info_marque{
+        font-size: 20px;
+    }
+    .enchere_info_description{
+        text-align: justify;
+    }
+    .div_timeur_compteur{
+        margin-right: 30px!important;
+    }
+    .enchere_compteur_total{
+        margin-top: 50px!important;
+    }
+    .enchere_compteur{
+        width: 82px!important;
+        height: 80px!important;
+        background-color: #ececec;
+        margin-left: 2px;
+    }
+
+            /********************************
+                    LISTE-GAUCHE-IMAGE
+            *********************************/
+            .img_enchere{
+                width: 350px;
+                height: 350px;
+                border-radius: 30px;
+            }
+            .img_enchere_separation_info{
+                width: 300px;
+                height: 100px;
+                position: absolute;
+                top: 190px;
+                left: 100px;
+            }
+            .img_timeur_compteur{
+                width: 80px;
+                height: 70px;
+            }
+
+    /********************************
+            LISTE-DROITE
+    *********************************/
+    .enchere_liste_payer{
+        background-color: white;
+        margin-left: 20px!important;
+        border-radius: 30px;
+        margin-top: 40px!important;
+    }
+    .enchere_payer_titre{
+        font-size: 40px;
+    }
+    .enchere_propose_prix{
+        margin-top: 40px;
+        width: 260px;
+        height: 50px;
+        font-size: 20px;
+        border: none;
+        border-bottom: solid 3px black;
+    }
+    .btn_envoyer_propose_prix{
+        width: 200px;
+        height: 50px;
+        margin-top: 60px;
+        border-radius: 10px;
+        background-color: #3678ab;
+        border: none;
+        color: white;
+        font-size: 20px;
+    }
+    .enchere_nombre_participant{
+        color: red;
+        margin-bottom: 7px;
+        margin-right: 15px;
+    }
+
+
+
+/********************************
+        SE CONNECTER
+*********************************/
+.se_connecter_general{
+    height: 800px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.se_connecter_div{
+    width: 800px;
+    height: 500px;
+}
+.se_connecter_titre{
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+}
+.se_connecter_titre h2{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.se_connecter_contenu{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 420px;
+}
+.se_connecter_mdp,
+.se_connecter_email{
+    width: 250px;
+    background-color: #d9d9d9;
+    border: none;
+    border-bottom: solid 2px black;
+}
+.se_connecter_mdp{
+    margin-top: 50px;
+}
+.btn_se_connecter{
+    width: 250px;
+    height: 50px;
+    color: white;
+    border: solid 2px white;
+    background-color: #3b5998;
+    margin-top: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.connecter_mdp_oublié{
+    margin-top: 10px;
+    float: right;
+    color: #14003f;
+}
+.connecter_mais_inscription{
+    color: #14003f;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+            /********************************
+            SE CONNECTER-ANIMATION-INSCRIPTION
+            *********************************/
+            #Clouds {
+                pointer-events: none;
+                height: 100%;
+                margin: auto;
+                overflow: hidden;
+                -webkit-animation: FadeIn 3s ease-out;
+                        animation: FadeIn 3s ease-out;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                    -ms-user-select: none;
+                        user-select: none;
+            }
+            @-webkit-keyframes FadeIn {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+            }
+            @keyframes FadeIn {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+            }
+            .Cloud {
+                opacity: 0.5;
+                position:absolute;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                height: 70px;
+                -webkit-animation-duration: 120s;
+                        animation-duration: 120s;
+                -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                -webkit-animation-name: Float, FadeFloat;
+                        animation-name: Float, FadeFloat;
+                z-index: 1;
+            }
+            .Cloud.Foreground {
+                opacity: 0.5;
+                height: 10%;
+                min-height: 20px;
+                z-index: 3;
+            }
+            .Cloud.Background {
+                opacity: 0.5;
+                height: 9.09090909%;
+                min-height: 8px;
+                -webkit-animation-duration: 210s;
+                        animation-duration: 210s;
+            }
+            @-webkit-keyframes Float {
+                from {
+                -webkit-transform: translateX(100%) translateZ(0);
+                transform: translateX(100%) translateZ(0);
+                }
+                to {
+                -webkit-transform: translateX(-15%) translateZ(0);
+                transform: translateX(-15%) translateZ(0);
+                }
+            }
+            @keyframes Float {
+                from {
+                -webkit-transform: translateX(100%) translateZ(0);
+                transform: translateX(100%) translateZ(0);
+                }
+                to {
+                -webkit-transform: translateX(-15%) translateZ(0);
+                transform: translateX(-15%) translateZ(0);
+                }
+            }
+            @-webkit-keyframes FadeFloat {
+                0%,
+                100% {
+                opacity: 0;
+                }
+                5%,
+                90% {
+                opacity: 0.5;
+                }
+            }
+            @keyframes FadeFloat {
+                0%,
+                100% {
+                opacity: 0;
+                }
+                5%,
+                90% {
+                opacity: 0.5;
+                }
+            }
+            .Cloud:nth-child(10) {
+                -webkit-animation-delay: -184.61538462s;
+                        animation-delay: -184.61538462s;
+                top: 60%;
+            }
+            .Cloud.Foreground:nth-child(10) {
+                -webkit-animation-duration: 80s;
+                        animation-duration: 80s;
+                height: 35%;
+            }
+            .Cloud.Background:nth-child(10) {
+                -webkit-animation-duration: 110s;
+                        animation-duration: 110s;
+                height: -3.40909091%;
+            }
+            .Cloud:nth-child(9) {
+                -webkit-animation-delay: -166.15384615s;
+                        animation-delay: -166.15384615s;
+                top: 54%;
+            }
+            .Cloud.Foreground:nth-child(9) {
+                -webkit-animation-duration: 84s;
+                        animation-duration: 84s;
+                height: 32.5%;
+            }
+            .Cloud.Background:nth-child(9) {
+                -webkit-animation-duration: 114s;
+                        animation-duration: 114s;
+                height: -2.15909091%;
+            }
+            .Cloud:nth-child(8) {
+                -webkit-animation-delay: -147.69230769s;
+                        animation-delay: -147.69230769s;
+                top: 48%;
+            }
+            .Cloud.Foreground:nth-child(8) {
+                -webkit-animation-duration: 88s;
+                        animation-duration: 88s;
+                height: 30%;
+            }
+            .Cloud.Background:nth-child(8) {
+                -webkit-animation-duration: 118s;
+                        animation-duration: 118s;
+                height: -0.90909091%;
+            }
+            .Cloud:nth-child(7) {
+                -webkit-animation-delay: -129.23076923s;
+                        animation-delay: -129.23076923s;
+                top: 42%;
+            }
+            .Cloud.Foreground:nth-child(7) {
+                -webkit-animation-duration: 92s;
+                        animation-duration: 92s;
+                height: 27.5%;
+            }
+            .Cloud.Background:nth-child(7) {
+                -webkit-animation-duration: 122s;
+                        animation-duration: 122s;
+                height: 0.34090909%;
+            }
+            .Cloud:nth-child(6) {
+                -webkit-animation-delay: -110.76923077s;
+                        animation-delay: -110.76923077s;
+                top: 36%;
+            }
+            .Cloud.Foreground:nth-child(6) {
+                -webkit-animation-duration: 96s;
+                        animation-duration: 96s;
+                height: 25%;
+            }
+            .Cloud.Background:nth-child(6) {
+                -webkit-animation-duration: 126s;
+                        animation-duration: 126s;
+                height: 1.59090909%;
+            }
+            .Cloud:nth-child(5) {
+                -webkit-animation-delay: -92.30769231s;
+                        animation-delay: -92.30769231s;
+                top: 30%;
+            }
+            .Cloud.Foreground:nth-child(5) {
+                -webkit-animation-duration: 100s;
+                        animation-duration: 100s;
+                height: 22.5%;
+            }
+            .Cloud.Background:nth-child(5) {
+                -webkit-animation-duration: 130s;
+                        animation-duration: 130s;
+                height: 2.84090909%;
+            }
+            .Cloud:nth-child(4) {
+                -webkit-animation-delay: -73.84615385s;
+                        animation-delay: -73.84615385s;
+                top: 24%;
+            }
+            .Cloud.Foreground:nth-child(4) {
+                -webkit-animation-duration: 104s;
+                        animation-duration: 104s;
+                height: 20%;
+            }
+            .Cloud.Background:nth-child(4) {
+                -webkit-animation-duration: 134s;
+                        animation-duration: 134s;
+                height: 4.09090909%;
+            }
+            .Cloud:nth-child(3) {
+                -webkit-animation-delay: -55.38461538s;
+                        animation-delay: -55.38461538s;
+                top: 18%;
+            }
+            .Cloud.Foreground:nth-child(3) {
+                -webkit-animation-duration: 108s;
+                        animation-duration: 108s;
+                height: 17.5%;
+            }
+            .Cloud.Background:nth-child(3) {
+                -webkit-animation-duration: 138s;
+                        animation-duration: 138s;
+                height: 5.34090909%;
+            }
+            .Cloud:nth-child(2) {
+                -webkit-animation-delay: -36.92307692s;
+                        animation-delay: -36.92307692s;
+                top: 12%;
+            }
+            .Cloud.Foreground:nth-child(2) {
+                -webkit-animation-duration: 112s;
+                        animation-duration: 112s;
+                height: 15%;
+            }
+            .Cloud.Background:nth-child(2) {
+                -webkit-animation-duration: 142s;
+                        animation-duration: 142s;
+                height: 6.59090909%;
+            }
+            .Cloud:nth-child(1) {
+                -webkit-animation-delay: -18.46153846s;
+                        animation-delay: -18.46153846s;
+                top: 6%;
+            }
+            .Cloud.Foreground:nth-child(1) {
+                -webkit-animation-duration: 116s;
+                        animation-duration: 116s;
+                height: 12.5%;
+            }
+            .Cloud.Background:nth-child(1) {
+                -webkit-animation-duration: 146s;
+                        animation-duration: 146s;
+                height: 7.84090909%;
+            }
+            .Cloud {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAABgCAYAAACTzNnjAAAFCklEQVR42u3d34uVRRjA8YMsEi0iSwhdRBGhSJgZiNRFIkWhQVEXBipKUVBBLCF6k0h4UxFkBLq4QT/Qiyi80EgxCjXMWqOMtqy0bBNja92yXatN3c3pGc9sHU/v+X3emWfe93vx+QN23u+e95x5Z94pmNWFQo5NEytErzgoBsSIOCf+FqbEBTEhzophcVTsFxvFEjE152PZHGMukbcB6BAPij0uqgtl0bXCBvyjeFPcS2wEWc0y0ec++Ywnf7rwbyc8grQ6RY8Y9RhhJT+Jde4TmghzFuR08bo4ryDEpE/N58QUYsx+kFPcD4yzCkMsZz+1uwkyu0HeKYYiCLHcN2I2QWYnSPudbHubfy37NuFu4wQZeZD2k2Uw4hDLHRZdBBnnH3K/5ykcX86IeQQZl6civ0XXYv/RlhJkHLZkOMTypz7dBKnbyzmJsfTZeTdB6vRszmIsjXI5QeryWMa/M9ZinzjdTJA63CLGcxzjpD/ElQQZfq3iKDFe8lSHIAPqI8L/6SHIMB4nvorTQQsI0v+teoz4KjpBkH7tIrqaNhCkH9cnbK5C8q/uywiSHzKabCLIdM3K+QR4o8YysfVWcZDvElnD1hNkOi5XuilLu5MlOyzni3vESnGfWCRuIMjm1zgSWPM7GWvNXdonXkdM8Q0dCwmytu8Iy/vK9B3iRoJMnghnqifc8jb7yXkXQf5nLWGo2WR2HUGuLrxPDKq25D6d9yBPE4I6/e6rVO6CnMpkuFq/eLmFKwtyMRde/dOg2XkKkvlH/X5P9ZNSWZBvcMGjMJza6iJlQe7nYkfjozwE+TkXOiprsx7kES5yVOzLYK/IcpA/cJGj806Wg/yaCxzlzsersxpkPxc4SruzGuQBLm603yU7DPOQUOSJWIK0E6j2lcvPm+JJVp+674oDbiFuv5t/fEXs5cJG65DmIO3KY3vG3yCLbXO1N1xVkB3uWfQQFye3rtUS5DN1bC5C9j0cOki7XOwUFwJOb6gg7TmCW1lMizI7QwQ5nW2qqGCv7yDtwsxfGXhU0OczyKvECIOOKvb5CnKa2+TDoKOat3wFyaIH1ONFH0H2MNCo00NpBzmXR39owIy0gzzOIKNOv6X9LHsZg4wGp3xsM/ZMoUfF3aaZ4++qBDnIIKMNzrsHKb11Lb6oEORtDCRSYB81f+vWxzYUJBv2kTYb5vx6gzzHgMHTjsUXagV5BwMFzz78d5NYQpDbGCAEcOzissaEIL9kcBDIx0lBsrwMIW0uD3KcQUHgqaEFpUGyLQGhnSgNkgGBBg8QJDQ5Phkky82g5bvkNQXDscDQY6MNcpiBgBL9NsjDDAS0LPq1Qb7EQECJicLFSUkGAkpMLgMaYzCgKci3GQxomPqZDPImBgMa9uOULifnDWcI7VRpkIsYEAR2sHwX2GcMCgJak/QKPh4lIsgcpOhM2iv7JIODAPqqvY7vPQYInlf6zKsWpN2iOMBAwZMD9bzSudPwvh+kr3gofJ0vve/ikxIp36pXNHosiD2j5gMGD2ksyG3lJK917qc5A4l2eNW04Wi5OaZ41DADilZu0xtMmw/fXCV+ZnDRoFFTfBdpaudlLxVfsXMRNYy7W3SH8XSAu/01bo8s/kL8xQWAM+JC7DIeDnCvZqZ4RGxxi3/3iUPOJ+5TtRXfG/v6jeadNMVjlqsZquG0uwU164ybg2vFuPuh2ax23tkm3N91VLwmbjVNvPT+H7Ro4730ITNPAAAAAElFTkSuQmCC);
+                /* background-image: url("Image/chaussure.png"); */
+            }
+            .Cloud.Background {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAqCAYAAAAUJM0rAAACFUlEQVRo3u3aPSwDYRzH8UZEbAYiYrDYjLZGpIPBJLGwSKwi0k1iYBKDdFJsEiMxSZgsFZJGiGjqJWEhSKuaNKRUG8r5PfI8SXOud72+PH2eu2f47Ndv7+V5/nee/G6bh5MWmIV9iEMWvkGjfiADD7AHk9BU6+PSNK0kPAINwwXkC6KU6gvC4HVyKB/clhHHCDnbTqHbSaEaYIv+OK3KyBk274RQrXBXg0B6B/QPkTIUiZTiEIm5gkbZQjXTJ5nG2ZFsocJ1iMQEZQk1VcdIGl2L9Yoeitwj3uocirgRPVRAgEjMoMihkgKFStIzK063QVHYhKF6h/IKFMlKGpaNlhM8Qq1JFIp5gQHeoSIShmJPST/PUElJQ7FN9hivUGmJQxE56OQRKiN5qL/NNY9QKQeEIpdgR7VC9cEqHeGeUyEHXHrMUiWhyKx6BV4dEsNMtNxQI4Ls33h5LidUoEYjXKEXoXZDLbgsEBOzE8qne8fmJhE7oWIujUQcwhyMmy0VSKRRF0cyWlclYMYo1LEKZOgRugpDpVWUot5ZLI8LlwN23bNQKoY1vwpVmmsS6kOFsPRJQl2qENZIqGkVwnp9xb5nUksEcxm2hZlQMcy3OYXTgx0VpOi2pl8/jwqpMP9sF5twBl08ctE7I/dws5l5D5y4OBj51HvdzluYdlik0RL06cjkKpSlB1Span5x/AQb5Hfrxyy/oU5ISeVw53AAAAAASUVORK5CYII=);
+                /* background-image: url("Image/chaussure.png"); */
+            }
+
+
+/********************************
+        INSCRIPTION
+*********************************/
+.inscription_general{
+    height: 850px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.inscription_div{
+    width: 800px;
+    height: 630px;
+}
+.inscription_titre{
+    margin-left: 0px!important;
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+    padding-top: 7px;
+}
+#inscription_titre_premier{
+    border-right: solid 2px white;
+}
+#inscription_titre_deuxieme{
+    border-left: solid 2px white;
+}
+.inscription_titre button{
+    font-size: 40px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #14003f;
+    color: #8795a3;
+}
+
+        /********************************
+            INSCRIPTION-CONTENU
+        *********************************/
+        .inscription_contenu{
+            margin-left: 0px!important;
+            background-color: #d9d9d9;
+            width: 100%;
+            height: 550px;
+        }
+        .inscription_detail_titre1,
+        .inscription_detail_titre2{
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #14003f;
+        }
+        .inscription_contenu_details_vendeur,
+        .inscription_contenu_details_acheteur{
+            width: 250px;
+            height: 40px;
+            border: none;
+            border-bottom: solid 2px black;
+            background-color: #d9d9d9;
+        }
+        .inscription_contenu_vendeur span,
+        .inscription_contenu_acheteur span{
+            font-size: 12px;
+            color: red;
+        }
+        .condition_inscription{
+            width: 15px;
+            height: 15px;
+            margin-top: 10px;
+        }
+                /********************************
+                    CHOIX-IMAGE-VENDEUR
+                *********************************/
+                #img_inscription_choix_vendeur{
+                    background-image: url("Image/chaussure.png");
+                    width: 250px;
+                    height: 250px;
+                    border: solid 2px black;
+                    border-radius: 50%;
+                    margin-top: 30px;
+                }
+                .img_inscription_general{
+                    margin-top: 10px;
+                }
+                .btn_choix_img_vendeur_inscription{
+                    position: relative;
+                    overflow: hidden;
+                    color: black!important;
+                    font-size: 15px!important;
+                    font-weight: bold!important;
+                }
+                .btn_choix_img_vendeur_inscription:hover{
+                    color: #246acf!important;
+                    font-weight: bold;
+                }
+                #file_interrieur_inscription_img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 100px;
+                    text-align: right;
+                    opacity: 0;
+                    background: white;
+                    cursor: pointer;
+                }
+        .btn_reset_inscription_vendeur,
+        .btn_reset_inscription_acheteur{
+            width: 120px;
+            height: 40px;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+        .retour_login_inscription{
+            text-decoration: none;
+            margin-left: 20px;
+            margin-right: 50px;
+            font-size: 20px;
+            margin-top: 25px;
+            color: black;
+        }
+        .retour_login_inscription:hover{
+            color: #246acf;
+        }
+        .btn_inscription_final_vendeur,
+        .btn_inscription_final_acheteur{
+            width: 770px!important;
+            height: 40px!important;
+            margin-left: 15px!important;
+            margin-bottom: 25px!important;
+            background-color: #3b5998!important;
+        }
+        
+        /********************************
+                INSCRIPTION-MODAL
+        *********************************/
+        .modal_condition_inscription_titre{
+            margin-left: 15%;
+            font-size: 30px;
+        }
+        .modal_condition_inscription_texte{
+            text-align: justify;
+        }
+
+        /********************************
+            INSCRIPTION-ANIMATION-SUCCESS
+        *********************************/
+        .toast-area{
+            z-index:2;
+            height: 80vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        .toast-area > *{
+            margin-top: 100px;
+        }
+        .toast{
+            display: flex;
+            justify-content: start;
+            width: 300px!important;
+            height: 100px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: slide-in .5s ease-out forwards;
+        }
+        .toast-content{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .toast_deco_gauche{
+            width: 5px;
+            height: 80px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background: #a2de96;
+        }
+        .toast_icon {
+            margin-left: 30px;
+            width: 35px;
+            height: 35px;
+            background: #79d70f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .toast_text {
+            width: 400px;
+            align-self: flex-start;
+            flex-wrap: wrap;
+            display:flex;
+            align-items:start;
+            margin-left: 30px;
+            font-family: Tahoma,Arial,"Hiragino Sans GB","simsun",sans-serif;
+        }
+        .toast_text > * {
+            margin: 0;
+            width: 400px;
+        }
+        .toast_text_titre {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .toast_text_message {
+            margin-top: 15px;
+            font-size:15px;
+            color: #878787;
+        }
+        @keyframes toast {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(0,-10px);
+                opacity: 0.7;
+            }
+        }
+        @keyframes slide-in {
+            0% {
+                transform: translate(0,-10px);
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
