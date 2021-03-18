@@ -1073,3 +1073,13 @@
     font-size: 25px;
     text-decoration: none;
 }
+
+
+/* test lecture photo dans base.php */
+#img_test{
+    background-image: url("");
+    width: 250px;
+    height: 250px;
+    border: solid 2px black;
+    border-radius: 50%;
+}

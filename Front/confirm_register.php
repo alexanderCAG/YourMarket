@@ -93,7 +93,7 @@
         <div class="confirm_register_contenu position-absolute bottom-0 start-0">
             <div class="confirm_register_contenu2 position-absolute top-50 start-50 translate-middle">
                 <p class="text-uppercase msg_confirm_register">
-                    Vous êtes maintenant connecter
+                    Vous êtes maintenant inscrit
                 </p>
                 <br><br>
                 <a href="../Front/connexion.php" class="confirm_register_to_connexion">Sign up</a>

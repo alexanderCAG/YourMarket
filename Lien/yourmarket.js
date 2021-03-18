@@ -466,6 +466,8 @@ jQuery(document).ready(function(){
             $('.btn_choix_img_vendeur_inscription :file').on('fileselect', function(event, nvx_texte) {
                 
                 let nom_img = $(this).parents(".img_inscription_general").find(':text'),
+                // let nom_img = $("#file_interrieur_inscription_img"),
+                // let nom_img = $(".form-control"),
                     mon_texte = nvx_texte;
                 
                 if( nom_img.length ) {
@@ -529,4 +531,19 @@ function decompteur(){
     secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
 
     setTimeout(decompteur,1000);
+}
+
+
+
+// test lecture photo dans base.php
+function readURL(mon_img) {
+    if (mon_img.files && mon_img.files[0]) {
+        let read = new FileReader();
+        
+        read.onload = function (e) {
+            $("#img_test").attr('src', e.target.result);
+        }
+        
+        read.readAsDataURL(mon_img.files[0]);
+    }
 }

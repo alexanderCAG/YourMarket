@@ -31,6 +31,16 @@
 	    $mail_vendeur=$_POST['mail_vendeur'];
 	    $mdp_vendeur=$_POST['mdp_vendeur'];
 	    $mdp2_vendeur=$_POST['mdp2_vendeur'];
+
+		$photo=$_POST['img'];
+
+		$sql = "INSERT INTO inscription (nom,prenom) VALUES ('$nomMarque_vendeur','$photo')";
+
+        if($con->query($sql)===true){
+            echo("");
+        }else{
+            echo "Error: " . $sql . "<br>" . $con->error;
+        }
     }
 
     include("../Front/confirm_register.php");
