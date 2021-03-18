@@ -97,10 +97,7 @@ jQuery(document).ready(function(){
         var regex_chiffre = /^[0-9]+$/;
         var regex_mixte = /^[a-zA-Z0-9]+$/;
         var regex_mail = /^([a-zA-Z0-9])+\@(([a-z-])+\.)+([a-z]{2,3})+$/;
-        var regex_mdp_fort = /^([a-z])+([A-Z])+([0-9])+([-+_!@#$%^&*., ?])+$/;
-        var regex_mdp_moyen = /^([a-z])+([A-Z])+([0-9])+$/;
-        var regex_mdp_faible = /^([a-z])+([A-Z])+$/;
-        var regex_mdp_insuffisant = /^([a-z])+$/;
+        var regex_mdp = /[\s@&\.-]/;
 
         document.getElementById('submit_inscription_acheteur').addEventListener('click',inscription_acheteur)
         function inscription_acheteur(event){
@@ -204,38 +201,51 @@ jQuery(document).ready(function(){
             // mdp verif
             if(mdp_acheteur.value.trim()==""){
                 mdpErreur_acheteur.innerHTML = "Compléter ce champs";
+                mdpErreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
-            }else if(regex_mdp_fort.test(mdp_acheteur.value)==true){
-                mdpErreur_acheteur.innerHTML = "Fort";
-                verification_inscription_acheteur=true;
-                mdpErreur_acheteur.setAttribute("style","color:green");
-            }else if(regex_mdp_moyen.test(mdp_acheteur.value)==true){
+            }else if(!/[a-z]/.test(mdp_acheteur.value)){
+                mdpErreur_acheteur.innerHTML = "minuscule obligatoire";
+                verification_inscription_acheteur=false;
+                mdpErreur_acheteur.setAttribute("style","color:red");
+            }else if(!/[A-Z]/.test(mdp_acheteur.value)){
+                mdpErreur_acheteur.innerHTML = "majuscule obligatoire";
+                verification_inscription_acheteur=false;
+                mdpErreur_acheteur.setAttribute("style","color:red");
+            }else if(!/[1-9]/.test(mdp_acheteur.value)){
+                mdpErreur_acheteur.innerHTML = "chiffre obligatoire";
+                verification_inscription_acheteur=false;
+                mdpErreur_acheteur.setAttribute("style","color:red");
+            }else if(/[1-9]/.test(mdp_acheteur.value) && regex_mdp.test(mdp_acheteur.value)==false){
                 mdpErreur_acheteur.innerHTML = "Moyen";
                 verification_inscription_acheteur=true;
                 mdpErreur_acheteur.setAttribute("style","color:green");
-            }else if(regex_mdp_faible.test(mdp_acheteur.value)==true){
-                mdpErreur_acheteur.innerHTML = "Faible";
-                verification_inscription_acheteur=false;
-                mdpErreur_acheteur.setAttribute("style","color:red");
-            }else if(regex_mdp_insuffisant.test(mdp_acheteur.value)==true){
-                mdpErreur_acheteur.innerHTML = "Insuffisant";
-                verification_inscription_acheteur=false;
-                mdpErreur_acheteur.setAttribute("style","color:red");
+            }else if(regex_mdp.test(mdp_acheteur.value)){
+                mdpErreur_acheteur.innerHTML = "Fort";
+                verification_inscription_acheteur=true;
+                mdpErreur_acheteur.setAttribute("style","color:green");
             }else{
                 mdpErreur_acheteur.innerHTML = "";
             }
 
             if(mdp2_acheteur.value.trim()==""){
                 mdp2Erreur_acheteur.innerHTML = "Compléter ce champs";
+                mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else if(mdp_acheteur.value.trim() != mdp2_acheteur.value.trim()){
                 mdp2Erreur_acheteur.innerHTML = "Mot de passe différent";
+                mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
-            }else if((regex_mdp_fort.test(mdp_acheteur.value)==true) != (regex_mdp_fort.test(mdp2_acheteur.value)==true)){
+            }else if(mdp_acheteur.value.trim() == mdp2_acheteur.value.trim()){
+                mdp2Erreur_acheteur.innerHTML = "Correct";
+                mdp2Erreur_acheteur.setAttribute("style","color:green");
+                verification_inscription_acheteur=true;
+            }else if(regex_mdp.test(mdp_acheteur.value) != regex_mdp.test(mdp2_acheteur.value)){
                 mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
-            }else if((regex_mdp_moyen.test(mdp_acheteur.value)==true) != (regex_mdp_moyen.test(mdp2_acheteur.value)==true)){
+            }else if(/[1-9]/.test(mdp_acheteur.value) && regex_mdp.test(mdp_acheteur.value)==false != /[1-9]/.test(mdp2_acheteur.value) && regex_mdp.test(mdp2_acheteur.value)==false){
                 mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else{
                 mdp2Erreur_acheteur.innerHTML = "";
@@ -372,38 +382,51 @@ jQuery(document).ready(function(){
             // mdp verif
             if(mdp_vendeur.value.trim()==""){
                 mdpErreur_vendeur.innerHTML = "Compléter ce champs";
+                mdpErreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
-            }else if(regex_mdp_fort.test(mdp_vendeur.value)==true){
-                mdpErreur_vendeur.innerHTML = "Fort";
-                verification_inscription_vendeur=true;
-                mdpErreur_vendeur.setAttribute("style","color:green");
-            }else if(regex_mdp_moyen.test(mdp_vendeur.value)==true){
+            }else if(!/[a-z]/.test(mdp_vendeur.value)){
+                mdpErreur_vendeur.innerHTML = "minuscule obligatoire";
+                verification_inscription_vendeur=false;
+                mdpErreur_vendeur.setAttribute("style","color:red");
+            }else if(!/[A-Z]/.test(mdp_vendeur.value)){
+                mdpErreur_vendeur.innerHTML = "majuscule obligatoire";
+                verification_inscription_vendeur=false;
+                mdpErreur_vendeur.setAttribute("style","color:red");
+            }else if(!/[1-9]/.test(mdp_vendeur.value)){
+                mdpErreur_vendeur.innerHTML = "chiffre obligatoire";
+                verification_inscription_vendeur=false;
+                mdpErreur_vendeur.setAttribute("style","color:red");
+            }else if(/[1-9]/.test(mdp_vendeur.value) && regex_mdp.test(mdp_vendeur.value)==false){
                 mdpErreur_vendeur.innerHTML = "Moyen";
                 verification_inscription_vendeur=true;
                 mdpErreur_vendeur.setAttribute("style","color:green");
-            }else if(regex_mdp_faible.test(mdp_vendeur.value)==true){
-                mdpErreur_vendeur.innerHTML = "Faible";
-                verification_inscription_vendeur=false;
-                mdpErreur_vendeur.setAttribute("style","color:red");
-            }else if(regex_mdp_insuffisant.test(mdp_vendeur.value)==true){
-                mdpErreur_vendeur.innerHTML = "Insuffisant";
-                verification_inscription_vendeur=false;
-                mdpErreur_vendeur.setAttribute("style","color:red");
+            }else if(regex_mdp.test(mdp_vendeur.value)){
+                mdpErreur_vendeur.innerHTML = "Fort";
+                verification_inscription_vendeur=true;
+                mdpErreur_vendeur.setAttribute("style","color:green");
             }else{
                 mdpErreur_vendeur.innerHTML = "";
             }
 
             if(mdp2_vendeur.value.trim()==""){
                 mdp2Erreur_vendeur.innerHTML = "Compléter ce champs";
+                mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else if(mdp_vendeur.value.trim() != mdp2_vendeur.value.trim()){
                 mdp2Erreur_vendeur.innerHTML = "Mot de passe différent";
+                mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
-            }else if((regex_mdp_fort.test(mdp_vendeur.value)==true) != (regex_mdp_fort.test(mdp2_vendeur.value)==true)){
+            }else if(mdp_vendeur.value.trim() == mdp2_vendeur.value.trim()){
+                mdp2Erreur_vendeur.innerHTML = "Correct";
+                mdp2Erreur_vendeur.setAttribute("style","color:green");
+                verification_inscription_vendeur=true;
+            }else if(regex_mdp.test(mdp_vendeur.value) != regex_mdp.test(mdp2_vendeur.value)){
                 mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
-            }else if((regex_mdp_moyen.test(mdp_vendeur.value)==true) != (regex_mdp_moyen.test(mdp2_vendeur.value)==true)){
+            }else if(/[1-9]/.test(mdp_vendeur.value) && regex_mdp.test(mdp_vendeur.value)==false != /[1-9]/.test(mdp2_vendeur.value) && regex_mdp.test(mdp2_acheteur.value)==false){
                 mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else{
                 mdp2Erreur_vendeur.innerHTML = "";
