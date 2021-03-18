@@ -168,7 +168,7 @@
                 </div>
             </form>
 
-            <form action="../Bdd/register.php" method="POST">
+            <form action="../Bdd/register.php" method="POST" enctype="multipart/form-data">
                 <div class="row inscription_contenu_vendeur">
                     <div class="col-1"></div>
 

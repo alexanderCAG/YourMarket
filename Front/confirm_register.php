@@ -5,7 +5,7 @@
 
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
+        <a class="navbar-brand" href="../Front/index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
                             <li><a class="dropdown-item" href="#">sheets</a></li>
                             <li><a class="dropdown-item" href="#">pillow</a></li>
                             <li><a class="dropdown-item" href="#">decoration</a></li>
-                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
+                            <li><a class="dropdown-item" href="../Front/page-maison.php">ALL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown nav_regul">
@@ -39,11 +39,11 @@
                             <li><a class="dropdown-item" href="#">CAP</a></li>
                             <li><a class="dropdown-item" href="#">MEN</a></li>
                             <li><a class="dropdown-item" href="#">WOMMEN</a></li>
-                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
+                            <li><a class="dropdown-item" href="../Front/page-vetements.php">ALL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
+                        <a class="nav-link" href="../Front/enchere.php">Enchère</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Panier
