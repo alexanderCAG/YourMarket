@@ -1033,3 +1033,43 @@
                 opacity: 1;
             }
         }
+
+/********************************
+    CONFIRMATION INSCRIPTION
+*********************************/
+.confirm_register_general{
+    height: 800px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.confirm_register_div{
+    width: 800px;
+    height: 380px;
+}
+.confirm_register_titre{
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+}
+.confirm_register_titre h2{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.confirm_register_contenu{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 300px;
+}
+.confirm_register_contenu2{
+    width: 80%;
+    text-align: center;
+}
+.msg_confirm_register{
+    font-size: 40px;
+    font-weight: bold;
+}
+.confirm_register_to_connexion{
+    font-size: 25px;
+    text-decoration: none;
+}

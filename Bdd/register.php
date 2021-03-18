@@ -33,5 +33,5 @@
 	    $mdp2_vendeur=$_POST['mdp2_vendeur'];
     }
 
-    include("../Front/connexion.php");
+    include("../Front/confirm_register.php");
 ?>

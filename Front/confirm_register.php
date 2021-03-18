@@ -1,5 +1,5 @@
 <?php
-    $title="Se connecter";
+    $title="Connexion";
     require "head.php";
 ?>
 
@@ -65,29 +65,43 @@
     </div>
 </nav>
 
-<form action="../Bdd/login.php" method="POST">
-    <div class="se_connecter_general position-relative">
-        <div class="se_connecter_div position-absolute top-50 start-50 translate-middle shadow">
-            <div class="se_connecter_titre position-absolute top-0 start-50 translate-middle-x">
-                <h2 class="text-uppercase texte_style centrer">Se connecter</h2>
-            </div>
-            
-            <div class="se_connecter_contenu position-absolute bottom-0 start-0">
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <input class="se_connecter_email detail_style" name="mail" placeholder="Email">
-                    <br>
-                    <input class="se_connecter_mdp detail_style" name="mdp" placeholder="Mot de passe">
-                    <br>
-                    <input type="submit" name="submit" value="Connexion" class="text-uppercase btn_se_connecter texte_style">
-                    <br>
-                    <a href="#" class="connecter_mdp_oublié">Mot de passe oublié</a>
-                    <br><br><br><br>
-                    <a href="inscription.php" class="connecter_mais_inscription centrer position-absolute bottom-0 start-50 translate-middle-x">S'inscrire</a>
+
+<div class="confirm_register_general position-relative">
+
+    <div class="toast-area" id="toasts">
+        <div style="display: none">
+            <div class="toast" id="clonemother">
+                <div class="toast-content">
+                    <div class="toast_deco_gauche"></div>
+                    <div class="toast_icon">
+                        &#x2714
+                    </div>
+                    <div class="toast_text">
+                        <p class="toast_text_titre">Success</p>
+                        <p class="toast_text_message">Inscription valider</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</form>
+
+    <div class="confirm_register_div position-absolute top-50 start-50 translate-middle shadow">
+        <div class="confirm_register_titre position-absolute top-0 start-50 translate-middle-x">
+            <h2 class="text-uppercase texte_style centrer">BIENVENUE</h2>
+        </div>
+        
+        <div class="confirm_register_contenu position-absolute bottom-0 start-0">
+            <div class="confirm_register_contenu2 position-absolute top-50 start-50 translate-middle">
+                <p class="text-uppercase msg_confirm_register">
+                    Vous êtes maintenant connecter
+                </p>
+                <br><br>
+                <a href="../Front/connexion.php" class="confirm_register_to_connexion">Sign up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div id="Clouds">
     <div class="Cloud Foreground"></div>
@@ -101,6 +115,24 @@
     <div class="Cloud Background"></div>
     <div class="Cloud Background"></div>
 </div>
+
+<script>
+    function animationInscription(){
+        var child = document.getElementById('clonemother');
+        var clone = child.cloneNode(true);
+        var node = document.getElementById("toasts").appendChild(clone);
+        console.log(node.childNodes);
+
+        setTimeout(function() {
+            if(node) {
+                node.style.animation = "toast .5s ease-out forwards";
+                setTimeout(() => {node.remove();} ,500);
+            }
+        },3000);
+    }
+
+    window.onload=animationInscription();
+</script>
 
 <?php
     include("footer.php");

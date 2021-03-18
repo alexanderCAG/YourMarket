@@ -310,21 +310,7 @@ jQuery(document).ready(function(){
                 codepostalErreur_acheteur.innerHTML = "";
             }
 
-            if(verification_inscription_acheteur == true){
-
-                var child = document.getElementById('clonemother');
-                var clone = child.cloneNode(true);
-                var node = document.getElementById("toasts").appendChild(clone);
-                console.log(node.childNodes);
-
-                setTimeout(function() {
-                    if(node) {
-                        node.style.animation = "toast .5s ease-out forwards";
-                        setTimeout(() => {node.remove();} ,500);
-                    }
-                },3000);
-
-            }else{
+            if(verification_inscription_acheteur == false){
                 event.preventDefault();
             }
 
@@ -437,30 +423,7 @@ jQuery(document).ready(function(){
                 mailErreur_vendeur.innerHTML = "";
             }
 
-            
-            
-            if(verification_inscription_vendeur == true){
-                var child = document.getElementById('clonemother');
-                var clone = child.cloneNode(true);
-                var node = document.getElementById("toasts").appendChild(clone);
-                console.log(node.childNodes);
-                
-                // event.preventDefault();
-
-                setTimeout(function() {
-                    if(node) {
-                        node.style.animation = "toast .5s ease-out forwards";
-                        setTimeout(() => {node.remove();} ,500);
-                    }
-                },3000);
-                // event.target.parentElement.onclick = null;
-                // event.target.parentElement.click();
-
-                // verification_inscription_vendeur = true;
-
-                // setTimeout(function(){event.preventDefault=false;}, 5000);
-                // window.location.href = 'recup_inscription.php';
-            }else{
+            if(verification_inscription_vendeur == false){
                 event.preventDefault();
             }
             
@@ -508,11 +471,9 @@ jQuery(document).ready(function(){
 
         }
 
-        
 /********************************
         COMPTE A REBOURS
 *********************************/
-
 
 function decompteur(){
 

@@ -25,7 +25,7 @@
 	}
     else{ 
         // echo "<script type='text/javascript'> alert('User Name Or Password Invalid!')</script>";
-        echo "<script language='javascript' type='text/javascript'> location.href='connexion.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/connexion.php' </script>";
     }
 }
 ?>
