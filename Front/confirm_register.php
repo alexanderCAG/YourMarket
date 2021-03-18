@@ -102,7 +102,6 @@
     </div>
 </div>
 
-
 <div id="Clouds">
     <div class="Cloud Foreground"></div>
     <div class="Cloud Background"></div>
