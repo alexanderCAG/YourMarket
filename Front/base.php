@@ -3,6 +3,7 @@
     require "head.php";
 ?>
 <!-- Mon code -->
+<a href="index.php">ICI</a>
 <?php
     include("footer.php");
 ?>
