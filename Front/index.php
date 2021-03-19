@@ -34,7 +34,7 @@
                             Vêtement
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="recupImage.php">T-SHIRT</a></li>
                             <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
                             <li><a class="dropdown-item" href="#">PULL</a></li>
                             <li><a class="dropdown-item" href="#">CAP</a></li>
