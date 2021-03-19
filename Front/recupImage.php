@@ -6,7 +6,7 @@
 
 <form method="POST" enctype="multipart/form-data">
     <input type="hidden" value="1000000" name="MAX_FILE_SIZE"/>
-    <input type="file" name="uploadedfile" accept="image/png,image/jpg,image/jpeg"/>
+    <input type="file" name="uploadedfile" accept="image/png, image/jpg, image/jpeg"/>
     <input type="submit" name="submit" value="Upload"/>
 </form>
 
