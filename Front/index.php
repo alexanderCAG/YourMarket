@@ -143,36 +143,6 @@
         <form class="form-inline my-2 my-lg-0">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav text-uppercase">
-                    <li class="nav-item dropdown nav_regul">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">sheets</a></li>
-                            <li><a class="dropdown-item" href="#">pillow</a></li>
-                            <li><a class="dropdown-item" href="#">decoration</a></li>
-                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown nav_regul">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">PULL</a></li>
-                            <li><a class="dropdown-item" href="#">CAP</a></li>
-                            <li><a class="dropdown-item" href="#">MEN</a></li>
-                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
-                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
-                    </li>
                     <li class="nav-item nav_regul">
                         <a class="nav-link" href="#">Ajouter Article</a>
                     </li>
@@ -206,36 +176,6 @@
         <form class="form-inline my-2 my-lg-0">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav text-uppercase">
-                    <li class="nav-item dropdown nav_regul">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">sheets</a></li>
-                            <li><a class="dropdown-item" href="#">pillow</a></li>
-                            <li><a class="dropdown-item" href="#">decoration</a></li>
-                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown nav_regul">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">PULL</a></li>
-                            <li><a class="dropdown-item" href="#">CAP</a></li>
-                            <li><a class="dropdown-item" href="#">MEN</a></li>
-                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
-                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
-                    </li>
                     <li class="nav-item nav_regul">
                         <a class="nav-link" href="#">Liste Vendeur</a>
                     </li>
