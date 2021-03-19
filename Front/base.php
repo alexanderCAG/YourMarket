@@ -4,61 +4,11 @@
 ?>
 <!-- Mon code -->
 
-<img id="img_test">
-
-<?php
-include("../Bdd/cnx.php");
-session_start();
-$photo="chaussure.png";
-
-// $recup_photo = "SELECT prenom from inscription where prenom= '$photo'";
-
-// if($con->query($recup_photo)===true){
-//     echo ("Hello '$recup_photo'  Bien");
-// }else{
-//     echo "Error: " . $recup_photo . "<br>" . $con->error;
-// }
-
-$recup_photo = mysqli_query($con, "select prenom from inscription where prenom='$photo'");
-
-if (mysqli_num_rows($recup_photo) != 0){
-    echo ("Hello '$recup_photo'  Bien");
-}
-
-
-
-// echo ("<script language='javascript' type='text/javascript'> 
-// function readURL(mon_img) {
-//     if (mon_img.files && mon_img.files[0]) {
-//         let read = new FileReader();
-//         alert('ok');
-//         read.onload = function (e) {
-//             $('#img_test').attr('src', e.target.result);
-//         }
-        
-//         read.readAsDataURL(mon_img.files[0]);
-//     }
-// }
-// window.onload = readURL($recup_photo); </script>");   
-
-?>
-
-<!-- <script>
-function readURL(mon_img) {
-    if (mon_img.files && mon_img.files[0]) {
-        let read = new FileReader();
-        alert('ok');
-        read.onload = function (e) {
-            $('#img_test').attr('src', e.target.result);
-        }
-        
-        read.readAsDataURL(mon_img.files[0]);
-    }
-}
-alert('ok1');
-window.onload = readURL($recup_photo);
-alert('ok2');
-</script> -->
+<!-- <form action="../Bdd/resgist.php" method="POST" enctype="multipart/form-data">
+    <input type="hidden" value="1000000" name="MAX_FILE_SIZE"/>
+    <input type="file" name="uploadedfile"/>
+    <input type="submit" name="submit" value="Upload"/>
+</form> -->
 
 
 <br><a href="index.php">ICI</a>

@@ -532,18 +532,3 @@ function decompteur(){
 
     setTimeout(decompteur,1000);
 }
-
-
-
-// test lecture photo dans base.php
-function readURL(mon_img) {
-    if (mon_img.files && mon_img.files[0]) {
-        let read = new FileReader();
-        
-        read.onload = function (e) {
-            $("#img_test").attr('src', e.target.result);
-        }
-        
-        read.readAsDataURL(mon_img.files[0]);
-    }
-}
