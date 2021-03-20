@@ -75,61 +75,74 @@
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-<div class="contenu_general_infoPerso_acheteur centrer row">
+<div class="contenu_general_infoPerso_acheteur row">
     <div class="col-1"></div>
 
-    <div class="col-3">
+    <div class="col-3 infoPerso_paiement">
+        <form action="../Bdd/infoPerso_paiement" method="POST">
+            <h3 class="infoPerso_detail_titre1 text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
 
-        <h3 class="inscription_detail_titre3 text-uppercase detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
+            <div class="row">
 
-        <input id="typeCarte_acheteur" name="typeCarte_acheteur" type="text" class="inscription_contenu_details_acheteur centrer" placeholder="Type de carte">
-        <br>
-        <span id="typeCarteErreur_acheteur"></span>
-        <br>
+                <div class="col-1"></div>
 
-        <div class="row">
-            <div class="col-6">
-                <input type="radio" name="carte_bancaire" id="carte_payement_amex" value="carte_payement_amex">
-                <img class="image_payment_inscription" src="../Image/carte_payement_amex.png" alt="carte_payement_amex">
+                <div class="col-10">
+                    <input id="infoPerso_typeCarte_acheteur" name="infoPerso_typeCarte_acheteur" type="text" class="infoPaiement_contenu_details_acheteur centrer" placeholder="Type de carte">
+                    <br>
+                    <span id="infoPerso_typeCarteErreur_acheteur"></span>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_amex" value="carte_payement_amex">
+                            <img class="image_infoPayment" src="../Image/carte_payement_amex.png" alt="carte_payement_amex">
+                        </div>
+
+                        <div class="col-6">
+                            <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_cb" value="carte_payement_cb">
+                            <img class="image_infoPayment" src="../Image/carte_payement_cb.png" alt="carte_payement_cb">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:20px!important">
+                        <div class="col-6">
+                            <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_mastercard" value="carte_payement_mastercard">
+                            <img class="image_infoPayment" src="../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
+                        </div>
+
+                        <div class="col-6">
+                            <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_visa" value="carte_payement_visa">
+                            <img class="image_infoPayment" src="../Image/carte_payement_visa.png" alt="carte_payement_visa">
+                        </div>
+                    </div>
+
+                    <input id="infoPerso_numeroCarte_acheteur" name="infoPerso_numeroCarte_acheteur" type="text" class="infoPaiement_contenu_details_acheteur" placeholder="Numéro de carte">
+                    <br>
+                    <span id="infoPerso_numeroCarteErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_nomCarte_acheteur" name="infoPerso_nomCarte_acheteur" type="text" class="infoPaiement_contenu_details_acheteur" placeholder="Nom de carte">
+                    <br>
+                    <span id="infoPerso_nomCarteErreur_acheteur"></span>
+                    <br>
+                    <label style="color:#888888;">Date d'expiration</label><br>
+                    <input id="infoPerso_dateExpiration_acheteur" name="infoPerso_dateExpiration_acheteur" type="date" class="infoPaiement_contenu_details_acheteur" placeholder="Date d'expiration">
+                    <br>
+                    <span id="infoPerso_dateExpirationErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_codeSecret_acheteur" name="infoPerso_codeSecret_acheteur" type="text" class="infoPaiement_contenu_details_acheteur" placeholder="Code secret">
+                    <br>
+                    <span id="infoPerso_codeSecretErreur_acheteur"></span>
+                    <br>
+                    <button type="button" id="submit_modif_infoPaiement_acheteur" name="submit_modif_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Modifier</button>
+                    <button type="submit" id="submit_valider_infoPaiement_acheteur" name="submit_valider_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Valider</button>
+                </div>
+
+                <div class="col-1"></div>
+                
             </div>
-
-            <div class="col-6">
-                <input type="radio" name="carte_bancaire" id="carte_payement_cb" value="carte_payement_cb">
-                <img class="image_payment_inscription" src="../Image/carte_payement_cb.png" alt="carte_payement_cb">
-            </div>
-        </div>
-        <div class="row" style="margin-bottom:20px!important">
-            <div class="col-6">
-                <input type="radio" name="carte_bancaire" id="carte_payement_mastercard" value="carte_payement_mastercard">
-                <img class="image_payment_inscription" src="../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
-            </div>
-
-            <div class="col-6">
-                <input type="radio" name="carte_bancaire" id="carte_payement_visa" value="carte_payement_visa">
-                <img class="image_payment_inscription" src="../Image/carte_payement_visa.png" alt="carte_payement_visa">
-            </div>
-        </div>
-
-        <input id="numeroCarte_acheteur" name="numeroCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Numéro de carte">
-        <br>
-        <span id="numeroCarteErreur_acheteur"></span>
-        <br>
-        <input id="nomCarte_acheteur" name="nomCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom de carte">
-        <br>
-        <span id="nomCarteErreur_acheteur"></span>
-        <br>
-        <label style="color:#888888;">Date d'expiration</label>
-        <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="date" class="inscription_contenu_details_acheteur" placeholder="Date d'expiration">
-        <br>
-        <span id="dateExpirationErreur_acheteur"></span>
-        <br>
-        <input id="codeSecret_acheteur" name="codeSecret_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code secret">
-        <br>
-        <span id="codeSecretErreur_acheteur"></span>
-        <br>
-
+            
+        </form>
     </div>
-
+    
     <div class="col-1"></div>
 
     <div class="col-6">
