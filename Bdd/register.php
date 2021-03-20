@@ -14,9 +14,19 @@
 	    $adresse2_acheteur=$_POST['adresse2_acheteur'];
 	    $pays_acheteur=$_POST['pays_acheteur'];
 	    $ville_acheteur=$_POST['ville_acheteur'];
-	    $codepostal_acheteur=$_POST['codepostal_acheteur'];
+        // if($_POST['carte_bancaire'] == on){
 
-        $sql = "INSERT INTO inscription (nom,prenom) VALUES ('$nom_acheteur','$mdp_acheteur')";
+        // }
+	    // $carte_payement_amex=$_POST['carte_payement_amex'];
+	    // $carte_payement_cb=$_POST['carte_payement_cb'];
+	    // $carte_payement_mastercard=$_POST['carte_payement_mastercard'];
+	    // $carte_payement_visa=$_POST['carte_payement_visa'];
+	    $numeroCarte_acheteur=$_POST['numeroCarte_acheteur'];
+	    $nomCarte_acheteur=$_POST['nomCarte_acheteur'];
+	    $dateExpiration_acheteur=$_POST['dateExpiration_acheteur'];
+	    $codeSecret_acheteur=$_POST['codeSecret_acheteur'];
+
+        $sql = "INSERT INTO inscription (nom,prenom) VALUES ('$nom_acheteur','$carte_payement_amex')";
 
         if($con->query($sql)===true){
             echo("");

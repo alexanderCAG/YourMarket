@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../Front/connexion.php">
                             <img id="img_nav_user" src="../Image/user.png" alt="panier">
                         </a>
                     </li>
