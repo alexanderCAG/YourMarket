@@ -84,6 +84,11 @@ jQuery(document).ready(function(){
             paysErreur_acheteur.innerHTML="";
             villeErreur_acheteur.innerHTML="";
             codepostalErreur_acheteur.innerHTML="";
+            typeCarteErreur_acheteur.innerHTML="";
+            numeroCarteErreur_acheteur.innerHTML="";
+            nomCarteErreur_acheteur.innerHTML="";
+            dateExpirationErreur_acheteur.innerHTML="";
+            codeSecretErreur_acheteur.innerHTML="";
         }
 
         function reset_vendeur(){
@@ -118,6 +123,15 @@ jQuery(document).ready(function(){
             let pays_acheteur= document.getElementById('pays_acheteur');
             let ville_acheteur= document.getElementById('ville_acheteur');
             let codepostal_acheteur= document.getElementById('codepostal_acheteur');
+                            // payement
+            let carte_payement_amex= document.getElementById('carte_payement_amex');
+            let carte_payement_cb= document.getElementById('carte_payement_cb');
+            let carte_payement_mastercard= document.getElementById('carte_payement_mastercard');
+            let carte_payement_visa= document.getElementById('carte_payement_visa');
+            let numeroCarte_acheteur= document.getElementById('numeroCarte_acheteur');
+            let nomCarte_acheteur= document.getElementById('nomCarte_acheteur');
+            let dateExpiration_acheteur= document.getElementById('dateExpiration_acheteur');
+            let codeSecret_acheteur= document.getElementById('codeSecret_acheteur');
 
                     // span
             let nomErreur_acheteur= document.getElementById('nomErreur_acheteur');
@@ -131,6 +145,12 @@ jQuery(document).ready(function(){
             let paysErreur_acheteur= document.getElementById('paysErreur_acheteur');
             let villeErreur_acheteur= document.getElementById('villeErreur_acheteur');
             let codepostalErreur_acheteur= document.getElementById('codepostalErreur_acheteur');
+                            // payement
+            let typeCarteErreur_acheteur= document.getElementById('typeCarteErreur_acheteur');
+            let numeroCarteErreur_acheteur= document.getElementById('numeroCarteErreur_acheteur');
+            let nomCarteErreur_acheteur= document.getElementById('nomCarteErreur_acheteur');
+            let dateExpirationErreur_acheteur= document.getElementById('dateExpirationErreur_acheteur');
+            let codeSecretErreur_acheteur= document.getElementById('codeSecretErreur_acheteur');
 
                     // reset span
             nomErreur_acheteur.innerHTML="";
@@ -144,6 +164,11 @@ jQuery(document).ready(function(){
             paysErreur_acheteur.innerHTML="";
             villeErreur_acheteur.innerHTML="";
             codepostalErreur_acheteur.innerHTML="";
+            typeCarteErreur_acheteur.innerHTML="";
+            numeroCarteErreur_acheteur.innerHTML="";
+            nomCarteErreur_acheteur.innerHTML="";
+            dateExpirationErreur_acheteur.innerHTML="";
+            codeSecretErreur_acheteur.innerHTML="";
 
             var verification_inscription_acheteur=true;
 
@@ -323,6 +348,66 @@ jQuery(document).ready(function(){
                 verification_inscription_acheteur=false;
             }else{
                 codepostalErreur_acheteur.innerHTML = "";
+            }
+
+            // Choix carte verif
+            if(carte_payement_amex.checked==false && carte_payement_cb.checked==false
+            && carte_payement_mastercard.checked==false && carte_payement_visa.checked==false){
+                typeCarteErreur_acheteur.innerHTML="Choisissez une carte";
+                verification_inscription_acheteur=false;
+            }else{
+                typeCarteErreur_acheteur.innerHTML="";
+            }
+
+            // Numéro de carte verif
+            if(numeroCarte_acheteur.value.trim()==""){
+                numeroCarteErreur_acheteur.innerHTML="Compléter ce champs";
+                verification_inscription_acheteur=false;
+            }else if(regex_chiffre.test(numeroCarte_acheteur.value)==false){
+                numeroCarteErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+                verification_inscription_acheteur=false;
+            }else if(numeroCarte_acheteur.value.length >= 20){
+                numeroCarteErreur_acheteur.innerHTML = "Trop long";
+                verification_inscription_acheteur=false;
+            }else if(numeroCarte_acheteur.value.length < 5){
+                numeroCarteErreur_acheteur.innerHTML = "Trop court";
+                verification_inscription_acheteur=false;
+            }
+
+            // Nom de carte verif
+            if(nomCarte_acheteur.value.trim()==""){
+                nomCarteErreur_acheteur.innerHTML = "Compléter ce champs";
+                verification_inscription_acheteur=false;
+            }else if(regex_lettre.test(nomCarte_acheteur.value)==false){
+                nomCarteErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+                verification_inscription_acheteur=false;
+            }else if(nomCarte_acheteur.value.length >= 20){
+                nomCarteErreur_acheteur.innerHTML = "Trop long";
+                verification_inscription_acheteur=false;
+            }else{
+                nomCarteErreur_acheteur.innerHTML = "";
+            }
+
+            // Date d'expiration verif
+            if(dateExpiration_acheteur.value.trim()==""){
+                dateExpirationErreur_acheteur.innerHTML = "Compléter ce champs";
+                verification_inscription_acheteur=false;
+            }else{
+                dateExpirationErreur_acheteur.innerHTML="";
+            }
+
+            // Code secret verif
+            if(codeSecret_acheteur.value.trim()==""){
+                codeSecretErreur_acheteur.innerHTML = "Compléter ce champs";
+                verification_inscription_acheteur=false;
+            }else if(codeSecret_acheteur.value.length != 4){
+                codeSecretErreur_acheteur.innerHTML = "N'existe pas";
+                verification_inscription_acheteur=false;
+            }else if(regex_chiffre.test(codeSecret_acheteur.value)==false){
+                codeSecretErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+                verification_inscription_acheteur=false;
+            }else{
+                codeSecretErreur_acheteur.innerHTML="";
             }
 
             if(verification_inscription_acheteur == false){

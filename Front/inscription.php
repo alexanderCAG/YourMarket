@@ -206,11 +206,13 @@
                                 <br>
                                 <span id="numeroCarteErreur_acheteur"></span>
                                 <br>
+                                
                                 <input id="nomCarte_acheteur" name="nomCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom de carte">
                                 <br>
                                 <span id="nomCarteErreur_acheteur"></span>
                                 <br>
-                                <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Date d'expiration">
+                                <label style="color:#888888;">Date d'expiration</label>
+                                <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="date" class="inscription_contenu_details_acheteur" placeholder="Date d'expiration">
                                 <br>
                                 <span id="dateExpirationErreur_acheteur"></span>
                                 <br>
