@@ -161,7 +161,7 @@
                     <div class="col-1"></div>
 
                     <div class="col-5">
-                        <h3 class="infoPerso_detail_titre2 text-uppercase detail_style">information personnelles</h3>
+                        <h3 class="infoPerso_detail_titre2 text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
                         
                         <input id="infoPerso_nom_acheteur" name="infoPerso_nom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Nom">
                         <br>
@@ -189,8 +189,8 @@
                         <br>
                     </div>
 
-                    <div class="col-5" style="margin-left:50px!important;">
-                        <h3 class="infoPerso_detail_titre3 text-uppercase detail_style">information de livraison</h3>
+                    <div class="col-5" style="margin-left:50px!important;" >
+                        <h3 class="infoPerso_detail_titre3 text-uppercase detail_style" style="margin-bottom:50px!important">information de livraison</h3>
                         
                         <input id="infoPerso_adresse1_acheteur" name="infoPerso_adresse1_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Adresse 1">
                         <br>
