@@ -83,6 +83,7 @@
 <script type="text/javascript" src="http://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script>
 <!-- JS -->
 <script src="../Lien/yourmarket.js"></script>
+<script src="../Lien/yourmarket2.js"></script>
 
 </body>
 
