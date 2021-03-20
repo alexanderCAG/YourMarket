@@ -27,6 +27,7 @@ jQuery(document).ready(function(){
             INSCRIPTION
     *********************************/
         document.getElementById('typeCarte_acheteur').disabled=true;
+        document.getElementById('infoPerso_typeCarte_acheteur').disabled=true;
 
         /********************************
                 HIDE UNE DIV DEBUT
@@ -593,6 +594,7 @@ jQuery(document).ready(function(){
 *********************************/
     document.getElementById('submit_valider_infoPaiement_acheteur').addEventListener('click',infoPerso_paiement)
     function infoPerso_paiement(event){
+        // alert('ok');
             // input
         let infoPerso_carte_payement_amex= document.getElementById('infoPerso_carte_payement_amex');
         let infoPerso_carte_payement_cb= document.getElementById('infoPerso_carte_payement_cb');
@@ -617,8 +619,8 @@ jQuery(document).ready(function(){
         infoPerso_dateExpirationErreur_acheteur.innerHTML="";
         infoPerso_codeSecretErreur_acheteur.innerHTML="";
 
-        verif_infoPaiement_acheteur=true;
-
+        var verif_infoPaiement_acheteur=true;
+        // alert('ok test');
         // Choix carte verif
         if(infoPerso_carte_payement_amex.checked==false && infoPerso_carte_payement_cb.checked==false
         && infoPerso_carte_payement_mastercard.checked==false && infoPerso_carte_payement_visa.checked==false){
@@ -627,7 +629,7 @@ jQuery(document).ready(function(){
         }else{
             verif_infoPaiement_acheteur.innerHTML="";
         }
-
+        // alert('ok1');
         // Numéro de carte verif
         if(infoPerso_numeroCarte_acheteur.value.trim()==""){
             infoPerso_numeroCarteErreur_acheteur.innerHTML="Compléter ce champs";
@@ -644,7 +646,7 @@ jQuery(document).ready(function(){
         }else{
             infoPerso_numeroCarteErreur_acheteur.innerHTML = "";
         }
-
+        // alert('ok2');
         // Nom de carte verif
         if(infoPerso_nomCarte_acheteur.value.trim()==""){
             infoPerso_nomCarteErreur_acheteur.innerHTML = "Compléter ce champs";
@@ -680,10 +682,11 @@ jQuery(document).ready(function(){
         }else{
             infoPerso_codeSecretErreur_acheteur.innerHTML="";
         }
-
+        // alert('ok3');
         if(verif_infoPaiement_acheteur == false){
             event.preventDefault();
         }
+        // alert('ok4');
     }
 
 /********************************

@@ -4,6 +4,7 @@
     
     if (isset($_POST['submit_valider_infoPaiement_acheteur'])){
         session_start();
+		echo("<br>alex<br><br>alex<br><br>alex<br><br>alex<br><br>alex<br><br>alex<br>");
 	    // $nom_acheteur=$_POST['nom_acheteur'];
 	    // $prenom_acheteur=$_POST['prenom_acheteur'];
 	    // $telephone_acheteur=$_POST['telephone_acheteur'];
