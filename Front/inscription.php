@@ -171,25 +171,25 @@
 
                                 <div class="row">
                                     <div class="col-6">
-                                        <input type="radio" name="carte_bancaire" id="carte_payement_amex">
-                                        <img class="image_payment_inscription" src="../Image/carte_payement_amex.png" alt="carte_payement_amex" name="carte_payement_amex">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_amex" value="carte_payement_amex">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_amex.png" alt="carte_payement_amex">
                                     </div>
 
                                     <div class="col-6">
-                                        <input type="radio" name="carte_bancaire" id="carte_payement_cb">
-                                        <img class="image_payment_inscription" src="../Image/carte_payement_cb.png" alt="carte_payement_cb" name="carte_payement_cb">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_cb" value="carte_payement_cb">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_cb.png" alt="carte_payement_cb">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-6">
-                                        <input type="radio" name="carte_bancaire" id="carte_payement_mastercard">
-                                        <img class="image_payment_inscription" src="../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard" name="carte_payement_mastercard">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_mastercard" value="carte_payement_mastercard">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
                                     </div>
 
                                     <div class="col-6">
-                                        <input type="radio" name="carte_bancaire" id="carte_payement_visa">
-                                        <img class="image_payment_inscription" src="../Image/carte_payement_visa.png" alt="carte_payement_visa" name="carte_payement_visa">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_visa" value="carte_payement_visa">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_visa.png" alt="carte_payement_visa">
                                     </div>
                                 </div>
 
