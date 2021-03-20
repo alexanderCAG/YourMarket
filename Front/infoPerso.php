@@ -80,7 +80,7 @@
 
     <div class="col-3 infoPerso_paiement">
 
-        <form action="../Bdd/paiement.php" method="POST">
+        <form action="../Bdd/infoPerso_paiement.php" method="POST">
             <div>
                 <h3 class="infoPerso_detail_titre1 text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
 
@@ -157,6 +157,13 @@
     <div class="col-1"></div>
 
 </div>
+
+<script>
+    function test(){
+        alert('ok');
+    }
+    window.onload=test();
+</script>
 
 <?php
     include("footer.php");
