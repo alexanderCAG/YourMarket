@@ -1086,17 +1086,3 @@
     font-size: 25px;
     text-decoration: none;
 }
-
-
-/* test  */
-.scroll-bg{
-    width: 400px;
-    height: 300px;
-    margin: 10% auto;
-}
-.scroll-div{
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
