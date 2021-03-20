@@ -35,7 +35,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
                             <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">PULL</a></li>
+                            <li><a class="dropdown-item" href="#">SWEATER</a></li>
                             <li><a class="dropdown-item" href="#">CAP</a></li>
                             <li><a class="dropdown-item" href="#">MEN</a></li>
                             <li><a class="dropdown-item" href="#">WOMMEN</a></li>
@@ -43,10 +43,10 @@
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="../Front/enchere.php">Enchère</a>
+                        <a class="nav-link" href="../Front/enchere.php">Bidding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panier
+                        <a class="nav-link" href="#">Basket
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../Image/panier.png" alt="panier"> <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
@@ -78,7 +78,7 @@
                     </div>
                     <div class="toast_text">
                         <p class="toast_text_titre">Success</p>
-                        <p class="toast_text_message">Inscription valider</p>
+                        <p class="toast_text_message">Registration validated</p>
                     </div>
                 </div>
             </div>
@@ -87,13 +87,13 @@
 
     <div class="confirm_register_div position-absolute top-50 start-50 translate-middle shadow">
         <div class="confirm_register_titre position-absolute top-0 start-50 translate-middle-x">
-            <h2 class="text-uppercase texte_style centrer">BIENVENUE</h2>
+            <h2 class="text-uppercase texte_style centrer">WELCOME</h2>
         </div>
         
         <div class="confirm_register_contenu position-absolute bottom-0 start-0">
             <div class="confirm_register_contenu2 position-absolute top-50 start-50 translate-middle">
                 <p class="text-uppercase msg_confirm_register">
-                    Vous êtes maintenant inscrit
+                    You are now registered
                 </p>
                 <br><br>
                 <a href="../Front/connexion.php" class="confirm_register_to_connexion">Sign up</a>

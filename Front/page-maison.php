@@ -20,7 +20,7 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison
+                            Home decoration
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">sheets</a></li>
@@ -32,12 +32,12 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
+                            Clothing
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
                             <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">PULL</a></li>
+                            <li><a class="dropdown-item" href="#">SWEATER</a></li>
                             <li><a class="dropdown-item" href="#">CAP</a></li>
                             <li><a class="dropdown-item" href="#">MEN</a></li>
                             <li><a class="dropdown-item" href="#">WOMMEN</a></li>
@@ -45,10 +45,10 @@
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
+                        <a class="nav-link" href="enchere.php">Bidding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panier
+                        <a class="nav-link" href="#">Basket
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../Image/panier.png" alt="panier"> <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
@@ -71,7 +71,7 @@
     <img class="image_vetement_general position-relative" src="../Image/maison-general.png" alt="vetement-general">
     <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
         <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../Image/icon_sale.png" alt="icon_sale">
-        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">maison</p> 
+        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">home</p> 
     </div>
     <div class="class_separation"></div>
 </div>
@@ -100,8 +100,8 @@
 
                 <div class="maison_liste_details mt-2 position-relative">
                     <div class="maison_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
+                        <div class="detail_style_titre detail_style">ARTICLE TITLE</div> 
+                        <div class="detail_style_marque detail_style">Item brand</div> 
                     </div>
                     <div class="maison_liste_details_droite">
                         <p class="detail_style_prix texte_style">20€</p>
@@ -118,8 +118,8 @@
 
                 <div class="maison_liste_details mt-2 position-relative">
                     <div class="maison_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
+                        <div class="detail_style_titre detail_style">ARTICLE TITLE</div> 
+                        <div class="detail_style_marque detail_style">Item brand</div> 
                     </div>
                     <div class="maison_liste_details_droite">
                         <p class="detail_style_prix texte_style">20€</p>
@@ -145,8 +145,8 @@
 
                 <div class="maison_liste_details mt-2 position-relative">
                     <div class="maison_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
+                        <div class="detail_style_titre detail_style">ARTICLE TITLE</div> 
+                        <div class="detail_style_marque detail_style">Item brand</div> 
                     </div>
                     <div class="maison_liste_details_droite">
                         <p class="detail_style_prix texte_style">20€</p>
@@ -163,8 +163,8 @@
 
                 <div class="maison_liste_details mt-2 position-relative">
                     <div class="maison_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
+                        <div class="detail_style_titre detail_style">ARTICLE TITLE</div> 
+                        <div class="detail_style_marque detail_style">Item brand</div> 
                     </div>
                     <div class="maison_liste_details_droite">
                         <p class="detail_style_prix texte_style">20€</p>

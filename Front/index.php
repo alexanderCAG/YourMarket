@@ -19,7 +19,7 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison
+                            House decoration
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="base.php">sheets</a></li>
@@ -31,7 +31,7 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
+                            Clothing
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="recupImage.php">T-SHIRT</a></li>
@@ -44,10 +44,10 @@
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
+                        <a class="nav-link" href="enchere.php">Bidding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panier
+                        <a class="nav-link" href="#">Basket
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../Image/panier.png" alt="panier">
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
@@ -208,13 +208,13 @@
             <img class="img_carousel position-relative" src="../Image/acceuil_achat.jpg" class="d-block w-100"
                 alt="acceuil_achat">
             <div class="bg-secondary">
-                <div class="div_deco">ACHETER MAINTENANT</div>
+                <div class="div_deco">BUY NOW</div>
             </div>
             <div class="row w-100 carousel-caption" style="top: 200px">
                 <div class="col-md-5"></div>
                 <div class="col-md-7">
                     <div class="carouseul_info">
-                        <h5 class="text_carousel texte_style">ACHAT DIRECT</h5>
+                        <h5 class="text_carousel texte_style">DIRECT BUY</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../Image/panier.png" alt="panier">
                             <p style="font-weight: bold;">SHOPPING</p>
@@ -228,7 +228,7 @@
             <div class="row w-100 carousel-caption" style="top: 320px">
                 <div class="col-md-10">
                     <div class="carouseul_info">
-                        <h5 class="text_carousel">ENCHERE</h5>
+                        <h5 class="text_carousel">BIDDING</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../Image/panier.png" alt="panier">
                             <p style="font-weight: bold;">SHOPPING</p>
@@ -255,11 +255,11 @@
 
     <div class="col-md-4 col-lg-4">
         <br><br><br>
-        <h2 class="centrer texte_style mt-4">VETEMENT</h2><br><br>
+        <h2 class="centrer texte_style mt-4">CLOTHING</h2><br><br>
         <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
             aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
             quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
-        <button class="btn_presentation">DECOUVRIR</button>
+        <button class="btn_presentation">DISCOVER</button>
     </div>
 
     <div class="col-md-1 col-lg-1"></div>
@@ -268,13 +268,13 @@
         <div class="position-relative">
             <img class="image_presentation_nouveau" id="image_premier_presentation" src="../Image/t-shirt_homme.png"
             alt="t-shirt_homme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NEW</p>
+            <button class="texte_style presentation_nouveau_ajout position-absolute">ADD</button>
         </div>
         
         <div class="information_presentation_premier">
             <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_categorie">CATEGORY</div>
             <div class="information_presentation_nom">T-shirt</div>
         </div>
     </div>
@@ -284,13 +284,13 @@
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
             <img class="image_presentation_nouveau" src="../Image/t-shirt_femme.png" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NEW</p> 
+            <button class="texte_style presentation_nouveau_ajout position-absolute">ADD</button>
         </div>
         
         <div class="information_presentation_deuxieme">
             <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_categorie">CATEGORy</div>
             <div class="information_presentation_nom">T-shirt</div>
         </div>
     </div>
@@ -302,13 +302,13 @@
         <div class="position-relative">
             <img class="image_presentation_nouveau" id="image_premier_presentation" src="../Image/t-shirt_homme.png"
             alt="t-shirt_homme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NEW</p>
+            <button class="texte_style presentation_nouveau_ajout position-absolute">ADD</button>
         </div>
         
         <div class="information_presentation_premier">
             <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_categorie">CATEGORY</div>
             <div class="information_presentation_nom">T-shirt</div>
         </div>
     </div>
@@ -318,13 +318,13 @@
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
             <img class="image_presentation_nouveau" src="../Image/t-shirt_femme.png" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NEW</p> 
+            <button class="texte_style presentation_nouveau_ajout position-absolute">ADD</button>
         </div>
         
         <div class="information_presentation_deuxieme">
             <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
+            <div class="information_presentation_categorie">CATEGORY</div>
             <div class="information_presentation_nom">T-shirt</div>
         </div>
     </div>
@@ -333,7 +333,7 @@
 
     <div class="col-md-4 texte_presentation_div">
         <br><br><br>
-        <h2 class="centrer texte_style mt-4">MAISON</h2><br><br>
+        <h2 class="centrer texte_style mt-4">HOME DECORATION</h2><br><br>
         <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
             aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
             quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
@@ -343,7 +343,7 @@
 
 <div class="presentation_marque mt-5 position-relative">
     <div class="container">
-        <h2 class="centrer texte_style pt-4 pb-4 text-uppercase">Nos Produits</h2>
+        <h2 class="centrer texte_style pt-4 pb-4 text-uppercase">Our products</h2>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <div class="col">
                 <div class="p-3">
@@ -405,7 +405,7 @@
 </div>
 
 <div class="information_connection pt-4 position-relative">
-    <h2 class="centrer white texte_style">SE CONNECTER</h2><br><br>
+    <h2 class="centrer white texte_style">LOG IN</h2><br><br>
     <p class="white info_connection_texte position-absolute top-50 start-50 translate-middle">Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Necessitatibus, dolores magni! A labore incidunt magnam doloribus,
         dolorum repudiandae consequatur corporis aut ex harum officia suscipit rem vero maxime, molestias quisquam.
@@ -418,14 +418,14 @@
             <div class="col shadow-sm">
                 <a href="#" style="text-decoration: none; color: black;">
                     <div class="info_connection_class texte_style centrer p-3 border">
-                        VENDEUR ?
+                        SELLER ?
                     </div>
                 </a>
             </div>
             <div class="col shadow-sm">
                 <a href="#" style="text-decoration: none; color: black;">
                     <div class="info_connection_class texte_style centrer p-3 border">
-                        ACHETEUR ?
+                        BUYER ?
                     </div>
                 </a>
             </div>

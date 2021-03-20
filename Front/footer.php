@@ -1,7 +1,7 @@
 
 <div class="suivez_reseaux pt-3 pb-3">
     <div class="text-uppercase centrer texte_style">
-        Suivez nous sur
+        Follow us on
         <a href="#" style="text-decoration: none;">
             <img class="image_reseau" src="../Image/instragram.png" alt="instragram">
         </a>
@@ -17,7 +17,7 @@
 <div class="footer">
     <div class="mon_footer1 row p-4">
         <div class="white centrer mt-4 col-md-4">
-            <h4 class="texte_style">VETEMENT</h4>
+            <h4 class="texte_style">CLOTHING</h4>
             <p>BlaBlaBla</p>
             <p>BlaBlaBla</p>
             <p>BlaBlaBla</p>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="white centrer mt-4 col-md-4">
-            <h4 class="texte_style">MAISON</h4>
+            <h4 class="texte_style">HOME DECORATION</h4>
             <p>BlaBlaBla</p>
             <p>BlaBlaBla</p>
             <p>BlaBlaBla</p>
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="monfotter2 centrer bg-light p-2">
-        @ 2121 Tous droits réservés | &copy; politique de confidentialité | conditions générales de vente 
+        @ 2121 All rights reserved | &copy; privacy policy | terms of Sales 
     </div>
 </div>
 

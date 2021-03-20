@@ -18,7 +18,7 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison
+                            Home decoration
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">sheets</a></li>
@@ -30,12 +30,12 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
+                            Clothing
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
                             <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">PULL</a></li>
+                            <li><a class="dropdown-item" href="#">SWEATER</a></li>
                             <li><a class="dropdown-item" href="#">CAP</a></li>
                             <li><a class="dropdown-item" href="#">MEN</a></li>
                             <li><a class="dropdown-item" href="#">WOMMEN</a></li>
@@ -43,10 +43,10 @@
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="#">Enchère</a>
+                        <a class="nav-link" href="#">Bidding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panier
+                        <a class="nav-link" href="#">Basket
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../Image/panier.png" alt="panier"> <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
@@ -68,10 +68,10 @@
 <div class="genale_page_enchere position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_enchere text-uppercase">
-            enchères
+            biddings
         </p>
         <p class="info_general_enchere centrer detail_style">
-            15 enchères en cours
+            15 auctions in progress
         </p>
     </div>
     
@@ -89,8 +89,8 @@
             </div>
 
             <div class="col-6 enchere_liste_details position-relative">
-                <div class="enchere_info_titre texte_style text-uppercase">titre produit</div>
-                <div class="enchere_info_marque detail_style text-uppercase">marque</div>
+                <div class="enchere_info_titre texte_style text-uppercase">product title</div>
+                <div class="enchere_info_marque detail_style text-uppercase">brand</div>
                 <br>
                 <div class="enchere_info_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique sequi, beatae voluptatum consectetur quidem consequatur. Quisquam similique minima dolorum ad, vel tempora vero optio corrupti perspiciatis veritatis iure explicabo.</div>
                 <img class="img_enchere_separation_info" src="../Image/enchere_separation_info.png" alt="enchere_separation_info">
@@ -112,9 +112,9 @@
     </div>
 
     <div class="col-3 enchere_liste_payer centrer position-relative">
-        <div class="enchere_payer_titre texte_style text-uppercase mt-4">faire une offre</div>
+        <div class="enchere_payer_titre texte_style text-uppercase mt-4">make an offer</div>
         <input class="enchere_propose_prix centrer" placeholder="Proposition (€)">
-        <button class="btn_envoyer_propose_prix text-uppercase">Envoyer</button>
+        <button class="btn_envoyer_propose_prix text-uppercase">Send</button>
         <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
     </div>
 
