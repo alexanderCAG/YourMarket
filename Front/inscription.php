@@ -152,18 +152,81 @@
                         <input id="codepostal_acheteur" name="codepostal_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code Postal">
                         <br>
                         <span id="codepostalErreur_acheteur"></span>
-                        <br>
-                        <input id="check_condition_inscription_acheteur" class="condition_inscription" type="checkbox">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accepter les condition d'inscription</a>
-                        <br>
-                        <a class="retour_login_inscription" href="connexion.php">Login</a>
-                        <button type="button" onclick="reset_acheteur()" class="btn_reset_inscription_acheteur text-uppercase detail_style">Reset</button>
+                        
                     </div>
 
                     <div class="col-1"></div>
 
+                    <div class="col-12" style="margin-top:30px!important;">
+                        <h3 class="inscription_detail_titre3 text-uppercase detail_style centrer">Information de paiement</h3>
+
+                        <div class="row">
+                            <div class="col-1"></div>
+
+                            <div class="col-5" style="margin-top:10px!important;">
+                                <input id="typeCarte_acheteur" name="typeCarte_acheteur" type="text" class="inscription_contenu_details_acheteur centrer" placeholder="Type de carte">
+                                <br>
+                                <span id="typeCarteErreur_acheteur"></span>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_amex">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_amex.png" alt="carte_payement_amex">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_cb">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_cb.png" alt="carte_payement_cb">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_mastercard">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_visa">
+                                        <img class="image_payment_inscription" src="../Image/carte_payement_visa.png" alt="carte_payement_visa">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <input id="check_condition_inscription_acheteur" class="condition_inscription" type="checkbox">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accepter les condition d'inscription</a>
+                                <br>
+                                <a class="retour_login_inscription" href="connexion.php">Login</a>
+                                <button type="button" onclick="reset_acheteur()" class="btn_reset_inscription_acheteur text-uppercase detail_style">Reset</button>
+                            </div>
+
+                            <div class="col-5" style="margin-left:50px!important; margin-top:10px!important;">
+                                <input id="numeroCarte_acheteur" name="numeroCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Numéro de carte">
+                                <br>
+                                <span id="numeroCarteErreur_acheteur"></span>
+                                <br>
+                                <input id="nomCarte_acheteur" name="nomCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom de carte">
+                                <br>
+                                <span id="nomCarteErreur_acheteur"></span>
+                                <br>
+                                <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Date d'expiration">
+                                <br>
+                                <span id="dateExpirationErreur_acheteur"></span>
+                                <br>
+                                <input id="codeSecret_acheteur" name="codeSecret_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code secret">
+                                <br>
+                                <span id="codeSecretErreur_acheteur"></span>
+                                <br>
+                            </div>
+
+                            <div class="col-1"></div>
+                        </div>
+
+                    </div>
+
                     <div class="col-12">
-                        <button type="submit" id="submit_inscription_acheteur" name="submit_inscription_acheteur" class="btn text-light btn_inscription_final_acheteur text-uppercase detail_style position-absolute bottom-0 start-0">S'inscrire</button>
+                        <button type="submit" id="submit_inscription_acheteur" name="submit_inscription_acheteur" class="btn text-light btn_inscription_final_acheteur text-uppercase detail_style">S'inscrire</button>
                     </div>
                 </div>
             </form>

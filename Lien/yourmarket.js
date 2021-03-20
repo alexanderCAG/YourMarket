@@ -26,6 +26,7 @@ jQuery(document).ready(function(){
     /********************************
             INSCRIPTION
     *********************************/
+        document.getElementById('typeCarte_acheteur').disabled=true;
 
         /********************************
                 HIDE UNE DIV DEBUT
@@ -68,6 +69,10 @@ jQuery(document).ready(function(){
         *********************************/
         function reset_acheteur(){
             $(".inscription_contenu_details_acheteur").val("");
+            document.getElementById('carte_payement_amex').checked=false;
+            document.getElementById('carte_payement_cb').checked=false;
+            document.getElementById('carte_payement_mastercard').checked=false;
+            document.getElementById('carte_payement_visa').checked=false;
             nomErreur_acheteur.innerHTML="";
             prenomErreur_acheteur.innerHTML="";
             telephoneErreur_acheteur.innerHTML="";

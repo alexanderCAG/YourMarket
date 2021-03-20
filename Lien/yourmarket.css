@@ -849,9 +849,10 @@
             height: 550px;
         }
         .inscription_detail_titre1,
-        .inscription_detail_titre2{
+        .inscription_detail_titre2,
+        .inscription_detail_titre3{
             font-size: 20px;
-            margin-top: 10px;
+            margin-top: 20px;
             font-weight: bold;
             color: #14003f;
         }
@@ -872,6 +873,17 @@
             width: 15px;
             height: 15px;
             margin-top: 10px;
+        }
+        .inscription_contenu_acheteur{
+            margin-left: 0px!important;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        .image_payment_inscription{
+            width: 70px;
+            height: 50px;
         }
                 /********************************
                     CHOIX-IMAGE-VENDEUR
@@ -928,9 +940,10 @@
         }
         .btn_inscription_final_vendeur,
         .btn_inscription_final_acheteur{
-            width: 770px!important;
+            width: 720px!important;
             height: 40px!important;
-            margin-left: 15px!important;
+            margin-top: 20px!important;
+            margin-left: 25px!important;
             margin-bottom: 25px!important;
             background-color: #3b5998!important;
         }
@@ -1075,11 +1088,15 @@
 }
 
 
-/* test lecture photo dans base.php */
-#img_test{
-    background-image: url("");
-    width: 250px;
-    height: 250px;
-    border: solid 2px black;
-    border-radius: 50%;
+/* test  */
+.scroll-bg{
+    width: 400px;
+    height: 300px;
+    margin: 10% auto;
+}
+.scroll-div{
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
