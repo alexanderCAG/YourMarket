@@ -158,12 +158,12 @@
 
 </div>
 
-<script>
+<!-- <script>
     function test(){
         alert('ok');
     }
     window.onload=test();
-</script>
+</script> -->
 
 <?php
     include("footer.php");
