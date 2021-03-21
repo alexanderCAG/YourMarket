@@ -241,60 +241,68 @@
 <!-- <div class="contenu_general_infoPerso_vendeur row">
     <div class="col-2"></div>
 
-    <div class="col-8">
+    <div class="col-8 infoPerso_vendeur">
+
         <form action="../Bdd/infoPerso_paiement.php" method="POST" enctype="multipart/form-data">
             <div class="row inscription_contenu_vendeur">
                 <div class="col-1"></div>
 
                 <div class="col-5">
-                    <h3 class="inscription_detail_titre1 text-uppercase detail_style">information générale</h3>
+                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style">information générale</h3>
                     
-                    <input id="nomMarque_vendeur" name="nomMarque_vendeur" class="inscription_contenu_details_vendeur" placeholder="Nom de la marque">
+                    <input id="infoPerso_nomMarque_vendeur" name="infoPerso_nomMarque_vendeur" class="infoPerso_contenu_details_vendeur" placeholder="Nom de la marque">
                     <br>
-                    <span id="nomMarqueErreur_vendeur"></span>
+                    <span id="infoPerso_nomMarqueErreur_vendeur"></span>
                     <br>
-                    <input id="telephone_vendeur" name="telephone_vendeur" class="inscription_contenu_details_vendeur" placeholder="Téléphone">
+                    <input id="infoPerso_telephone_vendeur" name="infoPerso_telephone_vendeur" class="infoPerso_contenu_details_vendeur" placeholder="Téléphone">
                     <br>
-                    <span id="telephoneErreur_vendeur"></span>
+                    <span id="infoPerso_telephoneErreur_vendeur"></span>
                     <br>
-                    <input id="mail_vendeur" name="mail_vendeur" class="inscription_contenu_details_vendeur" placeholder="Email">
+                    <input id="infoPerso_mail_vendeur" name="infoPerso_mail_vendeur" class="infoPerso_contenu_details_vendeur" placeholder="Email">
                     <br>
-                    <span id="mailErreur_vendeur"></span>
+                    <span id="infoPerso_mailErreur_vendeur"></span>
                     <br>
-                    <input id="mdp_vendeur" name="mdp_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Mot de passe">
+                    <input id="infoPerso_mdp_vendeur" name="infoPerso_mdp_vendeur" type="password" class="infoPerso_contenu_details_vendeur" placeholder="Mot de passe">
                     <br>
-                    <span id="mdpErreur_vendeur"></span>
+                    <span id="infoPerso_mdpErreur_vendeur"></span>
                     <br>
-                    <input id="mdp2_vendeur" name="mdp2_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Confirmation mot de passe">
+                    <input id="infoPerso_mdp2_vendeur" name="infoPerso_mdp2_vendeur" type="password" class="infoPerso_contenu_details_vendeur" placeholder="Confirmation mot de passe">
                     <br>
-                    <span id="mdp2Erreur_vendeur"></span>
+                    <span id="infoPerso_mdp2Erreur_vendeur"></span>
                     <br>
-                    <a class="retour_login_inscription" href="connexion.php">Login</a>
-                    <button type="button" onclick="reset_vendeur()" class="btn_reset_inscription_vendeur text-uppercase detail_style">Reset</button>
                 </div>
 
                 <div class="col-5" style="margin-left:50px!important;">
-                    <img id="img_inscription_choix_vendeur">
-                    <div class="img_inscription_general">
-                        <span class="file_inscription_img">
-                            <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
-                                Browse <input type="file" id="file_interrieur_inscription_img">
+                    <img id="infoPerso_img_inscription_choix_vendeur">
+                    <div class="infoPerso_img_inscription_general">
+                        <span class="infoPerso_file_inscription_img">
+                            <span onclick="choix_image_vendeur()" class="btn btn-default infoPerso_btn_choix_img_vendeur_inscription">
+                                Browse <input type="file" id="infoPerso_file_interrieur_inscription_img">
                             </span>
                         </span>
                         <input type="text" name="img" class="form-control" readonly>
                     </div>
                     <br><br>
-                    <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accepter les condition d'inscription</a>
                 </div>
 
                 <div class="col-1"></div>
 
-                <div class="col-12">
-                    <button type="submit" id="submit_inscription_vendeur" name="submit_inscription_vendeur" class="btn text-light btn_inscription_final_vendeur text-uppercase detail_style position-absolute bottom-0 start-0">S'inscrire</button>
+            </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+
+                <div class="col-10">
+                    <button onclick="modif_infoPersoVendeur()" type="button" id="modif_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Modifier</button>
+                    <button onclick="annulModif_infoPersoVendeur()" type="button" id="annulModif_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="reset_infoPersoVendeur()" type="button" id="reset_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Reset</button>
+                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
                 </div>
+
+                <div class="col-1"></div>
             </div>
         </form>
+
     </div>
 
     <div class="col-2"></div>

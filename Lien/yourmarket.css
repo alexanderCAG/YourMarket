@@ -1107,10 +1107,12 @@
             INFORMATION-PERSO-CONTENU
         *********************************/
         .contenu_general_infoPerso_admin,
+        .contenu_general_infoPerso_vendeur,
         .contenu_general_infoPerso_acheteur{
             margin-top: 100px!important;
         }
         .contenu_general_infoPerso_admin span,
+        .contenu_general_infoPerso_vendeur span,
         .contenu_general_infoPerso_acheteur span{
             font-size: 12px;
             color: red;
@@ -1185,6 +1187,72 @@
                     background-color: white!important;
                 }
             /********************************
+                        VENDEUR
+            *********************************/
+            .infoPerso_detail_titre1_vendeur{
+                font-size: 20px;
+                margin-top: 20px;
+                font-weight: bold;
+                color: #14003f;
+            }
+            .infoPerso_vendeur{
+                background-color: #d9d9d9;
+            }
+            .infoPerso_contenu_details_vendeur{
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-bottom: solid 2px black;
+                background-color: #d9d9d9;
+            }
+                    /********************************
+                            VENDEUR-IMAGE
+                    *********************************/
+                    #infoPerso_img_inscription_choix_vendeur{
+                        background-image: url("../Image/chaussure.png");
+                        width: 250px;
+                        height: 250px;
+                        border: solid 2px black;
+                        border-radius: 50%;
+                        margin-top: 30px;
+                    }
+                    .infoPerso_img_inscription_general{
+                        margin-top: 10px;
+                    }
+                    .infoPerso_btn_choix_img_vendeur_inscription{
+                        position: relative;
+                        overflow: hidden;
+                        color: black!important;
+                        font-size: 15px!important;
+                        font-weight: bold!important;
+                    }
+                    .infoPerso_btn_choix_img_vendeur_inscription:hover{
+                        color: #246acf!important;
+                        font-weight: bold;
+                    }
+                    #infoPerso_file_interrieur_inscription_img{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 100px;
+                        text-align: right;
+                        opacity: 0;
+                        background: white;
+                        cursor: pointer;
+                    }
+            .btn_infoPerso_final_vendeur{
+                width: 48%!important;
+                height: 65px!important;
+                border: solid 2px black!important;
+                background-color: #d9d9d9!important;
+                margin-bottom: 20px!important;
+                margin-top: 30px!important;
+                border-radius: 20px!important;
+            }
+            .btn_infoPerso_final_vendeur:hover{
+                background-color: white!important;
+            }
+            /********************************
                         ADMIN
             *********************************/
             .infoPerso_detail_titre1_admin,
@@ -1213,4 +1281,3 @@
             .btn_infoPerso_final_admin:hover{
                 background-color: white!important;
             }
-            
