@@ -75,14 +75,15 @@
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-<div class="contenu_general_infoPerso_acheteur row">
+<!-- Acheteur -->
+<!-- <div class="contenu_general_infoPerso_acheteur row">
     <div class="col-1"></div>
 
     <div class="col-3 infoPerso_paiement">
 
         <form action="../Bdd/infoPerso_paiement.php" method="POST">
             <div>
-                <h3 class="infoPerso_detail_titre1 text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
+                <h3 class="infoPerso_detail_titre1_acheteur text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
 
                 <div class="row">
 
@@ -138,7 +139,7 @@
                         <button onclick="modif_infoPerso_paiement()" type="button" id="modif_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Modifier</button>
                         <button onclick="annulModif_infoPerso_paiement()" type="button" id="annulModif_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Annuler Modif</button>
                         <button onclick="reset_infoPerso_paiement()" type="button" id="reset_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Reset</button>
-                        <button type="button" id="submit_valider_infoPaiement_acheteur" name="submit_valider_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Valider</button>
+                        <button type="submit" id="submit_valider_infoPaiement_acheteur" name="submit_valider_infoPaiement_acheteur" class="btn_infoPaiement_final_acheteur text-uppercase detail_style">Valider</button>
                     </div>
 
                     <div class="col-1"></div>
@@ -157,78 +158,76 @@
 
         <form action="../Bdd/infoPerso_paiement.php" method="POST">
             <div class="row">
-                <div class="row">
-                    <div class="col-1"></div>
+                <div class="col-1"></div>
 
-                    <div class="col-5">
-                        <h3 class="infoPerso_detail_titre2 text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
-                        
-                        <input id="infoPerso_nom_acheteur" name="infoPerso_nom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Nom">
-                        <br>
-                        <span id="infoPerso_nomErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_prenom_acheteur" name="infoPerso_prenom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Prénom">
-                        <br>
-                        <span id="infoPerso_prenomErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_telephone_acheteur" name="infoPerso_telephone_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Téléphone">
-                        <br>
-                        <span id="infoPerso_telephoneErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_mail_acheteur" name="infoPerso_mail_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Email">
-                        <br>
-                        <span id="infoPerso_mailErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_mdp_acheteur" name="infoPerso_mdp_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Mot de passe">
-                        <br>
-                        <span id="infoPerso_mdpErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_mdp2_acheteur" name="infoPerso_mdp2_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Confirmation mot de passe">
-                        <br>
-                        <span id="infoPerso_mdp2Erreur_acheteur"></span>
-                        <br>
-                    </div>
-
-                    <div class="col-5" style="margin-left:50px!important;" >
-                        <h3 class="infoPerso_detail_titre3 text-uppercase detail_style" style="margin-bottom:50px!important">information de livraison</h3>
-                        
-                        <input id="infoPerso_adresse1_acheteur" name="infoPerso_adresse1_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Adresse 1">
-                        <br>
-                        <span id="infoPerso_adresse1Erreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_adresse2_acheteur" name="infoPerso_adresse2_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Adresse 2">
-                        <br>
-                        <span id="infoPerso_adresse2Erreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_pays_acheteur" name="infoPerso_pays_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Pays">
-                        <br>
-                        <span id="infoPerso_paysErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_ville_acheteur" name="infoPerso_ville_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Ville">
-                        <br>
-                        <span id="infoPerso_villeErreur_acheteur"></span>
-                        <br>
-                        <input id="infoPerso_codepostal_acheteur" name="infoPerso_codepostal_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Code Postal">
-                        <br>
-                        <span id="infoPerso_codepostalErreur_acheteur"></span>
-                        <br>
-                    </div>
-
-                    <div class="col-1"></div>
+                <div class="col-5">
+                    <h3 class="infoPerso_detail_titre2_acheteur text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
+                    
+                    <input id="infoPerso_nom_acheteur" name="infoPerso_nom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Nom">
+                    <br>
+                    <span id="infoPerso_nomErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_prenom_acheteur" name="infoPerso_prenom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Prénom">
+                    <br>
+                    <span id="infoPerso_prenomErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_telephone_acheteur" name="infoPerso_telephone_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Téléphone">
+                    <br>
+                    <span id="infoPerso_telephoneErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_mail_acheteur" name="infoPerso_mail_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Email">
+                    <br>
+                    <span id="infoPerso_mailErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_mdp_acheteur" name="infoPerso_mdp_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Mot de passe">
+                    <br>
+                    <span id="infoPerso_mdpErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_mdp2_acheteur" name="infoPerso_mdp2_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Confirmation mot de passe">
+                    <br>
+                    <span id="infoPerso_mdp2Erreur_acheteur"></span>
+                    <br>
                 </div>
-                
-                <div class="row">
-                    <div class="col-1"></div>
 
-                    <div class="col-10" style="margin-top:50px!important">
-                        <button onclick="modif_infoPersoL_paiement()" type="button" id="modif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Modifier</button>
-                        <button onclick="annulModif_infoPersoL_paiement()" type="button" id="annulModif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Annuler Modif</button>
-                        <button onclick="reset_infoPersoL_paiement()" type="button" id="reset_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Reset</button>
-                        <button type="button" id="submit_valider_infoPersoL_acheteur" name="submit_valider_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Valider</button>
-                    </div>
-
-                    <div class="col-1"></div>
+                <div class="col-5" style="margin-left:50px!important;" >
+                    <h3 class="infoPerso_detail_titre3_acheteur text-uppercase detail_style" style="margin-bottom:50px!important">information de livraison</h3>
+                    
+                    <input id="infoPerso_adresse1_acheteur" name="infoPerso_adresse1_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Adresse 1">
+                    <br>
+                    <span id="infoPerso_adresse1Erreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_adresse2_acheteur" name="infoPerso_adresse2_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Adresse 2">
+                    <br>
+                    <span id="infoPerso_adresse2Erreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_pays_acheteur" name="infoPerso_pays_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Pays">
+                    <br>
+                    <span id="infoPerso_paysErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_ville_acheteur" name="infoPerso_ville_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Ville">
+                    <br>
+                    <span id="infoPerso_villeErreur_acheteur"></span>
+                    <br>
+                    <input id="infoPerso_codepostal_acheteur" name="infoPerso_codepostal_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Code Postal">
+                    <br>
+                    <span id="infoPerso_codepostalErreur_acheteur"></span>
+                    <br>
                 </div>
+
+                <div class="col-1"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-1"></div>
+
+                <div class="col-10" style="margin-top:50px!important">
+                    <button onclick="modif_infoPersoL_livraison()" type="button" id="modif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Modifier</button>
+                    <button onclick="annulModif_infoPersoL_livraison()" type="button" id="annulModif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="reset_infoPersoL_livraison()" type="button" id="reset_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Reset</button>
+                    <button type="submit" id="submit_valider_infoPersoL_acheteur" name="submit_valider_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Valider</button>
+                </div>
+
+                <div class="col-1"></div>
             </div>
         </form>
 
@@ -236,7 +235,84 @@
 
     <div class="col-1"></div>
 
-</div>
+</div> -->
+
+<!-- Admin -->
+<!-- <div class="contenu_general_infoPerso_admin row">
+    <div class="col-2"></div>
+
+    <div class="col-8 infoPerso_livraison">
+
+        <form action="../Bdd/infoPerso_paiement.php" method="POST">
+            <div class="row">
+                <div class="col-4">
+                    <h3 class="infoPerso_detail_titre1_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
+                    
+                    <input id="infoPerso_nom_admin" name="infoPerso_nom_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Nom">
+                    <br>
+                    <span id="infoPerso_nomErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_prenom_admin" name="infoPerso_prenom_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Prénom">
+                    <br>
+                    <span id="infoPerso_prenomErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_telephone_admin" name="infoPerso_telephone_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Téléphone">
+                    <br>
+                    <span id="infoPerso_telephoneErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_mail_admin" name="infoPerso_mail_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Email">
+                    <br>
+                    <span id="infoPerso_mailErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_mdp_admin" name="infoPerso_mdp_admin" type="password" class="infoPerso_contenu_details_admin" placeholder="Mot de passe">
+                    <br>
+                    <span id="infoPerso_mdpErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_mdp2_admin" name="infoPerso_mdp2_admin" type="password" class="infoPerso_contenu_details_admin" placeholder="Confirmation mot de passe">
+                    <br>
+                    <span id="infoPerso_mdp2Erreur_admin"></span>
+                    <br>
+                </div>
+
+                <div class="col-4" >
+                    <h3 class="infoPerso_detail_titre2_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important">information de livraison</h3>
+                    
+                    <input id="infoPerso_adresse1_admin" name="infoPerso_adresse1_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Adresse 1">
+                    <br>
+                    <span id="infoPerso_adresse1Erreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_adresse2_admin" name="infoPerso_adresse2_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Adresse 2">
+                    <br>
+                    <span id="infoPerso_adresse2Erreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_pays_admin" name="infoPerso_pays_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Pays">
+                    <br>
+                    <span id="infoPerso_paysErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_ville_admin" name="infoPerso_ville_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Ville">
+                    <br>
+                    <span id="infoPerso_villeErreur_admin"></span>
+                    <br>
+                    <input id="infoPerso_codepostal_admin" name="infoPerso_codepostal_admin" type="text" class="infoPerso_contenu_details_admin" placeholder="Code Postal">
+                    <br>
+                    <span id="infoPerso_codepostalErreur_admin"></span>
+                    <br>
+                </div>
+
+                <div class="col-4 centrer">
+                    <button onclick="modif_infoPersoL_paiement()" type="button" id="modif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Modifier</button>
+                    <button onclick="annulModif_infoPersoL_paiement()" type="button" id="annulModif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="reset_infoPersoL_paiement()" type="button" id="reset_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Reset</button>
+                    <button type="submit" id="submit_valider_infoPerso_admin" name="submit_valider_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Valider</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="col-2"></div>
+
+</div> -->
 
 <?php
     include("footer.php");
