@@ -76,12 +76,12 @@
 </div>
 
 <!-- Acheteur -->
-<!-- <div class="contenu_general_infoPerso_acheteur row">
+<div class="contenu_general_infoPerso_acheteur row">
     <div class="col-1"></div>
 
     <div class="col-3 infoPerso_paiement">
 
-        <form action="../Bdd/infoPerso_paiement.php" method="POST">
+        <form action="../Bdd/infoPerso_recup.php" method="POST">
             <div>
                 <h3 class="infoPerso_detail_titre1_acheteur text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
 
@@ -156,7 +156,7 @@
 
     <div class="col-6 infoPerso_livraison">
 
-        <form action="../Bdd/infoPerso_paiement.php" method="POST">
+        <form action="../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
                 <div class="col-1"></div>
 
@@ -235,7 +235,7 @@
 
     <div class="col-1"></div>
 
-</div> -->
+</div>
 
 <!-- Vendeur -->
 <!-- <div class="contenu_general_infoPerso_vendeur row">
@@ -243,7 +243,7 @@
 
     <div class="col-8 infoPerso_vendeur">
 
-        <form action="../Bdd/infoPerso_paiement.php" method="POST" enctype="multipart/form-data">
+        <form action="../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
             <div class="row inscription_contenu_vendeur">
                 <div class="col-1"></div>
 
@@ -314,7 +314,7 @@
 
     <div class="col-8 infoPerso_livraison">
 
-        <form action="../Bdd/infoPerso_paiement.php" method="POST">
+        <form action="../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
                 <div class="col-4">
                     <h3 class="infoPerso_detail_titre1_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
