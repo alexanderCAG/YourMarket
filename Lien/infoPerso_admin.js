@@ -248,7 +248,7 @@ function infoPerso_admin(event){
     }
 }
 
-function modif_infoPersoL_paiement(){
+function modif_infoPersoAdmin(){
     document.getElementById('infoPerso_nom_admin').disabled=false;
     document.getElementById('infoPerso_prenom_admin').disabled=false;
     document.getElementById('infoPerso_telephone_admin').disabled=false;
@@ -262,7 +262,7 @@ function modif_infoPersoL_paiement(){
     document.getElementById('infoPerso_codepostal_admin').disabled=false;
 }
 
-function annulModif_infoPersoL_paiement(){
+function annulModif_infoPersoAdmin(){
     document.getElementById('infoPerso_nom_admin').disabled=true;
     document.getElementById('infoPerso_prenom_admin').disabled=true;
     document.getElementById('infoPerso_telephone_admin').disabled=true;
@@ -276,7 +276,7 @@ function annulModif_infoPersoL_paiement(){
     document.getElementById('infoPerso_codepostal_admin').disabled=true;
 }
 
-function reset_infoPersoL_paiement(){
+function reset_infoPersoAdmin(){
     $(".infoPerso_contenu_details_admin").val("");
 
     infoPerso_nomErreur_admin.innerHTML="";

@@ -238,7 +238,7 @@
 </div> -->
 
 <!-- Admin -->
-<!-- <div class="contenu_general_infoPerso_admin row">
+<div class="contenu_general_infoPerso_admin row">
     <div class="col-2"></div>
 
     <div class="col-8 infoPerso_livraison">
@@ -300,9 +300,9 @@
                 </div>
 
                 <div class="col-4 centrer">
-                    <button onclick="modif_infoPersoL_paiement()" type="button" id="modif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Modifier</button>
-                    <button onclick="annulModif_infoPersoL_paiement()" type="button" id="annulModif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Annuler Modif</button>
-                    <button onclick="reset_infoPersoL_paiement()" type="button" id="reset_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Reset</button>
+                    <button onclick="modif_infoPersoAdmin()" type="button" id="modif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Modifier</button>
+                    <button onclick="annulModif_infoPersoAdmin()" type="button" id="annulModif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="reset_infoPersoAdmin()" type="button" id="reset_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Reset</button>
                     <button type="submit" id="submit_valider_infoPerso_admin" name="submit_valider_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Valider</button>
                 </div>
             </div>
@@ -312,7 +312,7 @@
 
     <div class="col-2"></div>
 
-</div> -->
+</div>
 
 <?php
     include("footer.php");
