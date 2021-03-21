@@ -237,6 +237,69 @@
 
 </div> -->
 
+<!-- Vendeur -->
+<!-- <div class="contenu_general_infoPerso_vendeur row">
+    <div class="col-2"></div>
+
+    <div class="col-8">
+        <form action="../Bdd/infoPerso_paiement.php" method="POST" enctype="multipart/form-data">
+            <div class="row inscription_contenu_vendeur">
+                <div class="col-1"></div>
+
+                <div class="col-5">
+                    <h3 class="inscription_detail_titre1 text-uppercase detail_style">information générale</h3>
+                    
+                    <input id="nomMarque_vendeur" name="nomMarque_vendeur" class="inscription_contenu_details_vendeur" placeholder="Nom de la marque">
+                    <br>
+                    <span id="nomMarqueErreur_vendeur"></span>
+                    <br>
+                    <input id="telephone_vendeur" name="telephone_vendeur" class="inscription_contenu_details_vendeur" placeholder="Téléphone">
+                    <br>
+                    <span id="telephoneErreur_vendeur"></span>
+                    <br>
+                    <input id="mail_vendeur" name="mail_vendeur" class="inscription_contenu_details_vendeur" placeholder="Email">
+                    <br>
+                    <span id="mailErreur_vendeur"></span>
+                    <br>
+                    <input id="mdp_vendeur" name="mdp_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Mot de passe">
+                    <br>
+                    <span id="mdpErreur_vendeur"></span>
+                    <br>
+                    <input id="mdp2_vendeur" name="mdp2_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Confirmation mot de passe">
+                    <br>
+                    <span id="mdp2Erreur_vendeur"></span>
+                    <br>
+                    <a class="retour_login_inscription" href="connexion.php">Login</a>
+                    <button type="button" onclick="reset_vendeur()" class="btn_reset_inscription_vendeur text-uppercase detail_style">Reset</button>
+                </div>
+
+                <div class="col-5" style="margin-left:50px!important;">
+                    <img id="img_inscription_choix_vendeur">
+                    <div class="img_inscription_general">
+                        <span class="file_inscription_img">
+                            <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
+                                Browse <input type="file" id="file_interrieur_inscription_img">
+                            </span>
+                        </span>
+                        <input type="text" name="img" class="form-control" readonly>
+                    </div>
+                    <br><br>
+                    <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accepter les condition d'inscription</a>
+                </div>
+
+                <div class="col-1"></div>
+
+                <div class="col-12">
+                    <button type="submit" id="submit_inscription_vendeur" name="submit_inscription_vendeur" class="btn text-light btn_inscription_final_vendeur text-uppercase detail_style position-absolute bottom-0 start-0">S'inscrire</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-2"></div>
+</div> -->
+
 <!-- Admin -->
 <div class="contenu_general_infoPerso_admin row">
     <div class="col-2"></div>

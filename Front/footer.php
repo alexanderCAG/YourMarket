@@ -85,6 +85,7 @@
 <script src="../Lien/yourmarket.js"></script>
 <script src="../Lien/infoPerso_acheteur.js"></script>
 <script src="../Lien/infoPerso_acheteur2.js"></script>
+<script src="../Lien/infoPerso_vendeur.js"></script>
 <script src="../Lien/infoPerso_admin.js"></script>
 
 </body>
