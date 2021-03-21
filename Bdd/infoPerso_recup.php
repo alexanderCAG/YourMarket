@@ -19,5 +19,5 @@
 		
     }
 
-    include("../Front/confirm_register.php");
+    include("../Front/confirm_infoPerso.php");
 ?>

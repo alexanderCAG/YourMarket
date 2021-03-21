@@ -1,5 +1,5 @@
 <?php
-    $title="Connexion";
+    $title="Confirmation";
     require "head.php";
 ?>
 
@@ -66,7 +66,7 @@
 </nav>
 
 
-<div class="confirm_register_general position-relative">
+<div class="confirm_infoPerso_general position-relative">
 
     <div class="toast-area" id="toasts">
         <div style="display: none">
@@ -85,18 +85,18 @@
         </div>
     </div>
 
-    <div class="confirm_register_div position-absolute top-50 start-50 translate-middle shadow">
-        <div class="confirm_register_titre position-absolute top-0 start-50 translate-middle-x">
-            <h2 class="text-uppercase texte_style centrer">BIENVENUE</h2>
+    <div class="confirm_infoPerso_div position-absolute top-50 start-50 translate-middle shadow">
+        <div class="confirm_infoPerso_titre position-absolute top-0 start-50 translate-middle-x">
+            <h2 class="text-uppercase texte_style centrer">Complété</h2>
         </div>
         
-        <div class="confirm_register_contenu position-absolute bottom-0 start-0">
-            <div class="confirm_register_contenu2 position-absolute top-50 start-50 translate-middle">
-                <p class="text-uppercase msg_confirm_register">
-                    Vous êtes maintenant inscrit
+        <div class="confirm_infoPerso_contenu position-absolute bottom-0 start-0">
+            <div class="confirm_infoPerso_contenu2 position-absolute top-50 start-50 translate-middle">
+                <p class="text-uppercase msg_confirm_infoPerso">
+                    Vous informations sont à jour
                 </p>
                 <br><br>
-                <a href="../Front/connexion.php" class="confirm_register_to_connexion">Sign up</a>
+                <a href="../Front/index.php" class="confirm_infoPerso_to_index">Home Page</a>
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@
 </div>
 
 <script>
-    function animationInscription(){
+    function animationInfoPerso(){
         let child = document.getElementById('clonemother');
         let clone = child.cloneNode(true);
         let node = document.getElementById("toasts").appendChild(clone);
@@ -130,7 +130,7 @@
         },3000);
     }
 
-    window.onload=animationInscription();
+    window.onload=animationInfoPerso();
 </script>
 
 <?php

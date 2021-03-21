@@ -67,24 +67,6 @@
 
 <div class="inscription_general position-relative">
 
-    <!-- Notification success -->
-    <div class="toast-area" id="toasts">
-        <div style="display: none">
-            <div class="toast" id="clonemother">
-                <div class="toast-content">
-                    <div class="toast_deco_gauche"></div>
-                    <div class="toast_icon">
-                        &#x2714
-                    </div>
-                    <div class="toast_text">
-                        <p class="toast_text_titre">Success</p>
-                        <p class="toast_text_message">Inscription valider</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="inscription_div position-absolute top-50 start-50 translate-middle shadow">
         <div class="inscription_titre row position-absolute top-0 start-50 translate-middle-x">
             <div id="inscription_titre_premier" class="col-6 position-relative">
