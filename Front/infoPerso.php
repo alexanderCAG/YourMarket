@@ -280,7 +280,7 @@
                                 Browse <input type="file" id="infoPerso_file_interrieur_inscription_img">
                             </span>
                         </span>
-                        <input type="text" name="img" class="form-control" readonly>
+                        <input type="text" name="infoPerso_img" class="form-control" readonly>
                     </div>
                     <br><br>
                 </div>

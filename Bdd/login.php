@@ -1,6 +1,7 @@
 
 <?php
-    if (isset($_POST['submit'])){    
+
+if (isset($_POST['submit'])){    
 
 	    include("cnx.php");
 	    session_start();
