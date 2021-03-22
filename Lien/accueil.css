@@ -1,0 +1,144 @@
+
+/********************************
+        ACCUEIL-CAROUSEL
+*********************************/
+.img_carousel{
+    width: 100%;
+}
+.div_deco{
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 140px;
+    left: 66%;
+}
+.carouseul_info{
+    width: 500px;
+    height: 300px;
+    background-color: rgb(51, 87, 117,0.8);
+    margin-top: 50px;
+}
+.text_carousel{
+    padding-top: 70px;
+    font-size: 45px;
+}
+.btn_carousel{
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+    padding-top: 12px;
+    border: none;
+}
+
+        /********************************
+                    IMAGE
+        *********************************/
+
+        #img_carousel_panier{
+            width: 20px;
+            height: 20px;
+            float: left;
+        }
+
+
+
+/********************************
+        ACCUEIL-PRESENTATION
+*********************************/
+
+        /********************************
+            ACCUEIL-PRESENTATION-INFO
+        *********************************/
+        .presentation_vetement{
+            padding-left: 50px;
+        }
+        .texte_presentation{
+            text-align: justify;
+        }
+        .btn_presentation{
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: #3d83b6;
+            color: white;
+        }
+        .presentation_maison{
+            padding-left: 50px;
+        }
+
+        /********************************
+            ACCUEIL-PRESENTATION-IMAGE
+        *********************************/
+        .presentation_nouveau_col{
+            width: 370px!important;
+            height: 600px!important;
+        }
+        .image_presentation_nouveau{
+            width: 350px;
+            height: 500px;
+            opacity: 0.5;
+        }
+        .image_presentation_nouveau:hover{
+            opacity: 1;
+        }
+        .presentation_nouveau_texte{
+            font-size: 30px;
+        }
+        .presentation_nouveau_ajout{
+            font-size: 20px;
+            border: none;
+            background-color: rgb(0, 0, 0,0);
+        }
+        .information_presentation_premier{
+            text-align: right;
+        }
+        .information_presentation_deuxieme{
+            text-align: right;
+        }
+        .information_presentation_prix{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .information_presentation_categorie,
+        .information_presentation_nom{
+            font-size: 13px;
+        }
+
+/********************************
+        ACCUEIL-PRODUIT
+*********************************/
+.presentation_marque{
+    background-color: #b0b0b0;
+    padding-bottom: 200px;
+}
+.image_produit{
+    width: 200px;
+    height: 200px;
+}
+#btn_presentation_produit{
+    width: 300px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #3d83b6;
+    color: white;
+    margin-bottom: 100px;
+}
+
+/********************************
+        ACCUEIL-CONNECTION
+*********************************/
+.information_connection{
+    background-color: #14003f;
+    padding-bottom: 200px;
+}
+.info_connection_texte{
+    width: 900px;
+    text-align: justify;
+}
+.info_connection_class{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #f2f2f2;
+}

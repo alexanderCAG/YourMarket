@@ -1,0 +1,216 @@
+
+/********************************
+        VETEMENTS/MAISON
+*********************************/
+.deco_marque_general{
+    margin-top: 100px!important;
+    background-color: rgb(255, 255, 255,0.5);
+    width: 400px;
+    height: 90px;
+    border-radius: 30px 0 0 30px;
+}
+.texte_deco_marque_general{
+    font-size: 50px;
+    margin-left: 30px!important;
+}
+            /********************************
+                        IMAGE
+            *********************************/
+            .image_vetement_general{
+                width: 100%;    
+            }
+            .img_icon_sale{
+                float: left;
+                width: 80px;
+                height: 80px;
+                margin-left: 20px!important;
+            }
+            .img_separation{
+                width: 100%;
+                height: 22px;
+            }
+.navbar_vetement{
+    background-color: #f2f2f2;
+}
+.navbar_vetement{
+    list-style-type: none;
+}
+.navbar_vetement_details li{
+    display: inline-block;
+    padding: 20px 0 20px 0;
+}
+.navbar_vetement_details li a{
+    text-decoration: none;
+    color: black;
+    margin-right: 60px;
+    font-size: 17px;
+}
+.navbar_vetement_details li :hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/********************************
+    LISTE-VETEMENT/MAISON
+*********************************/
+.maison_liste_total,
+.vetement_liste_total{
+    margin-top: 70px!important;
+}
+            /********************************
+                        IMAGE
+            *********************************/
+            .img_maison_presentation,
+            .img_vetement_presentation{
+                margin-left: 20px!important;
+            }
+            .img_vetement_sale{
+                width: 250px;
+                height: 350px;
+            }
+            .img_maison_sale{
+                width: 250px;
+                height: 250px;
+            }
+.class_separation2{
+    width: 250px;
+    height: 5px;
+    background: linear-gradient(-45deg, black 25%, white 25%, white 50%, black 50%, black 75%, white 75%, white);
+    background-size:10px 10px;
+}
+.maison_liste_details,
+.vetement_liste_details{
+    margin-left: 20px;
+    width: 250px;
+    height: 90px;
+}
+.maison_liste_details_gauche,
+.vetement_liste_details_gauche{
+    float: left;
+}
+.maison_liste_details_droite,
+.vetement_liste_details_droite{
+    float: right;
+}
+.btn_ajouter_article{
+    width: 120px;
+    background-color: #a0a0a0;
+    border-radius: 30px;
+    color: white;
+}
+
+
+
+/********************************
+            ENCHERE
+*********************************/
+.genale_page_enchere{
+    width: 100%;
+    height: 500px;
+    background-color: #3678ab;
+}
+.titre_general_enchere{
+    font-size: 150px;
+    color: white;
+}
+.info_general_enchere{
+    color: white;
+    font-size: 20px;
+}
+/********************************
+        ENCHERE-LISTE
+*********************************/
+
+    /********************************
+            LISTE-GAUCHE
+    *********************************/
+    .enchere_liste_total{
+        background-color: #ececec;
+        padding: 50px 0 50px 0;
+    }
+    .enchere_liste_un_par_un{
+        background-color: white;
+        border-radius: 30px;
+        padding: 10px 0 10px 0;
+        margin-top: 40px!important;
+    }
+    .enchere_liste_details{
+        border-left: solid 4px black;
+    }
+    .enchere_info_titre{
+        font-size: 35px;
+    }
+    .enchere_info_marque{
+        font-size: 20px;
+    }
+    .enchere_info_description{
+        text-align: justify;
+    }
+    .div_timeur_compteur{
+        margin-right: 30px!important;
+    }
+    .enchere_compteur_total{
+        margin-top: 50px!important;
+    }
+    .enchere_compteur{
+        width: 82px!important;
+        height: 80px!important;
+        background-color: #ececec;
+        margin-left: 2px;
+    }
+
+            /********************************
+                    LISTE-GAUCHE-IMAGE
+            *********************************/
+            .img_enchere{
+                width: 350px;
+                height: 350px;
+                border-radius: 30px;
+            }
+            .img_enchere_separation_info{
+                width: 300px;
+                height: 100px;
+                position: absolute;
+                top: 190px;
+                left: 100px;
+            }
+            .img_timeur_compteur{
+                width: 80px;
+                height: 70px;
+            }
+
+    /********************************
+            LISTE-DROITE
+    *********************************/
+    .enchere_liste_payer{
+        background-color: white;
+        margin-left: 20px!important;
+        border-radius: 30px;
+        margin-top: 40px!important;
+    }
+    .enchere_payer_titre{
+        font-size: 40px;
+    }
+    .enchere_propose_prix{
+        margin-top: 40px;
+        width: 260px;
+        height: 50px;
+        font-size: 20px;
+        border: none;
+        border-bottom: solid 3px black;
+    }
+    .btn_envoyer_propose_prix{
+        width: 200px;
+        height: 50px;
+        margin-top: 60px;
+        border-radius: 10px;
+        background-color: #3678ab;
+        border: none;
+        color: white;
+        font-size: 20px;
+    }
+    .enchere_nombre_participant{
+        color: red;
+        margin-bottom: 7px;
+        margin-right: 15px;
+    }
