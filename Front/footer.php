@@ -87,6 +87,7 @@
 <script src="../Lien/infoPerso_acheteur2.js"></script>
 <script src="../Lien/infoPerso_vendeur.js"></script>
 <script src="../Lien/infoPerso_admin.js"></script>
+<script src="../Lien/article.js"></script>
 
 </body>
 
