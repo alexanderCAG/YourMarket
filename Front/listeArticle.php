@@ -1,5 +1,5 @@
 <?php
-    $title="Accueil";
+    $title="Liste Article";
     require "head.php";
 ?>
 
@@ -108,7 +108,15 @@
                         </div>
                     </div>
 
-                    <div class="col-4"></div>
+                    <div class="col-1"></div>
+
+                    <div class="col-2">
+                        <div class="listeArticle_nego">
+                            <button class="text-uppercase btn_modal_nego texte_style" data-bs-toggle="modal" data-bs-target="#nego_total_modal">See Offer</button>
+                        </div>
+                    </div>
+
+                    <div class="col-1"></div>
 
                     <div class="col-2">
                         <div class="listeArticle_poubelle">
@@ -124,6 +132,67 @@
 
     <div class="col-2"></div>
 
+</div>
+
+<!-- Modal negociation-->
+<div class="modal fade" id="nego_total_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titre_modal_prix_nego texte_style text-uppercase" id="staticBackdropLabel">Choose a price</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mt-2">
+                    <div class="row nego_contenu_modal_titre detail_style text-uppercase">
+                        <div class="col-3">
+                            Lastname
+                        </div>
+
+                        <div class="col-2">
+                            Qty
+                        </div>
+
+                        <div class="col-3">
+                            Price
+                        </div>
+
+                        <div class="col-2">
+                            Refuse
+                        </div>
+
+                        <div class="col-2">
+                            Accept
+                        </div>
+                    </div>
+                    <div class="row nego_contenu_modal detail_style text-uppercase">
+                        <div class="col-3">
+                            <span name="nego_modal_nom"></span>
+                        </div>
+
+                        <div class="col-2">
+                            <span name="nego_modal_quantite"></span>
+                        </div>
+
+                        <div class="col-3">
+                            <span name="nego_modal_prix"></span>
+                        </div>
+
+                        <div class="col-2">
+                            <button type="submit" class="btn_submit_refus_nego_modal">X</button>
+                        </div>
+
+                        <div class="col-2">
+                            <button type="submit" class="btn_submit_accepte_nego_modal">V</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 <?php

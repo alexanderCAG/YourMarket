@@ -68,10 +68,38 @@
             background-color: #cac7c7;
             margin-top: 0px;
         }
+        .btn_modal_nego{
+            background-color: #cac7c7;
+            border: solid 2px black;
+        }
         .img_trash{
             cursor: pointer;
             width: 50px;
             height: 50px;
             border: solid 2px black;
             background-color: #ececec;
+        }
+
+        /********************************
+                    MODAL
+        *********************************/
+        .nego_contenu_modal div,
+        .nego_contenu_modal_titre div{
+            border: solid 1px black;
+        }
+        .btn_submit_refus_nego_modal,
+        .btn_submit_accepte_nego_modal{
+            margin-top: 4px;
+            margin-bottom: 4px;
+            width: 50px;
+            height: 25px;
+            color: #ececec;
+        }
+        .btn_submit_refus_nego_modal:hover{
+            background-color: red;
+            color: white;
+        }
+        .btn_submit_accepte_nego_modal:hover{
+            background-color: green;
+            color: white;
         }
