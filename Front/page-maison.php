@@ -175,7 +175,7 @@
                         </div>
 
                         <div class="col-6">
-                            <center><button class="btn_ajouter_article position-absolute bottom-0 end-0">NEGOCIATE</button></center>
+                            <center><button class="btn_ajouter_article position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#nego_prix_maison">NEGOCIATE</button></center>
                         </div>
                     </div>
                     
@@ -187,6 +187,29 @@
     
     <div class="col-1"></div>
 
+</div>
+
+<!-- Modal negociation-->
+<div class="modal fade" id="nego_prix_maison" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titre_modal_prix_nego texte_style text-uppercase" id="staticBackdropLabel">Choose a price</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mt-2">
+                    <input type="text" name="prix_nego_maison" class="prix_nego_maison">€
+                    <br><br>
+                    <span class="condition_prix_nego">If you offer a price and this price is accepted by the seller, you will be automatically charged.</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="subit_btn_nego_prix_maison" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 <?php

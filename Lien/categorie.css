@@ -98,7 +98,28 @@
     border-radius: 30px;
     color: white;
 }
-
+        /********************************
+                    MODAL
+        *********************************/
+        .titre_modal_prix_nego{
+            font-size: 25px;
+            color: #14003f;
+        }
+        .modal-body{
+            text-align: center!important;
+        }
+        .prix_nego_vetement,
+        .prix_nego_maison{
+            width: 50px;
+            border: none;
+            text-align: center;
+            border-bottom: solid 2px black;
+        }
+        .condition_prix_nego{
+            width: 200px;
+            font-size: 9px;
+            text-align: justify;
+        }
 
 
 /********************************

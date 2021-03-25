@@ -177,7 +177,7 @@
 
                                 <br>
                                 <input id="check_condition_inscription_acheteur" class="condition_inscription" type="checkbox">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accepter les condition d'inscription</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accepter les condition d'inscription</a>
                                 <br>
                                 <a class="retour_login_inscription" href="connexion.php">Login</a>
                                 <button type="button" onclick="reset_acheteur()" class="btn_reset_inscription_acheteur text-uppercase detail_style">Reset</button>
@@ -258,7 +258,7 @@
                         </div>
                         <br><br>
                         <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accepter les condition d'inscription</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accepter les condition d'inscription</a>
                     </div>
 
                     <div class="col-1"></div>
@@ -274,7 +274,7 @@
 </div>
 
 <!-- Modal condition -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="condition_contenu_inscription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
         <div class="modal-header">
