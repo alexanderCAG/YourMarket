@@ -165,6 +165,7 @@
                             Accept
                         </div>
                     </div>
+                    
                     <div class="row nego_contenu_modal detail_style text-uppercase">
                         <div class="col-3">
                             <span name="nego_modal_nom"></span>
