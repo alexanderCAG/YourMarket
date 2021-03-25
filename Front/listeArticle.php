@@ -168,23 +168,23 @@
                     
                     <div class="row nego_contenu_modal detail_style text-uppercase">
                         <div class="col-3">
-                            <span name="nego_modal_nom"></span>
+                            <span name="nego_modal_nom" class="marge_modal_offre">a</span>
                         </div>
 
                         <div class="col-2">
-                            <span name="nego_modal_quantite"></span>
+                            <span name="nego_modal_quantite" class="marge_modal_offre">dza</span>
                         </div>
 
                         <div class="col-3">
-                            <span name="nego_modal_prix"></span>
+                            <span name="nego_modal_prix" class="marge_modal_offre">a</span>
                         </div>
 
                         <div class="col-2">
-                            <button type="submit" class="btn_submit_refus_nego_modal">X</button>
+                            <button type="submit" class="btn_submit_refus_nego_modal shadow">X</button>
                         </div>
 
                         <div class="col-2">
-                            <button type="submit" class="btn_submit_accepte_nego_modal">V</button>
+                            <button type="submit" class="btn_submit_accepte_nego_modal shadow">V</button>
                         </div>
                     </div>
                 </div>
