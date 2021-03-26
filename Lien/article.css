@@ -113,6 +113,11 @@
 
 
 
+
+
+
+
+
 /********************************
     LISTE VENDEUR - NAVBAR
 *********************************/
@@ -203,8 +208,71 @@
 /********************************
     LISTE VENDEUR - MODAL
 *********************************/
-.test{
+.taille_modal_ajout_vendeur{
     width: 80%!important;
     margin-left: 10%!important;
     margin-top: 50px!important;
+}
+.titre_modal_ajout_vendeur{
+    font-size: 25px;
+    color: #14003f;
+}
+.ajout_vendeur_div_body span{
+    font-size: 12px;
+    color: red;
+}
+.ajout_vendeur_titre{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #14003f;
+}
+.contenu_details_Ajoutvendeur{
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-bottom: solid 2px black;
+    background-color: white;
+}
+.btn_final_Ajoutvendeur,
+.btn_reset_Ajoutvendeur{
+    width: 120px;
+    height: 40px;
+    margin-top: 25px;
+}
+.btn_final_Ajoutvendeur{
+    background-color: #4e6296;
+    color: white;
+}
+#img_Ajoutvendeur{
+    background-image: url("../Image/chaussure.png");
+    width: 250px;
+    height: 250px;
+    border: solid 2px black;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.img_Ajoutvendeur_general{
+    margin-top: 10px;
+}
+.btn_choix_img_Ajoutvendeur{
+    position: relative;
+    overflow: hidden;
+    color: black!important;
+    font-size: 15px!important;
+    font-weight: bold!important;
+}
+.btn_choix_img_Ajoutvendeur:hover{
+    color: #246acf!important;
+    font-weight: bold;
+}
+#file_interrieur_Ajoutvendeur_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 100px;
+    text-align: right;
+    opacity: 0;
+    background: white;
+    cursor: pointer;
 }

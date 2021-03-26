@@ -3,7 +3,7 @@
 *********************************/
 jQuery(document).ready(function(){
 /********************************
-            ADMIN
+            VENDEUR
 *********************************/
 document.getElementById('infoPerso_nomMarque_vendeur').disabled=true;
 document.getElementById('infoPerso_telephone_vendeur').disabled=true;
