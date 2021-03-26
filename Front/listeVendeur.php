@@ -87,6 +87,9 @@
     </div>
 </div>
 
+<div class="ajouter_vendeur">
+    <button class="btn_ajout_vendeur_par_admin text-uppercase" data-bs-toggle="modal" data-bs-target="#ajout_vendeur_par_admin">+ Ajouter</button>
+</div>
 
 <div class="listeVendeur_total row">
     <!-- Premiere ligne -->
@@ -100,8 +103,11 @@
                     <div class="class_separation2"></div>
                 </div>
 
-                <div class="listeVendeur_details_nom position-relative">
-                    <h4 class="titre_logo_vendeur centrer text-uppercase detail_style">Ma marque</h4>
+                <div class="listeVendeur_details_nom centrer position-relative">
+                    <h4 class="titre_logo_vendeur text-uppercase detail_style">
+                        marque
+                        <img class="img_trash_vendeur" src="../Image/trash.png" alt="trash">
+                    </h4>
                 </div>
             </div>
 
@@ -111,8 +117,11 @@
                     <div class="class_separation2"></div>
                 </div>
 
-                <div class="listeVendeur_details_nom position-relative">
-                    <h4 class="titre_logo_vendeur centrer text-uppercase detail_style">Ma marque</h4>
+                <div class="listeVendeur_details_nom centrer position-relative">
+                    <h4 class="titre_logo_vendeur text-uppercase detail_style">
+                        marque
+                        <img class="img_trash_vendeur" src="../Image/trash.png" alt="trash">
+                    </h4>
                 </div>
             </div>
 
@@ -122,8 +131,11 @@
                     <div class="class_separation2"></div>
                 </div>
 
-                <div class="listeVendeur_details_nom position-relative">
-                    <h4 class="titre_logo_vendeur centrer text-uppercase detail_style">Ma marque</h4>
+                <div class="listeVendeur_details_nom centrer position-relative">
+                    <h4 class="titre_logo_vendeur text-uppercase detail_style">
+                        marque
+                        <img class="img_trash_vendeur" src="../Image/trash.png" alt="trash">
+                    </h4>
                 </div>
             </div>
 
@@ -133,8 +145,11 @@
                     <div class="class_separation2"></div>
                 </div>
 
-                <div class="listeVendeur_details_nom position-relative">
-                    <h4 class="titre_logo_vendeur centrer text-uppercase detail_style">Ma marque</h4>
+                <div class="listeVendeur_details_nom centrer position-relative">
+                    <h4 class="titre_logo_vendeur text-uppercase detail_style">
+                        marque
+                        <img class="img_trash_vendeur" src="../Image/trash.png" alt="trash">
+                    </h4>
                 </div>
             </div>
         </div>
@@ -143,6 +158,79 @@
     
     <div class="col-1"></div>
 
+</div>
+
+<!-- Modal XXL-->
+<div class="modal fade" id="ajout_vendeur_par_admin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen test">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title titre_modal_prix_nego texte_style text-uppercase" id="staticBackdropLabel">Choose a price</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body mt-2">
+                    <div class="row inscription_contenu_vendeur">
+                        <div class="col-1"></div>
+
+                        <div class="col-5">
+                            <h3 class="inscription_detail_titre1 text-uppercase detail_style">information générale</h3>
+                            
+                            <input id="nomMarque_vendeur" name="nomMarque_vendeur" class="inscription_contenu_details_vendeur" placeholder="Nom de la marque">
+                            <br>
+                            <span id="nomMarqueErreur_vendeur"></span>
+                            <br>
+                            <input id="telephone_vendeur" name="telephone_vendeur" class="inscription_contenu_details_vendeur" placeholder="Téléphone">
+                            <br>
+                            <span id="telephoneErreur_vendeur"></span>
+                            <br>
+                            <input id="mail_vendeur" name="mail_vendeur" class="inscription_contenu_details_vendeur" placeholder="Email">
+                            <br>
+                            <span id="mailErreur_vendeur"></span>
+                            <br>
+                            <input id="mdp_vendeur" name="mdp_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Mot de passe">
+                            <br>
+                            <span id="mdpErreur_vendeur"></span>
+                            <br>
+                            <input id="mdp2_vendeur" name="mdp2_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Confirmation mot de passe">
+                            <br>
+                            <span id="mdp2Erreur_vendeur"></span>
+                            <br>
+                            <a class="retour_login_inscription" href="connexion.php">Login</a>
+                            <button type="button" onclick="reset_vendeur()" class="btn_reset_inscription_vendeur text-uppercase detail_style">Reset</button>
+                        </div>
+
+                        <div class="col-5" style="margin-left:50px!important;">
+                            <img id="img_inscription_choix_vendeur">
+                            <div class="img_inscription_general">
+                                <span class="file_inscription_img">
+                                    <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
+                                        Browse <input type="file" id="file_interrieur_inscription_img">
+                                    </span>
+                                </span>
+                                <input type="text" name="img" class="form-control" readonly>
+                            </div>
+                            <br><br>
+                            <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accepter les condition d'inscription</a>
+                        </div>
+
+                        <div class="col-1"></div>
+
+                        <div class="col-12">
+                            <button type="submit" id="submit_inscription_vendeur" name="submit_inscription_vendeur" class="btn text-light btn_inscription_final_vendeur text-uppercase detail_style position-absolute bottom-0 start-0">S'inscrire</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 <?php

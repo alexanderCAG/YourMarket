@@ -112,7 +112,7 @@
         }
 
 
-        
+
 /********************************
     LISTE VENDEUR - NAVBAR
 *********************************/
@@ -136,6 +136,22 @@
     color: black;
     font-weight: bold;
     text-decoration: underline;
+}
+
+/********************************
+        AJOUTER VENDEUR
+*********************************/
+.ajouter_vendeur{
+    float: right;
+}
+.btn_ajout_vendeur_par_admin{
+    margin-right: 50px;
+    font-size: 15px;
+    background-color: white;
+}
+.btn_ajout_vendeur_par_admin:hover{
+    font-weight: bold;
+    font-size: 14px;
 }
 
 /********************************
@@ -171,8 +187,24 @@
         .listeVendeur_details_nom{
             margin-left: 20px;
             width: 250px;
+            height: 30px;
             border: solid 1px black;
         }
         .titre_logo_vendeur{
             font-weight: bold;
         }
+        .img_trash_vendeur{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+/********************************
+    LISTE VENDEUR - MODAL
+*********************************/
+.test{
+    width: 80%!important;
+    margin-left: 10%!important;
+    margin-top: 50px!important;
+}
