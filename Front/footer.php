@@ -74,6 +74,20 @@
     </a>
 </div>
 
+<script>
+    var nav = document.querySelector('.navbar_menu_principal'); // Identify target
+
+    window.addEventListener('scroll', function(event) { // To listen for event
+        event.preventDefault();
+
+        if (window.scrollY <= 650) { // Just an example
+            nav.style.backgroundColor = 'transparent'; // or default color
+        } else {
+            nav.style.backgroundColor = '#FFF';
+        }
+    });
+</script>
+
 <!-- Boostrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"

@@ -4,7 +4,7 @@
     require "head.php";
 ?>
 <!-- base -->
-<nav class="navbar fixed-top navbar-expand-lg shadow">
+<nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -68,7 +68,7 @@
 </nav>
 
 <!-- acheteur -->
-<!-- <nav class="navbar fixed-top navbar-expand-lg shadow">
+<!-- <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -131,7 +131,7 @@
 </nav> -->
 
 <!-- vendeur -->
-<!-- <nav class="navbar fixed-top navbar-expand-lg shadow">
+<!-- <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -164,7 +164,7 @@
 </nav> -->
 
 <!-- admin -->
-<!-- <nav class="navbar fixed-top navbar-expand-lg shadow">
+<!-- <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>

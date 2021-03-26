@@ -41,6 +41,7 @@ jQuery(document).ready(function(){
         document.getElementById('check_condition_inscription_vendeur').checked=true;
         document.getElementById('check_condition_inscription_acheteur').disabled=true;
         document.getElementById('check_condition_inscription_vendeur').disabled=true;
+
 });
 
 /********************************
