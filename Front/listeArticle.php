@@ -101,61 +101,24 @@
                 <div class="row border-bottom mb-3 pb-2">
                     <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
                     <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
+                </div>
 
-                </div> 
                 <div class="row">
                     <div class="col-md-2">
-                    <h4 class="texte_style text-uppercase">20 $</h4></div>
-                    <div class="col-md-3">
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                        <h4 class="texte_style text-uppercase">20 $</h4></div>
+                        <div class="col-md-3">
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
                         </div>
-                    
-                    </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
-                    </div>
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
+                        <div class="col-md-6">
+                            <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
+                        </div>
                     </div>
                 </div>
-                </div>
-                        <!-- <i class="fab fa-2x fa-cc-amex"></i>
-                        <i class="fab fa-2x fa-cc-visa"></i>
-                        <i class="fab fa-2x fa-cc-mastercard"></i>
-                        <i class="fab  fa-2x fa-cc-discover"></i> -->
-                <!--<div class="row centrer">
-                    <div class="col-2">
-                        <div class="listeArticle_prix detail_style">
-                            <span>20</span>€
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="listeArticle_quatité">
-                            <img class="btnMoins img_quantite" onclick="enlever1()" src="../Image/moins.png" alt="moins">
-                            <input class="nbre" id="nb1" value="0">
-                            <img class="btnPlus img_quantite" onclick="ajouter1()" src="../Image/plus.png" alt="plus">
-                        </div>
-                    </div>
-
-                    <div class="col-1"></div>
-
-                    <div class="col-2">
-                        <div class="listeArticle_nego">
-                            <button class="text-uppercase btn_modal_nego texte_style" data-bs-toggle="modal" data-bs-target="#nego_total_modal">See Offer</button>
-                        </div>
-                    </div>
-
-                    <div class="col-1"></div>
-
-                    <div class="col-2">
-                        <div class="listeArticle_poubelle">
-                            <img class="img_trash" src="../Image/trash.png" alt="trash">
-                        </div>
-                    </div>
-
-                </div>-->
             </div>
         </div>
     </div>
@@ -186,65 +149,28 @@
                 <div class="row border-bottom mb-3 pb-2">
                     <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
                     <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
+                </div>
 
-                </div> 
                 <div class="row">
                     <div class="col-md-2">
-                    <h4 class="texte_style text-uppercase">20 $</h4></div>
-                    <div class="col-md-3">
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                        <h4 class="texte_style text-uppercase">20 $</h4></div>
+                        <div class="col-md-3">
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
                         </div>
-                    
-                    </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
-                    </div>
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
+                        <div class="col-md-6">
+                            <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
+                        </div>
                     </div>
                 </div>
-                </div>
-                        <!-- <i class="fab fa-2x fa-cc-amex"></i>
-                        <i class="fab fa-2x fa-cc-visa"></i>
-                        <i class="fab fa-2x fa-cc-mastercard"></i>
-                        <i class="fab  fa-2x fa-cc-discover"></i> -->
-                <!--<div class="row centrer">
-                    <div class="col-2">
-                        <div class="listeArticle_prix detail_style">
-                            <span>20</span>€
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="listeArticle_quatité">
-                            <img class="btnMoins img_quantite" onclick="enlever1()" src="../Image/moins.png" alt="moins">
-                            <input class="nbre" id="nb1" value="0">
-                            <img class="btnPlus img_quantite" onclick="ajouter1()" src="../Image/plus.png" alt="plus">
-                        </div>
-                    </div>
-
-                    <div class="col-1"></div>
-
-                    <div class="col-2">
-                        <div class="listeArticle_nego">
-                            <button class="text-uppercase btn_modal_nego texte_style" data-bs-toggle="modal" data-bs-target="#nego_total_modal">See Offer</button>
-                        </div>
-                    </div>
-
-                    <div class="col-1"></div>
-
-                    <div class="col-2">
-                        <div class="listeArticle_poubelle">
-                            <img class="img_trash" src="../Image/trash.png" alt="trash">
-                        </div>
-                    </div>
-
-                </div>-->
             </div>
         </div>
     </div>
-    
+
     <div class="col-2"></div>
 </div>
 
