@@ -178,7 +178,7 @@ function infoPersoL_livraison(event){
     if(infoPerso_adresse1_acheteur.value.trim()==""){
         infoPerso_adresse1Erreur_acheteur.innerHTML = "Compléter ce champs";
         verif_infoPersoL_acheteur=false;
-    }else if(regex_mixte.test(infoPerso_adresse1_acheteur.value)==false){
+    }else if(regex_tot.test(infoPerso_adresse1_acheteur.value)==false){
         infoPerso_adresse1Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_adresse1_acheteur.value.length >= 50){
@@ -191,7 +191,7 @@ function infoPersoL_livraison(event){
     if(infoPerso_adresse2_acheteur.value.trim()==""){
         infoPerso_adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
         verif_infoPersoL_acheteur=false;
-    }else if(regex_mixte.test(infoPerso_adresse2_acheteur.value)==false){
+    }else if(regex_tot.test(infoPerso_adresse2_acheteur.value)==false){
         infoPerso_adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_adresse2_acheteur.value.length >= 50){

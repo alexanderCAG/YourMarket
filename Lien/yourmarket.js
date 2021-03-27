@@ -109,6 +109,7 @@ jQuery(document).ready(function(){
         var regex_mixte = /^[a-zA-Z0-9]+$/;
         var regex_mail = /^([a-zA-Z0-9])+\@(([a-z-])+\.)+([a-z]{2,3})+$/;
         var regex_mdp = /[\s@&\.-]/;
+        var regex_tot = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-\s]+$/;
 
         document.getElementById('submit_inscription_acheteur').addEventListener('click',inscription_acheteur)
         function inscription_acheteur(event){
@@ -286,7 +287,7 @@ jQuery(document).ready(function(){
             if(adresse1_acheteur.value.trim()==""){
                 adresse1Erreur_acheteur.innerHTML = "Compléter ce champs";
                 verification_inscription_acheteur=false;
-            }else if(regex_mixte.test(adresse1_acheteur.value)==false){
+            }else if(regex_tot.test(adresse1_acheteur.value)==false){
                 adresse1Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
                 verification_inscription_acheteur=false;
             }else if(adresse1_acheteur.value.length >= 50){
@@ -299,7 +300,7 @@ jQuery(document).ready(function(){
             if(adresse2_acheteur.value.trim()==""){
                 adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
                 verification_inscription_acheteur=false;
-            }else if(regex_mixte.test(adresse2_acheteur.value)==false){
+            }else if(regex_tot.test(adresse2_acheteur.value)==false){
                 adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
                 verification_inscription_acheteur=false;
             }else if(adresse2_acheteur.value.length >= 50){

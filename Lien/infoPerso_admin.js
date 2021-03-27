@@ -178,7 +178,7 @@ function infoPerso_admin(event){
     if(infoPerso_adresse1_admin.value.trim()==""){
         infoPerso_adresse1Erreur_admin.innerHTML = "Compléter ce champs";
         verif_infoPerso_admin=false;
-    }else if(regex_mixte.test(infoPerso_adresse1_admin.value)==false){
+    }else if(regex_tot.test(infoPerso_adresse1_admin.value)==false){
         infoPerso_adresse1Erreur_admin.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
         verif_infoPerso_admin=false;
     }else if(infoPerso_adresse1_admin.value.length >= 50){
@@ -191,7 +191,7 @@ function infoPerso_admin(event){
     if(infoPerso_adresse2_admin.value.trim()==""){
         infoPerso_adresse2Erreur_admin.innerHTML = "Compléter ce champs";
         verif_infoPerso_admin=false;
-    }else if(regex_mixte.test(infoPerso_adresse2_admin.value)==false){
+    }else if(regex_tot.test(infoPerso_adresse2_admin.value)==false){
         infoPerso_adresse2Erreur_admin.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
         verif_infoPerso_admin=false;
     }else if(infoPerso_adresse2_admin.value.length >= 50){
