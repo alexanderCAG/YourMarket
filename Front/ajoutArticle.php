@@ -108,7 +108,7 @@
                                 Browse <input type="file" id="file_interrieur_ajoutArticle_img">
                             </span>
                         </span>
-                        <input type="text" name="img" class="form-control" readonly>
+                        <input type="text" name="img" class="form_ajoutArticle_control" readonly>
                     </div>
                 </div>
 
