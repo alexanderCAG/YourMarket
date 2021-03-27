@@ -87,50 +87,42 @@
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure">
+                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">
-                        <div class="listeArticle_info_titre texte_style text-uppercase">titre produit</div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="listeArticle_info_titre texte_style text-uppercase">titre produit</div>
+                            </div>
+                        </div>
                         <div class="listeArticle_info_marque detail_style text-uppercase">marque</div>
-                        <br><br>
+                        <br>
                         <div class="listeArticle_info_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique sequi, beatae voluptatum consectetur quidem consequatur. Quisquam similique minima dolorum ad, vel tempora vero optio corrupti perspiciatis veritatis iure explicabo.</div>
-                        <br><br><br>
-                        <div class="row centrer">
-                            <div class="col-2">
-                                <div class="listeArticle_prix detail_style">
-                                    <span>20</span>€
+                        <br>
+                        <div class="row border-bottom mb-3 pb-2">
+                            <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
+                            <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h4 class="texte_style text-uppercase">20 $</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
-
-                            <div class="col-4">
-                                <div class="listeArticle_quatité">
-                                    <img class="btnMoins img_quantite" onclick="enlever1()" src="../Image/moins.png" alt="moins">
-                                    <input class="nbre" id="nb1" value="0">
-                                    <img class="btnPlus img_quantite" onclick="ajouter1()" src="../Image/plus.png" alt="plus">
-                                </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-2">
-                                <div class="listeArticle_nego">
-                                    <button class="text-uppercase btn_modal_nego texte_style" data-bs-toggle="modal" data-bs-target="#nego_total_modal">See Offer</button>
-                                </div>
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
                             </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-2">
-                                <div class="listeArticle_poubelle">
-                                    <img class="img_trash" src="../Image/trash.png" alt="trash">
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-1"></div>
@@ -142,50 +134,42 @@
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure">
+                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">
-                        <div class="listeArticle_info_titre texte_style text-uppercase">titre produit</div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="listeArticle_info_titre texte_style text-uppercase">titre produit</div>
+                            </div>
+                        </div>
                         <div class="listeArticle_info_marque detail_style text-uppercase">marque</div>
-                        <br><br>
+                        <br>
                         <div class="listeArticle_info_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique sequi, beatae voluptatum consectetur quidem consequatur. Quisquam similique minima dolorum ad, vel tempora vero optio corrupti perspiciatis veritatis iure explicabo.</div>
-                        <br><br><br>
-                        <div class="row centrer">
-                            <div class="col-2">
-                                <div class="listeArticle_prix detail_style">
-                                    <span>20</span>€
+                        <br>
+                        <div class="row border-bottom mb-3 pb-2">
+                            <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
+                            <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h4 class="texte_style text-uppercase">20 $</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
-
-                            <div class="col-4">
-                                <div class="listeArticle_quatité">
-                                    <img class="btnMoins img_quantite" onclick="enlever1()" src="../Image/moins.png" alt="moins">
-                                    <input class="nbre" id="nb1" value="0">
-                                    <img class="btnPlus img_quantite" onclick="ajouter1()" src="../Image/plus.png" alt="plus">
-                                </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-2">
-                                <div class="listeArticle_nego">
-                                    <button class="text-uppercase btn_modal_nego texte_style" data-bs-toggle="modal" data-bs-target="#nego_total_modal">See Offer</button>
-                                </div>
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
                             </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-2">
-                                <div class="listeArticle_poubelle">
-                                    <img class="img_trash" src="../Image/trash.png" alt="trash">
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-1"></div>
@@ -197,50 +181,42 @@
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure">
+                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">
-                        <div class="listeArticle_info_titre texte_style text-uppercase">titre produit</div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="listeArticle_info_titre texte_style text-uppercase">titre produit</div>
+                            </div>
+                        </div>
                         <div class="listeArticle_info_marque detail_style text-uppercase">marque</div>
-                        <br><br>
+                        <br>
                         <div class="listeArticle_info_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique sequi, beatae voluptatum consectetur quidem consequatur. Quisquam similique minima dolorum ad, vel tempora vero optio corrupti perspiciatis veritatis iure explicabo.</div>
-                        <br><br><br>
-                        <div class="row centrer">
-                            <div class="col-2">
-                                <div class="listeArticle_prix detail_style">
-                                    <span>20</span>€
+                        <br>
+                        <div class="row border-bottom mb-3 pb-2">
+                            <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
+                            <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h4 class="texte_style text-uppercase">20 $</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
-
-                            <div class="col-4">
-                                <div class="listeArticle_quatité">
-                                    <img class="btnMoins img_quantite" onclick="enlever1()" src="../Image/moins.png" alt="moins">
-                                    <input class="nbre" id="nb1" value="0">
-                                    <img class="btnPlus img_quantite" onclick="ajouter1()" src="../Image/plus.png" alt="plus">
-                                </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-2">
-                                <div class="listeArticle_nego">
-                                    <button class="text-uppercase btn_modal_nego texte_style" data-bs-toggle="modal" data-bs-target="#nego_total_modal">See Offer</button>
-                                </div>
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
                             </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-2">
-                                <div class="listeArticle_poubelle">
-                                    <img class="img_trash" src="../Image/trash.png" alt="trash">
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-1"></div>
@@ -249,13 +225,23 @@
 
     <div class="panier_navbar_div">
         <div class="navbar_panier detail_style text-uppercase">
-            <input type="radio" name="typedelivraison_panier" id="livraison_panier_magasin" class="contenu_navbar_panier contenu_navbar_panier_premier">Livraison en magasin
-            <br>
-            <input type="radio" name="typedelivraison_panier" id="livraison_panier_magasin" class="contenu_navbar_panier">Point relais
-            <br>
-            <input type="radio" name="typedelivraison_panier" id="livraison_panier_magasin" class="contenu_navbar_panier">livraison à domicile
-            <br>
-            <div class="separation_panier_div"></div>
+            <form action="" method="POST">
+                <input type="radio" name="typedelivraison_panier" id="livraison_panier_magasin" class="contenu_navbar_panier contenu_navbar_panier_premier"><span class="typedelivraison_panier_texte">Livraison en magasin</span>
+                <br>
+                <input type="radio" name="typedelivraison_panier" id="livraison_panier_relais" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">Point relais</span>
+                <br>
+                <input type="radio" name="typedelivraison_panier" id="livraison_panier_domicile" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">livraison à domicile</span>
+                <br>
+                <div class="separation_panier_div mb-3"></div>
+                <span class="contenu_navbar_panier detail_panier_navbar">Valeur de la commande : </span><span class="detail_panier_navbar f_right">60<span class="detail_panier_navbar_euro">€</span></span>
+                <br>
+                <span class="contenu_navbar_panier detail_panier_navbar">Livraison : </span><span class="detail_panier_navbar f_right">0<span class="detail_panier_navbar_euro">€</span></span>
+                <br>
+                <div class="separation_panier_div mt-3 mb-3"></div>
+                <span class="contenu_navbar_panier prixTotal_panier_navbar">Total :</span><span class="prixTotal_panier_navbar f_right">60<span class="detail_panier_navbar_euro">€</span></span>
+                <br>
+                <button type="submit" name="btn_submit_navbar_panier" id="btn_submit_navbar_panier" class="bg_blue1 white btn_final_navbar_panier mt-3">Finaliser la commande</button>
+            </form>
         </div>
     </div>
     

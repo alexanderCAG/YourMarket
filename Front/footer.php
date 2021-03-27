@@ -103,6 +103,7 @@
 <script src="../Lien/infoPerso_admin.js"></script>
 <script src="../Lien/ajoutVendeur.js"></script>
 <script src="../Lien/article.js"></script>
+<script src="../Lien/panier.js"></script>
 
 </body>
 

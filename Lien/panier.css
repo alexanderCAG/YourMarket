@@ -46,8 +46,28 @@
         .contenu_navbar_panier{
             margin: 15px;
         }
+        .typedelivraison_panier_texte{
+            font-size: 15px;
+        }
         .separation_panier_div{
             width: 100%;
             border: solid 1px black;
-            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .detail_panier_navbar{
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .detail_panier_navbar_euro{
+            margin-right: 10px;
+        }
+        .prixTotal_panier_navbar{
+            font-size: 28px;
+            font-family: Impact, fantasy;
+        }
+        .btn_final_navbar_panier{
+            width: 150px;
+            height: 60px;
+            font-size: 20px;
+            margin-left: 22%;
+            border-radius: 10px;
         }
