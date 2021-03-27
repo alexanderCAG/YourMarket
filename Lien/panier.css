@@ -1,0 +1,53 @@
+/********************************
+        PANIER GENERAL
+*********************************/
+.genale_panier{
+    width: 100%;
+    height: 500px;
+    background-color: #3678ab;
+}
+.titre_general_panier{
+    font-size: 180px;
+    color: white;
+}
+.info_general_panier{
+    color: white;
+    font-size: 20px;
+}
+
+        /********************************
+                PANIER CONTENU
+        *********************************/
+        .panier_total{
+            background-color: #f2f2f2;
+            margin-top: 70px!important;
+            display: flex;
+        }
+        .panier_liste_article_un_par_un{
+            flex: 0 0 80%;
+            padding-bottom: 40px;
+        }
+        .panier_navbar_div div{
+            flex: 0 0 20%;
+            background-color: white;
+        }
+        .navbar_panier{
+            position: sticky;
+            top: 85px;
+            width: 250px;
+            height: 380px;
+            background-color: white;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        .contenu_navbar_panier_premier{
+            margin-top: 30px!important;
+        }
+        .contenu_navbar_panier{
+            margin: 15px;
+        }
+        .separation_panier_div{
+            width: 100%;
+            border: solid 1px black;
+            background-color: rgba(0, 0, 0, 0.5);
+        }

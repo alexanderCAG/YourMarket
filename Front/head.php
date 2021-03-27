@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../Lien/categorie.css">
     <link rel="stylesheet" href="../Lien/infoPerso.css">
     <link rel="stylesheet" href="../Lien/article.css">
+    <link rel="stylesheet" href="../Lien/panier.css">
     <link rel="shortcut icon" href="../Image/logo.png">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

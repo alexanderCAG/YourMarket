@@ -47,7 +47,7 @@
                         <a class="nav-link" href="enchere.php">Enchère</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Panier
+                        <a class="nav-link" href="panier.php">Panier
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../Image/panier.png" alt="panier">
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
