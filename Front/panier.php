@@ -246,7 +246,6 @@
             <div class="col-1"></div>
         </div>
     </div>
-    
 
     <div class="panier_navbar_div">
         <div class="navbar_panier detail_style text-uppercase">
