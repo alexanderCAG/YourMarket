@@ -112,6 +112,54 @@
         }
 
 
+/********************************
+        CREER ARTICLE
+*********************************/
+.genale_newArticle{
+    width: 100%;
+    height: 500px;
+    background-color: #3678ab;
+}
+.titre_general_newArticle{
+    font-size: 90px;
+    color: white;
+}
+        /********************************
+            CREER ARTICLE-CONTENU
+        *********************************/
+        .ajoutAricle_contenu_general{
+            background-color: #f2f2f2;
+        }
+        .ajout_article_div_body span{
+            font-size: 12px;
+            color: red;
+        }
+        .ajout_article_titre{
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #14003f;
+        }
+        .contenu_details_Ajoutarticle{
+            width: 350px;
+            height: 40px;
+            border: none;
+            border-bottom: solid 2px black;
+            background-color: #f2f2f2;
+        }
+        .inputAchat_ajoutArticle{
+            margin-left: 10px;
+        }
+        .btn_final_ajoutArticle,
+        .btn_reset_ajoutArticle{
+            width: 120px;
+            height: 40px;
+            margin-top: 25px;
+        }
+        .btn_final_ajoutArticle{
+            background-color: #4e6296;
+            color: white;
+        }
 
 
 
