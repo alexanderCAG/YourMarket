@@ -1,0 +1,47 @@
+Liste des produit d'un vendeur: 
+
+Liste de tous les articles en vente:
+
+
+Affichage d'un article
+Modification d'un article
+Ajout d'un article
+Suppression d'un article
+
+
+##------------------Créer un admin----------------------##
+
+INSERT INTO `admin` (`id_admin`, `id_item`, `id_seller`, `lastname`, `firstname`, `phone`, `email`, `password`, `adress1`, `adress2`, `country`, `city`, `zipcode`) 
+VALUES (NULL, '1', '1', 'Alexander', 'Abbey', '0666991274', 'alexander@gmail.com', '@mdp-alex', '33 avenu galieni ', NULL, 'France', 'Paris', '75');
+
+##------------------Créer un Acheteur ----------------------##
+
+INSERT INTO `buyer` (`id_buyer`, `lastname`, `firstname`, `phone`, `email`, `password`, `adress1`, `adress2`, `city`, `zip_code`, `country`)
+ VALUES (NULL, 'Emilie', 'Raza', '0695631800', 'razafiemilie@hotmail.fr', 'mdp-emilie91', '33 avenue galieni', '', 'Antony', '92160', 'France');
+
+
+##------------------Mise à jours de l'email d'un utilsateur  ----------------------##
+
+UPDATE `buyer` SET `email` = 'razafiemilie13@hotmail.fr' WHERE `buyer`.`id_buyer` = 7;
+
+
+##------------------Liste de tous les produits  ----------------------##
+SELECT * FROM `item`
+
+
+##------------------Supprimer un utilisateur  ----------------------##
+DELETE FROM `buyer` WHERE `buyer`.`id_buyer` = 6
+
+
+
+##------------------Créer une marque ----------------------##
+
+INSERT INTO `seller` (`id_seller`, `brand`, `profil_picture`, `background`, `phone`, `email`, `password`) 
+VALUES (NULL, 'Yvi ', '', 'blue ', '0695631800', 'yvibrand@gmail.com', 'mdp@yviyvi');
+
+
+##------------------Créer un produit ( assosié à un vendeur) ----------------------##
+INSERT INTO `item` (`id_item`, `id_seller`, `price`, `name`, `quantity`, `description`, `photo`, `is _bidding`, `is_negotiated`, `is_buying`) 
+VALUES (NULL, '4', '20', 'T-shirt blue unisex', '200', 'Le t-shirt avec juste ce qu’il faut d’élasticité. Il est confortable et la coupe unisexe est flatteuse pour les femmes. 
+On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n• 100 % coton peigné et filé à l’anneau\r\n• 
+Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule', '', '0', '1', '1');
