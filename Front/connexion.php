@@ -3,7 +3,7 @@
     require "head.php";
 ?>
 
-<nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
+<nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -76,7 +76,7 @@
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <input class="se_connecter_email detail_style" name="mail" placeholder="Email">
                     <br>
-                    <input class="se_connecter_mdp detail_style" name="mdp" placeholder="Mot de passe">
+                    <input class="se_connecter_mdp detail_style" name="mdp" type="password" placeholder="Mot de passe">
                     <br>
                     <input type="submit" name="submit" value="Connexion" class="text-uppercase btn_se_connecter texte_style">
                     <br>

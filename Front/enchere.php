@@ -1,9 +1,19 @@
 <?php
     $title="Enchere";
     require "head.php";
-?>
+    session_start();
 
-<nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
+    if(!isset($_SESSION)){
+    session_start();
+    }
+
+    if (isset($_SESSION['email'])) {
+
+    }else{
+    header ('location: ../Front/index.php');
+    }
+?>
+<nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -55,9 +65,17 @@
                         </a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
-                        <a class="nav-link" href="connexion.php">
-                            <img id="img_nav_user" src="../Image/user.png" alt="panier">
-                        </a>
+                        <div class="btn-group">
+                            <a class="nav-link"  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img id="img_nav_user" src="../Image/user.png" alt="panier">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?></button></li>
+                                <li><button class="dropdown-item" type="button">Mon account</button></li>
+                                <li><a class="dropdown-item text-decoration-none" href="../Bdd/logout.php">Logout <i class="fas fa-sign-out-alt text-dark "></i></a></li>
+                                
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
