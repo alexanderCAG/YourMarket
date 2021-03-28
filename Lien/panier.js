@@ -34,8 +34,6 @@ function panier_avec_livraison(event){
         // toastr.success("Compléter le champs");
         // }, 1000);
 
-        
-        
         verif_panierLivraison=false;
     }
 
