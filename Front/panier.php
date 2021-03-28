@@ -111,7 +111,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" class="form-control w-100" value="0">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -158,7 +158,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" class="form-control w-100" value="0">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -171,7 +171,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-1"></div>
         </div>
 
@@ -205,7 +204,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" class="form-control w-100" value="0">
                                 </div>
                             </div>
                             <div class="col-md-6">
