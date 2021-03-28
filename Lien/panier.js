@@ -12,6 +12,30 @@ function panier_avec_livraison(event){
     // livraison verif
     if(livraison_panier_magasin.checked==false && livraison_panier_relais.checked==false
         && livraison_panier_domicile.checked==false){
+
+        // toastr.options = {
+        //     "closeButton": true,
+        //     "newestOnTop": false,
+        //     "progressBar": true,
+        //     "positionClass": "toast-bottom-center",
+        //     "preventDuplicates": false,
+        //     "onclick": null,
+        //     "showDuration": "300",
+        //     "hideDuration": "1000",
+        //     "timeOut": "5000",
+        //     "extendedTimeOut": "1000",
+        //     "showEasing": "swing",
+        //     "hideEasing": "linear",
+        //     "showMethod": "fadeIn",
+        //     "hideMethod": "fadeOut"
+        // }
+
+        // setTimeout(function doThisEveryTwoSeconds() {
+        // toastr.success("Compléter le champs");
+        // }, 1000);
+
+        
+        
         verif_panierLivraison=false;
     }
 

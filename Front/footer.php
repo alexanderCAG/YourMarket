@@ -94,6 +94,7 @@
     crossorigin="anonymous"></script>
 <!-- JQUERY -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- ARCTEXT -->
 <script type="text/javascript" src="http://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script>
 <!-- JS -->
 <script src="../Lien/yourmarket.js"></script>
