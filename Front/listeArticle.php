@@ -1,9 +1,22 @@
+
 <?php
     $title="Liste Article";
     require "head.php";
+    session_start();
+
+    if(!isset($_SESSION)){
+    session_start();
+    }
+
+    if (isset($_SESSION['email'])) {
+
+    }else{
+    header ('location: ../Front/connexion.php');
+    }
 ?>
 
-<nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
+<?php require "../Bdd/navbar.php"; ?>
+<!-- <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -63,12 +76,12 @@
             </div>
         </form>
     </div>
-</nav>
+</nav> -->
 
 <div class="genale_listeArticle position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_listeArticle text-uppercase">
-            Liste des articles
+            Liste des articles 
         </p>
         <p class="info_general_listeArticle centrer detail_style">
             Vous avez 15 articles

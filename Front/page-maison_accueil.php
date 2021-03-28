@@ -2,17 +2,6 @@
 <?php
     $title="Page Maison";
     require "head.php";
-    session_start();
-
-    if(!isset($_SESSION)){
-    session_start();
-    }
-
-    if (isset($_SESSION['email'])) {
-
-    }else{
-    header ('location: ../Front/connexion.php');
-    }
 ?>
 
 <?php require "../Bdd/navbar.php"; ?>
