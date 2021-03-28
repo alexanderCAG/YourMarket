@@ -109,7 +109,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="number" class="form-control w-100" value="0">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -153,18 +153,18 @@
 
                 <div class="row">
                     <div class="col-md-2">
-                        <h4 class="texte_style text-uppercase">20 $</h4></div>
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <input type="number" class="form-control w-100" value="0" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
+                        <h4 class="texte_style text-uppercase">20 $</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control w-100" value="0">
                         </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
-                        </div>
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
-                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-outline-danger f_right"><i class="fas fa-times"></i></button>
                     </div>
                 </div>
             </div>
