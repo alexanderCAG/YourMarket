@@ -2,22 +2,11 @@
 <?php
     $title="Accueil";
     require "head.php";
-    session_start();
-
-    if(!isset($_SESSION)){
-    session_start();
-    }
-
-    if (isset($_SESSION['email'])) {
-
-    }else{
-    header ('location: ../Front/connexion.php');
-    }
 ?>
 
-<!-- <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
+<nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
+        <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../Image/logo_navbar.png" alt="logo_navbar"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +25,7 @@
                             <li><a class="dropdown-item" href="base.php">sheets</a></li>
                             <li><a class="dropdown-item" href="compte_a_rebours.php">pillow</a></li>
                             <li><a class="dropdown-item" href="confirm_register.php">decoration</a></li>
-                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
+                            <li><a class="dropdown-item" href="page-maison_accueil.php">ALL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown nav_regul">
@@ -51,14 +40,14 @@
                             <li><a class="dropdown-item" href="listeVendeur.php">CAP</a></li>
                             <li><a class="dropdown-item" href="ajoutArticle.php">MEN</a></li>
                             <li><a class="dropdown-item" href="#">WOMMEN</a></li>
-                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
+                            <li><a class="dropdown-item" href="page-vetements_accueil.php">ALL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
+                        <a class="nav-link" href="enchere_accueil.php">Enchère</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="panier.php">Panier
+                        <a class="nav-link" href="panier_accueil.php">Panier
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../Image/panier.png" alt="panier">
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
@@ -68,24 +57,15 @@
                         </a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
-                        <div class="btn-group">
-                            <a class="nav-link"  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="../Front/connexion.php">
                                 <img id="img_nav_user" src="../Image/user.png" alt="user">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
-                                <li><button class="dropdown-item" type="button">My account</button></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
-                            </ul>
-                        </div>
                     </li>
                 </ul>
             </div>
         </form>
     </div>
-</nav> -->
-
+</nav> 
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">

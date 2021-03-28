@@ -3,8 +3,69 @@
     $title="Page maison";
     require "head.php";
 ?>
-<?php require "../Bdd/navbar.php"; ?>
 
+<nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
+                src="../Image/logo_navbar.png" alt="logo_navbar"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline my-2 my-lg-0">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item dropdown nav_regul">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Maison
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="base.php">sheets</a></li>
+                            <li><a class="dropdown-item" href="compte_a_rebours.php">pillow</a></li>
+                            <li><a class="dropdown-item" href="confirm_register.php">decoration</a></li>
+                            <li><a class="dropdown-item" href="page-maison_accueil.php">ALL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown nav_regul">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vêtement
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="recupImage.php">T-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="infoPerso.php">SWEAT-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="listeArticle.php">PULL</a></li>
+                            <li><a class="dropdown-item" href="listeVendeur.php">CAP</a></li>
+                            <li><a class="dropdown-item" href="ajoutArticle.php">MEN</a></li>
+                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
+                            <li><a class="dropdown-item" href="page-vetements_accueil.php">ALL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav_regul">
+                        <a class="nav-link" href="enchere_accueil.php">Enchère</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="panier_accueil.php">Panier
+                            <button type="button" class="nav_btn_panier btn position-relative">
+                                <img id="img_nav_panier" src="../Image/panier.png" alt="panier">
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
+                                        <span class="visually-hidden"></span>
+                                    </span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav_user position-absolute top-0 end-0">
+                            <a class="nav-link" href="../Front/connexion.php">
+                                <img id="img_nav_user" src="../Image/user.png" alt="user">
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</nav> 
 
 <div class="genale_panier position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">

@@ -26,7 +26,7 @@
     elseif (mysqli_num_rows($queryacheteur) != 0){
         $_SESSION['email']=$usermail;
 		$_SESSION['lastname']=$usermail;
-        echo "<script language='javascript' type='text/javascript'> location.href='../Front/index.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/index_accueil.php' </script>";
     }
     else{ 
         // echo "<script type='text/javascript'> alert('User Name Or Password Invalid!')</script>";
