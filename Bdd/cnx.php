@@ -2,7 +2,7 @@
 
 <?php
 
-$con = mysqli_connect("localhost","root","","yourmarket_marketplace");
+$con = mysqli_connect("localhost","root","","yourmarket");
 
 // verif de la cnx
 if (mysqli_connect_errno())
