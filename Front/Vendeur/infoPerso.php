@@ -2,7 +2,20 @@
 <?php
     $title="Informations personnelles";
     require "head.php";
-    session_start();
+        include("../../Bdd/cnx.php");
+        session_start();
+        $email_user = $_SESSION['email'];
+        // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
+
+        $queryinfoPerso_vendeur = mysqli_query($con, "SELECT brand,profil_picture,phone,email,passworde FROM seller WHERE email='$email_user'");
+
+    if($rowinfoPerso_vendeur = mysqli_fetch_assoc($queryinfoPerso_vendeur)){
+        $brand_vendeur = $rowinfoPerso_vendeur['brand'];
+        $profil_picture_vendeur = $rowinfoPerso_vendeur['profil_picture'];
+        $phone_vendeur = $rowinfoPerso_vendeur['phone'];
+        $email_vendeur = $rowinfoPerso_vendeur['email'];
+        $passworde_vendeur = $rowinfoPerso_vendeur['passworde'];
+
 ?>
 
 <nav class="navbar fixed-top navbar-expand-lg shadow">
@@ -68,23 +81,23 @@
                 <div class="col-5">
                     <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style">information générale</h3>
                     
-                    <input id="infoPerso_nomMarque_vendeur" name="infoPerso_nomMarque_vendeur" class="infoPerso_contenu_details_vendeur" placeholder="Nom de la marque">
+                    <input id="infoPerso_nomMarque_vendeur" name="infoPerso_nomMarque_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $brand_vendeur ?>" placeholder="Nom de la marque">
                     <br>
                     <span id="infoPerso_nomMarqueErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_telephone_vendeur" name="infoPerso_telephone_vendeur" class="infoPerso_contenu_details_vendeur" placeholder="Téléphone">
+                    <input id="infoPerso_telephone_vendeur" name="infoPerso_telephone_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $phone_vendeur ?>" placeholder="Téléphone">
                     <br>
                     <span id="infoPerso_telephoneErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_mail_vendeur" name="infoPerso_mail_vendeur" class="infoPerso_contenu_details_vendeur" placeholder="Email">
+                    <input id="infoPerso_mail_vendeur" name="infoPerso_mail_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $email_vendeur ?>" placeholder="Email">
                     <br>
                     <span id="infoPerso_mailErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_mdp_vendeur" name="infoPerso_mdp_vendeur" type="password" class="infoPerso_contenu_details_vendeur" placeholder="Mot de passe">
+                    <input id="infoPerso_mdp_vendeur" name="infoPerso_mdp_vendeur" type="password" class="infoPerso_contenu_details_vendeur" value="<?php echo $passworde_vendeur ?>" placeholder="Mot de passe">
                     <br>
                     <span id="infoPerso_mdpErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_mdp2_vendeur" name="infoPerso_mdp2_vendeur" type="password" class="infoPerso_contenu_details_vendeur" placeholder="Confirmation mot de passe">
+                    <input id="infoPerso_mdp2_vendeur" name="infoPerso_mdp2_vendeur" type="password" class="infoPerso_contenu_details_vendeur" value="<?php echo $passworde_vendeur ?>" placeholder="Confirmation mot de passe">
                     <br>
                     <span id="infoPerso_mdp2Erreur_vendeur"></span>
                     <br>
@@ -111,10 +124,10 @@
                 <div class="col-1"></div>
 
                 <div class="col-10">
-                    <button onclick="modif_infoPersoVendeur()" type="button" id="modif_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Modifier</button>
-                    <button onclick="annulModif_infoPersoVendeur()" type="button" id="annulModif_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Annuler Modif</button>
-                    <button onclick="reset_infoPersoVendeur()" type="button" id="reset_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Reset</button>
-                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPersoL_acheteur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
+                    <button onclick="modif_infoPersoVendeur()" type="button" id="modif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Modifier</button>
+                    <button onclick="annulModif_infoPersoVendeur()" type="button" id="annulModif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="reset_infoPersoVendeur()" type="button" id="reset_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Reset</button>
+                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
                 </div>
 
                 <div class="col-1"></div>
@@ -127,5 +140,6 @@
 </div>
 
 <?php
+}
     include("footer.php");
 ?>
