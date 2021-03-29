@@ -2,7 +2,12 @@
 <?php
     $title="Page maison";
     require "head.php";
+        include("../../Bdd/cnx.php");
+        session_start();
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); //4
+        $queryAllItems = mysqli_query($con, "select name, price , quantity, description,photo, is_negotiated, is_bidding from item");// Tableau liste
 ?>
+
 
 <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
@@ -85,95 +90,46 @@
 
     <div class="col-10">
         <div class="row">
-            <div class=" vetement_liste_un_par_un col-3">
-                <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
-                    <div class="class_separation2"></div>
-                </div>
+        <?php
+        // Tota items
+        if($row = mysqli_fetch_assoc($queryCountItems)){
+            $total = $row['total'];
+            for ($i=0; $i<=$total;$i++){
+                if($rowAllItems = mysqli_fetch_assoc($queryAllItems)){
+                    $nameItems = $rowAllItems['name'];
+                    $prixItems = $rowAllItems['price'];
+                    $descriptionItems = $rowAllItems['description'];
+                
+                    // echo "<H1> Nom produit: ".$nameItems."</H1><br>";
+                    // echo "<h3> prix: ".$prixItems." $ </h3><br>";
+                    // echo "<p> Description: ".$descriptionItems." $ </p><br>";
 
-                <div class="vetement_liste_details mt-2 position-relative">
-                    <div class="vetement_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
-                    </div>
-                    <div class="vetement_liste_details_droite">
-                        <p class="detail_style_prix texte_style">20€</p>
-                    </div>
-                    <center><button class="btn_ajouter_article position-absolute bottom-0 start-50 translate-middle-x">ADD TO CART</button></center>
-                </div>
-            </div>
-
-            <div class=" vetement_liste_un_par_un col-3">
-                <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
-                    <div class="class_separation2"></div>
-                </div>
-
-                <div class="vetement_liste_details mt-2 position-relative">
-                    <div class="vetement_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
-                    </div>
-                    <div class="vetement_liste_details_droite">
-                        <p class="detail_style_prix texte_style">20€</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <center><button class="btn_ajouter_article position-absolute bottom-0 start-0">ADD TO CART</button></center>
+                    ?>
+       
+                    <div class=" vetement_liste_un_par_un col-3">
+                        <div class="img_vetement_presentation">
+                            <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
+                            <div class="class_separation2"></div>
                         </div>
 
-                        <div class="col-6">
-                            <center><button class="btn_ajouter_article position-absolute bottom-0 end-0">NEGOCIATE</button></center>
+                        <div class="vetement_liste_details mt-2 position-relative">
+                            <div class="vetement_liste_details_gauche">
+                                <div class="detail_style_titre detail_style"><?php echo $nameItems ?></div> 
+                                <div class="detail_style_marque detail_style">Marque article</div> 
+                            </div>
+                            <div class="vetement_liste_details_droite">
+                                <p class="detail_style_prix texte_style"><?php echo $prixItems ?> €</p>
+                            </div>
+                            <center><button class="btn_ajouter_article position-absolute bottom-0 start-50 translate-middle-x">ADD TO CART</button></center>
                         </div>
                     </div>
-                    
-                </div>
-            </div>
 
-            <div class=" vetement_liste_un_par_un col-3">
-                <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
-                    <div class="class_separation2"></div>
-                </div>
+            <?php
+                }
+            }
 
-                <div class="vetement_liste_details mt-2 position-relative">
-                    <div class="vetement_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
-                    </div>
-                    <div class="vetement_liste_details_droite">
-                        <p class="detail_style_prix texte_style">20€</p>
-                    </div>
-                    <center><button class="btn_ajouter_article position-absolute bottom-0 start-50 translate-middle-x">ADD TO CART</button></center>
-                </div>
-            </div>
-
-            <div class=" vetement_liste_un_par_un col-3">
-                <div class="img_vetement_presentation">
-                    <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
-                    <div class="class_separation2"></div>
-                </div>
-
-                <div class="vetement_liste_details mt-2 position-relative">
-                    <div class="vetement_liste_details_gauche">
-                        <div class="detail_style_titre detail_style">TITRE ARTICLE</div> 
-                        <div class="detail_style_marque detail_style">Marque article</div> 
-                    </div>
-                    <div class="vetement_liste_details_droite">
-                        <p class="detail_style_prix texte_style">20€</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <center><button class="btn_ajouter_article position-absolute bottom-0 start-0">ADD TO CART</button></center>
-                        </div>
-
-                        <div class="col-6">
-                            <center><button class="btn_ajouter_article position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#nego_prix_vetement">NEGOCIATE</button></center>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+        }
+        ?>
         </div>
         
     </div>
