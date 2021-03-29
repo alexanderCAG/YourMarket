@@ -22,13 +22,19 @@
 	    $dateExpiration_acheteur=$_POST['dateExpiration_acheteur'];
 	    $codeSecret_acheteur=$_POST['codeSecret_acheteur'];
 
-        $sql1 = "INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
-				VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')";
+        // $sql1 = "INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
+		// 		VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')";
 
-		$sql2 = "INSERT INTO payment (carde,code,num_card,expiration,nom) 
-				VALUES ('$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur')";
+		// if($con->query($sql1)===true){
+        //     echo("");
+        // }else{
+        //     echo "Error: " . $sql . "<br>" . $con->error;
+        // }
 
-        if(($con->query($sql1)===true) && ($con->query($sql2)===true)){
+		$sql2 = "INSERT INTO payment (id_buyer,carde,code,num_card,expiration,nom) 
+				VALUES ('8','$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur')";
+
+        if($con->query($sql2)===true){
             echo("");
         }else{
             echo "Error: " . $sql . "<br>" . $con->error;

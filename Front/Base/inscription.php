@@ -71,7 +71,7 @@
         
         <div class="inscription_contenu position-absolute bottom-0 start-0">
 
-            <form action="../Bdd/register.php" method="POST">
+            <form action="../../Bdd/register.php" method="POST">
                 <div class="row inscription_contenu_acheteur">
                     <div class="col-1"></div>
 
