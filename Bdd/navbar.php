@@ -87,7 +87,7 @@ if (isset($acheteur) && $acheteur = 1){
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
-                                    <li><button class="dropdown-item" type="button">My account</button></li>
+                                    <li><span class="dropdown-item" ><a href="../Front/infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
                                 </ul>
@@ -129,7 +129,7 @@ elseif (isset($vendeur) && $vendeur = 1){
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li><button class="dropdown-item" type="button">?php echo $_SESSION['email'];?> </button></li>
-                                    <li><button class="dropdown-item" type="button">My account</button></li>
+                                    <li><span class="dropdown-item" ><a href="../Front/infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
                                 </ul>
@@ -179,7 +179,7 @@ elseif (isset($_SESSION['email']) && $admin = 1){
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
-                                <li><button class="dropdown-item" type="button">My account</button></li>
+                                <li><span class="dropdown-item" ><a href="../Front/infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
                             </ul>
@@ -385,7 +385,7 @@ elseif (isset($_SESSION['email']) && $admin = 1){
                                 <img id="img_nav_user" src="../Image/user.png" alt="user">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" type="button">?php echo $_SESSION['email'];?> </button></li>
+                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
                                 <li><span class="dropdown-item" ><a href="../Front/infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
@@ -433,7 +433,7 @@ elseif (isset($_SESSION['email']) && $admin = 1){
                                 <img id="img_nav_user" src="../Image/user.png" alt="user">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" type="button">?php echo $_SESSION['email'];?> </button></li>
+                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
                                 <li><span class="dropdown-item" ><a href="../Front/infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
@@ -481,7 +481,7 @@ elseif (isset($_SESSION['email']) && $admin = 1){
                                 <img id="img_nav_user" src="../Image/user.png" alt="user">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" type="button">?php echo $_SESSION['email'];?></button></li>
+                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?></button></li>
                                 <li><span class="dropdown-item" ><a href="../Front/infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><span class="dropdown-item" ><a href="../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>

@@ -7,7 +7,7 @@
 <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
-                src="../Image/logo_navbar.png" alt="logo_navbar"></a>
+                src="../../Image/logo_navbar.png" alt="logo_navbar"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,29 +43,19 @@
                             <li><a class="dropdown-item" href="page-vetements_accueil.php">ALL</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item nav_regul">
+                    <li class="nav-item nav_regul" style="margin-right:100px!important">
                         <a class="nav-link" href="enchere_accueil.php">Enchère</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="panier_accueil.php">Panier
-                            <button type="button" class="nav_btn_panier btn position-relative">
-                                <img id="img_nav_panier" src="../Image/panier.png" alt="panier">
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
-                                        <span class="visually-hidden"></span>
-                                    </span>
-                            </button>
-                        </a>
-                    </li>
                     <li class="nav_user position-absolute top-0 end-0">
-                            <a class="nav-link" href="../Front/connexion.php">
-                                <img id="img_nav_user" src="../Image/user.png" alt="user">
+                            <a class="nav-link" href="connexion.php">
+                                <img id="img_nav_user" src="../../Image/user.png" alt="user">
                             </a>
                     </li>
                 </ul>
             </div>
         </form>
     </div>
-</nav> 
+</nav>
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -76,7 +66,7 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="img_carousel position-relative" src="../Image/acceuil_achat.jpg" class="d-block w-100"
+            <img class="img_carousel position-relative" src="../../Image/acceuil_achat.jpg" class="d-block w-100"
                 alt="acceuil_achat">
             <div class="bg-secondary">
                 <div class="div_deco">ACHETER MAINTENANT</div>
@@ -87,7 +77,7 @@
                     <div class="carouseul_info">
                         <h5 class="text_carousel texte_style">ACHAT DIRECT</h5>
                         <button class="btn_carousel">
-                            <img id="img_carousel_panier" src="../Image/panier.png" alt="panier">
+                            <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
                             <p style="font-weight: bold;">SHOPPING</p>
                         </button>
                     </div>
@@ -95,13 +85,13 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="img_carousel" src="../Image/accueil_enchere.png" class="d-block w-100" alt="accueil_enchere">
+            <img class="img_carousel" src="../../Image/accueil_enchere.png" class="d-block w-100" alt="accueil_enchere">
             <div class="row w-100 carousel-caption" style="top: 320px">
                 <div class="col-md-10">
                     <div class="carouseul_info">
                         <h5 class="text_carousel">ENCHERE</h5>
                         <button class="btn_carousel">
-                            <img id="img_carousel_panier" src="../Image/panier.png" alt="panier">
+                            <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
                             <p style="font-weight: bold;">SHOPPING</p>
                         </button>
                     </div>
@@ -137,7 +127,7 @@
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../Image/t-shirt_homme.png"
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../../Image/t-shirt_homme.png"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
             <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
@@ -154,7 +144,7 @@
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
-            <img class="image_presentation_nouveau" src="../Image/t-shirt_femme.png" alt="t-shirt_femme">
+            <img class="image_presentation_nouveau" src="../../Image/t-shirt_femme.png" alt="t-shirt_femme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
             <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
@@ -171,7 +161,7 @@
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../Image/t-shirt_homme.png"
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../../Image/t-shirt_homme.png"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
             <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
@@ -188,7 +178,7 @@
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
-            <img class="image_presentation_nouveau" src="../Image/t-shirt_femme.png" alt="t-shirt_femme">
+            <img class="image_presentation_nouveau" src="../../Image/t-shirt_femme.png" alt="t-shirt_femme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
             <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
@@ -218,52 +208,52 @@
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../Image/chaussure.png" alt="chaussure">
+                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
                 </div>
             </div>
         </div>

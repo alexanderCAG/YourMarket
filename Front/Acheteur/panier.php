@@ -3,20 +3,77 @@
     $title="Page maison";
     require "head.php";
     session_start();
-
-    if(!isset($_SESSION)){
-    session_start();
-    }
-
-    if (isset($_SESSION['email'])) {
-
-    }else{
-    header ('location: ../Front/connexion.php');
-    }
-    
 ?>
-<?php require "../Bdd/navbar.php"; ?>
 
+<nav class="navbar fixed-top navbar-expand-lg shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
+                src="../../Image/logo_navbar.png" alt="logo_navbar"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline my-2 my-lg-0">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item dropdown nav_regul">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Maison 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">sheets</a></li>
+                            <li><a class="dropdown-item" href="#">pillow</a></li>
+                            <li><a class="dropdown-item" href="#">decoration</a></li>
+                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown nav_regul">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vêtement
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="#">PULL</a></li>
+                            <li><a class="dropdown-item" href="#">CAP</a></li>
+                            <li><a class="dropdown-item" href="#">MEN</a></li>
+                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
+                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav_regul">
+                        <a class="nav-link" href="enchere.php">Enchère</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="panier.php">Panier
+                            <button type="button" class="nav_btn_panier btn position-relative">
+                                <img id="img_nav_panier" src="../../Image/panier.png" alt="panier"> <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
+                                    <span class="visually-hidden">unread messages</span></span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav_user position-absolute top-0 end-0">
+                        <div class="btn-group">
+                            <a class="nav-link"  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img id="img_nav_user" src="../../Image/user.png" alt="user">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
+                                <li><span class="dropdown-item" ><a href="infoPerso.php" class="text-decoration-none">My account</a></span></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><span class="dropdown-item" ><a href="../../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</nav>
 
 <div class="genale_panier position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
@@ -40,7 +97,7 @@
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">
@@ -87,7 +144,7 @@
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">
@@ -133,7 +190,7 @@
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">

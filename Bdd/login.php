@@ -16,22 +16,23 @@
     if (mysqli_num_rows($queryadmin) != 0){
         $_SESSION['email']=$usermail;
 		$_SESSION['lastname']=$usermail;
-        echo "<script language='javascript' type='text/javascript'> location.href='../Front/listeArticle.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeArticle.php' </script>";
     }
     else if (mysqli_num_rows($queryvendeur) != 0){
         $_SESSION['email']=$usermail;
 		$_SESSION['lastname']=$usermail;
-        echo "<script language='javascript' type='text/javascript'> location.href='../Front/listeArticle.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Vendeur/listeArticle.php' </script>";
     }
     elseif (mysqli_num_rows($queryacheteur) != 0){
         $_SESSION['email']=$usermail;
 		$_SESSION['lastname']=$usermail;
-        echo "<script language='javascript' type='text/javascript'> location.href='../Front/index_accueil.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
     }
-    else{ 
+    else{
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Base/index.php' </script>";
         // echo "<script type='text/javascript'> alert('User Name Or Password Invalid!')</script>";
         // echo "<script language='javascript' type='text/javascript'> location.href='../Front/connexion.php' </script>";
-        echo "ERREUR DE CONNEXION";
+        // echo "ERREUR DE CONNEXION";
     }
 }
 ?>

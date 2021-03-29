@@ -3,19 +3,77 @@
     $title="Informations personnelles";
     require "head.php";
     session_start();
-
-    if(!isset($_SESSION)){
-    session_start();
-    }
-
-    if (isset($_SESSION['email'])) {
-
-    }else{
-    header ('location: ../Front/connexion.php');
-    }
 ?>
 
-<?php require "../Bdd/navbar.php"; ?>
+<nav class="navbar fixed-top navbar-expand-lg shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
+                src="../../Image/logo_navbar.png" alt="logo_navbar"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline my-2 my-lg-0">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item dropdown nav_regul">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Maison 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">sheets</a></li>
+                            <li><a class="dropdown-item" href="#">pillow</a></li>
+                            <li><a class="dropdown-item" href="#">decoration</a></li>
+                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown nav_regul">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vêtement
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="#">PULL</a></li>
+                            <li><a class="dropdown-item" href="#">CAP</a></li>
+                            <li><a class="dropdown-item" href="#">MEN</a></li>
+                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
+                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav_regul">
+                        <a class="nav-link" href="enchere.php">Enchère</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="panier.php">Panier
+                            <button type="button" class="nav_btn_panier btn position-relative">
+                                <img id="img_nav_panier" src="../../Image/panier.png" alt="panier"> <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
+                                    <span class="visually-hidden">unread messages</span></span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav_user position-absolute top-0 end-0">
+                        <div class="btn-group">
+                            <a class="nav-link"  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img id="img_nav_user" src="../../Image/user.png" alt="user">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
+                                <li><span class="dropdown-item" ><a href="infoPerso.php" class="text-decoration-none">My account</a></span></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><span class="dropdown-item" ><a href="../../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</nav>
 
 <div class="genale_page_infoPerso position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
@@ -33,7 +91,7 @@
 
     <div class="col-3 infoPerso_paiement">
 
-        <form action="../Bdd/infoPerso_recup.php" method="POST">
+        <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div>
                 <h3 class="infoPerso_detail_titre1_acheteur text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
 
@@ -50,23 +108,23 @@
                         <div class="row">
                             <div class="col-6">
                                 <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_amex" value="carte_payement_amex">
-                                <img class="image_infoPayment" src="../Image/carte_payement_amex.png" alt="carte_payement_amex">
+                                <img class="image_infoPayment" src="../../Image/carte_payement_amex.png" alt="carte_payement_amex">
                             </div>
 
                             <div class="col-6">
                                 <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_cb" value="carte_payement_cb">
-                                <img class="image_infoPayment" src="../Image/carte_payement_cb.png" alt="carte_payement_cb">
+                                <img class="image_infoPayment" src="../../Image/carte_payement_cb.png" alt="carte_payement_cb">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom:20px!important">
                             <div class="col-6">
                                 <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_mastercard" value="carte_payement_mastercard">
-                                <img class="image_infoPayment" src="../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
+                                <img class="image_infoPayment" src="../../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
                             </div>
 
                             <div class="col-6">
                                 <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_visa" value="carte_payement_visa">
-                                <img class="image_infoPayment" src="../Image/carte_payement_visa.png" alt="carte_payement_visa">
+                                <img class="image_infoPayment" src="../../Image/carte_payement_visa.png" alt="carte_payement_visa">
                             </div>
                         </div>
 
@@ -108,7 +166,7 @@
 
     <div class="col-6 infoPerso_livraison">
 
-        <form action="../Bdd/infoPerso_recup.php" method="POST">
+        <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
                 <div class="col-1"></div>
 
@@ -195,7 +253,7 @@
 
     <div class="col-8 infoPerso_vendeur">
 
-        <form action="../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
+        <form action="../../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
             <div class="row inscription_contenu_vendeur">
                 <div class="col-1"></div>
 
@@ -266,7 +324,7 @@
 
     <div class="col-8 infoPerso_livraison">
 
-        <form action="../Bdd/infoPerso_recup.php" method="POST">
+        <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
                 <div class="col-4">
                     <h3 class="infoPerso_detail_titre1_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
