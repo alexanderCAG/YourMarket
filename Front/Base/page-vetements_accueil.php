@@ -104,9 +104,7 @@
                     // echo "<H1> Nom produit: ".$nameItems."</H1><br>";
                     // echo "<h3> prix: ".$prixItems." $ </h3><br>";
                     // echo "<p> Description: ".$descriptionItems." $ </p><br>";
-
                     ?>
-       
                     <div class=" vetement_liste_un_par_un col-3 mb-5">
                         <div class="img_vetement_presentation">
                             <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
