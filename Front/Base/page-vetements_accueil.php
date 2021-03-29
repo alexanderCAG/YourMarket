@@ -107,7 +107,7 @@
 
                     ?>
        
-                    <div class=" vetement_liste_un_par_un col-3">
+                    <div class=" vetement_liste_un_par_un col-3 mb-5">
                         <div class="img_vetement_presentation">
                             <img class="img_vetement_sale" src="../../Image/chaussure.png" alt="chaussure">
                             <div class="class_separation2"></div>
