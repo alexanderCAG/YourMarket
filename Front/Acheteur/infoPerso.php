@@ -1,9 +1,39 @@
-
 <?php
     $title="Informations personnelles";
     require "head.php";
-    session_start();
+        include("../../Bdd/cnx.php");
+        session_start();
+        $email_user = $_SESSION['email'];
+        // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
+
+        $queryinfoPerso_acheteur = mysqli_query($con, "select lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country,carde,code,num_card,expiration,nom from buyer, payment where buyer.id_buyer=payment.id_buyer and email='$email_user'");
+    
+    if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
+        $lastname_acheteur = $rowinfoPerso_acheteur['lastname'];
+        $firstname_acheteur = $rowinfoPerso_acheteur['firstname'];
+        $phone_acheteur = $rowinfoPerso_acheteur['phone'];
+        $email_acheteur = $rowinfoPerso_acheteur['email'];
+        $passworde_acheteur = $rowinfoPerso_acheteur['passworde'];
+        $adress1_acheteur = $rowinfoPerso_acheteur['adress1'];
+        $adress2_acheteur = $rowinfoPerso_acheteur['adress2'];
+        $city_acheteur = $rowinfoPerso_acheteur['city'];
+        $zip_code_acheteur = $rowinfoPerso_acheteur['zip_code'];
+        $country_acheteur = $rowinfoPerso_acheteur['country'];
+        $carde_acheteur = $rowinfoPerso_acheteur['carde'];
+        $code_acheteur = $rowinfoPerso_acheteur['code'];
+        $num_card_acheteur = $rowinfoPerso_acheteur['num_card'];
+        $expiration_acheteur = $rowinfoPerso_acheteur['expiration'];
+        $nom_acheteur = $rowinfoPerso_acheteur['nom'];
+        echo "<br><br><br><br><br><br><br><br><br><br><br><br>";
+        echo "Bonjour";
+        echo "<h1>".$lastname_acheteur."</h1>";
+    }
+    echo "<br><br><br><br><br><br><br><br><br><br><br><br>";
+    echo"Hello";
+    // echo $queryinfoPerso_acheteur;
 ?>
+
+
 
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">

@@ -11,6 +11,7 @@
         //liste de tous les produits du vendeur connecté 
         $queryAllItemSeller = mysqli_query($con, "select email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and email='$seller_email'");// Tableau liste
 ?>
+
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
@@ -55,101 +56,103 @@
 if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
-    <div class="genale_listeArticle position-relative">
-        <div class="texte_style position-absolute top-50 start-50 translate-middle">
-            <p class="titre_general_listeArticle text-uppercase">
-                Liste des articles 
-            </p>
-            <p class="info_general_listeArticle centrer detail_style">
-                Vous avez <?php echo $total ?> articles
-            </p>
-        </div>
-        
-        <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
+
+<div class="genale_listeArticle position-relative">
+    <div class="texte_style position-absolute top-50 start-50 translate-middle">
+        <p class="titre_general_listeArticle text-uppercase">
+            Liste des articles 
+        </p>
+        <p class="info_general_listeArticle centrer detail_style">
+            Vous avez <?php echo $total ?> articles
+        </p>
     </div>
+    
+    <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
+</div>
 
 <!-- Article 1-->
 <?php
     for ($i=0; $i<=$total;$i++){
-                    if($rowAllItemSeller = mysqli_fetch_assoc($queryAllItemSeller)){
-                        $nameItemSeller = $rowAllItemSeller['name'];
-                        $PriceItemSeller = $rowAllItemSeller['price'];
-                        $qttItemSeller = $rowAllItemSeller['quantity'];
-                        $brandItemSeller = $rowAllItemSeller['brand'];
-                        $isBidding = $rowAllItemSeller['is_bidding'];
-                        $is_negotiated = $rowAllItemSeller['is_negotiated'];
-                        $is_buying = $rowAllItemSeller['is_buying'];
-                        $DescriptionItemSeller = $rowAllItemSeller['description'];
+        if($rowAllItemSeller = mysqli_fetch_assoc($queryAllItemSeller)){
+            $nameItemSeller = $rowAllItemSeller['name'];
+            $PriceItemSeller = $rowAllItemSeller['price'];
+            $qttItemSeller = $rowAllItemSeller['quantity'];
+            $brandItemSeller = $rowAllItemSeller['brand'];
+            $isBidding = $rowAllItemSeller['is_bidding'];
+            $is_negotiated = $rowAllItemSeller['is_negotiated'];
+            $is_buying = $rowAllItemSeller['is_buying'];
+            $DescriptionItemSeller = $rowAllItemSeller['description'];
 ?>
-    <div class="listeArticle_liste_total row m-0 p-3">
-        <div class="col-2"></div>
 
-        <div class="col-8 listeArticle_liste_un_par_un">
-            <div class="row">
-                <div class="col-5">
-                    <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
-                </div>
-               
-                <div class="col-7 listeArticle_liste_details position-relative">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="listeArticle_info_titre texte_style text-uppercase"><?php echo $nameItemSeller ?></div>
-                        </div>
-                        <div class="col-md-6">
-                            <?php if($qttItemSeller == 0){ ?>
-                                <span class="badge  badge-pill rounded-pill bg-danger f_right mr-3"><i class="fas fa-times"></i> not availale </span>
-                            <?php } ?>
-                            <?php if($isBidding == 1){ ?>
-                                <span class="badge  badge-pill rounded-pill bg-warning f_right mr-3"> <i class="fas fa-gavel"></i> Is biding </span>
-                            <?php } ?>
-                            <?php if($is_negotiated == 1){ ?>
-                                
-                                <span class="badge  badge-pill rounded-pill bg-success f_right mr-3">  <i class="far fa-handshake"></i> Is negociated </span> 
-                            <?php } ?>
-                        </div>
-                        
+        <div class="listeArticle_liste_total row m-0 p-3">
+            <div class="col-2"></div>
+
+            <div class="col-8 listeArticle_liste_un_par_un">
+                <div class="row">
+                    <div class="col-5">
+                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
                     </div>
-                    <div class="listeArticle_info_marque detail_style text-uppercase"><?php echo $brandItemSeller ?></div>
-                    <br>
-                    <div class="listeArticle_info_description"><?php echo utf8_encode($DescriptionItemSeller)
                     
-                    ?></div>
-                    <br>
-                    <div class="row border-bottom mb-3 pb-2">
-                        <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
-                        <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <h4 class="texte_style text-uppercase"><?php echo $PriceItemSeller ?> €</h4>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <input type="number" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
+                    <div class="col-7 listeArticle_liste_details position-relative">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="listeArticle_info_titre texte_style text-uppercase"><?php echo $nameItemSeller ?></div>
                             </div>
+                            <div class="col-md-6">
+                                <?php if($qttItemSeller == 0){ ?>
+                                    <span class="badge  badge-pill rounded-pill bg-danger f_right mr-3"><i class="fas fa-times"></i> not availale </span>
+                                <?php } ?>
+                                <?php if($isBidding == 1){ ?>
+                                    <span class="badge  badge-pill rounded-pill bg-warning f_right mr-3"> <i class="fas fa-gavel"></i> Is biding </span>
+                                <?php } ?>
+                                <?php if($is_negotiated == 1){ ?>
+                                    
+                                    <span class="badge  badge-pill rounded-pill bg-success f_right mr-3">  <i class="far fa-handshake"></i> Is negociated </span> 
+                                <?php } ?>
+                            </div>
+                            
                         </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
-                        </div>
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-outline-danger f_right" data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"><i class="fas fa-times"></i></button>
+                        <div class="listeArticle_info_marque detail_style text-uppercase"><?php echo $brandItemSeller ?></div>
+                        <br>
+                        <div class="listeArticle_info_description"><?php echo utf8_encode($DescriptionItemSeller)
                         
+                        ?></div>
+                        <br>
+                        <div class="row border-bottom mb-3 pb-2">
+                            <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
+                            <div class="col-md-10"><small class="text-uppercase">Quantity</small></div>
                         </div>
 
-                        
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h4 class="texte_style text-uppercase"><?php echo $PriceItemSeller ?> €</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
+                            </div>
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-danger f_right" data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"><i class="fas fa-times"></i></button>
+                            
+                            </div>
+
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-2"></div>
-    </div>
-    <?php 
-    } 
+            <div class="col-2"></div>
+        </div>
+        <?php 
+        } 
+    }
 }
-}
-    ?>
+?>
 
 <!-- fin article -->
 <div class="listeArticle_liste_total bg_blue2 row mt-5">
