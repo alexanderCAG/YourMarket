@@ -1,6 +1,6 @@
 <?php
     $title="Confirmation";
-    require "head.php";
+    require "../Base/head.php";
 ?>
 
 <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
@@ -124,5 +124,5 @@
 </script>
 
 <?php
-    include("footer.php");
+    include("../Base/footer.php");
 ?>
