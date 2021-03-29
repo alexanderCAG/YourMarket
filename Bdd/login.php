@@ -29,7 +29,7 @@
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
     }
     else{
-        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Base/index.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Base/connexion.php' </script>";
         // echo "<script type='text/javascript'> alert('User Name Or Password Invalid!')</script>";
         // echo "<script language='javascript' type='text/javascript'> location.href='../Front/connexion.php' </script>";
         // echo "ERREUR DE CONNEXION";
