@@ -234,10 +234,11 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
         </form>
     </div>
 </div>
+
 <!-- Modal to confirm Delete Item-->
 <div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="" method="POST">
+        <form action="delete.php" method="POST">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title titre_modal_prix_nego texte_style" id="staticBackdropLabel">Suppression du produit: <?php echo $nameItemSeller ?> </h5>
@@ -250,16 +251,20 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <button type="submit" name="btn_submit_supprimer" class="btn btn-danger" data-bs-dismiss="modal">Supprimer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="deleteme(<?php echo $idItem; ?>)">Supprimer</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
                 <script language="javascript">
-                            function deleteme(delid) 
-                            {
-                                    window.location.href='delete.php?del_id='+delid+'';
-                                    return true;
-                            }
-                            </script>
+                function deleteme(delid) 
+                {
+                        window.location.href='delete.php?del_id='+delid+'';
+                        return true;
+                }
+                </script> -->
             </div>
         </form>
     </div>
