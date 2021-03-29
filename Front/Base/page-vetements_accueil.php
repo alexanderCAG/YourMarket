@@ -5,7 +5,7 @@
         include("../../Bdd/cnx.php");
         session_start();
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , quantity, description,photo, is_negotiated, is_bidding from item");// Tableau liste
+        $queryAllItems = mysqli_query($con, "select name, price , brand, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller");// Tableau liste
 ?>
 
 
@@ -98,6 +98,7 @@
                 if($rowAllItems = mysqli_fetch_assoc($queryAllItems)){
                     $nameItems = $rowAllItems['name'];
                     $prixItems = $rowAllItems['price'];
+                    $brandItems = $rowAllItems['brand'];
                     $descriptionItems = $rowAllItems['description'];
                 
                     // echo "<H1> Nom produit: ".$nameItems."</H1><br>";
@@ -115,7 +116,7 @@
                         <div class="vetement_liste_details mt-2 position-relative">
                             <div class="vetement_liste_details_gauche">
                                 <div class="detail_style_titre detail_style"><?php echo $nameItems ?></div> 
-                                <div class="detail_style_marque detail_style">Marque article</div> 
+                                <div class="detail_style_marque detail_style"><?php echo $brandItems ?></div> 
                             </div>
                             <div class="vetement_liste_details_droite">
                                 <p class="detail_style_prix texte_style"><?php echo $prixItems ?> €</p>
