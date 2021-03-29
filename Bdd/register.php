@@ -22,22 +22,27 @@
 	    $dateExpiration_acheteur=$_POST['dateExpiration_acheteur'];
 	    $codeSecret_acheteur=$_POST['codeSecret_acheteur'];
 
-        // $sql1 = "INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
-		// 		VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')";
+        $sql1 = "INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
+				VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')";
 
-		// if($con->query($sql1)===true){
-        //     echo("");
-        // }else{
-        //     echo "Error: " . $sql . "<br>" . $con->error;
-        // }
+		$id_last="SELECT id_buyer FROM buyer ORDER BY id_buyer DESC LIMIT 1";
+
+		if($con->query($sql1)===true){
+            echo("");
+			$id_last_result=$con->query($id_last);
+			$row = mysqli_fetch_array($id_last_result);
+			$result = $row['id_buyer'];
+        }else{
+            echo "Error: " . $sql1 . "<br>" . $con->error;
+        }
 
 		$sql2 = "INSERT INTO payment (id_buyer,carde,code,num_card,expiration,nom) 
-				VALUES ('8','$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur')";
+				VALUES ('$result','$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur')";
 
         if($con->query($sql2)===true){
             echo("");
         }else{
-            echo "Error: " . $sql . "<br>" . $con->error;
+            echo "Error: " . $sql2 . "<br>" . $con->error;
         }
     }
     if(isset($_POST['submit_inscription_vendeur'])){
