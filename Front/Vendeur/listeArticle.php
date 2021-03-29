@@ -9,10 +9,12 @@
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
 
         //liste de tous les produits du vendeur connecté 
-        $queryAllItemSeller = mysqli_query($con, "select email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and email='$seller_email'");// Tableau liste
+        $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and email='$seller_email'");// Tableau liste
+
+        
 ?>
 
-<nav class="navbar fixed-top navbar-expand-lg shadow">
+<nav class="navbar fixed-top navbar-expand-lg shadow navbar_menu_principal">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
                 src="../../Image/logo_navbar.png" alt="logo_navbar"></a>
@@ -53,6 +55,7 @@
 </nav>
 
 <?php
+
 if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
@@ -75,6 +78,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     for ($i=0; $i<=$total;$i++){
         if($rowAllItemSeller = mysqli_fetch_assoc($queryAllItemSeller)){
             $nameItemSeller = $rowAllItemSeller['name'];
+            $idItem = $rowAllItemSeller['id_item'];
             $PriceItemSeller = $rowAllItemSeller['price'];
             $qttItemSeller = $rowAllItemSeller['quantity'];
             $brandItemSeller = $rowAllItemSeller['brand'];
@@ -82,6 +86,11 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $is_negotiated = $rowAllItemSeller['is_negotiated'];
             $is_buying = $rowAllItemSeller['is_buying'];
             $DescriptionItemSeller = $rowAllItemSeller['description'];
+            
+            $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
+             
+            
+            
 ?>
 
         <div class="listeArticle_liste_total row m-0 p-3">
@@ -135,12 +144,12 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                             <div class="col-md-6">
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
+                            
                             <div class="col-md-1">
-                                <button type="button" class="btn btn-outline-danger f_right" data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"><i class="fas fa-times"></i></button>
-                            
+                                <button type="button" class="btn btn-outline-danger f_right" data-bs-toggle="modal" data-bs-target="#confirmDeleteItem" name="deleteItem"><i class="fas fa-times"></i></button>
                             </div>
+            
 
-                            
                         </div>
                     </div>
                 </div>
@@ -153,7 +162,6 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     }
 }
 ?>
-
 <!-- fin article -->
 <div class="listeArticle_liste_total bg_blue2 row mt-5">
     <div class="col-2"></div>
