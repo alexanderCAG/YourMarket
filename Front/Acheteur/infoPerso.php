@@ -24,13 +24,8 @@
         $num_card_acheteur = $rowinfoPerso_acheteur['num_card'];
         $expiration_acheteur = $rowinfoPerso_acheteur['expiration'];
         $nom_acheteur = $rowinfoPerso_acheteur['nom'];
-        echo "Bonjour";
-        echo "<h1>".$lastname_acheteur."</h1>";
 
 ?>
-
-
-
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
@@ -133,23 +128,46 @@
 
                         <div class="row">
                             <div class="col-6">
-                                <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_amex" value="carte_payement_amex">
+                                <?php if($carde_acheteur == "carte_payement_amex"){ 
+                                echo'<input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_amex" value="carte_payement_amex" checked>';
+                                }
+                                else{
+                                    echo'<input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_amex" value="carte_payement_amex">';
+                                } ?>
                                 <img class="image_infoPayment" src="../../Image/carte_payement_amex.png" alt="carte_payement_amex">
                             </div>
 
                             <div class="col-6">
-                                <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_cb" value="carte_payement_cb">
+                            <?php if($carde_acheteur == "carte_payement_cb"){ 
+                                echo'
+                                <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_cb" value="carte_payement_cb" checked>';
+                                }
+                                else{
+                                    echo'<input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_cb" value="carte_payement_cb">';
+                                }?>
                                 <img class="image_infoPayment" src="../../Image/carte_payement_cb.png" alt="carte_payement_cb">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom:20px!important">
                             <div class="col-6">
-                                <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_mastercard" value="carte_payement_mastercard">
+                            <?php if($carde_acheteur == "carte_payement_mastercard"){ 
+                                echo' <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_mastercard" value="carte_payement_mastercard" checked>';
+                                }
+                                else{
+                                echo' <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_mastercard" value="carte_payement_mastercard">';
+                            }?>
                                 <img class="image_infoPayment" src="../../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
                             </div>
 
                             <div class="col-6">
-                                <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_visa" value="carte_payement_visa">
+                            <?php if($carde_acheteur == "carte_payement_visa"){ 
+                                echo'
+                                <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_visa" value="carte_payement_visa" checked>';
+                                }
+                                else{
+                                    echo'
+                                    <input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_visa" value="carte_payement_visa">';
+                                }?>
                                 <img class="image_infoPayment" src="../../Image/carte_payement_visa.png" alt="carte_payement_visa">
                             </div>
                         </div>
