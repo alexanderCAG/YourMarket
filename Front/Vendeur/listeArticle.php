@@ -88,9 +88,6 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $DescriptionItemSeller = $rowAllItemSeller['description'];
             
             $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
-             
-            
-            
 ?>
 
         <div class="listeArticle_liste_total row m-0 p-3">
@@ -148,8 +145,6 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                             <div class="col-md-1">
                                 <button type="button" class="btn btn-outline-danger f_right" data-bs-toggle="modal" data-bs-target="#confirmDeleteItem" name="deleteItem"><i class="fas fa-times"></i></button>
                             </div>
-            
-
                         </div>
                     </div>
                 </div>
@@ -255,9 +250,16 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Supprimer</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="deleteme(<?php echo $idItem; ?>)">Supprimer</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
+                <script language="javascript">
+                            function deleteme(delid) 
+                            {
+                                    window.location.href='delete.php?del_id='+delid+'';
+                                    return true;
+                            }
+                            </script>
             </div>
         </form>
     </div>
