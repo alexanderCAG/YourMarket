@@ -1,7 +1,6 @@
 <?php
     $title="Confirmation";
     require "head.php";
-    session_start();
 ?>
 
 

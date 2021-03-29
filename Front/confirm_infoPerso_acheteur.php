@@ -1,7 +1,6 @@
 <?php
     $title="Confirmation";
     require "head.php";
-    session_start();
 ?>
 
 <div class="confirm_infoPerso_general position-relative">
