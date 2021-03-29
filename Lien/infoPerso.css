@@ -486,7 +486,7 @@
             flex-direction: column;
         }
         .toast-area > *{
-            margin-top: 100px;
+            margin-top: 40px;
         }
         .toast{
             display: flex;

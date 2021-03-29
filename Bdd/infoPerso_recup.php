@@ -10,6 +10,7 @@
 	    $infoPerso_dateExpiration_acheteur=$_POST['infoPerso_dateExpiration_acheteur'];
 	    $infoPerso_codeSecret_acheteur=$_POST['infoPerso_codeSecret_acheteur'];
 		
+		include("../Front/confirm_infoPerso_acheteur.php");
     }
 	if (isset($_POST['submit_valider_infoPersoL_acheteur'])){
         session_start();
@@ -24,6 +25,7 @@
 	    $infoPerso_pays_acheteur=$_POST['infoPerso_pays_acheteur'];
 	    $infoPerso_ville_acheteur=$_POST['infoPerso_ville_acheteur'];
 		
+		include("../Front/confirm_infoPerso_acheteur.php");
     }
 	if (isset($_POST['submit_valider_infoPerso_vendeur'])){
         session_start();
@@ -34,6 +36,8 @@
 	    $infoPerso_mdp2_vendeur=$_POST['infoPerso_mdp2_vendeur'];
 
 		$infoPerso_photo=$_POST['infoPerso_img'];
+
+		include("../Front/confirm_infoPerso_vendeur.php");
     }
 	if (isset($_POST['submit_valider_infoPerso_admin'])){
         session_start();
@@ -47,7 +51,9 @@
 	    $infoPerso_adresse2_admin=$_POST['infoPerso_adresse2_admin'];
 	    $infoPerso_pays_admin=$_POST['infoPerso_pays_admin'];
 	    $infoPerso_ville_admin=$_POST['infoPerso_ville_admin'];
+
+		include("../Front/confirm_infoPerso_admin.php");
     }
 
-    include("../Front/confirm_infoPerso.php");
+    // include("../Front/confirm_infoPerso.php");
 ?>
