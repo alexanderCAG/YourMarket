@@ -3,7 +3,7 @@
     $title="Page maison";
     require "head.php";
         include("../../Bdd/cnx.php");
-        session_start();
+        
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); //4
         $queryAllItems = mysqli_query($con, "select name, price , brand, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller");// Tableau liste
 ?>
