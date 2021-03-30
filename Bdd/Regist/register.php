@@ -1,6 +1,6 @@
 
-<?php
-    include("cnx.php");
+<!-- <?php
+    include("../cnx.php");
     
     if (isset($_POST['submit_inscription_acheteur'])){
         session_start();
@@ -65,10 +65,8 @@
 			}else{
 				echo "Error:".$sql.$con->error;
 			}
-		}else{
-            echo "Error: " . $sql . "<br>" . $con->error;
-        }
+		}
     }
 
-    include("../Front/confirm_register.php");
-?>
+    // include("../../Front/confirm_register.php");
+?> -->
