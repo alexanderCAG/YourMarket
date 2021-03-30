@@ -51,9 +51,9 @@
                             Maison 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">sheets</a></li>
-                            <li><a class="dropdown-item" href="#">pillow</a></li>
-                            <li><a class="dropdown-item" href="#">decoration</a></li>
+                            <li><a class="dropdown-item" href="page-maison-sheet.php">sheets</a></li>
+                            <li><a class="dropdown-item" href="page-maison-pillow.php">pillow</a></li>
+                            <li><a class="dropdown-item" href="page-maison-decoration.php">decoration</a></li>
                             <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
                         </ul>
                     </li>

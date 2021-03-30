@@ -4,8 +4,8 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller");// Tableau liste
+        $queryCountCadre = mysqli_query($con, "select count(id_item) as total  from item where category='maison' and subcategory='decoration'"); 
+        $queryAllCadre = mysqli_query($con, "select name, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='maison' and subcategory='decoration'");
 ?>
 
 <div class="vetement_general">
@@ -17,17 +17,16 @@
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
 
-<div class="vetement_details" id="">
+<div class="vetement_details" >
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
-                    <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
-                    <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
+                    <li><a href="page-maison.php#menuCatMaison" class="text-uppercase" >All product</a> </li>
+                    <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEET</a></li>
                     <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOW</a></li>
-                    <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATION</a></li>
+                    <li><a href="page-maison-decoration.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">DECORATION</a></li>
                 </ul>
     </div>
 </div>
-
 <div class="maison_liste_total row">
     <!-- Premiere ligne -->
     <div class="col-1"></div>
@@ -35,34 +34,30 @@
     <div class="col-10">
         <div class="row">
         <?php
-        // Tota items
-        if($row = mysqli_fetch_assoc($queryCountItems)){
+        // Total items
+        if($row = mysqli_fetch_assoc($queryCountCadre)){
             $total = $row['total'];
             for ($i=0; $i<=$total;$i++){
-                if($rowAllItems = mysqli_fetch_assoc($queryAllItems)){
-                    $nameItems = $rowAllItems['name'];
-                    $prixItems = $rowAllItems['price'];
-                    $brandItems = $rowAllItems['brand'];
-                    $quantityCadre = $rowAllItems['quantity'];
-                    $descriptionItems = $rowAllItems['description'];
-                    $subcategoryItems = $rowAllItems['subcategory'];
-                    $is_negotiated = $rowAllItems['is_negotiated'];
-                    
+                if($rowAllCadre = mysqli_fetch_assoc($queryAllCadre)){
+                    $nameCadre = $rowAllCadre['name'];
+                    $prixCadre = $rowAllCadre['price'];
+                    $brandCadre = $rowAllCadre['brand'];
+                    $quantityCadre = $rowAllCadre['quantity'];
+                    $descriptionCadre = $rowAllCadre['description'];
+                    $is_negotiated = $rowAllCadre['is_negotiated'];
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
                             <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
-                            <?php  if($quantityCadre == 0 ){?>
-                                <div class="bg-danger text-light w-100 text-center">Indisponible</div>
-                                <?php }?>
+            
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-9">
-                                    <div class="detail_style_titre detail_style"><small><?php echo $nameItems ?></small></div> 
-                                <div class="detail_style_marque detail_style"><small><?php echo $brandItems ?></small></div> 
+                                    <div class="detail_style_titre detail_style"><small><?php echo $nameCadre ?></small></div> 
+                                <div class="detail_style_marque detail_style"><small><?php echo $brandCadre ?></small></div> 
                                     </div>
                                     <div class="col-md-3">
-                                        <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixItems ?> €</small> </p>
+                                        <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixCadre ?> €</small> </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -75,16 +70,12 @@
                                     </div>
 
                                     <div class="col-6  p-1 m-0">
-                                        <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                        <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart</small></button>
                                     </div>
                             </div>
-                                <?php  if($subcategoryItems == 'drap' or $subcategoryItems == 'oreiller' or $subcategoryItems == 'decoration'){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Maison &nbsp;</div>
-                                <?php }?>
-                                <?php  if($subcategoryItems == 'tshirt' or $subcategoryItems == 'pull'){?>
-                                    <div class="card-badge bg_blue1  pl-5"> &nbsp;<i class="fas fa-tshirt"></i> Vêtement &nbsp;</div>
-                                <?php }?>
-                                
+                            <?php  if($quantityCadre == 0 ){?>
+                                    <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> Ce produit n'est plus disponible &nbsp;</div>
+                            <?php }?>
                                 
                             </div>
                             <div class="class_separation2 w-100"></div>
@@ -93,7 +84,6 @@
             <?php
                 }
             }
-
         }
         ?>
         </div>
