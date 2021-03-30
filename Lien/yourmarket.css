@@ -25,21 +25,21 @@
 .f_right{
     float: right!important;
 }
-        /********************************
-                    COLORS
-        *********************************/
-        .color_blue1{
-            color:#3678ab!important;
-        }
-        .bg_blue1{
-            background-color:#3678ab!important;
-        }
-        .color_blue2{
-            color:#14003f!important;
-        }
-        .bg_blue2{
-            background-color:#14003f!important;
-        }
+/********************************
+            COLORS
+*********************************/
+.color_blue1{
+    color:#3678ab!important;
+}
+.bg_blue1{
+    background-color:#3678ab!important;
+}
+.color_blue2{
+    color:#14003f!important;
+}
+.bg_blue2{
+    background-color:#14003f!important;
+}
 
 
 

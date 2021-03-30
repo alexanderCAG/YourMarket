@@ -3,19 +3,18 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         $seller_email = $_SESSION['email'];
-        //total des vendeurs inscrits 
-        $queryCountSeller = mysqli_query($con, "select count(id_seller) as totalVendeurs from seller"); 
 
-        //liste des vendeurs inscrits
-        $queryAllSeller = mysqli_query($con, "select brand,profil_picture,background,phone,email from seller");//
+        $queryCountMaisonBrand = mysqli_query($con, "select count(brand) as total_brand from seller, item where seller.id_seller=item.id_seller and category='Maison'"); 
+
+        $queryAllMaisonBrand = mysqli_query($con, "select brand, phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='Maison'");//
         
-        if($row = mysqli_fetch_assoc($queryCountSeller)){
-                    $total = $row['totalVendeurs'];
+        if($row = mysqli_fetch_assoc($queryCountMaisonBrand)){
+                    $total = $row['total_brand'];
         ?>
         <div class="genale_listeVendeur position-relative">
             <div class="texte_style position-absolute top-50 start-50 translate-middle">
                 <p class="titre_general_listeVendeur text-uppercase">
-                    Liste des vendeurs
+                Liste des vendeurs
                 </p>
                 <!-- <p class="info_general_listeVendeur centrer detail_style">
                     Il y a <=?php echo $total ; ?> vendeur(s)
@@ -28,9 +27,9 @@
         <div class="listeVendeur_details">
             <div class="navbar_listeVendeur">
                 <ul class="navbar_listeVendeur_details detail_style centrer">
-                    <li><a href="listeVendeur.php" class="badge text-uppercase bg_blue1 text-light">Toutes nos marques <span class="badge bg-light text-dark"><?php echo $total ; ?></span></a> </li>
-                    <li><a href="listeVendeurMaison.php" class="text-uppercase">Marques mobilier </a> </li>
-                    <li><a href="listeVendeurVetement.php" class="text-uppercase">Marques de vêtements</a></li>
+                <li><a href="listeVendeur.php" class="text-uppercase">Toutes nos marques </a> </li>
+                    <li><a href="listeVendeurMaison.php" class="badge text-uppercase bg_blue1 text-light">Marques mobilier <span class="badge bg-light text-dark"><?php echo $total ; ?></span></a> </li>
+                    <li><a href="listeVendeurVetement.php" class="text-uppercase">marques de vêtements</a></li>
                 </ul>
             </div>
         </div>
@@ -46,12 +45,11 @@
                 <div class="row">
                 <?php
                     for ($i=0; $i<=$total;$i++){
-                        if($rowAllSeller = mysqli_fetch_assoc($queryAllSeller)){
-                            $brandSeller = $rowAllSeller['brand'];
-                            $profil_picture_Seller = $rowAllSeller['profil_picture'];
-                            $backgroundSeller = $rowAllSeller['background'];
-                            $phoneSeller = $rowAllSeller['phone'];
-                            $emailSeller = $rowAllSeller['email'];
+                        if($rowAllBrandMaison = mysqli_fetch_assoc($queryAllMaisonBrand)){
+                            $brandMaisonName = $rowAllBrandMaison['brand'];
+                            $profil_picture_brand_Maison = $rowAllBrandMaison['profil_picture'];
+                            $phoneBrandMaison = $rowAllBrandMaison['phone'];
+                            $emailBrandMaison = $rowAllBrandMaison['email'];
                 ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card" style="width: 18rem;">
@@ -60,15 +58,15 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h5 class="card-title"> <i class="fas fa-hand-holding-usd"></i> <?php echo $brandSeller ?></h5>
+                                    <h5 class="card-title"> <i class="fas fa-hand-holding-usd"></i> <?php echo $brandMaisonName ?></h5>
                                 </div>
                                 <div class="col-md-4">
                                     <a href="#" class="btn btn-danger f_right"><i class="far fa-trash-alt"></i></a>
                                 </div>
                             </div>
                             <hr>
-                            <small class="card-title"> <i class="fas fa-phone-square-alt"></i> <?php echo $phoneSeller ?></small><br>
-                            <small class="card-title"> <i class="fas fa-envelope-square"></i> <?php echo $emailSeller ?></small>
+                            <small class="card-title"> <i class="fas fa-phone-square-alt"></i> <?php echo $phoneBrandMaison ?></small><br>
+                            <small class="card-title"> <i class="fas fa-envelope-square"></i> <?php echo $emailBrandMaison ?></small>
                             
                         </div>
                         <div class="class_separation2 w-100"></div>
