@@ -61,7 +61,7 @@
                         <div class="vetement_liste_details mt-2 position-relative">
                             <div class="vetement_liste_details_gauche">
                                 <div class="detail_style_titre detail_style"><?php echo $nameItems ?></div> 
-                                <div class="detail_style_marque detail_style"><?php echo $brandItems ?></div> 
+                                <div class="detail_style_marque detail_style" style="text-decoration:underline;"><?php echo $brandItems ?></div> 
                             </div>
                             <div class="vetement_liste_details_droite">
                                 <p class="detail_style_prix texte_style"><?php echo $prixItems ?> €</p>
