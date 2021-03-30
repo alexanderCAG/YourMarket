@@ -259,11 +259,11 @@
                     <br>
                     <span id="infoPerso_paysErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_ville_acheteur" name="infoPerso_ville_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Ville" value="<?php echo $zip_code_acheteur ?>">
+                    <input id="infoPerso_ville_acheteur" name="infoPerso_ville_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Ville" value="<?php echo $city_acheteur ?>">
                     <br>
                     <span id="infoPerso_villeErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_codepostal_acheteur" name="infoPerso_codepostal_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Code Postal" value="<?php echo $city_acheteur ?>">
+                    <input id="infoPerso_codepostal_acheteur" name="infoPerso_codepostal_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Code Postal" value="<?php echo $zip_code_acheteur ?>">
                     <br>
                     <span id="infoPerso_codepostalErreur_acheteur"></span>
                     <br>

@@ -127,7 +127,7 @@
                     <button onclick="modif_infoPersoVendeur()" type="button" id="modif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Modifier</button>
                     <button onclick="annulModif_infoPersoVendeur()" type="button" id="annulModif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Annuler Modif</button>
                     <button onclick="reset_infoPersoVendeur()" type="button" id="reset_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Reset</button>
-                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
+                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPerso_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
                 </div>
 
                 <div class="col-1"></div>
