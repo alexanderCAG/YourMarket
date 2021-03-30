@@ -17,11 +17,11 @@
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
 
-<div class="vetement_details" id="">
+<div class="vetement_details" >
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
-                    <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
-                    <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
+                    <li><a href="page-maison.php#menuCatMaison" class="text-uppercase" >All product</a> </li>
+                    <li><a href="page-maison-sheet.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">SHEETS</a></li>
                     <li><a href="page-maison-pullow.php#menuCatMaison" class="text-uppercase">PILLOW</a></li>
                     <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATION</a></li>
                 </ul>
