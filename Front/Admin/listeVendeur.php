@@ -55,23 +55,23 @@
                 ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card" style="width: 18rem;">
-                        <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
-        
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="card-title"> <i class="fas fa-hand-holding-usd"></i> <?php echo $brandSeller ?></h5>
+                            <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
+            
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h5 class="card-title"> <i class="fas fa-hand-holding-usd"></i> <?php echo $brandSeller ?></h5>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="#" class="btn btn-danger f_right"><i class="far fa-trash-alt"></i></a>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <a href="#" class="btn btn-danger f_right"><i class="far fa-trash-alt"></i></a>
-                                </div>
+                                <hr>
+                                <small class="card-title"> <i class="fas fa-phone-square-alt"></i> <?php echo $phoneSeller ?></small><br>
+                                <small class="card-title"> <i class="fas fa-envelope-square"></i> <?php echo $emailSeller ?></small>
+                                
                             </div>
-                            <hr>
-                            <small class="card-title"> <i class="fas fa-phone-square-alt"></i> <?php echo $phoneSeller ?></small><br>
-                            <small class="card-title"> <i class="fas fa-envelope-square"></i> <?php echo $emailSeller ?></small>
-                            
-                        </div>
-                        <div class="class_separation2 w-100"></div>
+                            <div class="class_separation2 w-100"></div>
                         </div>
                     </div>
                     <?php 
