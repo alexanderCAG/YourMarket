@@ -3,8 +3,8 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Vetement'"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='Vetement'");// 
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Vetement' and subcategory='shoes'"); //4
+        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='Vetement'and subcategory='shoes'");// 
 ?>
 
 <div class="vetement_general">
@@ -19,10 +19,10 @@
 <div class="vetement_details" id="menuCatVetement">
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
-                    <li><a href="page-vetements.php#menuCatVetement" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
+                    <li><a href="page-vetements.php#menuCatVetement" class="text-uppercase">All product</a> </li>
                     <li><a href="page-vetements-tshirt.php#menuCatVetement" class="text-uppercase">T-shirt</a></li>
                     <li><a href="page-vetements-sweat.php#menuCatVetement" class="text-uppercase">Sweat-shirt</a></li>
-                    <li><a href="page-vetements-shoes.php#menuCatVetement" class="text-uppercase">Shoes</a></li>
+                    <li><a href="page-vetements-shoes.php#menuCatVetement" class="badge text-uppercase bg_blue1 text-light">Shoes</a></li>
                 </ul>
     </div>
 </div>
@@ -51,9 +51,6 @@
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
                             <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
-                            <?php  if($quantityCadre == 0 ){?>
-                                <div class="bg-danger text-light w-100 text-center">Indisponible</div>
-                                <?php }?>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-9">
@@ -77,15 +74,9 @@
                                         <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
                                     </div>
                             </div>
-                                <?php  if($subcategoryItems == 'tshirt' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-tshirt"></i> T-shirt &nbsp;</div>
-                                <?php }?>
-                                <?php  if($subcategoryItems == 'sweat_shirt' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp; <i class="fas fa-tshirt"></i> Sweat-shirt &nbsp;</div>
-                                <?php }?>
-                                <?php  if($subcategoryItems == 'shoes' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp; <i class="fas fa-shoe-prints"></i> Shoes &nbsp;</div>
-                                <?php }?>
+                            <?php  if($quantityCadre == 0 ){?>
+                                    <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> Ce produit n'est plus disponible &nbsp;</div>
+                            <?php }?>
                             </div>
                             <div class="class_separation2 w-100"></div>
                             </div>

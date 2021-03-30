@@ -4,7 +4,7 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); 
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Maison'"); 
         $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='Maison'");
 ?>
 
@@ -87,8 +87,6 @@
                                 <?php  if($subcategoryItems == 'decoration' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Decoration &nbsp;</div>
                                 <?php }?>
-                                
-                                
                             </div>
                             <div class="class_separation2 w-100"></div>
                             </div>

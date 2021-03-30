@@ -63,12 +63,9 @@
                             Vêtement
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="#">PULL</a></li>
-                            <li><a class="dropdown-item" href="#">CAP</a></li>
-                            <li><a class="dropdown-item" href="#">MEN</a></li>
-                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
+                            <li><a class="dropdown-item" href="page-vetements-tshirt.php">T-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="page-vetements-sweat.php">SWEAT-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="page-vetements-shoes.php">SHOES</a></li>
                             <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
                         </ul>
                     </li>
