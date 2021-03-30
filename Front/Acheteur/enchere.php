@@ -6,10 +6,9 @@
         
         $queryCountEnchere = mysqli_query($con, "select count(id_item) as total  from item where is_bidding=1"); 
         $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, brand, quantity, description,photo is_negotiated, is_bidding 
-        from item,bid,seller,buyer
+        from item,bid,seller
         where bid.id_item=item.id_item
         and bid.id_seller=seller.id_seller
-        and bid.id_buyer=buyer.id_buyer
         and is_bidding=1
         ");
 ?>
