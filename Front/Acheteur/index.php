@@ -1,7 +1,18 @@
-
 <?php
     $title="Accueil";
     require "head.php";
+        include("../../Bdd/cnx.php");
+        
+        // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Vetement' and subcategory='sweat_shirt'"); 
+        $dernierVetement = mysqli_query($con, 'select id_item, brand,price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Vetement" order by id_item desc limit 1');
+       
+        $avantDernierVetement = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Vetement" order by id_item desc limit 1,1');
+
+        $dernierMaison = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Maison" order by id_item desc limit 1');
+       
+        $avantDernierMaison = mysqli_query($con, 'select id_item,brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Maison" order by id_item desc limit 1,1');
+
+        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller order by id_item desc limit 10 ");
 ?>
 
 
@@ -68,7 +79,7 @@
         <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
             aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
             quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
-        <button class="btn_presentation">DECOUVRIR</button>
+        <a type="button"  href="page-vetements.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DECOUVRIR</a>
     </div>
 
     <div class="col-md-1 col-lg-1"></div>
@@ -82,9 +93,17 @@
         </div>
         
         <div class="information_presentation_premier">
-            <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
-            <div class="information_presentation_nom">T-shirt</div>
+        <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
+                    $nameItem = $rowdernierVetement['name'];
+                    $priceItem = $rowdernierVetement['price'];
+                    $categoryItem = $rowdernierVetement['category'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $subcategoryItem = $rowdernierVetement['subcategory'];
+        ?>
+            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
+            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
+            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
+            <?php } ?>
         </div>
     </div>
 
@@ -98,9 +117,17 @@
         </div>
         
         <div class="information_presentation_deuxieme">
-            <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
-            <div class="information_presentation_nom">T-shirt</div>
+        <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
+                    $nameItem = $rowavantDernierVetement['name'];
+                    $priceItem = $rowavantDernierVetement['price'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $categoryItem = $rowavantDernierVetement['category'];
+                    $subcategoryItem = $rowavantDernierVetement['subcategory'];
+        ?>
+            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
+            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
+            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
+            <?php } ?>
         </div>
     </div>
 </div>
@@ -116,9 +143,17 @@
         </div>
         
         <div class="information_presentation_premier">
-            <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
-            <div class="information_presentation_nom">T-shirt</div>
+        <?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
+                    $nameItem = $rowdernierMaison['name'];
+                    $priceItem = $rowdernierMaison['price'];
+                    $categoryItem = $rowdernierMaison['category'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $subcategoryItem = $rowdernierMaison['subcategory'];
+        ?>
+            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
+            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
+            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
+            <?php } ?>
         </div>
     </div>
 
@@ -132,9 +167,17 @@
         </div>
         
         <div class="information_presentation_deuxieme">
-            <div class="information_presentation_prix">20,99 €</div>
-            <div class="information_presentation_categorie">CATEGORIE</div>
-            <div class="information_presentation_nom">T-shirt</div>
+        <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
+                    $nameItem = $rowavantDernierMaison['name'];
+                    $priceItem = $rowavantDernierMaison['price'];
+                    $categoryItem = $rowavantDernierMaison['category'];
+                    $brandItem = $rowavantDernierMaison['brand'];
+                    $subcategoryItem = $rowavantDernierMaison['subcategory'];
+        ?>
+            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
+            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
+            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
+            <?php } ?>
         </div>
     </div>
 
@@ -146,7 +189,7 @@
         <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
             aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
             quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
-        <button class="btn_presentation">DECOUVRIR</button>
+            <a type="button"  href="page-maison.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DECOUVRIR</a>
     </div>
 </div>
 
@@ -154,66 +197,29 @@
     <div class="container">
         <h2 class="centrer texte_style pt-4 pb-4 text-uppercase">Nos Produits</h2>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <?php for ($i=0; $i<=9;$i++){
+            if($rowAllItems = mysqli_fetch_assoc($queryAllItems)){
+                $nameItems = $rowAllItems['name'];
+                $prixItems = $rowAllItems['price'];
+                $brandItems = $rowAllItems['brand'];
+    ?>
             <div class="col">
                 <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
+                    <p lass='text-center'><img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
+                    <small><?php echo "<p class='text-center'>".$nameItems." - ".$prixItems."€ </p>"  ?></small></p>
                 </div>
             </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                    <img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
-                </div>
-            </div>
+            <?php } }?>
+            
         </div>
 
-        <button class="position-absolute bottom-0 start-50 translate-middle-x" id="btn_presentation_produit">
-            TOUT VOIR
+        <button class="position-absolute bottom-0 start-50 translate-middle-x" id="btn_presentation_produit"><a href="tous-nos-produits.php" class="text-decoration-none text-light">TOUT VOIR</a>
         </button>
-
+        
     </div>
 </div>
 
-<div class="information_connection pt-4 position-relative">
+<!-- <div class="information_connection pt-4 position-relative">
     <h2 class="centrer white texte_style">SE CONNECTER</h2><br><br>
     <p class="white info_connection_texte position-absolute top-50 start-50 translate-middle">Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Necessitatibus, dolores magni! A labore incidunt magnam doloribus,
@@ -240,7 +246,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php
     include("footer.php");
