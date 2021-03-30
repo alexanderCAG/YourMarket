@@ -14,6 +14,8 @@ jQuery(document).ready(function(){
     document.getElementById('infoPerso_nomCarte_acheteur').disabled=true;
     document.getElementById('infoPerso_dateExpiration_acheteur').disabled=true;
     document.getElementById('infoPerso_codeSecret_acheteur').disabled=true;
+
+    $("#submit_valider_infoPaiement_acheteur").hide();
 });
 
     /********************************
@@ -123,6 +125,8 @@ jQuery(document).ready(function(){
         document.getElementById('infoPerso_nomCarte_acheteur').disabled=false;
         document.getElementById('infoPerso_dateExpiration_acheteur').disabled=false;
         document.getElementById('infoPerso_codeSecret_acheteur').disabled=false;
+
+        $("#submit_valider_infoPaiement_acheteur").show();
     }
 
     function annulModif_infoPerso_paiement(){
@@ -134,6 +138,8 @@ jQuery(document).ready(function(){
         document.getElementById('infoPerso_nomCarte_acheteur').disabled=true;
         document.getElementById('infoPerso_dateExpiration_acheteur').disabled=true;
         document.getElementById('infoPerso_codeSecret_acheteur').disabled=true;
+
+        $("#submit_valider_infoPaiement_acheteur").hide();
     }
 
     function reset_infoPerso_paiement(){

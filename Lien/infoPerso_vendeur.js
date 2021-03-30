@@ -11,6 +11,8 @@ document.getElementById('infoPerso_mail_vendeur').disabled=true;
 document.getElementById('infoPerso_mdp_vendeur').disabled=true;
 document.getElementById('infoPerso_mdp2_vendeur').disabled=true;
 
+$("#submit_valider_infoPerso_vendeur").hide();
+
 });
 
 document.getElementById('submit_valider_infoPerso_vendeur').addEventListener('click',infoPerso_vendeur)
@@ -145,6 +147,8 @@ function modif_infoPersoVendeur(){
     document.getElementById('infoPerso_mail_vendeur').disabled=false;
     document.getElementById('infoPerso_mdp_vendeur').disabled=false;
     document.getElementById('infoPerso_mdp2_vendeur').disabled=false;
+
+    $("#submit_valider_infoPerso_vendeur").show();
 }
 
 function annulModif_infoPersoVendeur(){
@@ -153,6 +157,8 @@ function annulModif_infoPersoVendeur(){
     document.getElementById('infoPerso_mail_vendeur').disabled=true;
     document.getElementById('infoPerso_mdp_vendeur').disabled=true;
     document.getElementById('infoPerso_mdp2_vendeur').disabled=true;
+
+    $("#submit_valider_infoPerso_vendeur").hide();
 }
 
 function reset_infoPersoVendeur(){

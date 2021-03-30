@@ -17,6 +17,8 @@ document.getElementById('infoPerso_pays_admin').disabled=true;
 document.getElementById('infoPerso_ville_admin').disabled=true;
 document.getElementById('infoPerso_codepostal_admin').disabled=true;
 
+$("#submit_valider_infoPerso_admin").hide();
+
 });
 
 /********************************
@@ -260,6 +262,8 @@ function modif_infoPersoAdmin(){
     document.getElementById('infoPerso_pays_admin').disabled=false;
     document.getElementById('infoPerso_ville_admin').disabled=false;
     document.getElementById('infoPerso_codepostal_admin').disabled=false;
+
+    $("#submit_valider_infoPerso_admin").show();
 }
 
 function annulModif_infoPersoAdmin(){
@@ -274,6 +278,8 @@ function annulModif_infoPersoAdmin(){
     document.getElementById('infoPerso_pays_admin').disabled=true;
     document.getElementById('infoPerso_ville_admin').disabled=true;
     document.getElementById('infoPerso_codepostal_admin').disabled=true;
+
+    $("#submit_valider_infoPerso_admin").hide();
 }
 
 function reset_infoPersoAdmin(){

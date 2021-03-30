@@ -16,6 +16,8 @@ jQuery(document).ready(function(){
     document.getElementById('infoPerso_pays_acheteur').disabled=true;
     document.getElementById('infoPerso_ville_acheteur').disabled=true;
     document.getElementById('infoPerso_codepostal_acheteur').disabled=true;
+
+    $("#submit_valider_infoPersoL_acheteur").hide();
 });
 
 
@@ -260,6 +262,8 @@ function modif_infoPersoL_livraison(){
     document.getElementById('infoPerso_pays_acheteur').disabled=false;
     document.getElementById('infoPerso_ville_acheteur').disabled=false;
     document.getElementById('infoPerso_codepostal_acheteur').disabled=false;
+
+    $("#submit_valider_infoPersoL_acheteur").show();
 }
 
 function annulModif_infoPersoL_livraison(){
@@ -274,6 +278,8 @@ function annulModif_infoPersoL_livraison(){
     document.getElementById('infoPerso_pays_acheteur').disabled=true;
     document.getElementById('infoPerso_ville_acheteur').disabled=true;
     document.getElementById('infoPerso_codepostal_acheteur').disabled=true;
+
+    $("#submit_valider_infoPersoL_acheteur").hide();
 }
 
 function reset_infoPersoL_livraison(){
