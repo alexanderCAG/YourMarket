@@ -4,8 +4,8 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller");// Tableau liste
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); 
+        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='Maison'");
 ?>
 
 <div class="vetement_general">
@@ -78,11 +78,14 @@
                                         <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
                                     </div>
                             </div>
-                                <?php  if($subcategoryItems == 'drap' or $subcategoryItems == 'oreiller' or $subcategoryItems == 'decoration'){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Maison &nbsp;</div>
+                                <?php  if($subcategoryItems == 'drap' ){?>
+                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
                                 <?php }?>
-                                <?php  if($subcategoryItems == 'tshirt' or $subcategoryItems == 'pull'){?>
-                                    <div class="card-badge bg_blue1  pl-5"> &nbsp;<i class="fas fa-tshirt"></i> Vêtement &nbsp;</div>
+                                <?php  if($subcategoryItems == 'oreiller' ){?>
+                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillows &nbsp;</div>
+                                <?php }?>
+                                <?php  if($subcategoryItems == 'decoration' ){?>
+                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Decoration &nbsp;</div>
                                 <?php }?>
                                 
                                 

@@ -1,10 +1,7 @@
+
 <?php
-    $title="Page Vêtement";
+    $title="Page Vetement";
     require "head.php";
-        include("../../Bdd/cnx.php");
-        
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller");// Tableau liste
 ?>
 
 <div class="vetement_general">
