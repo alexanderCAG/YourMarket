@@ -105,6 +105,7 @@
 <script src="../Lien/ajoutVendeur.js"></script>
 <script src="../Lien/article.js"></script>
 <script src="../Lien/panier.js"></script>
+<script src="../Lien/image.js"></script>
 
 </body>
 
