@@ -27,7 +27,7 @@
 
             if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)){
                 // enregistrer dans sql
-                $sql="insert into upload_image (`path`) values ('$target_path')";
+                $sql="insert into upload_image (path) values ('$target_path')";
                 if($con->query($sql)==true){
                     echo"<br><br>";
                 }else{
