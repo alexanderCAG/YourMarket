@@ -9,19 +9,40 @@
 	    $telephone_acheteur=$_POST['telephone_acheteur'];
 	    $mail_acheteur=$_POST['mail_acheteur'];
 	    $mdp_acheteur=$_POST['mdp_acheteur'];
-	    $mdp2_acheteur=$_POST['mdp2_acheteur'];
+	    // $mdp2_acheteur=$_POST['mdp2_acheteur'];
 	    $adresse1_acheteur=$_POST['adresse1_acheteur'];
 	    $adresse2_acheteur=$_POST['adresse2_acheteur'];
 	    $pays_acheteur=$_POST['pays_acheteur'];
 	    $ville_acheteur=$_POST['ville_acheteur'];
 	    $codepostal_acheteur=$_POST['codepostal_acheteur'];
 
-        $sql = "INSERT INTO inscription (nom,prenom) VALUES ('$nom_acheteur','$mdp_acheteur')";
+	    $carte_bancaire=$_POST['carte_bancaire'];
+	    $numeroCarte_acheteur=$_POST['numeroCarte_acheteur'];
+	    $nomCarte_acheteur=$_POST['nomCarte_acheteur'];
+	    $dateExpiration_acheteur=$_POST['dateExpiration_acheteur'];
+	    $codeSecret_acheteur=$_POST['codeSecret_acheteur'];
 
-        if($con->query($sql)===true){
+        $sql1 = "INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
+				VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')";
+
+		$id_last="SELECT id_buyer FROM buyer ORDER BY id_buyer DESC LIMIT 1";
+
+		if($con->query($sql1)===true){
+            echo("");
+			$id_last_result=$con->query($id_last);
+			$row = mysqli_fetch_array($id_last_result);
+			$result = $row['id_buyer'];
+        }else{
+            echo "Error: " . $sql1 . "<br>" . $con->error;
+        }
+
+		$sql2 = "INSERT INTO payment (id_buyer,carde,code,num_card,expiration,nom) 
+				VALUES ('$result','$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur')";
+
+        if($con->query($sql2)===true){
             echo("");
         }else{
-            echo "Error: " . $sql . "<br>" . $con->error;
+            echo "Error: " . $sql2 . "<br>" . $con->error;
         }
     }
     if(isset($_POST['submit_inscription_vendeur'])){
@@ -34,7 +55,7 @@
 
 		$photo=$_POST['img'];
 
-		$sql = "INSERT INTO inscription (nom,prenom) VALUES ('$nomMarque_vendeur','$photo')";
+		$sql = "INSERT INTO seller (brand,profil_picture,background,phone,email,passworde) VALUES ('$nomMarque_vendeur','$photo','white','$telephone_vendeur','$mail_vendeur','$mdp_vendeur')";
 
         if($con->query($sql)===true){
             echo("");

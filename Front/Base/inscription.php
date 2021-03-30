@@ -3,6 +3,7 @@
     require "head.php";
 ?>
 
+
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
@@ -85,6 +86,8 @@
         </div>
     </div>
 
+
+<div class="inscription_general position-relative">
     <div class="inscription_div position-absolute top-50 start-50 translate-middle shadow">
         <div class="inscription_titre row position-absolute top-0 start-50 translate-middle-x">
             <div id="inscription_titre_premier" class="col-6 position-relative">
@@ -98,7 +101,7 @@
         
         <div class="inscription_contenu position-absolute bottom-0 start-0">
 
-            <form action="../Bdd/register.php" method="POST">
+            <form action="../../Bdd/register.php" method="POST">
                 <div class="row inscription_contenu_acheteur">
                     <div class="col-1"></div>
 
@@ -152,23 +155,96 @@
                         <input id="codepostal_acheteur" name="codepostal_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code Postal">
                         <br>
                         <span id="codepostalErreur_acheteur"></span>
+
                         <br>
                         <input id="check_condition_inscription_acheteur" class="condition_inscription" type="checkbox">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accept the registration conditions</a>
                         <br>
                         <a class="retour_login_inscription" href="connexion.php">Login</a>
                         <button type="button" onclick="reset_acheteur()" class="btn_reset_inscription_acheteur text-uppercase detail_style">Reset</button>
+
                     </div>
 
                     <div class="col-1"></div>
 
+                    <div class="col-12" style="margin-top:30px!important;">
+                        <h3 class="inscription_detail_titre3 text-uppercase detail_style centrer">Information de paiement</h3>
+
+                        <div class="row">
+                            <div class="col-1"></div>
+
+                            <div class="col-5" style="margin-top:10px!important;">
+                                <input id="typeCarte_acheteur" name="typeCarte_acheteur" type="text" class="inscription_contenu_details_acheteur centrer" placeholder="Type de carte">
+                                <br>
+                                <span id="typeCarteErreur_acheteur"></span>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_amex" value="carte_payement_amex">
+                                        <img class="image_payment_inscription" src="../../Image/carte_payement_amex.png" alt="carte_payement_amex">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_cb" value="carte_payement_cb">
+                                        <img class="image_payment_inscription" src="../../Image/carte_payement_cb.png" alt="carte_payement_cb">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_mastercard" value="carte_payement_mastercard">
+                                        <img class="image_payment_inscription" src="../../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input type="radio" name="carte_bancaire" id="carte_payement_visa" value="carte_payement_visa">
+                                        <img class="image_payment_inscription" src="../../Image/carte_payement_visa.png" alt="carte_payement_visa">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <input id="check_condition_inscription_acheteur" class="condition_inscription" type="checkbox">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accepter les condition d'inscription</a>
+                                <br>
+                                <a class="retour_login_inscription" href="connexion.php">Login</a>
+                                <button type="button" onclick="reset_acheteur()" class="btn_reset_inscription_acheteur text-uppercase detail_style">Reset</button>
+                            </div>
+
+                            <div class="col-5" style="margin-left:50px!important; margin-top:10px!important;">
+                                <input id="numeroCarte_acheteur" name="numeroCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Numéro de carte">
+                                <br>
+                                <span id="numeroCarteErreur_acheteur"></span>
+                                <br>
+                                
+                                <input id="nomCarte_acheteur" name="nomCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom de carte">
+                                <br>
+                                <span id="nomCarteErreur_acheteur"></span>
+                                <br>
+                                <label style="color:#888888;">Date d'expiration</label>
+                                <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="date" class="inscription_contenu_details_acheteur" placeholder="Date d'expiration">
+                                <br>
+                                <span id="dateExpirationErreur_acheteur"></span>
+                                <br>
+                                <input id="codeSecret_acheteur" name="codeSecret_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code secret">
+                                <br>
+                                <span id="codeSecretErreur_acheteur"></span>
+                                <br>
+                            </div>
+
+                            <div class="col-1"></div>
+                        </div>
+
+                    </div>
+
                     <div class="col-12">
                         <button type="submit" id="submit_inscription_acheteur" name="submit_inscription_acheteur" class="btn text-light btn_inscription_final_acheteur text-uppercase detail_style position-absolute bottom-0 start-0">Register</button>
+
                     </div>
                 </div>
             </form>
 
-            <form action="../Bdd/register.php" method="POST" enctype="multipart/form-data">
+            <form action="../../Bdd/register.php" method="POST" enctype="multipart/form-data">
                 <div class="row inscription_contenu_vendeur">
                     <div class="col-1"></div>
 
@@ -211,7 +287,9 @@
                         </div>
                         <br><br>
                         <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">
+
                         <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accept the registration conditions</a>
+
                     </div>
 
                     <div class="col-1"></div>
@@ -227,7 +305,7 @@
 </div>
 
 <!-- Modal condition -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="condition_contenu_inscription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
         <div class="modal-header">

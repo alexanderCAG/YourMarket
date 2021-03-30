@@ -1,7 +1,8 @@
 <?php
-    $title="Connexion";
+    $title="Confirmation";
     require "head.php";
 ?>
+
 
 <nav class="navbar fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
@@ -96,7 +97,7 @@
                     You are now registered
                 </p>
                 <br><br>
-                <a href="../Front/connexion.php" class="confirm_register_to_connexion">Sign up</a>
+                <a href="../Front/Base/connexion.php" class="confirm_register_to_connexion">Sign up</a>
             </div>
         </div>
     </div>
@@ -117,9 +118,9 @@
 
 <script>
     function animationInscription(){
-        var child = document.getElementById('clonemother');
-        var clone = child.cloneNode(true);
-        var node = document.getElementById("toasts").appendChild(clone);
+        let child = document.getElementById('clonemother');
+        let clone = child.cloneNode(true);
+        let node = document.getElementById("toasts").appendChild(clone);
         console.log(node.childNodes);
 
         setTimeout(function() {

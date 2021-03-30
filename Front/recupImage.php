@@ -1,6 +1,6 @@
 
 <?php
-    $title="Accueil";
+    $title="Recup Image";
     require "head.php";
 ?>
 

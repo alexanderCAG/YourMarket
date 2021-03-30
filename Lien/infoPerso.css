@@ -1,0 +1,840 @@
+
+/********************************
+        SE CONNECTER
+*********************************/
+.se_connecter_general{
+    height: 800px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.se_connecter_div{
+    width: 800px;
+    height: 500px;
+}
+.se_connecter_titre{
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+}
+.se_connecter_titre h2{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.se_connecter_contenu{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 420px;
+}
+.se_connecter_mdp,
+.se_connecter_email{
+    width: 250px;
+    background-color: #d9d9d9;
+    border: none;
+    border-bottom: solid 2px black;
+}
+.se_connecter_mdp{
+    margin-top: 50px;
+}
+.btn_se_connecter{
+    width: 250px;
+    height: 50px;
+    color: white;
+    border: solid 2px white;
+    background-color: #3b5998;
+    margin-top: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.connecter_mdp_oublié{
+    margin-top: 10px;
+    float: right;
+    color: #14003f;
+}
+.connecter_mais_inscription{
+    color: #14003f;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+            /********************************
+            SE CONNECTER-ANIMATION-INSCRIPTION
+            *********************************/
+            #Clouds {
+                pointer-events: none;
+                height: 100%;
+                margin: auto;
+                overflow: hidden;
+                -webkit-animation: FadeIn 3s ease-out;
+                        animation: FadeIn 3s ease-out;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                    -ms-user-select: none;
+                        user-select: none;
+            }
+            @-webkit-keyframes FadeIn {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+            }
+            @keyframes FadeIn {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+            }
+            .Cloud {
+                opacity: 0.5;
+                position:absolute;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                height: 70px;
+                -webkit-animation-duration: 120s;
+                        animation-duration: 120s;
+                -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                -webkit-animation-name: Float, FadeFloat;
+                        animation-name: Float, FadeFloat;
+                z-index: 1;
+            }
+            .Cloud.Foreground {
+                opacity: 0.5;
+                height: 10%;
+                min-height: 20px;
+                z-index: 3;
+            }
+            .Cloud.Background {
+                opacity: 0.5;
+                height: 9.09090909%;
+                min-height: 8px;
+                -webkit-animation-duration: 210s;
+                        animation-duration: 210s;
+            }
+            @-webkit-keyframes Float {
+                from {
+                -webkit-transform: translateX(100%) translateZ(0);
+                transform: translateX(100%) translateZ(0);
+                }
+                to {
+                -webkit-transform: translateX(-15%) translateZ(0);
+                transform: translateX(-15%) translateZ(0);
+                }
+            }
+            @keyframes Float {
+                from {
+                -webkit-transform: translateX(100%) translateZ(0);
+                transform: translateX(100%) translateZ(0);
+                }
+                to {
+                -webkit-transform: translateX(-15%) translateZ(0);
+                transform: translateX(-15%) translateZ(0);
+                }
+            }
+            @-webkit-keyframes FadeFloat {
+                0%,
+                100% {
+                opacity: 0;
+                }
+                5%,
+                90% {
+                opacity: 0.5;
+                }
+            }
+            @keyframes FadeFloat {
+                0%,
+                100% {
+                opacity: 0;
+                }
+                5%,
+                90% {
+                opacity: 0.5;
+                }
+            }
+            .Cloud:nth-child(10) {
+                -webkit-animation-delay: -184.61538462s;
+                        animation-delay: -184.61538462s;
+                top: 60%;
+            }
+            .Cloud.Foreground:nth-child(10) {
+                -webkit-animation-duration: 80s;
+                        animation-duration: 80s;
+                height: 35%;
+            }
+            .Cloud.Background:nth-child(10) {
+                -webkit-animation-duration: 110s;
+                        animation-duration: 110s;
+                height: -3.40909091%;
+            }
+            .Cloud:nth-child(9) {
+                -webkit-animation-delay: -166.15384615s;
+                        animation-delay: -166.15384615s;
+                top: 54%;
+            }
+            .Cloud.Foreground:nth-child(9) {
+                -webkit-animation-duration: 84s;
+                        animation-duration: 84s;
+                height: 32.5%;
+            }
+            .Cloud.Background:nth-child(9) {
+                -webkit-animation-duration: 114s;
+                        animation-duration: 114s;
+                height: -2.15909091%;
+            }
+            .Cloud:nth-child(8) {
+                -webkit-animation-delay: -147.69230769s;
+                        animation-delay: -147.69230769s;
+                top: 48%;
+            }
+            .Cloud.Foreground:nth-child(8) {
+                -webkit-animation-duration: 88s;
+                        animation-duration: 88s;
+                height: 30%;
+            }
+            .Cloud.Background:nth-child(8) {
+                -webkit-animation-duration: 118s;
+                        animation-duration: 118s;
+                height: -0.90909091%;
+            }
+            .Cloud:nth-child(7) {
+                -webkit-animation-delay: -129.23076923s;
+                        animation-delay: -129.23076923s;
+                top: 42%;
+            }
+            .Cloud.Foreground:nth-child(7) {
+                -webkit-animation-duration: 92s;
+                        animation-duration: 92s;
+                height: 27.5%;
+            }
+            .Cloud.Background:nth-child(7) {
+                -webkit-animation-duration: 122s;
+                        animation-duration: 122s;
+                height: 0.34090909%;
+            }
+            .Cloud:nth-child(6) {
+                -webkit-animation-delay: -110.76923077s;
+                        animation-delay: -110.76923077s;
+                top: 36%;
+            }
+            .Cloud.Foreground:nth-child(6) {
+                -webkit-animation-duration: 96s;
+                        animation-duration: 96s;
+                height: 25%;
+            }
+            .Cloud.Background:nth-child(6) {
+                -webkit-animation-duration: 126s;
+                        animation-duration: 126s;
+                height: 1.59090909%;
+            }
+            .Cloud:nth-child(5) {
+                -webkit-animation-delay: -92.30769231s;
+                        animation-delay: -92.30769231s;
+                top: 30%;
+            }
+            .Cloud.Foreground:nth-child(5) {
+                -webkit-animation-duration: 100s;
+                        animation-duration: 100s;
+                height: 22.5%;
+            }
+            .Cloud.Background:nth-child(5) {
+                -webkit-animation-duration: 130s;
+                        animation-duration: 130s;
+                height: 2.84090909%;
+            }
+            .Cloud:nth-child(4) {
+                -webkit-animation-delay: -73.84615385s;
+                        animation-delay: -73.84615385s;
+                top: 24%;
+            }
+            .Cloud.Foreground:nth-child(4) {
+                -webkit-animation-duration: 104s;
+                        animation-duration: 104s;
+                height: 20%;
+            }
+            .Cloud.Background:nth-child(4) {
+                -webkit-animation-duration: 134s;
+                        animation-duration: 134s;
+                height: 4.09090909%;
+            }
+            .Cloud:nth-child(3) {
+                -webkit-animation-delay: -55.38461538s;
+                        animation-delay: -55.38461538s;
+                top: 18%;
+            }
+            .Cloud.Foreground:nth-child(3) {
+                -webkit-animation-duration: 108s;
+                        animation-duration: 108s;
+                height: 17.5%;
+            }
+            .Cloud.Background:nth-child(3) {
+                -webkit-animation-duration: 138s;
+                        animation-duration: 138s;
+                height: 5.34090909%;
+            }
+            .Cloud:nth-child(2) {
+                -webkit-animation-delay: -36.92307692s;
+                        animation-delay: -36.92307692s;
+                top: 12%;
+            }
+            .Cloud.Foreground:nth-child(2) {
+                -webkit-animation-duration: 112s;
+                        animation-duration: 112s;
+                height: 15%;
+            }
+            .Cloud.Background:nth-child(2) {
+                -webkit-animation-duration: 142s;
+                        animation-duration: 142s;
+                height: 6.59090909%;
+            }
+            .Cloud:nth-child(1) {
+                -webkit-animation-delay: -18.46153846s;
+                        animation-delay: -18.46153846s;
+                top: 6%;
+            }
+            .Cloud.Foreground:nth-child(1) {
+                -webkit-animation-duration: 116s;
+                        animation-duration: 116s;
+                height: 12.5%;
+            }
+            .Cloud.Background:nth-child(1) {
+                -webkit-animation-duration: 146s;
+                        animation-duration: 146s;
+                height: 7.84090909%;
+            }
+            .Cloud {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAABgCAYAAACTzNnjAAAFCklEQVR42u3d34uVRRjA8YMsEi0iSwhdRBGhSJgZiNRFIkWhQVEXBipKUVBBLCF6k0h4UxFkBLq4QT/Qiyi80EgxCjXMWqOMtqy0bBNja92yXatN3c3pGc9sHU/v+X3emWfe93vx+QN23u+e95x5Z94pmNWFQo5NEytErzgoBsSIOCf+FqbEBTEhzophcVTsFxvFEjE152PZHGMukbcB6BAPij0uqgtl0bXCBvyjeFPcS2wEWc0y0ec++Ywnf7rwbyc8grQ6RY8Y9RhhJT+Jde4TmghzFuR08bo4ryDEpE/N58QUYsx+kFPcD4yzCkMsZz+1uwkyu0HeKYYiCLHcN2I2QWYnSPudbHubfy37NuFu4wQZeZD2k2Uw4hDLHRZdBBnnH3K/5ykcX86IeQQZl6civ0XXYv/RlhJkHLZkOMTypz7dBKnbyzmJsfTZeTdB6vRszmIsjXI5QeryWMa/M9ZinzjdTJA63CLGcxzjpD/ElQQZfq3iKDFe8lSHIAPqI8L/6SHIMB4nvorTQQsI0v+teoz4KjpBkH7tIrqaNhCkH9cnbK5C8q/uywiSHzKabCLIdM3K+QR4o8YysfVWcZDvElnD1hNkOi5XuilLu5MlOyzni3vESnGfWCRuIMjm1zgSWPM7GWvNXdonXkdM8Q0dCwmytu8Iy/vK9B3iRoJMnghnqifc8jb7yXkXQf5nLWGo2WR2HUGuLrxPDKq25D6d9yBPE4I6/e6rVO6CnMpkuFq/eLmFKwtyMRde/dOg2XkKkvlH/X5P9ZNSWZBvcMGjMJza6iJlQe7nYkfjozwE+TkXOiprsx7kES5yVOzLYK/IcpA/cJGj806Wg/yaCxzlzsersxpkPxc4SruzGuQBLm603yU7DPOQUOSJWIK0E6j2lcvPm+JJVp+674oDbiFuv5t/fEXs5cJG65DmIO3KY3vG3yCLbXO1N1xVkB3uWfQQFye3rtUS5DN1bC5C9j0cOki7XOwUFwJOb6gg7TmCW1lMizI7QwQ5nW2qqGCv7yDtwsxfGXhU0OczyKvECIOOKvb5CnKa2+TDoKOat3wFyaIH1ONFH0H2MNCo00NpBzmXR39owIy0gzzOIKNOv6X9LHsZg4wGp3xsM/ZMoUfF3aaZ4++qBDnIIKMNzrsHKb11Lb6oEORtDCRSYB81f+vWxzYUJBv2kTYb5vx6gzzHgMHTjsUXagV5BwMFzz78d5NYQpDbGCAEcOzissaEIL9kcBDIx0lBsrwMIW0uD3KcQUHgqaEFpUGyLQGhnSgNkgGBBg8QJDQ5Phkky82g5bvkNQXDscDQY6MNcpiBgBL9NsjDDAS0LPq1Qb7EQECJicLFSUkGAkpMLgMaYzCgKci3GQxomPqZDPImBgMa9uOULifnDWcI7VRpkIsYEAR2sHwX2GcMCgJak/QKPh4lIsgcpOhM2iv7JIODAPqqvY7vPQYInlf6zKsWpN2iOMBAwZMD9bzSudPwvh+kr3gofJ0vve/ikxIp36pXNHosiD2j5gMGD2ksyG3lJK917qc5A4l2eNW04Wi5OaZ41DADilZu0xtMmw/fXCV+ZnDRoFFTfBdpaudlLxVfsXMRNYy7W3SH8XSAu/01bo8s/kL8xQWAM+JC7DIeDnCvZqZ4RGxxi3/3iUPOJ+5TtRXfG/v6jeadNMVjlqsZquG0uwU164ybg2vFuPuh2ax23tkm3N91VLwmbjVNvPT+H7Ro4730ITNPAAAAAElFTkSuQmCC);
+                /* background-image: url("Image/chaussure.png"); */
+            }
+            .Cloud.Background {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAqCAYAAAAUJM0rAAACFUlEQVRo3u3aPSwDYRzH8UZEbAYiYrDYjLZGpIPBJLGwSKwi0k1iYBKDdFJsEiMxSZgsFZJGiGjqJWEhSKuaNKRUG8r5PfI8SXOud72+PH2eu2f47Ndv7+V5/nee/G6bh5MWmIV9iEMWvkGjfiADD7AHk9BU6+PSNK0kPAINwwXkC6KU6gvC4HVyKB/clhHHCDnbTqHbSaEaYIv+OK3KyBk274RQrXBXg0B6B/QPkTIUiZTiEIm5gkbZQjXTJ5nG2ZFsocJ1iMQEZQk1VcdIGl2L9Yoeitwj3uocirgRPVRAgEjMoMihkgKFStIzK063QVHYhKF6h/IKFMlKGpaNlhM8Qq1JFIp5gQHeoSIShmJPST/PUElJQ7FN9hivUGmJQxE56OQRKiN5qL/NNY9QKQeEIpdgR7VC9cEqHeGeUyEHXHrMUiWhyKx6BV4dEsNMtNxQI4Ls33h5LidUoEYjXKEXoXZDLbgsEBOzE8qne8fmJhE7oWIujUQcwhyMmy0VSKRRF0cyWlclYMYo1LEKZOgRugpDpVWUot5ZLI8LlwN23bNQKoY1vwpVmmsS6kOFsPRJQl2qENZIqGkVwnp9xb5nUksEcxm2hZlQMcy3OYXTgx0VpOi2pl8/jwqpMP9sF5twBl08ctE7I/dws5l5D5y4OBj51HvdzluYdlik0RL06cjkKpSlB1Span5x/AQb5Hfrxyy/oU5ISeVw53AAAAAASUVORK5CYII=);
+                /* background-image: url("Image/chaussure.png"); */
+            }
+
+
+/********************************
+        INSCRIPTION
+*********************************/
+.inscription_general{
+    height: 850px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.inscription_div{
+    width: 800px;
+    height: 630px;
+}
+.inscription_titre{
+    margin-left: 0px!important;
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+    padding-top: 7px;
+}
+#inscription_titre_premier{
+    border-right: solid 2px white;
+}
+#inscription_titre_deuxieme{
+    border-left: solid 2px white;
+}
+.inscription_titre button{
+    font-size: 40px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #14003f;
+    color: #8795a3;
+}
+
+        /********************************
+            INSCRIPTION-CONTENU
+        *********************************/
+        .inscription_contenu{
+            margin-left: 0px!important;
+            background-color: #d9d9d9;
+            width: 100%;
+            height: 550px;
+        }
+        .inscription_detail_titre1,
+        .inscription_detail_titre2,
+        .inscription_detail_titre3{
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #14003f;
+        }
+        .inscription_contenu_details_vendeur,
+        .inscription_contenu_details_acheteur{
+            width: 250px;
+            height: 40px;
+            border: none;
+            border-bottom: solid 2px black;
+            background-color: #d9d9d9;
+        }
+        .inscription_contenu_vendeur span,
+        .inscription_contenu_acheteur span{
+            font-size: 12px;
+            color: red;
+        }
+        .condition_inscription{
+            width: 15px;
+            height: 15px;
+            margin-top: 10px;
+        }
+        .inscription_contenu_acheteur{
+            margin-left: 0px!important;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        .image_payment_inscription{
+            width: 70px;
+            height: 50px;
+        }
+                /********************************
+                    CHOIX-IMAGE-VENDEUR
+                *********************************/
+                #img_inscription_choix_vendeur{
+                    background-image: url("../Image/chaussure.png");
+                    width: 250px;
+                    height: 250px;
+                    border: solid 2px black;
+                    border-radius: 50%;
+                    margin-top: 30px;
+                }
+                .img_inscription_general{
+                    margin-top: 10px;
+                }
+                .btn_choix_img_vendeur_inscription{
+                    position: relative;
+                    overflow: hidden;
+                    color: black!important;
+                    font-size: 15px!important;
+                    font-weight: bold!important;
+                }
+                .btn_choix_img_vendeur_inscription:hover{
+                    color: #246acf!important;
+                    font-weight: bold;
+                }
+                #file_interrieur_inscription_img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 100px;
+                    text-align: right;
+                    opacity: 0;
+                    background: white;
+                    cursor: pointer;
+                }
+        .btn_reset_inscription_vendeur,
+        .btn_reset_inscription_acheteur{
+            width: 120px;
+            height: 40px;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+        .retour_login_inscription{
+            text-decoration: none;
+            margin-left: 20px;
+            margin-right: 50px;
+            font-size: 20px;
+            margin-top: 25px;
+            color: black;
+        }
+        .retour_login_inscription:hover{
+            color: #246acf;
+        }
+        .btn_inscription_final_vendeur,
+        .btn_inscription_final_acheteur{
+            width: 720px!important;
+            height: 40px!important;
+            margin-top: 20px!important;
+            margin-left: 25px!important;
+            margin-bottom: 25px!important;
+            background-color: #3b5998!important;
+        }
+        
+        /********************************
+                INSCRIPTION-MODAL
+        *********************************/
+        .modal_condition_inscription_titre{
+            margin-left: 15%;
+            font-size: 30px;
+        }
+        .modal_condition_inscription_texte{
+            text-align: justify;
+        }
+
+        /********************************
+            INSCRIPTION-ANIMATION-SUCCESS
+        *********************************/
+        .toast-area{
+            z-index:2;
+            height: 80vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        .toast-area > *{
+            margin-top: 40px;
+        }
+        .toast{
+            display: flex;
+            justify-content: start;
+            width: 300px!important;
+            height: 100px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: slide-in .5s ease-out forwards;
+        }
+        .toast-content{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .toast_deco_gauche{
+            width: 5px;
+            height: 80px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background: #a2de96;
+        }
+        .toast_icon {
+            margin-left: 30px;
+            width: 35px;
+            height: 35px;
+            background: #79d70f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .toast_text {
+            width: 400px;
+            align-self: flex-start;
+            flex-wrap: wrap;
+            display:flex;
+            align-items:start;
+            margin-left: 30px;
+            font-family: Tahoma,Arial,"Hiragino Sans GB","simsun",sans-serif;
+        }
+        .toast_text > * {
+            margin: 0;
+            width: 400px;
+        }
+        .toast_text_titre {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .toast_text_message {
+            margin-top: 15px;
+            font-size:15px;
+            color: #878787;
+        }
+        @keyframes toast {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(0,-10px);
+                opacity: 0.7;
+            }
+        }
+        @keyframes slide-in {
+            0% {
+                transform: translate(0,-10px);
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+/********************************
+    CONFIRMATION INSCRIPTION
+*********************************/
+.confirm_register_general{
+    height: 800px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.confirm_register_div{
+    width: 800px;
+    height: 380px;
+}
+.confirm_register_titre{
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+}
+.confirm_register_titre h2{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.confirm_register_contenu{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 300px;
+}
+.confirm_register_contenu2{
+    width: 80%;
+    text-align: center;
+}
+.msg_confirm_register{
+    font-size: 40px;
+    font-weight: bold;
+}
+.confirm_register_to_connexion{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+
+/********************************
+        INFORMATION-PERSO
+*********************************/
+.genale_page_infoPerso{
+    width: 100%;
+    height: 500px;
+    background-color: #3678ab;
+}
+.general_infoPerso_div{
+    width: 80%;
+}
+.titre_general_infoPerso{
+    font-size: 100px;
+    color: white;
+}
+        /********************************
+            INFORMATION-PERSO-CONTENU
+        *********************************/
+        .contenu_general_infoPerso_admin,
+        .contenu_general_infoPerso_vendeur,
+        .contenu_general_infoPerso_acheteur{
+            margin-top: 100px!important;
+        }
+        .contenu_general_infoPerso_admin span,
+        .contenu_general_infoPerso_vendeur span,
+        .contenu_general_infoPerso_acheteur span{
+            font-size: 12px;
+            color: red;
+        }
+            /********************************
+                        ACHETEUR
+            *********************************/
+                /********************************
+                    INFORMATION-PERSO-PAIEMENT
+                *********************************/
+                .infoPerso_paiement{
+                    background-color: #d9d9d9;
+                }
+                .infoPerso_detail_titre1_acheteur{
+                    font-size: 20px;
+                    margin-top: 20px;
+                    font-weight: bold;
+                    color: #14003f;
+                }
+                .infoPaiement_contenu_details_acheteur{
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    border-bottom: solid 2px black;
+                    background-color: #d9d9d9;
+                }
+                .btn_infoPaiement_final_acheteur{
+                    width: 48%!important;
+                    height: 45px!important;
+                    border: solid 2px black!important;
+                    background-color: #d9d9d9!important;
+                    margin-bottom: 20px!important;
+                    border-radius: 20px!important;
+                }
+                .btn_infoPaiement_final_acheteur:hover{
+                    background-color: white!important;
+                }
+                .image_infoPayment{
+                    width: 70px;
+                    height: 50px;
+                }
+                /********************************
+                    INFORMATION-PERSO-LIVRAISON
+                *********************************/
+                .infoPerso_livraison{
+                    background-color: #d9d9d9;
+                }
+                .infoPerso_detail_titre2_acheteur,
+                .infoPerso_detail_titre3_acheteur{
+                    font-size: 20px;
+                    margin-top: 20px;
+                    font-weight: bold;
+                    color: #14003f;
+                }
+                .infoPersoL_contenu_details_acheteur{
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    border-bottom: solid 2px black;
+                    background-color: #d9d9d9;
+                }
+                .btn_infoPersoL_final_acheteur{
+                    width: 40%!important;
+                    height: 65px!important;
+                    border: solid 2px black!important;
+                    background-color: #d9d9d9!important;
+                    margin-bottom: 20px!important;
+                    border-radius: 20px!important;
+                    margin-left:50px!important;
+                }
+                .btn_infoPersoL_final_acheteur:hover{
+                    background-color: white!important;
+                }
+            /********************************
+                        VENDEUR
+            *********************************/
+            .infoPerso_detail_titre1_vendeur{
+                font-size: 20px;
+                margin-top: 20px;
+                font-weight: bold;
+                color: #14003f;
+            }
+            .infoPerso_vendeur{
+                background-color: #d9d9d9;
+            }
+            .infoPerso_contenu_details_vendeur{
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-bottom: solid 2px black;
+                background-color: #d9d9d9;
+            }
+                    /********************************
+                            VENDEUR-IMAGE
+                    *********************************/
+                    #infoPerso_img_inscription_choix_vendeur{
+                        background-image: url("../Image/chaussure.png");
+                        width: 250px;
+                        height: 250px;
+                        border: solid 2px black;
+                        border-radius: 50%;
+                        margin-top: 30px;
+                    }
+                    .infoPerso_img_inscription_general{
+                        margin-top: 10px;
+                    }
+                    .infoPerso_btn_choix_img_vendeur_inscription{
+                        position: relative;
+                        overflow: hidden;
+                        color: black!important;
+                        font-size: 15px!important;
+                        font-weight: bold!important;
+                    }
+                    .infoPerso_btn_choix_img_vendeur_inscription:hover{
+                        color: #246acf!important;
+                        font-weight: bold;
+                    }
+                    #infoPerso_file_interrieur_inscription_img{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 100px;
+                        text-align: right;
+                        opacity: 0;
+                        background: white;
+                        cursor: pointer;
+                    }
+            .btn_infoPerso_final_vendeur{
+                width: 48%!important;
+                height: 65px!important;
+                border: solid 2px black!important;
+                background-color: #d9d9d9!important;
+                margin-bottom: 20px!important;
+                margin-top: 30px!important;
+                border-radius: 20px!important;
+            }
+            .btn_infoPerso_final_vendeur:hover{
+                background-color: white!important;
+            }
+            /********************************
+                        ADMIN
+            *********************************/
+            .infoPerso_detail_titre1_admin,
+            .infoPerso_detail_titre2_admin{
+                font-size: 20px;
+                margin-top: 20px;
+                font-weight: bold;
+                color: #14003f;
+            }
+            .infoPerso_contenu_details_admin{
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-bottom: solid 2px black;
+                background-color: #d9d9d9;
+            }
+            .btn_infoPerso_final_admin{
+                width: 80%!important;
+                height: 65px!important;
+                border: solid 2px black!important;
+                background-color: #d9d9d9!important;
+                margin-bottom: 20px!important;
+                margin-top: 30px!important;
+                border-radius: 20px!important;
+            }
+            .btn_infoPerso_final_admin:hover{
+                background-color: white!important;
+            }
+
+
+/********************************
+        CONFIRMER INFO PERSO
+*********************************/
+.confirm_infoPerso_general{
+    height: 800px;
+    z-index: 5;
+    opacity: 0.9;
+}
+.confirm_infoPerso_div{
+    width: 800px;
+    height: 380px;
+}
+.confirm_infoPerso_titre{
+    width: 100%;
+    height: 80px;
+    background-color: #14003f;
+    color: white;
+}
+.confirm_infoPerso_titre h2{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.confirm_infoPerso_contenu{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 300px;
+}
+.confirm_infoPerso_contenu2{
+    width: 80%;
+    text-align: center;
+}
+.msg_confirm_infoPerso{
+    font-size: 40px;
+    font-weight: bold;
+}
+.confirm_infoPerso_to_index{
+    font-size: 25px;
+    text-decoration: none;
+}

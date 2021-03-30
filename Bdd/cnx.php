@@ -3,6 +3,7 @@
 <?php
 
 
+
 $con = mysqli_connect("localhost","root","root","market");
 
 // verif de la cnx
