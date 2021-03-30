@@ -64,14 +64,14 @@
                 </div>
 
                 <div class="col-5" style="margin-left:50px!important;">
-                    <img id="infoPerso_img_inscription_choix_vendeur">
-                    <div class="infoPerso_img_inscription_general">
-                        <span class="infoPerso_file_inscription_img">
-                            <span onclick="choix_image_vendeur()" class="btn btn-default infoPerso_btn_choix_img_vendeur_inscription">
-                                Browse <input type="file" id="infoPerso_file_interrieur_inscription_img">
+                    <img id="img_inscription_choix_vendeur">
+                    <div class="img_inscription_general">
+                        <span class="file_inscription_img">
+                            <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
+                                Browse <input type="file" id="file_interrieur_inscription_img">
                             </span>
                         </span>
-                        <input type="text" name="infoPerso_img" class="form-control" readonly>
+                        <input type="text" name="img" class="form-control" readonly>
                     </div>
                     <br><br>
                 </div>

@@ -132,11 +132,11 @@
                         </div>
 
                         <div class="col-5" style="margin-left:50px!important;">
-                            <img id="img_Ajoutvendeur">
-                            <div class="img_Ajoutvendeur_general">
-                                <span class="file_Ajoutvendeur_img">
-                                    <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_Ajoutvendeur">
-                                        Browse <input type="file" id="file_interrieur_Ajoutvendeur_img">
+                            <img id="img_inscription_choix_vendeur">
+                            <div class="img_inscription_general">
+                                <span class="file_inscription_img">
+                                    <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
+                                        Browse <input type="file" id="file_interrieur_inscription_img">
                                     </span>
                                 </span>
                                 <input type="text" name="img" class="form-control" readonly>

@@ -40,14 +40,14 @@
                 </div>
 
                 <div class="col-5">
-                    <img id="img_ajoutArticle">
-                    <div class="img_ajoutArticle_general">
-                        <span class="file_ajoutArticle_img">
-                            <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_ajoutArticle">
-                                Browse <input type="file" id="file_interrieur_ajoutArticle_img">
+                    <img id="img_inscription_choix_vendeur">
+                    <div class="img_inscription_general">
+                        <span class="file_inscription_img">
+                            <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
+                                Browse <input type="file" id="file_interrieur_inscription_img">
                             </span>
                         </span>
-                        <input type="text" name="img" class="form_ajoutArticle_control" readonly>
+                        <input type="text" name="img" class="form-control" readonly>
                     </div>
                 </div>
 
