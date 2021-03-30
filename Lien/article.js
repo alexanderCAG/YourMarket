@@ -178,7 +178,6 @@ function reset_ajoutArticle(){
     typeAchatErreur_ajoutArticle.innerHTML="";
 }
 
-
 function choix_image_vendeur(){
 
     $(document).on('change', '.btn_choix_img_ajoutArticle :file', function() {

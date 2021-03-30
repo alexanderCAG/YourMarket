@@ -20,11 +20,11 @@
 <div class="vetement_details" id="">
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
-                    <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
-                    <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
-                    <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOW</a></li>
-                    <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATION</a></li>
-                </ul>
+                <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
+                <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
+                <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOW</a></li>
+                <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATION</a></li>
+            </ul>
     </div>
 </div>
 
