@@ -5,7 +5,8 @@
 ?>
 
 <form method="POST" enctype="multipart/form-data">
-
+    <input type="text" name="name">
+    <br><br>
     <input type="hidden" value="1000000" name="MAX_FILE_SIZE"/>
     <input type="file" name="uploadedfile" accept="image/png, image/jpg, image/jpeg"/>
     <input type="submit" name="submit" value="Upload"/>
@@ -15,20 +16,21 @@
     include("../Bdd/cnx.php");
 
     if(isset($_POST['submit'])){
+        $nom=$_POST['name'];
         $target_path="../Image/";
         $target_path=$target_path.basename($_FILES['uploadedfile']['name']);
 
-        $fileName=$_FILES['uploadedfile']['name'];
-        $fileExt=explode('.', $fileName);
-        $fileActualExt= strtolower(end($fileExt));
+        // $fileName=$_FILES['uploadedfile']['name'];
+        // $fileExt=explode('.', $fileName);
+        // $fileActualExt= strtolower(end($fileExt));
 
-        $allowed=array('jpg','jpeg','png');
+        // $allowed=array('jpg','jpeg','png');
 
         // if(in_array($fileActualExt,$allowed)){
 
             if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)){
                 // enregistrer dans sql
-                $sql="insert into upload_image (path) values ('$target_path')";
+                $sql="insert into upload_image (path,nom) values ('$target_path','$nom')";
                 if($con->query($sql)==true){
                     echo"<br><br>";
                 }else{

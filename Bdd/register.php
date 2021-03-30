@@ -53,13 +53,19 @@
 	    $mdp_vendeur=$_POST['mdp_vendeur'];
 	    $mdp2_vendeur=$_POST['mdp2_vendeur'];
 
-		$photo=$_POST['img'];
+		$target_path="../../Image/";
+        $target_path=$target_path.basename($_FILES['uploadedfile']['name']);
 
-		$sql = "INSERT INTO seller (brand,profil_picture,background,phone,email,passworde) VALUES ('$nomMarque_vendeur','$photo','white','$telephone_vendeur','$mail_vendeur','$mdp_vendeur')";
-
-        if($con->query($sql)===true){
-            echo("");
-        }else{
+		if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)){
+			// enregistrer dans sql
+			$sql = "INSERT INTO seller (brand,profil_picture,background,phone,email,passworde) VALUES ('$nomMarque_vendeur','$target_path','white','$telephone_vendeur','$mail_vendeur','$mdp_vendeur')";
+			// $sql="insert into upload_image (path,nom) values ('$target_path','$nom')";
+			if($con->query($sql)==true){
+				echo"<br><br>";
+			}else{
+				echo "Error:".$sql.$con->error;
+			}
+		}else{
             echo "Error: " . $sql . "<br>" . $con->error;
         }
     }

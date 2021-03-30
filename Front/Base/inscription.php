@@ -190,10 +190,10 @@
                         <div class="img_inscription_general">
                             <span class="file_inscription_img">
                                 <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
-                                    Browse <input type="file" id="file_interrieur_inscription_img">
+                                    Browse <input type="file" name="uploadedfile" id="file_interrieur_inscription_img" accept="image/png, image/jpg, image/jpeg">
                                 </span>
                             </span>
-                            <input type="text" name="img" class="form-control" readonly>
+                            <input type="text" class="form-control" readonly>
                         </div>
                         <br><br>
                         <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">

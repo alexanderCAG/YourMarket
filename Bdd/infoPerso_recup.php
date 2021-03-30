@@ -45,9 +45,11 @@
 	    $infoPerso_mdp_vendeur=$_POST['infoPerso_mdp_vendeur'];
 	    // $infoPerso_mdp2_vendeur=$_POST['infoPerso_mdp2_vendeur'];
 
-		$infoPerso_photo=$_POST['infoPerso_img'];
+		$infoPerso_photo="../../Image/";
+        $infoPerso_photo=$infoPerso_photo.basename($_FILES['infoPerso_img']['name']);
 
 		$queryinfoPerso_vendeur = mysqli_query($con, "UPDATE seller SET brand='$infoPerso_nomMarque_vendeur',profil_picture='$infoPerso_photo', phone='$infoPerso_telephone_vendeur',email='$infoPerso_mail_vendeur',passworde='$infoPerso_mdp_vendeur' WHERE email='$email_user'");
+		
 
 		include("../Front/confirm_infoPerso_vendeur.php");
     }
