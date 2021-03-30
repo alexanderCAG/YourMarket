@@ -1,23 +1,46 @@
 
 <?php
-    $title="Enchere";
+    $title="Page enchère";
     require "head.php";
+        include("../../Bdd/cnx.php");
+        
+        $queryCountEnchere = mysqli_query($con, "select count(id_item) as total  from item where is_bidding=1"); 
+        $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, brand, quantity, description,photo is_negotiated, is_bidding 
+        from item,bid,seller,buyer
+        where bid.id_item=item.id_item
+        and bid.id_seller=seller.id_seller
+        and bid.id_buyer=buyer.id_buyer
+        and is_bidding=1
+        ");
+?>
+ <?php
+ if($row = mysqli_fetch_assoc($queryCountEnchere)){
+        $totalEnchere = $row['total'];
 ?>
 
-
-<div class="genale_page_enchere position-relative">
+    <div class="genale_page_enchere position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_enchere text-uppercase">
             enchères
         </p>
         <p class="info_general_enchere centrer detail_style">
-            15 enchères en cours
+        <?php echo $totalEnchere ?> enchères en cours
         </p>
     </div>
-    
+
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
-
+<?php
+for ($i=0; $i<=$totalEnchere;$i++){
+                if($rowAllEnchere = mysqli_fetch_assoc($queryAllEnchere)){
+                    $nameEnchere = $rowAllEnchere['name'];
+                    $prixEnchere = $rowAllEnchere['price'];
+                    $brandEnchere = $rowAllEnchere['brand'];
+                    $quantityEnchere = $rowAllEnchere['quantity'];
+                    $end_enchere = $rowAllEnchere['end_enchere'];
+                    $descriptionEnchere = $rowAllEnchere['description'];
+                    $is_negotiated = $rowAllEnchere['is_negotiated'];
+                    ?>
 <div class="enchere_liste_total row">
     <!-- Ligne 1 -->
     <div class="col-1"></div>
@@ -29,11 +52,12 @@
             </div>
 
             <div class="col-6 enchere_liste_details position-relative">
-                <div class="enchere_info_titre texte_style text-uppercase">titre produit</div>
-                <div class="enchere_info_marque detail_style text-uppercase">marque</div>
+                <div class="enchere_info_titre texte_style text-uppercase"><?php echo $nameEnchere ?></div>
+                <div class="enchere_info_marque detail_style text-uppercase"><?php echo $brandEnchere ?></div>
                 <br>
-                <div class="enchere_info_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum similique sequi, beatae voluptatum consectetur quidem consequatur. Quisquam similique minima dolorum ad, vel tempora vero optio corrupti perspiciatis veritatis iure explicabo.</div>
-                <img class="img_enchere_separation_info" src="../../Image/enchere_separation_info.png" alt="enchere_separation_info">
+                <div class="enchere_info_description"><?php echo $descriptionEnchere ?></div>
+                <div class="enchere_info_description"><?php echo $end_enchere ?></div>
+                
                 <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
                         <img class="img_timeur_compteur" src="../../Image/timeur_compteur.png" alt="timeur_compteur">
@@ -61,7 +85,11 @@
     <div class="col-1"></div>
 
 </div>
-
+<?php
+                }
+            }
+        }
+        ?>
 <?php
     include("footer.php");
 ?>

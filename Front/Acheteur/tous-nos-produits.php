@@ -9,7 +9,7 @@
 ?>
 
 <div class="vetement_general">
-    <img class="image_vetement_general position-relative" src="../../Image/allProduct.jpg" alt="tous les produits">
+    <img class="image_vetement_general position-relative" src="../../Image/allProduct.png" alt="tous les produits">
     <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
         <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../../Image/icon_sale.png" alt="icon_sale">
         <p class="texte_style h4 text-uppercase position-absolute top-50 start-50 translate-middle">Tous nos produits</p> 
