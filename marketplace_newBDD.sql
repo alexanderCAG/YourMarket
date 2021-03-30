@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 28 mars 2021 à 13:21
+-- Généré le : mar. 30 mars 2021 à 15:55
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `bid` (
   KEY `id_item` (`id_item`),
   KEY `id_buyer` (`id_buyer`),
   KEY `id_seller` (`id_seller`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `buyer` (
   `firstname` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `passworde` varchar(255) NOT NULL,
   `adress1` varchar(100) NOT NULL,
   `adress2` varchar(100) NOT NULL,
   `city` varchar(255) NOT NULL,
@@ -127,20 +127,23 @@ CREATE TABLE IF NOT EXISTS `buyer` (
   `country` varchar(20) NOT NULL,
   PRIMARY KEY (`id_buyer`),
   KEY `id_buyer` (`id_buyer`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `buyer`
 --
 
-INSERT INTO `buyer` (`id_buyer`, `lastname`, `firstname`, `phone`, `email`, `password`, `adress1`, `adress2`, `city`, `zip_code`, `country`) VALUES
+INSERT INTO `buyer` (`id_buyer`, `lastname`, `firstname`, `phone`, `email`, `passworde`, `adress1`, `adress2`, `city`, `zip_code`, `country`) VALUES
 (1, 'Lauril', 'William', '9989819797', 'laulau@yahoo.com', '@mdp-lauril', '14 rue de seine', '', 'Corbeil-essonnes', 'dojdo', 'France'),
 (2, 'Larielle', 'Raza', '6198971979', 'larielle2@yahoo.com', '@mdp-larielle', '10 rue de l\'orme à martin', '2 ième étage apt 24', 'Evry', '92160', ''),
 (3, 'Marie', 'Eva', '1982989898', 'marieva@yahoo.com', '@mdp-marieeva', '2 avenue des espadrille ', '', 'Monaco', '98000', 'Monaco'),
 (4, 'Alex', 'Matay', '8197979797', 'alexab@yahoo.com', '@mdp-matay', '13 boulevard d\'oxford', '', 'Cannes', '06400', 'France'),
 (5, 'Audrey', 'Simon', '1982989898', 'audsimon32@yahoo.com', '@mdp-audreysimon', '33 rue des freine ', '', 'adressebuyer4', '', ''),
 (6, 'Eric', 'Louis', '8197979797', 'ericlouis@yahoo.com', '@mdp-ericlouis', 'adressebuyer4', 'adressebuyer4', 'adressebuyer4', '', ''),
-(7, 'Emilie', 'Raza', '0695631800', 'razafiemilie13@hotmail.fr', 'mdp-emilie91', '33 avenue galieni', '', 'Antony', '92160', 'France');
+(7, 'Emilie', 'Raza', '0695631800', 'razafiemilie13@hotmail.fr', 'mdp-emilie91', '33 avenue galieni', '', 'Antony', '92160', 'France'),
+(8, 'TestAlex', 'test', '5050', 'test@test.com', 'aA1', 'test', 'test', 'test', '5050', 'test'),
+(22, 'alexIdTest', 'test', '456', 'testid@test.fr', 'aA5', 'test', 'test', 'test', '5045', 'test'),
+(23, 'YviTest', 'fbezui', '04954', 'tfez@feaz.fr', 'aA1', 'fez', 'fez', 'ezff', '564', 'feaz');
 
 -- --------------------------------------------------------
 
@@ -154,26 +157,36 @@ CREATE TABLE IF NOT EXISTS `item` (
   `id_seller` int(11) NOT NULL,
   `price` varchar(15) NOT NULL,
   `name` varchar(20) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `subcategory` varchar(255) NOT NULL,
   `quantity` varchar(15) NOT NULL,
   `description` text NOT NULL,
   `photo` varchar(255) NOT NULL,
-  `is _bidding` tinyint(4) NOT NULL DEFAULT '0',
+  `is_bidding` tinyint(4) NOT NULL DEFAULT '0',
   `is_negotiated` tinyint(4) NOT NULL DEFAULT '0',
   `is_buying` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_item`),
   KEY `id_item` (`id_item`),
   KEY `id_seller` (`id_seller`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `item`
 --
 
-INSERT INTO `item` (`id_item`, `id_seller`, `price`, `name`, `quantity`, `description`, `photo`, `is _bidding`, `is_negotiated`, `is_buying`) VALUES
-(1, 1, '500', 'name1', 'status1', 'descriptiontest', '918981981987917', 15, 41, 14),
-(2, 4, '20', 'T-shirt blue unisex', '200', 'Le t-shirt  avec juste ce qu’il faut d’élasticité. Il est confortable et la coupe unisexe est flatteuse pour les femmes. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n• 100 % coton peigné et filé à l’anneau\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule', '', 0, 1, 1),
-(3, 5, '99,99', 'T-shirt Rouge unisex', '200', 'Le t-shirt personnalisable. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', '', 1, 0, 1),
-(4, 4, '29,99', 'Pull Vert unisexe', '15', 'Pull vert unisexe. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', '', 0, 0, 1);
+INSERT INTO `item` (`id_item`, `id_seller`, `price`, `name`, `category`, `subcategory`, `quantity`, `description`, `photo`, `is_bidding`, `is_negotiated`, `is_buying`) VALUES
+(1, 1, '15', 'Drap desert', 'Maison', 'drap', '0', 'descriptiontest', '918981981987917', 0, 1, 1),
+(2, 4, '20', 'T-shirt blue unisex', 'Vetement', 'tshirt', '200', 'Le t-shirt  avec juste ce qu’il faut d’élasticité. Il est confortable et la coupe unisexe est flatteuse pour les femmes. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n• 100 % coton peigné et filé à l’anneau\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule', '', 0, 1, 1),
+(3, 5, '99,99', 'T-shirt Rouge unisex', 'Vetement', 'tshirt', '200', 'Le t-shirt personnalisable. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', '', 1, 0, 1),
+(4, 4, '29,99', 'Pull Vert unisexe', 'Vetement', 'pull', '15', 'Pull vert unisexe. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', '', 0, 0, 1),
+(5, 5, '59,99', 'Pull Bleu unisex', 'Vetement', 'pull', '0', 'Pull personnalisable. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', '', 0, 1, 1),
+(6, 5, '59,99', 'Tshirt Bleu unisex 2', 'Vetement', 'tshirt', '0', 'Le t-shirt personnalisable. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', '', 0, 1, 1),
+(7, 2, '35', 'Oreiller dodo', 'Maison', 'oreiller', '95', 'L\'oreiller ferme synthétique DODO. Garnissage 100% polyester fibre creuse siliconée qui favorise la circulation de l\'air et réduit l\'accumulation de l\'humidité. Excellent rapport qualité/prix !\r\nGarnissage : \r\n •  100% polyester fibre creuse siliconée, aérée\r\n\r\nEnveloppe : \r\n •  Microfibre \r\n\r\nEntretien : \r\n •  Oreiller lavable à 60°\r\n\r\nLivré sous housse. \r\n\r\nOreillers vendus à l\'unité ou par lot de 2.\r\nCouleurs Blanc\r\nTailles 2x60x60 cm, 2x65x65 cm, 2x50x70 cm, 40x60 cm, 50x70 cm, 60x60 cm, 65x65 cm', '918981981987917', 0, 0, 1),
+(8, 5, '35', 'Oreiller Croco', 'Maison', 'oreiller', '05', 'L\'oreiller ferme synthétique DODO. Garnissage 100% polyester fibre creuse siliconée qui favorise la circulation de l\'air et réduit l\'accumulation de l\'humidité. Excellent rapport qualité/prix !\r\nGarnissage : \r\n •  100% polyester fibre creuse siliconée, aérée\r\n\r\nEnveloppe : \r\n •  Microfibre \r\n\r\nEntretien : \r\n •  Oreiller lavable à 60°\r\n\r\nLivré sous housse. \r\n\r\nOreillers vendus à l\'unité ou par lot de 2.\r\nCouleurs Blanc\r\nTailles 2x60x60 cm, 2x65x65 cm, 2x50x70 cm, 40x60 cm, 50x70 cm, 60x60 cm, 65x65 cm', '918981981987917', 0, 1, 1),
+(9, 5, '30', 'Drap marron', 'Maison', 'drap', '45', 'drap drap drap', '918981981987917', 0, 1, 1),
+(10, 5, '15', 'Coussin bleu ocean', 'Maison', 'oreiller', '35', 'descriptiontest', '918981981987917', 0, 1, 1),
+(11, 5, '50', 'Cadre mural bleu', 'Maison', 'decoration', '0', 'descriptiontest', '918981981987917', 0, 1, 1),
+(12, 5, '50', 'Cadre mural rouge', 'Maison', 'decoration', '30', 'descriptiontest', '918981981987917', 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -218,22 +231,26 @@ DROP TABLE IF EXISTS `payment`;
 CREATE TABLE IF NOT EXISTS `payment` (
   `id_payment` int(11) NOT NULL AUTO_INCREMENT,
   `id_buyer` int(11) NOT NULL,
-  `card` varchar(255) NOT NULL,
+  `carde` varchar(255) NOT NULL,
   `code` int(255) NOT NULL,
   `num_card` varchar(255) NOT NULL,
   `expiration` date NOT NULL,
-  `name` varchar(20) NOT NULL,
+  `nom` varchar(20) NOT NULL,
   PRIMARY KEY (`id_payment`),
   KEY `id_payment` (`id_payment`),
   KEY `id_buyer` (`id_buyer`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `payment`
 --
 
-INSERT INTO `payment` (`id_payment`, `id_buyer`, `card`, `code`, `num_card`, `expiration`, `name`) VALUES
-(6, 1, '1544-5454-4545-4646', 800, '545454546465464654', '2021-03-30', 'mandela');
+INSERT INTO `payment` (`id_payment`, `id_buyer`, `carde`, `code`, `num_card`, `expiration`, `nom`) VALUES
+(6, 1, 'carte_payement_amex', 800, '545454546465464654', '2021-03-30', 'mandela'),
+(7, 8, 'carte_payement_cb', 5057, '140564', '2021-03-31', 'Abbey'),
+(8, 1, 'carte_payement_visa', 7894, '159849', '2021-03-30', 'AbbeyId'),
+(9, 22, 'carte_payement_visa', 7894, '159849', '2021-03-30', 'AbbeyId'),
+(10, 23, 'carte_payement_mastercard', 8494, '1655161', '2021-04-11', 'Raza');
 
 -- --------------------------------------------------------
 
@@ -249,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `seller` (
   `background` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `passworde` varchar(255) NOT NULL,
   PRIMARY KEY (`id_seller`),
   KEY `id_seller` (`id_seller`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -258,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `seller` (
 -- Déchargement des données de la table `seller`
 --
 
-INSERT INTO `seller` (`id_seller`, `brand`, `profil_picture`, `background`, `phone`, `email`, `password`) VALUES
+INSERT INTO `seller` (`id_seller`, `brand`, `profil_picture`, `background`, `phone`, `email`, `passworde`) VALUES
 (1, 'branduser1', 'mon image nelson', 'background image', '64979454164', 'emailnelson@yahoo.com', 'passwordnelsoncode'),
 (2, 'unTest', 'profiltest', 'un autretest', '15151154', 'emailtest@yahoo.com', 'monmotdepasse'),
 (3, 'unTesteencore', 'unTesteencore', 'unTesteencoreparconséquent', '51197197197', 'unTesteencore@yahoo.com', 'motdepassetest'),
