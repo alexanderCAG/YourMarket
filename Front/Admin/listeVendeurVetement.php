@@ -30,7 +30,6 @@
                     <li><a href="listeVendeur.php" class="text-uppercase">Toutes nos marques </a> </li>
                     <li><a href="listeVendeurMaison.php" class="text-uppercase">Marque de mobilier</a></li>
                     <li><a href="listeVendeurVetement.php" class="badge text-uppercase bg_blue1 text-light">marques de vêtements <span class="badge bg-light text-dark"><?php echo $total ; ?></span></a> </li>
-                   
                 </ul>
             </div>
         </div>

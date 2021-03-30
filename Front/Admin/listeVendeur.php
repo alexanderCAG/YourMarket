@@ -70,9 +70,9 @@
                                 <small class="card-title"> <i class="fas fa-phone-square-alt"></i> <?php echo $phoneSeller ?></small><br>
                                 <small class="card-title"> <i class="fas fa-envelope-square"></i> <?php echo $emailSeller ?></small>
                                 
+
                             </div>
                             <div class="class_separation2 w-100"></div>
-                            </div>
                         </div>
                     <?php 
                     } 
