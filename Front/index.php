@@ -39,7 +39,7 @@
                             <li><a class="dropdown-item" href="#">PULL</a></li>
                             <li><a class="dropdown-item" href="#">CAP</a></li>
                             <li><a class="dropdown-item" href="#">MEN</a></li>
-                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
+                            <li><a class="dropdown-item" href="ajoutArticle.php">WOMMEN</a></li>
                             <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
                         </ul>
                     </li>
