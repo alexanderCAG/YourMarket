@@ -3,7 +3,6 @@
     $title="Informations personnelles";
     require "head.php";
         include("../../Bdd/cnx.php");
-        session_start();
         $email_user = $_SESSION['email'];
         // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
 
@@ -22,53 +21,6 @@
         $zip_code_admin = $rowinfoPerso_admin['zipcode'];
 ?>
 
-<nav class="navbar fixed-top navbar-expand-lg shadow">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"
-                src="../../Image/logo_navbar.png" alt="logo_navbar"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <form class="form-inline my-2 my-lg-0">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav text-uppercase">
-                    <li class="nav-item dropdown nav_regul">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Articles
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="ajoutArticle.php">Ajouter un article</a></li>
-                            <li><a class="dropdown-item" href="listeArticle.php">Liste des articles</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav_regul">
-                        <a class="nav-link" href="listeVendeur.php">Liste Vendeur</a>
-                    </li>
-
-                    <li class="nav-item last_nav_title nav_regul">
-                        <a class="nav-link" href="#">Statistique</a>
-                    </li>
-                    <li class="nav_user position-absolute top-0 end-0">
-                        <div class="btn-group">
-                            <a class="nav-link"  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img id="img_nav_user" src="../../Image/user.png" alt="user">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
-                                <li><span class="dropdown-item" ><a href="infoPerso.php" class="text-decoration-none">My account</a></span></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><span class="dropdown-item" ><a href="../../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </form>
-    </div>
-</nav> 
 
 <div class="genale_page_infoPerso position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
