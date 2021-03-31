@@ -150,7 +150,7 @@
 
         if(move_uploaded_file($_FILES['img_ajoutArticle']['tmp_name'], $target_path)){
             if($choixCategorie_ajoutArticle=='choix_categorie_null'){
-                echo'Categorie pb';
+                
                 return false;
             }elseif($choixCategorie_ajoutArticle=='Maison'){
 
