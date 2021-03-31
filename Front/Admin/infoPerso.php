@@ -6,7 +6,7 @@
         $email_user = $_SESSION['email'];
         // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
 
-        $queryinfoPerso_admin = mysqli_query($con, "SELECT `lastname`,`firstname`,`phone`,`email`,`password`,`adress1`,`adress2`,`country`,`city`,`zipcode` FROM `admin` WHERE email='$email_user'");
+        $queryinfoPerso_admin = mysqli_query($con, "SELECT `lastname`,`firstname`,`phone`,`email`,`password`,`adress1`,`adress2`,`country`,`city`,`zipcode` FROM `admin` WHERE (email='$email_user' or lastname='$email_user')");
 
     if($rowinfoPerso_admin = mysqli_fetch_assoc($queryinfoPerso_admin)){
         $lastname_admin = $rowinfoPerso_admin['lastname'];

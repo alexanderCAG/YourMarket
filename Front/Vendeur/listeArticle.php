@@ -6,10 +6,10 @@
         // session_start();
         $seller_email = $_SESSION['email'];
         //total des produits du vendeur connecté ( pour faire la boucle for)
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')"); 
 
         //liste de tous les produits du vendeur connecté 
-        $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and email='$seller_email'");// Tableau liste
+        $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')");// Tableau liste
 
         
 ?>

@@ -4,9 +4,9 @@
         include("../../Bdd/cnx.php");
         $seller_email = $_SESSION['email'];
 
-        $queryCountMaisonBrand = mysqli_query($con, "select count(DISTINCT brand) as totalBrandMaison from seller, item where seller.id_seller=item.id_seller and category='Vetement'"); 
+        $queryCountMaisonBrand = mysqli_query($con, "select count(DISTINCT brand) as totalBrandMaison from seller, item where seller.id_seller=item.id_seller and category='Clothes'"); 
 
-        $queryAllMaisonBrand = mysqli_query($con, "select DISTINCT(brand), phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='Vetement'");//
+        $queryAllMaisonBrand = mysqli_query($con, "select DISTINCT(brand), phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='Clothes'");//
         
         if($row = mysqli_fetch_assoc($queryCountMaisonBrand)){
                     $total = $row['totalBrandMaison'];

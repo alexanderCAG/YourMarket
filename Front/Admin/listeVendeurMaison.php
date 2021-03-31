@@ -4,9 +4,9 @@
         include("../../Bdd/cnx.php");
         $seller_email = $_SESSION['email'];
 
-        $queryCountMaisonBrand = mysqli_query($con, "select count(brand) as total_brand from seller, item where seller.id_seller=item.id_seller and category='Maison'"); 
+        $queryCountMaisonBrand = mysqli_query($con, "select count(brand) as total_brand from seller, item where seller.id_seller=item.id_seller and category='House'"); 
 
-        $queryAllMaisonBrand = mysqli_query($con, "select brand, phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='Maison'");//
+        $queryAllMaisonBrand = mysqli_query($con, "select brand, phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='House'");//
         
         if($row = mysqli_fetch_assoc($queryCountMaisonBrand)){
                     $total = $row['total_brand'];

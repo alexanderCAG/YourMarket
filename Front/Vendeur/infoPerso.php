@@ -6,7 +6,7 @@
         $email_user = $_SESSION['email'];
         // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
 
-        $queryinfoPerso_vendeur = mysqli_query($con, "SELECT brand,profil_picture,phone,email,passworde FROM seller WHERE email='$email_user'");
+        $queryinfoPerso_vendeur = mysqli_query($con, "SELECT brand,profil_picture,phone,email,passworde FROM seller WHERE (seller.email='$email_user' or seller.brand='$email_user')");
 
     if($rowinfoPerso_vendeur = mysqli_fetch_assoc($queryinfoPerso_vendeur)){
         $brand_vendeur = $rowinfoPerso_vendeur['brand'];

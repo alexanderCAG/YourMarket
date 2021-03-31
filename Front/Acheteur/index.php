@@ -4,13 +4,13 @@
         include("../../Bdd/cnx.php");
         
         // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Vetement' and subcategory='sweat_shirt'"); 
-        $dernierVetement = mysqli_query($con, 'select id_item, brand,price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Vetement" order by id_item desc limit 1');
+        $dernierVetement = mysqli_query($con, 'select id_item, brand,price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Clothes" order by id_item desc limit 1');
        
-        $avantDernierVetement = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Vetement" order by id_item desc limit 1,1');
+        $avantDernierVetement = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Clothes" order by id_item desc limit 1,1');
 
-        $dernierMaison = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Maison" order by id_item desc limit 1');
+        $dernierMaison = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="House" order by id_item desc limit 1');
        
-        $avantDernierMaison = mysqli_query($con, 'select id_item,brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Maison" order by id_item desc limit 1,1');
+        $avantDernierMaison = mysqli_query($con, 'select id_item,brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="House" order by id_item desc limit 1,1');
 
         $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller order by id_item desc limit 10 ");
 ?>

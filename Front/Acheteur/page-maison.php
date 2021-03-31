@@ -82,10 +82,10 @@
                                     </div>
                             </div>
                                 <?php  if($subcategoryItems == 'sheet' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
+                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheet &nbsp;</div>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'pillow' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillows &nbsp;</div>
+                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillow &nbsp;</div>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'decoration' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Decoration &nbsp;</div>

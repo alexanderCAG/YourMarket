@@ -7,9 +7,9 @@
         $usermail=$_POST['mail'];
         $password=$_POST['mdp'];
 
-        $queryadmin = mysqli_query($con, "select * from admin where password='$password' and email='$usermail' or lastname='$usermail'");
-		$queryvendeur = mysqli_query($con, "select * from seller where passworde='$password' and email='$usermail' or brand='$usermail'");
-		$queryacheteur = mysqli_query($con, "select * from buyer where passworde='$password' and email='$usermail' or lastname='$usermail'");
+        $queryadmin = mysqli_query($con, "select * from admin where password='$password' and (email='$usermail' or lastname='$usermail')");
+		$queryvendeur = mysqli_query($con, "select * from seller where passworde='$password' and (email='$usermail' or brand='$usermail')");
+		$queryacheteur = mysqli_query($con, "select * from buyer where passworde='$password' and (email='$usermail' or lastname='$usermail')");
 
 
 
