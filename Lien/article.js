@@ -11,10 +11,10 @@ function choixCategorie(){
     if(choixCategorie_ajoutArticle.value == "choix_categorie_null"){
         $("#sousCategorie_ajoutArticle_maison").hide();
         $("#sousCategorie_ajoutArticle_vetement").hide();
-    }else if(choixCategorie_ajoutArticle.value == "house"){
+    }else if(choixCategorie_ajoutArticle.value == "Maison"){
         $("#sousCategorie_ajoutArticle_maison").show();
         $("#sousCategorie_ajoutArticle_vetement").hide();
-    }else if(choixCategorie_ajoutArticle.value == "clothes"){
+    }else if(choixCategorie_ajoutArticle.value == "Vetement"){
         $("#sousCategorie_ajoutArticle_maison").hide();
         $("#sousCategorie_ajoutArticle_vetement").show();
     }

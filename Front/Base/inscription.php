@@ -258,8 +258,6 @@
     <div class="Cloud Background"></div>
 </div>
 
-
-
 <!-- register verif -->
 <?php
     include("../../Bdd/cnx.php");
@@ -336,4 +334,3 @@
 <?php
     include("footer.php");
 ?>
-
