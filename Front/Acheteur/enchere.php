@@ -56,7 +56,66 @@ for ($i=0; $i<=$totalEnchere;$i++){
                 <br>
                 <div class="enchere_info_description"><?php echo $descriptionEnchere ?></div>
                 <div class="enchere_info_description"><?php echo $end_enchere ?></div>
-                
+                <script type="text/javascript">
+                    function decompteur(){
+              
+                        // var date1 = new Date(document.getElementById('start').value) ;
+                       
+                        var dateBDD ='<?php echo $end_enchere ?>'
+
+                        var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
+                        var yearEndBid2 = parseInt(yearEndBid);
+
+                        var monthEndBid = dateBDD[5]+dateBDD[6]; 
+                        var monthEndBid2 =parseInt(monthEndBid);
+
+                        var dayEndBid = dateBDD[8]+dateBDD[9]; 
+                        var dayEndBid2 = parseInt(dayEndBid);
+
+                        var hourEndBid = dateBDD[11]+dateBDD[12]; 
+                        var hourEndBid2 = parseInt(hourEndBid);
+
+                        var minuteEndBid = dateBDD[14]+dateBDD[15]; 
+                        var minuteEndBid2 = parseInt(minuteEndBid);
+
+                        var secondEndBid = dateBDD[17]+dateBDD[18]; 
+                        var secondEndBid2 = parseInt(secondEndBid);
+                        var millisecondEndBid = 0; 
+
+                        // alert(monthEndBid2);
+                        // var date2 =  dateBDD;//year, month, day, hour, minute, second, and millisecond
+                        // var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);//year, month, day, hour, minute, second, and millisecond
+                        
+                        var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
+    
+                        var jours=$('#jours');
+                        var heures=$('#heures');
+                        var minutes=$('#minutes');
+                        var secondes=$('#secondes');
+                       
+                        // var heure1 = date1.getTime()/1000;
+                        var heure2 = date2.getTime()/1000;
+                        var heure1 = new Date()/1000;
+                        var s=heure2-heure1;
+
+                        var d=Math.floor(s/86400);
+                        jours.html('<strong><font size="6">'+d+'</font></strong> Jour'+(d>1?'s':''));
+                        s-=d*86400;
+
+                        var h=Math.floor(s/3600);
+                        heures.html('<strong><font size="6">'+h+'</font></strong> Heure'+(h>1?'s':''));
+                        s-=h*3600;
+
+                        var m=Math.floor(s/60);
+                        minutes.html('<strong><font size="6">'+m+'</font></strong> Minute'+(m>1?'s':''));
+                        s-=m*60;
+
+                        var s=Math.floor(s);
+                        secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
+
+                        setTimeout(decompteur,1000);
+                        }
+                    </script>
                 <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
                         <img class="img_timeur_compteur" src="../../Image/timeur_compteur.png" alt="timeur_compteur">
@@ -68,7 +127,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     <div class="col-2"></div>
                 </div>
             </div>
-
+            
             <div class="col-1"></div>
         </div>
 

@@ -562,35 +562,35 @@ jQuery(document).ready(function(){
         COMPTE A REBOURS
 *********************************/
 
-function decompteur(){
+// function decompteur(){
 
-    // var date1 = new Date(document.getElementById('start').value) ;
-    var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
+//     // var date1 = new Date(document.getElementById('start').value) ;
+//     var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
 
-    var jours=$('#jours');
-    var heures=$('#heures');
-    var minutes=$('#minutes');
-    var secondes=$('#secondes');
+//     var jours=$('#jours');
+//     var heures=$('#heures');
+//     var minutes=$('#minutes');
+//     var secondes=$('#secondes');
     
-    // var heure1 = date1.getTime()/1000;
-    var heure2 = date2.getTime()/1000;
-    var heure1 = new Date()/1000;
-    var s=heure2-heure1;
+//     // var heure1 = date1.getTime()/1000;
+//     var heure2 = date2.getTime()/1000;
+//     var heure1 = new Date()/1000;
+//     var s=heure2-heure1;
 
-    var d=Math.floor(s/86400);
-    jours.html('<strong><font size="6">'+d+'</font></strong> Jour'+(d>1?'s':''));
-    s-=d*86400;
+//     var d=Math.floor(s/86400);
+//     jours.html('<strong><font size="6">'+d+'</font></strong> Jour'+(d>1?'s':''));
+//     s-=d*86400;
 
-    var h=Math.floor(s/3600);
-    heures.html('<strong><font size="6">'+h+'</font></strong> Heure'+(h>1?'s':''));
-    s-=h*3600;
+//     var h=Math.floor(s/3600);
+//     heures.html('<strong><font size="6">'+h+'</font></strong> Heure'+(h>1?'s':''));
+//     s-=h*3600;
 
-    var m=Math.floor(s/60);
-    minutes.html('<strong><font size="6">'+m+'</font></strong> Minute'+(m>1?'s':''));
-    s-=m*60;
+//     var m=Math.floor(s/60);
+//     minutes.html('<strong><font size="6">'+m+'</font></strong> Minute'+(m>1?'s':''));
+//     s-=m*60;
 
-    var s=Math.floor(s);
-    secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
+//     var s=Math.floor(s);
+//     secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
 
-    setTimeout(decompteur,1000);
-}
+//     setTimeout(decompteur,1000);
+// }
