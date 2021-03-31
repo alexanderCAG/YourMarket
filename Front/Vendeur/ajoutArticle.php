@@ -174,7 +174,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Maison','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='pillow'){
                     
@@ -192,7 +192,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Maison','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='decoration'){
                     
@@ -210,7 +210,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Maison','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
 
                 }
 
@@ -235,7 +235,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Vetement','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='sweat_shirt'){
                     
@@ -253,7 +253,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Vetement','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='shoes'){
                     
@@ -271,7 +271,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Vetement','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
 
                 }
             }
