@@ -4,8 +4,8 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountCadre = mysqli_query($con, "select count(id_item) as total  from item where category='maison' and subcategory='oreiller'"); 
-        $queryAllCadre = mysqli_query($con, "select name, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='maison' and subcategory='oreiller'");
+        $queryCountCadre = mysqli_query($con, "select count(id_item) as total  from item where category='House' and subcategory='pillow'"); 
+        $queryAllCadre = mysqli_query($con, "select category, name, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='House' and subcategory='pillow' and (is_buying =1 or	is_negotiated=1)");
 ?>
 
 <div class="vetement_general">
@@ -21,9 +21,9 @@
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
                     <li><a href="page-maison.php#menuCatMaison" class="text-uppercase" >All product</a> </li>
-                    <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEET</a></li>
-                    <li><a href="page-maison-pillow.php#menuCatMaison" class=" badge text-uppercase bg_blue1 text-light">PILLOW</a></li>
-                    <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATION</a></li>
+                    <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
+                    <li><a href="page-maison-pillow.php#menuCatMaison" class=" badge text-uppercase bg_blue1 text-light">PILLOWS</a></li>
+                    <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATIONS</a></li>
                 </ul>
     </div>
 </div>
@@ -45,6 +45,7 @@
                     $quantityCadre = $rowAllCadre['quantity'];
                     $descriptionCadre = $rowAllCadre['description'];
                     $is_negotiated = $rowAllCadre['is_negotiated'];
+                    $is_buying = $rowAllCadre['is_buying'];
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
@@ -70,7 +71,9 @@
                                     </div>
 
                                     <div class="col-6  p-1 m-0">
-                                        <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart</small></button>
+                                        <?php if($is_buying == 1){ ?>
+                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                        <?php } ?>
                                     </div>
                             </div>
                             <?php  if($quantityCadre == 0 ){?>

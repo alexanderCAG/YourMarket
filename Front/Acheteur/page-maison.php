@@ -4,8 +4,8 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Maison'"); 
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='Maison'");
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='House'"); 
+        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and category='House' and (is_buying =1 or is_negotiated=1)");
 ?>
 
 <div class="vetement_general">
@@ -22,8 +22,8 @@
             <ul class="navbar_listeVendeur_details detail_style centrer">
                 <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
                 <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
-                <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOW</a></li>
-                <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATION</a></li>
+                <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOWS</a></li>
+                <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATIONS</a></li>
             </ul>
     </div>
 </div>
@@ -47,6 +47,7 @@
                     $descriptionItems = $rowAllItems['description'];
                     $subcategoryItems = $rowAllItems['subcategory'];
                     $is_negotiated = $rowAllItems['is_negotiated'];
+                    $is_buying = $rowAllItems['is_buying'];
                     
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
@@ -75,13 +76,15 @@
                                     </div>
 
                                     <div class="col-6  p-1 m-0">
-                                        <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                        <?php if($is_buying == 1){ ?>
+                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                        <?php } ?>
                                     </div>
                             </div>
-                                <?php  if($subcategoryItems == 'drap' ){?>
+                                <?php  if($subcategoryItems == 'sheet' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
                                 <?php }?>
-                                <?php  if($subcategoryItems == 'oreiller' ){?>
+                                <?php  if($subcategoryItems == 'pillow' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillows &nbsp;</div>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'decoration' ){?>

@@ -3,8 +3,8 @@
     require "head.php";
         include("../../Bdd/cnx.php");
         
-        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Vetement' and subcategory='tshirt'"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller and category='Vetement'and subcategory='tshirt'");// 
+        $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Clothes' and subcategory='tshirt'"); //4
+        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='Clothes'and subcategory='tshirt' and (is_buying =1 or is_negotiated=1)");// 
 ?>
 
 <div class="vetement_general">
@@ -46,6 +46,7 @@
                     $descriptionItems = $rowAllItems['description'];
                     $subcategoryItems = $rowAllItems['subcategory'];
                     $is_negotiated = $rowAllItems['is_negotiated'];
+                    $is_buying = $rowAllItems['is_buying'];
                     
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
@@ -71,7 +72,9 @@
                                     </div>
 
                                     <div class="col-6  p-1 m-0">
-                                        <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                        <?php if($is_buying == 1){ ?>
+                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                        <?php } ?>
                                     </div>
                             </div>
                             <?php  if($quantityCadre == 0 ){?>
