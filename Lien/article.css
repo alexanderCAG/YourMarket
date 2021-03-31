@@ -44,6 +44,10 @@
         }
         .listeArticle_info_description{
             text-align: justify;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            overflow-y: scroll;
         }
         .listeArticle_prix{
             height: 50px;
