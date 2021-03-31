@@ -136,10 +136,10 @@
                             <div class="img_inscription_general">
                                 <span class="file_inscription_img">
                                     <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
-                                        Browse <input type="file" id="file_interrieur_inscription_img">
+                                        Browse <input type="file" name="img_Ajoutvendeur" id="file_interrieur_inscription_img">
                                     </span>
                                 </span>
-                                <input type="text" name="img" class="form-control" readonly>
+                                <input type="text" class="form-control" readonly>
                             </div>
                         </div>
 
@@ -154,6 +154,35 @@
         </form>
     </div>
 </div>
+
+<!-- register verif -->
+<?php
+    include("../../Bdd/cnx.php");
+    
+    if(isset($_POST['submit_Ajoutvendeur'])){
+        // session_start();
+	    $nomMarque_vendeur=$_POST['nomMarque_Ajoutvendeur'];
+	    $telephone_vendeur=$_POST['telephone_Ajoutvendeur'];
+	    $mail_vendeur=$_POST['mail_Ajoutvendeur'];
+	    $mdp_vendeur=$_POST['mdp_Ajoutvendeur'];
+	    // $mdp2_vendeur=$_POST['mdp2_vendeur'];
+
+		$target_path="../../Image/";
+        $target_path=$target_path.basename($_FILES['img_Ajoutvendeur']['name']);
+
+		if(move_uploaded_file($_FILES['img_Ajoutvendeur']['tmp_name'], $target_path)){
+			// enregistrer dans sql
+			$sql = "INSERT INTO seller (brand,profil_picture,background,phone,email,passworde) VALUES ('$nomMarque_vendeur','$target_path','white','$telephone_vendeur','$mail_vendeur','$mdp_vendeur')";
+			if($con->query($sql)==true){
+				echo"<br><br>";
+			}else{
+				echo "Error:".$sql.$con->error;
+			}
+		}
+    }
+
+    // include("../../Front/confirm_register.php");
+?>
 
 <?php
     include("footer.php");
