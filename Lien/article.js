@@ -37,6 +37,7 @@ function ajoutArticle(event){
     let achat_direct_ajoutArticle= document.getElementById('achat_direct_ajoutArticle');
     let achat_nego_ajoutArticle= document.getElementById('achat_nego_ajoutArticle');
     let achat_enchere_ajoutArticle= document.getElementById('achat_enchere_ajoutArticle');
+    let file_interrieur_inscription_img= document.getElementById('file_interrieur_inscription_img');
     
             // span
     let nomProduitErreur_ajoutArticle= document.getElementById('nomProduitErreur_ajoutArticle');
@@ -47,6 +48,8 @@ function ajoutArticle(event){
     let choixSousCategorieErreur_ajoutArticle_maison= document.getElementById('choixSousCategorieErreur_ajoutArticle_maison');
     let choixSousCategorieErreur_ajoutArticle_vetement= document.getElementById('choixSousCategorieErreur_ajoutArticle_vetement');
     let typeAchatErreur_ajoutArticle= document.getElementById('typeAchatErreur_ajoutArticle');
+    let imageErreur_ajoutArticle= document.getElementById('imageErreur_ajoutArticle');
+    // let imageErreur_ajoutArticle_Admin= document.getElementById('imageErreur_ajoutArticle_Admin');
 
             // reset span
     nomProduitErreur_ajoutArticle.innerHTML="";
@@ -57,8 +60,20 @@ function ajoutArticle(event){
     choixSousCategorieErreur_ajoutArticle_maison.innerHTML="";
     choixSousCategorieErreur_ajoutArticle_vetement.innerHTML="";
     typeAchatErreur_ajoutArticle.innerHTML="";
+    imageErreur_ajoutArticle.innerHTML="";
+    // imageErreur_ajoutArticle_Admin.innerHTML="";
 
     var verif_ajoutArticle=true;
+
+    // image verif
+    if(file_interrieur_inscription_img.value.length==""){
+        imageErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        // imageErreur_ajoutArticle_Admin.innerHTML = "Compléter ce champs";
+        verif_ajoutArticle=false;
+    }else{
+        imageErreur_ajoutArticle.innerHTML = "";
+        // imageErreur_ajoutArticle_Admin.innerHTML = "";
+    }
     
     // nom produit verif
     if(nomProduit_ajoutArticle.value.trim()==""){
@@ -176,4 +191,6 @@ function reset_ajoutArticle(){
     choixSousCategorieErreur_ajoutArticle_maison.innerHTML="";
     choixSousCategorieErreur_ajoutArticle_vetement.innerHTML="";
     typeAchatErreur_ajoutArticle.innerHTML="";
+    imageErreur_ajoutArticle.innerHTML="";
+    // imageErreur_ajoutArticle_Admin.innerHTML="";
 }

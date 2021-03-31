@@ -48,6 +48,7 @@
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
+                        <span id="imageErreur_ajoutArticle"></span>
                     </div>
                 </div>
 

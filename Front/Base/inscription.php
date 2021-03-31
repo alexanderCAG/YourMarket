@@ -194,6 +194,8 @@
                                 </span>
                             </span>
                             <input type="text" class="form-control" readonly>
+                            <span id="imageErreur_vendeur"></span>
+                            <br>
                         </div>
                         <br><br>
                         <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">

@@ -142,11 +142,11 @@ function infoPersoL_livraison(event){
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:red");
     }else if(/[1-9]/.test(infoPerso_mdp_acheteur.value) && regex_mdp.test(infoPerso_mdp_acheteur.value)==false){
         infoPerso_mdpErreur_acheteur.innerHTML = "Moyen";
-        verif_infoPersoL_acheteur=true;
+        // verif_infoPersoL_acheteur=true;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:green");
     }else if(regex_mdp.test(infoPerso_mdp_acheteur.value)){
         infoPerso_mdpErreur_acheteur.innerHTML = "Fort";
-        verif_infoPersoL_acheteur=true;
+        // verif_infoPersoL_acheteur=true;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:green");
     }else{
         infoPerso_mdpErreur_acheteur.innerHTML = "";
@@ -163,7 +163,7 @@ function infoPersoL_livraison(event){
     }else if(infoPerso_mdp_acheteur.value.trim() == infoPerso_mdp2_acheteur.value.trim()){
         infoPerso_mdp2Erreur_acheteur.innerHTML = "Correct";
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:green");
-        verif_infoPersoL_acheteur=true;
+        // verif_infoPersoL_acheteur=true;
     }else if(regex_mdp.test(infoPerso_mdp_acheteur.value) != regex_mdp.test(infoPerso_mdp2_acheteur.value)){
         infoPerso_mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:red");
@@ -190,18 +190,18 @@ function infoPersoL_livraison(event){
         infoPerso_adresse1Erreur_acheteur.innerHTML = "";
     }
 
-    if(infoPerso_adresse2_acheteur.value.trim()==""){
-        infoPerso_adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
-        verif_infoPersoL_acheteur=false;
-    }else if(regex_tot.test(infoPerso_adresse2_acheteur.value)==false){
-        infoPerso_adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
-        verif_infoPersoL_acheteur=false;
-    }else if(infoPerso_adresse2_acheteur.value.length >= 50){
-        infoPerso_adresse2Erreur_acheteur.innerHTML = "Trop long";
-        verif_infoPersoL_acheteur=false;
-    }else{
-        infoPerso_adresse2Erreur_acheteur.innerHTML = "";
-    }
+    // if(infoPerso_adresse2_acheteur.value.trim()==""){
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
+    //     verif_infoPersoL_acheteur=false;
+    // }else if(regex_tot.test(infoPerso_adresse2_acheteur.value)==false){
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+    //     verif_infoPersoL_acheteur=false;
+    // }else if(infoPerso_adresse2_acheteur.value.length >= 50){
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Trop long";
+    //     verif_infoPersoL_acheteur=false;
+    // }else{
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "";
+    // }
 
     // Pays verif
     if(infoPerso_pays_acheteur.value.trim()==""){

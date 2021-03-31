@@ -140,6 +140,7 @@
                                     </span>
                                 </span>
                                 <input type="text" class="form-control" readonly>
+                                <span id="imageErreur_listeVendeur"></span>
                             </div>
                         </div>
 

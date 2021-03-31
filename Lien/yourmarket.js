@@ -99,6 +99,7 @@ jQuery(document).ready(function(){
             mailErreur_vendeur.innerHTML="";
             mdpErreur_vendeur.innerHTML="";
             mdp2Erreur_vendeur.innerHTML="";
+            imageErreur_vendeur.innerHTML="";
         }
 
         /********************************
@@ -249,11 +250,11 @@ jQuery(document).ready(function(){
                 mdpErreur_acheteur.setAttribute("style","color:red");
             }else if(/[1-9]/.test(mdp_acheteur.value) && regex_mdp.test(mdp_acheteur.value)==false){
                 mdpErreur_acheteur.innerHTML = "Moyen";
-                verification_inscription_acheteur=true;
+                // verification_inscription_acheteur=true;
                 mdpErreur_acheteur.setAttribute("style","color:green");
             }else if(regex_mdp.test(mdp_acheteur.value)){
                 mdpErreur_acheteur.innerHTML = "Fort";
-                verification_inscription_acheteur=true;
+                // verification_inscription_acheteur=true;
                 mdpErreur_acheteur.setAttribute("style","color:green");
             }else{
                 mdpErreur_acheteur.innerHTML = "";
@@ -270,7 +271,7 @@ jQuery(document).ready(function(){
             }else if(mdp_acheteur.value.trim() == mdp2_acheteur.value.trim()){
                 mdp2Erreur_acheteur.innerHTML = "Correct";
                 mdp2Erreur_acheteur.setAttribute("style","color:green");
-                verification_inscription_acheteur=true;
+                // verification_inscription_acheteur=true;
             }else if(regex_mdp.test(mdp_acheteur.value) != regex_mdp.test(mdp2_acheteur.value)){
                 mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
                 mdp2Erreur_acheteur.setAttribute("style","color:red");
@@ -297,18 +298,18 @@ jQuery(document).ready(function(){
                 adresse1Erreur_acheteur.innerHTML = "";
             }
 
-            if(adresse2_acheteur.value.trim()==""){
-                adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
-                verification_inscription_acheteur=false;
-            }else if(regex_tot.test(adresse2_acheteur.value)==false){
-                adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
-                verification_inscription_acheteur=false;
-            }else if(adresse2_acheteur.value.length >= 50){
-                adresse2Erreur_acheteur.innerHTML = "Trop long";
-                verification_inscription_acheteur=false;
-            }else{
-                adresse2Erreur_acheteur.innerHTML = "";
-            }
+            // if(adresse2_acheteur.value.trim()==""){
+            //     adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
+            //     verification_inscription_acheteur=false;
+            // }else if(regex_tot.test(adresse2_acheteur.value)==false){
+            //     adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+            //     verification_inscription_acheteur=false;
+            // }else if(adresse2_acheteur.value.length >= 50){
+            //     adresse2Erreur_acheteur.innerHTML = "Trop long";
+            //     verification_inscription_acheteur=false;
+            // }else{
+            //     adresse2Erreur_acheteur.innerHTML = "";
+            // }
 
             // Pays verif
             if(pays_acheteur.value.trim()==""){
@@ -428,6 +429,7 @@ jQuery(document).ready(function(){
             let mail_vendeur= document.getElementById('mail_vendeur');
             let mdp_vendeur= document.getElementById('mdp_vendeur');
             let mdp2_vendeur= document.getElementById('mdp2_vendeur');
+            let file_interrieur_inscription_img= document.getElementById('file_interrieur_inscription_img');
 
                     // span
             let nomMarqueErreur_vendeur= document.getElementById('nomMarqueErreur_vendeur');
@@ -435,6 +437,7 @@ jQuery(document).ready(function(){
             let mailErreur_vendeur= document.getElementById('mailErreur_vendeur');
             let mdpErreur_vendeur= document.getElementById('mdpErreur_vendeur');
             let mdp2Erreur_vendeur= document.getElementById('mdp2Erreur_vendeur');
+            let imageErreur_vendeur= document.getElementById('imageErreur_vendeur');
 
                     // reset span
             nomMarqueErreur_vendeur.innerHTML="";
@@ -442,8 +445,17 @@ jQuery(document).ready(function(){
             mailErreur_vendeur.innerHTML="";
             mdpErreur_vendeur.innerHTML="";
             mdp2Erreur_vendeur.innerHTML="";
+            imageErreur_vendeur.innerHTML="";
             
             var verification_inscription_vendeur=true;
+
+            // image verif
+            if(file_interrieur_inscription_img.value.length==""){
+                imageErreur_vendeur.innerHTML = "Compléter ce champs";
+                verification_inscription_vendeur=false;
+            }else{
+                imageErreur_vendeur.innerHTML = "";
+            }
 
             // nom marque verif
             if(nomMarque_vendeur.value.trim()==""){
@@ -492,11 +504,11 @@ jQuery(document).ready(function(){
                 mdpErreur_vendeur.setAttribute("style","color:red");
             }else if(/[1-9]/.test(mdp_vendeur.value) && regex_mdp.test(mdp_vendeur.value)==false){
                 mdpErreur_vendeur.innerHTML = "Moyen";
-                verification_inscription_vendeur=true;
+                // verification_inscription_vendeur=true;
                 mdpErreur_vendeur.setAttribute("style","color:green");
             }else if(regex_mdp.test(mdp_vendeur.value)){
                 mdpErreur_vendeur.innerHTML = "Fort";
-                verification_inscription_vendeur=true;
+                // verification_inscription_vendeur=true;
                 mdpErreur_vendeur.setAttribute("style","color:green");
             }else{
                 mdpErreur_vendeur.innerHTML = "";
@@ -513,7 +525,7 @@ jQuery(document).ready(function(){
             }else if(mdp_vendeur.value.trim() == mdp2_vendeur.value.trim()){
                 mdp2Erreur_vendeur.innerHTML = "Correct";
                 mdp2Erreur_vendeur.setAttribute("style","color:green");
-                verification_inscription_vendeur=true;
+                // verification_inscription_vendeur=true;
             }else if(regex_mdp.test(mdp_vendeur.value) != regex_mdp.test(mdp2_vendeur.value)){
                 mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
                 mdp2Erreur_vendeur.setAttribute("style","color:red");

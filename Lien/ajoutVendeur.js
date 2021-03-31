@@ -9,6 +9,7 @@ function ajoutvendeur(event){
     let mail_Ajoutvendeur= document.getElementById('mail_Ajoutvendeur');
     let mdp_Ajoutvendeur= document.getElementById('mdp_Ajoutvendeur');
     let mdp2_Ajoutvendeur= document.getElementById('mdp2_Ajoutvendeur');
+    let file_interrieur_inscription_img= document.getElementById('file_interrieur_inscription_img');
 
             // span
     let nomMarqueErreur_Ajoutvendeur= document.getElementById('nomMarqueErreur_Ajoutvendeur');
@@ -16,6 +17,7 @@ function ajoutvendeur(event){
     let mailErreur_Ajoutvendeur= document.getElementById('mailErreur_Ajoutvendeur');
     let mdpErreur_Ajoutvendeur= document.getElementById('mdpErreur_Ajoutvendeur');
     let mdp2Erreur_Ajoutvendeur= document.getElementById('mdp2Erreur_Ajoutvendeur');
+    let imageErreur_listeVendeur= document.getElementById('imageErreur_listeVendeur');
 
             // reset span
     nomMarqueErreur_Ajoutvendeur.innerHTML="";
@@ -23,8 +25,17 @@ function ajoutvendeur(event){
     mailErreur_Ajoutvendeur.innerHTML="";
     mdpErreur_Ajoutvendeur.innerHTML="";
     mdp2Erreur_Ajoutvendeur.innerHTML="";
+    imageErreur_listeVendeur.innerHTML="";
     
     var verif_Ajoutvendeur=true;
+
+    // image verif
+    if(file_interrieur_inscription_img.value.length==""){
+        imageErreur_listeVendeur.innerHTML = "Compléter ce champs";
+        verif_Ajoutvendeur=false;
+    }else{
+        imageErreur_listeVendeur.innerHTML = "";
+    }
 
     // nom marque verif
     if(nomMarque_Ajoutvendeur.value.trim()==""){
@@ -73,11 +84,11 @@ function ajoutvendeur(event){
         mdpErreur_Ajoutvendeur.setAttribute("style","color:red");
     }else if(/[1-9]/.test(mdp_Ajoutvendeur.value) && regex_mdp.test(mdp_Ajoutvendeur.value)==false){
         mdpErreur_Ajoutvendeur.innerHTML = "Moyen";
-        verif_Ajoutvendeur=true;
+        // verif_Ajoutvendeur=true;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:green");
     }else if(regex_mdp.test(mdp_Ajoutvendeur.value)){
         mdpErreur_Ajoutvendeur.innerHTML = "Fort";
-        verif_Ajoutvendeur=true;
+        // verif_Ajoutvendeur=true;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:green");
     }else{
         mdpErreur_Ajoutvendeur.innerHTML = "";
@@ -94,7 +105,7 @@ function ajoutvendeur(event){
     }else if(mdp_Ajoutvendeur.value.trim() == mdp2_Ajoutvendeur.value.trim()){
         mdp2Erreur_Ajoutvendeur.innerHTML = "Correct";
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:green");
-        verif_Ajoutvendeur=true;
+        // verif_Ajoutvendeur=true;
     }else if(regex_mdp.test(mdp_Ajoutvendeur.value) != regex_mdp.test(mdp2_Ajoutvendeur.value)){
         mdp2Erreur_Ajoutvendeur.innerHTML = "Mot de passe pas sécurisé";
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:red");
@@ -135,4 +146,5 @@ function reset_Ajoutvendeur(){
     mailErreur_Ajoutvendeur.innerHTML="";
     mdpErreur_Ajoutvendeur.innerHTML="";
     mdp2Erreur_Ajoutvendeur.innerHTML="";
+    imageErreur_listeVendeur.innerHTML="";
 }

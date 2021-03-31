@@ -67,11 +67,13 @@
                     <img id="img_inscription_choix_vendeur" src="<?php echo $profil_picture_vendeur ?>">
                     <div class="img_inscription_general">
                         <span class="file_inscription_img">
-                            <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
-                                Browse <input type="file" name="infoPerso_img" id="file_interrieur_inscription_img">
+                            <span onclick="choix_image_vendeur()" id="btn_Browse" class="btn btn-default btn_choix_img_vendeur_inscription">
+                                Browse <input type="file" name="infoPerso_img" id="file_interrieur_inscription_img" accept="image/png, image/jpg, image/jpeg">
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
+                        <span id="imageErreur_infoPersovendeur"></span>
+                        <br>
                     </div>
                     <br><br>
                 </div>

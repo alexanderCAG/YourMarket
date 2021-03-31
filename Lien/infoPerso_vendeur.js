@@ -11,6 +11,7 @@ document.getElementById('infoPerso_mail_vendeur').disabled=true;
 document.getElementById('infoPerso_mdp_vendeur').disabled=true;
 document.getElementById('infoPerso_mdp2_vendeur').disabled=true;
 
+$("#btn_Browse").hide();
 $("#submit_valider_infoPerso_vendeur").hide();
 
 });
@@ -23,6 +24,7 @@ function infoPerso_vendeur(event){
     let infoPerso_mail_vendeur= document.getElementById('infoPerso_mail_vendeur');
     let infoPerso_mdp_vendeur= document.getElementById('infoPerso_mdp_vendeur');
     let infoPerso_mdp2_vendeur= document.getElementById('infoPerso_mdp2_vendeur');
+    let file_interrieur_inscription_img= document.getElementById('file_interrieur_inscription_img');
 
             // span
     let infoPerso_nomMarqueErreur_vendeur= document.getElementById('infoPerso_nomMarqueErreur_vendeur');
@@ -30,6 +32,7 @@ function infoPerso_vendeur(event){
     let infoPerso_mailErreur_vendeur= document.getElementById('infoPerso_mailErreur_vendeur');
     let infoPerso_mdpErreur_vendeur= document.getElementById('infoPerso_mdpErreur_vendeur');
     let infoPerso_mdp2Erreur_vendeur= document.getElementById('infoPerso_mdp2Erreur_vendeur');
+    let imageErreur_infoPersovendeur= document.getElementById('imageErreur_infoPersovendeur');
 
             // reset span
     infoPerso_nomMarqueErreur_vendeur.innerHTML="";
@@ -37,8 +40,17 @@ function infoPerso_vendeur(event){
     infoPerso_mailErreur_vendeur.innerHTML="";
     infoPerso_mdpErreur_vendeur.innerHTML="";
     infoPerso_mdp2Erreur_vendeur.innerHTML="";
+    imageErreur_infoPersovendeur.innerHTML="";
     
     var verif_infoPerso_vendeur=true;
+
+    // image verif
+    if(file_interrieur_inscription_img.value.length==""){
+        imageErreur_infoPersovendeur.innerHTML = "Compléter ce champs";
+        verif_infoPerso_vendeur=false;
+    }else{
+        imageErreur_infoPersovendeur.innerHTML = "";
+    }
 
     // nom marque verif
     if(infoPerso_nomMarque_vendeur.value.trim()==""){
@@ -87,11 +99,11 @@ function infoPerso_vendeur(event){
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:red");
     }else if(/[1-9]/.test(infoPerso_mdp_vendeur.value) && regex_mdp.test(infoPerso_mdp_vendeur.value)==false){
         infoPerso_mdpErreur_vendeur.innerHTML = "Moyen";
-        verif_infoPerso_vendeur=true;
+        // verif_infoPerso_vendeur=true;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:green");
     }else if(regex_mdp.test(infoPerso_mdp_vendeur.value)){
         infoPerso_mdpErreur_vendeur.innerHTML = "Fort";
-        verif_infoPerso_vendeur=true;
+        // verif_infoPerso_vendeur=true;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:green");
     }else{
         infoPerso_mdpErreur_vendeur.innerHTML = "";
@@ -108,7 +120,7 @@ function infoPerso_vendeur(event){
     }else if(infoPerso_mdp_vendeur.value.trim() == infoPerso_mdp2_vendeur.value.trim()){
         infoPerso_mdp2Erreur_vendeur.innerHTML = "Correct";
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:green");
-        verif_infoPerso_vendeur=true;
+        // verif_infoPerso_vendeur=true;
     }else if(regex_mdp.test(infoPerso_mdp_vendeur.value) != regex_mdp.test(infoPerso_mdp2_vendeur.value)){
         infoPerso_mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:red");
@@ -149,6 +161,7 @@ function modif_infoPersoVendeur(){
     document.getElementById('infoPerso_mdp2_vendeur').disabled=false;
 
     $("#submit_valider_infoPerso_vendeur").show();
+    $("#btn_Browse").show();
 }
 
 function annulModif_infoPersoVendeur(){
@@ -159,6 +172,7 @@ function annulModif_infoPersoVendeur(){
     document.getElementById('infoPerso_mdp2_vendeur').disabled=true;
 
     $("#submit_valider_infoPerso_vendeur").hide();
+    $("#btn_Browse").hide();
 }
 
 function reset_infoPersoVendeur(){
@@ -169,4 +183,5 @@ function reset_infoPersoVendeur(){
     infoPerso_mailErreur_vendeur.innerHTML="";
     infoPerso_mdpErreur_vendeur.innerHTML="";
     infoPerso_mdp2Erreur_vendeur.innerHTML="";
+    imageErreur_infoPersovendeur.innerHTML="";
 }
