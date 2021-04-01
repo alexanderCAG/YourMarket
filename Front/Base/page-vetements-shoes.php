@@ -66,14 +66,14 @@
                                 <div class="row">
                                     <div class="col-6 p-1 m-0">
                                         <?php if($is_negotiated == 1){ ?>
-                                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#nego_prix_maison"> <i class="far fa-handshake"></i><small> Negociate</small></button>
+                                            <a href="connexion.php" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Negociate</small></a>
                                         <?php } ?>
                                         
                                     </div>
 
                                     <div class="col-6  p-1 m-0">
                                         <?php if($is_buying == 1){ ?>
-                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                            <a href="connexion.php" type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></a>
                                         <?php } ?>
                                     </div>
                             </div>
