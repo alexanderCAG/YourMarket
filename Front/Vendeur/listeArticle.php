@@ -120,7 +120,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
 
 
 <!-- Modal to confirm Delete Item-->
-<div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <form action="delete.php" method="POST">
             <div class="modal-content">
@@ -138,21 +138,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     <button type="submit" name="btn_submit_supprimer" class="btn btn-danger" data-bs-dismiss="modal">Supprimer</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="deleteme(<?php echo $idItem; ?>)">Supprimer</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-                <script language="javascript">
-                function deleteme(delid) 
-                {
-                        window.location.href='delete.php?del_id='+delid+'';
-                        return true;
-                }
-                </script> -->
             </div>
         </form>
     </div>
-</div>
+</div> -->
 
 <?php 
         } 
