@@ -7,7 +7,7 @@
         $queryCountSeller = mysqli_query($con, "select count(id_seller) as totalVendeurs from seller"); 
 
         //liste des vendeurs inscrits
-        $queryAllSeller = mysqli_query($con, "select brand,profil_picture,background,phone,email from seller");//
+        $queryAllSeller = mysqli_query($con, "select id_seller,brand,profil_picture,background,phone,email from seller");//
         
         if($row = mysqli_fetch_assoc($queryCountSeller)){
                     $total = $row['totalVendeurs'];
@@ -52,6 +52,7 @@
                             $backgroundSeller = $rowAllSeller['background'];
                             $phoneSeller = $rowAllSeller['phone'];
                             $emailSeller = $rowAllSeller['email'];
+                            $idSeller = $rowAllSeller['id_seller'];
                 ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card" style="width: 18rem;">
@@ -63,7 +64,7 @@
                                         <h5 class="card-title"> <i class="fas fa-hand-holding-usd"></i> <?php echo $brandSeller ?></h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#" class="btn btn-danger f_right"><i class="far fa-trash-alt"></i></a>
+                                        <a href="../../Bdd/delete.php?ids=<?= $idSeller; ?>" class="btn btn-danger f_right"><i class="far fa-trash-alt"></i></a>
                                     </div>
                                 </div>
                                 <hr>

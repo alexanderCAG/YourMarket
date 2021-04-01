@@ -11,7 +11,6 @@
         //liste de tous les produits du vendeur connecté 
         $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')");// Tableau liste
 
-        
 ?>
 
 
@@ -48,7 +47,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $is_buying = $rowAllItemSeller['is_buying'];
             $DescriptionItemSeller = $rowAllItemSeller['description'];
             
-            $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
+            // $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
 ?>
 
         <div class="listeArticle_liste_total row m-0 p-3">
@@ -108,7 +107,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                             
                             <div class="col-md-1">
                                 <a type="button" href="../../Bdd/delete.php?id=<?= $idItem; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
-                            <!-- data-bs-toggle="modal" data-bs-target="#confirmDeleteItem" -->
+                            <!--  data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"-->
                             </div>
                         </div>
                     </div>
@@ -117,19 +116,32 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
 
             <div class="col-2"></div>
         </div>
+        <?php 
+        } 
+    }
+}
+?>
 
 
 <!-- Modal to confirm Delete Item-->
 <!-- <div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <?php
+
+    $queryItemSeller = mysqli_query($con, "select name, price , brand from item,seller where seller.id_seller=item.id_seller and id_item='$idItem'");
+    if($rowItemSeller = mysqli_fetch_assoc($queryItemSeller)){
+        $nameItemSeller2 = $rowItemSeller['name'];
+        $PriceItemSeller2 = $rowItemSeller['price'];
+        $brandItemSeller2 = $rowItemSeller['brand'];
+    ?>
     <div class="modal-dialog">
-        <form action="delete.php" method="POST">
+        <form action="" method="POST">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title titre_modal_prix_nego texte_style" id="staticBackdropLabel">Suppression du produit: <?php echo $nameItemSeller ?> </h5>
+                    <h5 class="modal-title titre_modal_prix_nego texte_style" id="staticBackdropLabel">Suppression du produit: <?php echo $nameItemSeller2 ?> </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body mt-2">
-                    <p>Confirmation de la suppression : <?php echo $nameItemSeller ?> - <?php echo $brandItemSeller ?> - <?php echo $PriceItemSeller ?> €</p>
+                    <p>Confirmation de la suppression : <?php echo $nameItemSeller2 ?> - <?php echo $brandItemSeller2 ?> - <?php echo $PriceItemSeller2 ?> €</p>
                     <div class="alert alert-danger" role="alert">
                     <i class="fas fa-exclamation-triangle"></i> La suppression sera définitive.
                     </div>
@@ -141,13 +153,12 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             </div>
         </form>
     </div>
-</div> -->
+</div>
 
-<?php 
-        } 
-    }
+<?php
 }
-?>
+?> -->
+
 <!-- fin article -->
 <div class="listeArticle_liste_total bg_blue2 row mt-5">
     <div class="col-2"></div>

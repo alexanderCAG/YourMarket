@@ -6,6 +6,21 @@
         $delete=$_GET['id'];
 
         $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$delete'");
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Vendeur/listeArticle.php' </script>";
+    }
+
+    if (isset($_GET['ida'])){
+        $delete=$_GET['ida'];
+
+        $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$delete'");
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeArticle.php' </script>";
+    }
+
+    if (isset($_GET['ids'])){
+        $delete=$_GET['ids'];
+
+        $queryDeleteItem = mysqli_query($con, "delete from seller WHERE id_seller='$delete'");
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeVendeur.php' </script>";
     }
 
     // include("../../Bdd/cnx.php");
@@ -38,7 +53,7 @@
 //     echo "ERREUR DE CONNEXION";
 // }
 ?>
-<div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <form action="delete.php" method="POST">
             <div class="modal-content">
@@ -64,4 +79,4 @@
     if (isset($_POST['btn_submit_close'])){
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Vendeur/listeArticle.php' </script>";
     }
-?>
+?> -->
