@@ -71,6 +71,12 @@
 
 		include("../Front/confirm_infoPerso_admin.php");
     }
+	if (isset($_POST['submit_valider_background'])){
+		$background_seller=$_POST['background_seller'];
+        $queryBackground_seller = mysqli_query($con, "UPDATE seller SET background='$background_seller' WHERE email='$email_user'");
+
+		include("../Front/confirm_infoPerso_vendeur.php");
+    }
 	// else{
     //     echo "ERREUR";
     // }

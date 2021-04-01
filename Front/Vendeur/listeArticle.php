@@ -9,8 +9,11 @@
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')"); 
 
         //liste de tous les produits du vendeur connecté 
-        $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')");// Tableau liste
+        $queryAllItemSeller = mysqli_query($con, "select id_item, email ,background, name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')");// Tableau liste
+        
 
+
+        // UPDATE `seller` SET `background` = '#FF5733' WHERE `seller`.`id_seller` = 5;
 ?>
 
 
@@ -19,8 +22,15 @@
 if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
-
-<div class="genale_listeArticle position-relative">
+<!--affichage du background de l'utilisateur, sinon bleu par defaut-->
+<?php if($row2 = mysqli_fetch_assoc($queryAllItemSeller)){$bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php } ?>
+<?php } ?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_listeArticle text-uppercase">
             Liste des articles 

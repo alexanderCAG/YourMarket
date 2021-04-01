@@ -6,7 +6,7 @@
         $email_user = $_SESSION['email'];
         // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item, seller where seller.id_seller=item.id_seller and seller.email='$seller_email'"); 
 
-        $queryinfoPerso_vendeur = mysqli_query($con, "SELECT brand,profil_picture,phone,email,passworde FROM seller WHERE (seller.email='$email_user' or seller.brand='$email_user')");
+        $queryinfoPerso_vendeur = mysqli_query($con, "SELECT brand,profil_picture,background, phone,email,passworde FROM seller WHERE (seller.email='$email_user' or seller.brand='$email_user')");
 
     if($rowinfoPerso_vendeur = mysqli_fetch_assoc($queryinfoPerso_vendeur)){
         $brand_vendeur = $rowinfoPerso_vendeur['brand'];
@@ -14,11 +14,16 @@
         $phone_vendeur = $rowinfoPerso_vendeur['phone'];
         $email_vendeur = $rowinfoPerso_vendeur['email'];
         $passworde_vendeur = $rowinfoPerso_vendeur['passworde'];
+        $bg = $rowinfoPerso_vendeur['background'];
 
-?>
 
+// <!--affichage du background de l'utilisateur, sinon bleu par defaut-->
 
-<div class="genale_page_infoPerso position-relative">
+if($bg != null){?>
+    <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;"> <?php  
+}else{?>
+    <div class="genale_listeArticle position-relative" ><?php 
+} ?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
         <p class="titre_general_infoPerso text-uppercase centrer">
             Informations personnelles
