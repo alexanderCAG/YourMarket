@@ -41,3 +41,32 @@ function choix_image_vendeur(){
     });
 
 }
+jQuery(document).ready(function(){
+    compteur();
+});
+
+    // const minutes=60;
+    // const hours=60*minutes;
+    // const days=24*hours;
+
+    // function compteur(){
+    //     const countdown = document.querySelector('#countdown');
+    //     const launchDate = Date.parse(countdown.dataset.time)/1000;
+    //     const difference = launchDate - Date.now() / 1000;
+
+    //     const diff = {
+    //         days: Math.floor(difference/days),
+    //         hours: Math.floor(difference%days/hours),
+    //         minutes: Math.floor(difference%hours/minutes),
+    //         seconddes: Math.floor(difference%minutes),
+    //     }
+
+    //     document.getElementById('jour').innerText=diff.days;
+    //     document.getElementById('heure').innerText=diff.hours;
+    //     document.getElementById('minute').innerText=diff.minutes;
+    //     document.getElementById('seconde').innerText=diff.seconddes;
+
+    //     window.setTimeout(()=>{
+    //         window.requestAnimationFrame(compteur);
+    //     });
+    // }

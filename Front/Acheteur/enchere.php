@@ -57,75 +57,80 @@ for ($i=0; $i<=$totalEnchere;$i++){
                 <div class="enchere_info_description"><?php echo $descriptionEnchere ?></div>
                 <div class="enchere_info_description"><?php echo $end_enchere ?></div>
                 <script type="text/javascript">
-                    function decompteur(){
-              
-                        // var date1 = new Date(document.getElementById('start').value) ;
-                       
-                        var dateBDD ='<?php echo $end_enchere ?>'
-
-                        var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
-                        var yearEndBid2 = parseInt(yearEndBid);
-
-                        var monthEndBid = dateBDD[5]+dateBDD[6]; 
-                        var monthEndBid2 =parseInt(monthEndBid);
-
-                        var dayEndBid = dateBDD[8]+dateBDD[9]; 
-                        var dayEndBid2 = parseInt(dayEndBid);
-
-                        var hourEndBid = dateBDD[11]+dateBDD[12]; 
-                        var hourEndBid2 = parseInt(hourEndBid);
-
-                        var minuteEndBid = dateBDD[14]+dateBDD[15]; 
-                        var minuteEndBid2 = parseInt(minuteEndBid);
-
-                        var secondEndBid = dateBDD[17]+dateBDD[18]; 
-                        var secondEndBid2 = parseInt(secondEndBid);
-                        var millisecondEndBid = 0; 
+                        
 
                         // alert(monthEndBid2);
                         // var date2 =  dateBDD;//year, month, day, hour, minute, second, and millisecond
                         // var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);//year, month, day, hour, minute, second, and millisecond
-                        
-                        var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
+                        // var dateBDD ='<?php echo $end_enchere ?>'
+
+                        // var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
+                        // var monthEndBid = dateBDD[5]+dateBDD[6]; 
+                        // var dayEndBid = dateBDD[8]+dateBDD[9]; 
+                        // var hourEndBid = dateBDD[11]+dateBDD[12]; 
+                        // var minuteEndBid = dateBDD[14]+dateBDD[15]; 
+                        // var secondEndBid = dateBDD[17]+dateBDD[18]; 
+                        // var millisecondEndBid = 0; 
+
+                        // var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);
     
-                        var jours=$('#jours');
-                        var heures=$('#heures');
-                        var minutes=$('#minutes');
-                        var secondes=$('#secondes');
-                       
-                        // var heure1 = date1.getTime()/1000;
-                        var heure2 = date2.getTime()/1000;
-                        var heure1 = new Date()/1000;
-                        var s=heure2-heure1;
+                        const minutes=60;
+                        const hours=60*minutes;
+                        const days=24*hours;
 
-                        var d=Math.floor(s/86400);
-                        jours.html('<strong><font size="6">'+d+'</font></strong> Jour'+(d>1?'s':''));
-                        s-=d*86400;
+                        function compteur(){
+                            
 
-                        var h=Math.floor(s/3600);
-                        heures.html('<strong><font size="6">'+h+'</font></strong> Heure'+(h>1?'s':''));
-                        s-=h*3600;
+                            const countdown = document.querySelector('#countdown');
+                            const launchDate = Date.parse(countdown.dataset.time)/1000;
+                            const difference = launchDate - Date.now() / 1000;
+                            // date2 = date2 /1000;
+                            // alert(date2);
+                            // const difference = date2 - Date.now() / 1000;
 
-                        var m=Math.floor(s/60);
-                        minutes.html('<strong><font size="6">'+m+'</font></strong> Minute'+(m>1?'s':''));
-                        s-=m*60;
+                            const diff = {
+                                days: Math.floor(difference/days),
+                                hours: Math.floor(difference%days/hours),
+                                minutes: Math.floor(difference%hours/minutes),
+                                seconddes: Math.floor(difference%minutes),
+                            }
 
-                        var s=Math.floor(s);
-                        secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
+                            document.getElementById('jours').innerText=diff.days;
+                            document.getElementById('heures').innerText=diff.hours;
+                            document.getElementById('minutes').innerText=diff.minutes;
+                            document.getElementById('secondes').innerText=diff.seconddes;
 
-                        setTimeout(decompteur,1000);
+                            window.setTimeout(()=>{
+                                window.requestAnimationFrame(compteur);
+                            });
                         }
                     </script>
                 <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
                         <img class="img_timeur_compteur" src="../../Image/timeur_compteur.png" alt="timeur_compteur">
                     </div>
-                    <div class="enchere_compteur col-2" id="jours"></div>
-                    <div class="enchere_compteur col-2" id="heures"></div>
-                    <div class="enchere_compteur col-2" id="minutes"></div>
-                    <div class="enchere_compteur col-2" id="secondes"></div>
-                    <div class="col-2"></div>
-                </div>
+                    <div class="col-9">
+                        <div class="row" id="countdown" data-time="<?php echo $end_enchere ?>">
+                            <div class="enchere_compteur col-3" >
+                                <font size=6><strong id="jours"></strong></font>
+                                <em>Jours</em>
+                            </div>
+                            <div class="enchere_compteur col-3" >
+                                <font size=6><strong id="heures"></strong></font>
+                                <em>Houres</em>
+                            </div>
+                            <div class="enchere_compteur col-3" >
+                                <font size=6><strong id="minutes"></strong></font>
+                                <em>Minutes</em>
+                            </div>
+                            <div class="enchere_compteur col-3" >
+                                <font size=6><strong id="secondes"></strong></font>
+                                <em>Secondes</em>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                        
+                    </div>
             </div>
             
             <div class="col-1"></div>

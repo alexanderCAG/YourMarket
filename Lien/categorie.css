@@ -196,7 +196,8 @@
         margin-top: 50px!important;
     }
     .enchere_compteur{
-        width: 82px!important;
+        width: 78px!important;
+        /* width: 82px!important; */
         height: 80px!important;
         background-color: #ececec;
         margin-left: 2px;
