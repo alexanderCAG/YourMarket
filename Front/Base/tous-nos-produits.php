@@ -72,7 +72,7 @@
                                         <?php } ?>
                                     </div>
                             </div>
-                            <?php  if($subcategoryItems == 'sheet' ){?>
+                                <?php  if($subcategoryItems == 'sheet' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'pillow' ){?>
