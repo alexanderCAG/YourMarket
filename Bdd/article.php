@@ -3,8 +3,7 @@
     include("cnx.php");
 	session_start();
 	$email_user = $_SESSION['email'];
-    
-   
+
 	if (isset($_GET['id']) && isset($_GET['qty'])){
         $id_item=$_GET['id'];
         $quantity_update=$_GET['qty'];

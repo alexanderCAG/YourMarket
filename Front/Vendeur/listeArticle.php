@@ -108,12 +108,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                             </div>
                             <div class="col-md-5">
                                 <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                    <div class="input-group-text"><?php echo $qttItemSeller ?></div>
-                                </div>
-                                    <input type="number" name="input_quantity_update" min="0" class="form-control" value="">
-                                    <a type="button" type="submit"name="btn_submit_quantity_update" class="btn text-light  bg_blue1"><i class="fas fa-pen"></i></a>
-
+                                    <form action="../../Bdd/article.php" method="POST">
+                                        <input type="number" name="input_quantity_update" min="0" class="form-control" value="<?php echo $qttItemSeller ?>">
+                                        <!-- <button type="btn_submit_quantity_update" name="btn_submit_quantity_update" class="btn text-light  bg_blue1"><i class="fas fa-pen"></i></button> -->
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-md-4">
