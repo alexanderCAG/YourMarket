@@ -76,6 +76,9 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                     
                                     <span class="badge  badge-pill rounded-pill bg-success f_right mr-3">  <i class="far fa-handshake"></i> Is negociated </span> 
                                 <?php } ?>
+                                <?php if($is_buying == 1){ ?>
+                                    <span class="badge  badge-pill rounded-pill bg-secondary f_right mr-3"> <i class="far fa-money-bill-alt"></i> Is bying </span>
+                                <?php } ?>
                             </div>
                             
                         </div>
