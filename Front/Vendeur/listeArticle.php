@@ -106,12 +106,17 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                             <div class="col-md-2">
                                 <h4 class="texte_style text-uppercase"><?php echo $PriceItemSeller ?> €</h4>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-5">
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text"><?php echo $qttItemSeller ?></div>
+                                </div>
+                                    <input type="number" name="input_quantity_update" min="0" class="form-control" value="">
+                                    <a type="button" type="submit"name="btn_submit_quantity_update" class="btn text-light  bg_blue1"><i class="fas fa-pen"></i></a>
+
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
                             
