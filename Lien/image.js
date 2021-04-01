@@ -41,9 +41,9 @@ function choix_image_vendeur(){
     });
 
 }
-jQuery(document).ready(function(){
-    compteur();
-});
+// jQuery(document).ready(function(){
+//     compteur();
+// });
 
     // const minutes=60;
     // const hours=60*minutes;
