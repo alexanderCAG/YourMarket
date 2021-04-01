@@ -40,6 +40,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     $descriptionEnchere = $rowAllEnchere['description'];
                     $is_negotiated = $rowAllEnchere['is_negotiated'];
                     ?>
+                    
 <div class="enchere_liste_total row">
     <!-- Ligne 1 -->
     <div class="col-1"></div>
@@ -55,56 +56,27 @@ for ($i=0; $i<=$totalEnchere;$i++){
                 <div class="enchere_info_marque detail_style text-uppercase"><?php echo $brandEnchere ?></div>
                 <br>
                 <div class="enchere_info_description"><?php echo $descriptionEnchere ?></div>
-                <div class="enchere_info_description"><?php echo $end_enchere ?></div>
-                <script type="text/javascript">
+                <!-- <div><?php echo $end_enchere ?></div> -->
+                <!-- <script type="text/javascript">
                         
 
-                        // alert(monthEndBid2);
-                        // var date2 =  dateBDD;//year, month, day, hour, minute, second, and millisecond
-                        // var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);//year, month, day, hour, minute, second, and millisecond
-                        // var dateBDD ='<?php echo $end_enchere ?>'
+                        alert(monthEndBid2);
+                        var date2 =  dateBDD;//year, month, day, hour, minute, second, and millisecond
+                        var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);//year, month, day, hour, minute, second, and millisecond
+                        var dateBDD ='<?php echo $end_enchere ?>'
 
-                        // var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
-                        // var monthEndBid = dateBDD[5]+dateBDD[6]; 
-                        // var dayEndBid = dateBDD[8]+dateBDD[9]; 
-                        // var hourEndBid = dateBDD[11]+dateBDD[12]; 
-                        // var minuteEndBid = dateBDD[14]+dateBDD[15]; 
-                        // var secondEndBid = dateBDD[17]+dateBDD[18]; 
-                        // var millisecondEndBid = 0; 
+                        var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
+                        var monthEndBid = dateBDD[5]+dateBDD[6]; 
+                        var dayEndBid = dateBDD[8]+dateBDD[9]; 
+                        var hourEndBid = dateBDD[11]+dateBDD[12]; 
+                        var minuteEndBid = dateBDD[14]+dateBDD[15]; 
+                        var secondEndBid = dateBDD[17]+dateBDD[18]; 
+                        var millisecondEndBid = 0; 
 
-                        // var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);
+                        var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);
     
-                        const minutes=60;
-                        const hours=60*minutes;
-                        const days=24*hours;
-
-                        function compteur(){
-                            
-
-                            const countdown = document.querySelector('#countdown');
-                            const launchDate = Date.parse(countdown.dataset.time)/1000;
-                            const difference = launchDate - Date.now() / 1000;
-                            // date2 = date2 /1000;
-                            // alert(date2);
-                            // const difference = date2 - Date.now() / 1000;
-
-                            const diff = {
-                                days: Math.floor(difference/days),
-                                hours: Math.floor(difference%days/hours),
-                                minutes: Math.floor(difference%hours/minutes),
-                                seconddes: Math.floor(difference%minutes),
-                            }
-
-                            document.getElementById('jours').innerText=diff.days;
-                            document.getElementById('heures').innerText=diff.hours;
-                            document.getElementById('minutes').innerText=diff.minutes;
-                            document.getElementById('secondes').innerText=diff.seconddes;
-
-                            window.setTimeout(()=>{
-                                window.requestAnimationFrame(compteur);
-                            });
-                        }
-                    </script>
+                        
+                </script> -->
                 <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
                         <img class="img_timeur_compteur" src="../../Image/timeur_compteur.png" alt="timeur_compteur">
@@ -131,8 +103,11 @@ for ($i=0; $i<=$totalEnchere;$i++){
                         </div>
                         
                     </div>
-            </div>
+                </div>
             
+            <div class="col-1"></div>
+        </div>
+
             <div class="col-1"></div>
         </div>
 
