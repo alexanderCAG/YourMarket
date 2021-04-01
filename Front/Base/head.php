@@ -48,13 +48,13 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison
+                            Maison 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="base.php">sheets</a></li>
-                            <li><a class="dropdown-item" href="compte_a_rebours.php">pillow</a></li>
-                            <li><a class="dropdown-item" href="confirm_register.php">decoration</a></li>
-                            <li><a class="dropdown-item" href="page-maison_accueil.php">ALL</a></li>
+                            <li><a class="dropdown-item" href="page-maison-sheet.php">sheets</a></li>
+                            <li><a class="dropdown-item" href="page-maison-pillow.php">pillows</a></li>
+                            <li><a class="dropdown-item" href="page-maison-decoration.php">decorations</a></li>
+                            <li><a class="dropdown-item" href="page-maison.php">ALL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown nav_regul">
@@ -63,13 +63,10 @@
                             Vêtement
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="recupImage.php">T-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="infoPerso.php">SWEAT-SHIRT</a></li>
-                            <li><a class="dropdown-item" href="listeArticle.php">PULL</a></li>
-                            <li><a class="dropdown-item" href="listeVendeur.php">CAP</a></li>
-                            <li><a class="dropdown-item" href="ajoutArticle.php">MEN</a></li>
-                            <li><a class="dropdown-item" href="#">WOMMEN</a></li>
-                            <li><a class="dropdown-item" href="page-vetements_accueil.php">ALL</a></li>
+                            <li><a class="dropdown-item" href="page-vetements-tshirt.php">T-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="page-vetements-sweat.php">SWEAT-SHIRT</a></li>
+                            <li><a class="dropdown-item" href="page-vetements-shoes.php">SHOES</a></li>
+                            <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item nav_regul" style="margin-right:100px!important">
