@@ -194,3 +194,19 @@ function reset_ajoutArticle(){
     imageErreur_ajoutArticle.innerHTML="";
     // imageErreur_ajoutArticle_Admin.innerHTML="";
 }
+
+function appelmodal_sup(idItem){
+    var data={"idItem" : idItem}
+    jQuery.ajax({
+        url : '../../Bdd/modal.php',
+        method : "post",
+        data : data,
+        success : function(data){
+            jQuery('body').append(data);
+            jQuery('#confirmDeleteItem').modal('toggle');
+        },
+        error : function(){
+            alert('Something wrong ! ');
+        },
+    });
+}

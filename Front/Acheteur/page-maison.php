@@ -3,9 +3,13 @@
     $title="Page maison";
     require "head.php";
         include("../../Bdd/cnx.php");
+        $email_user = $_SESSION['email'];
         
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='House'"); 
         $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and category='House' and (is_buying =1 or is_negotiated=1)");
+        // $idItems = mysqli_query($con, "SELECT id_seller FROM `seller` WHERE id_seller='$email_user'");
+        // $result = $con->query($idItems);
+        // $idItem = mysqli_fetch_assoc($result);
 ?>
 
 <div class="vetement_general">
@@ -52,47 +56,49 @@
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
-                            <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
-                            <?php  if($quantityCadre == 0 ){?>
-                                <div class="bg-danger text-light w-100 text-center">Indisponible</div>
-                                <?php }?>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                    <div class="detail_style_titre detail_style"><small><?php echo $nameItems ?></small></div> 
-                                <div class="detail_style_marque detail_style"><small><?php echo $brandItems ?></small></div> 
+                            <form action="../../Bdd/infoPerso_recup.php" method="POST">
+                                <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
+                                <?php  if($quantityCadre == 0 ){?>
+                                    <div class="bg-danger text-light w-100 text-center">Indisponible</div>
+                                    <?php }?>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                        <div class="detail_style_titre detail_style"><small><?php echo $nameItems ?></small></div> 
+                                    <div class="detail_style_marque detail_style"><small><?php echo $brandItems ?></small></div> 
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixItems ?> €</small> </p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixItems ?> €</small> </p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-6 p-1 m-0">
-                                        <?php if($is_negotiated == 1){ ?>
-                                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#nego_prix_maison"> <i class="far fa-handshake"></i><small> Negociate</small></button>
-                                        <?php } ?>
-                                        
-                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-6 p-1 m-0">
+                                            <?php if($is_negotiated == 1){ ?>
+                                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#nego_prix_maison"> <i class="far fa-handshake"></i><small> Negociate</small></button>
+                                            <?php } ?>
+                                            
+                                        </div>
 
-                                    <div class="col-6  p-1 m-0">
-                                        <?php if($is_buying == 1){ ?>
-                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
-                                        <?php } ?>
-                                    </div>
-                            </div>
-                                <?php  if($subcategoryItems == 'sheet' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheet &nbsp;</div>
-                                <?php }?>
-                                <?php  if($subcategoryItems == 'pillow' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillow &nbsp;</div>
-                                <?php }?>
-                                <?php  if($subcategoryItems == 'decoration' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Decoration &nbsp;</div>
-                                <?php }?>
-                            </div>
-                            <div class="class_separation2 w-100"></div>
-                            </div>
+                                        <div class="col-6  p-1 m-0">
+                                            <?php if($is_buying == 1){ ?>
+                                                <a href="../../Bdd/panier.php?iditem=" type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></a>
+                                            <?php } ?>
+                                        </div>
+                                </div>
+                                    <?php  if($subcategoryItems == 'sheet' ){?>
+                                        <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheet &nbsp;</div>
+                                    <?php }?>
+                                    <?php  if($subcategoryItems == 'pillow' ){?>
+                                        <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillow &nbsp;</div>
+                                    <?php }?>
+                                    <?php  if($subcategoryItems == 'decoration' ){?>
+                                        <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Decoration &nbsp;</div>
+                                    <?php }?>
+                                </div>
+                                <div class="class_separation2 w-100"></div>
+                                </div>
+                            </form>
                         </div>
             <?php
                 }

@@ -23,14 +23,20 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
 <!--affichage du background de l'utilisateur, sinon bleu par defaut-->
-<?php if($row2 = mysqli_fetch_assoc($queryAllItemSeller)){$bg = $row2['background'];
+<?php if($row2 = mysqli_fetch_assoc($queryAllItemSeller)){
+    $bg = $row2['background'];
     if($bg != null){?>
         <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
     <?php 
     }else{?>
         <div class="genale_listeArticle position-relative" >
-<?php } ?>
-<?php } ?>
+<?php 
+    }
+}
+
+?>
+
+<div class="genale_listeArticle position-relative" >
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_listeArticle text-uppercase">
             Liste des articles 
@@ -107,20 +113,21 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 <h4 class="texte_style text-uppercase"><?php echo $PriceItemSeller ?> €</h4>
                             </div>
                             <div class="col-md-5">
-                                <div class="input-group mb-3">
-                                    <form action="../../Bdd/article.php" method="POST">
-                                        <input type="number" name="input_quantity_update" min="0" class="form-control" value="<?php echo $qttItemSeller ?>">
+                                <!-- <form action="../../Bdd/article.php"> -->
+                                    <div class="input-group mb-3">
+                                        <input type="number" id="input_quantity_update" name="quantity_update" min="0" class="form-control" value="<?php echo $qttItemSeller ?>">   
+                                        <a type="button" href="../../Bdd/article.php?id=<?= $idItem; ?>" name="btn_submit_quantity_update" class="btn text-light  bg_blue1"><i class="fas fa-pen"></i></a>
                                         <!-- <button type="btn_submit_quantity_update" name="btn_submit_quantity_update" class="btn text-light  bg_blue1"><i class="fas fa-pen"></i></button> -->
-                                    </form>
-                                </div>
+                                    </div>
+                                <!-- </form> -->
                             </div>
                             <div class="col-md-4">
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
                             
                             <div class="col-md-1">
-                                <a type="button" href="../../Bdd/delete.php?id=<?= $idItem; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
-                            <!--  data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"-->
+                                <a type="button" onclick="appelmodal_sup(<?= $idItem; ?>)" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
+                            <!--   href="../../Bdd/delete.php?id=<?= $idItem; ?>" data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"-->
                             </div>
                         </div>
                     </div>
@@ -134,43 +141,6 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     }
 }
 ?>
-
-
-<!-- Modal to confirm Delete Item-->
-<!-- <div class="modal fade" id="confirmDeleteItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <?php
-
-    $queryItemSeller = mysqli_query($con, "select name, price , brand from item,seller where seller.id_seller=item.id_seller and id_item='$idItem'");
-    if($rowItemSeller = mysqli_fetch_assoc($queryItemSeller)){
-        $nameItemSeller2 = $rowItemSeller['name'];
-        $PriceItemSeller2 = $rowItemSeller['price'];
-        $brandItemSeller2 = $rowItemSeller['brand'];
-    ?>
-    <div class="modal-dialog">
-        <form action="" method="POST">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title titre_modal_prix_nego texte_style" id="staticBackdropLabel">Suppression du produit: <?php echo $nameItemSeller2 ?> </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body mt-2">
-                    <p>Confirmation de la suppression : <?php echo $nameItemSeller2 ?> - <?php echo $brandItemSeller2 ?> - <?php echo $PriceItemSeller2 ?> €</p>
-                    <div class="alert alert-danger" role="alert">
-                    <i class="fas fa-exclamation-triangle"></i> La suppression sera définitive.
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" name="btn_submit_supprimer" class="btn btn-danger" data-bs-dismiss="modal">Supprimer</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<?php
-}
-?> -->
 
 <!-- fin article -->
 <div class="listeArticle_liste_total bg_blue2 row mt-5">

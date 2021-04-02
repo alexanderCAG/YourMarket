@@ -4,9 +4,9 @@
 	session_start();
 	$email_user = $_SESSION['email'];
 
-	if (isset($_GET['id']) && isset($_GET['qty'])){
+	if (isset($_GET['id'])){
         $id_item=$_GET['id'];
-        $quantity_update=$_GET['qty'];
+        $quantity_update=$_GET['quantity_update'];
 		echo($quantity_update);
         $queryquantity_update = mysqli_query($con, "UPDATE item SET quantity='$quantity_update' where id_item='$id_item'");
 
