@@ -12,6 +12,23 @@
 </form>
 <div id="messages"></div>
 
+<style>
+    #messages{
+        width : 200px;
+    }
+    .glob{
+        width : 100px;
+        height : 70px;
+        background-color: gray;
+    }
+    .message h4{
+        color : green;
+    }
+    .message p{
+        color : pink;
+    }
+</style>
+
 <?php
 
 include("../Bdd/cnx.php");
@@ -21,7 +38,8 @@ if(isset($_POST['prenom'])){
     $message = htmlspecialchars($_POST['message']);
     $prenom = 'valider';
 
-    $query = mysqli_query($con, "INSERT INTO messagerie(message, user) VALUES ('$message','$prenom')");
+    // $query = mysqli_query($con, "INSERT INTO messagerie(message, user) VALUES ('$message','$prenom')");
+    $query = mysqli_query($con, "UPDATE messagerie SET message='$message', user='$prenom'");
 
     // echo "<script language='javascript' type='text/javascript'> location.href='../Front/base.php' </script>";
 }
