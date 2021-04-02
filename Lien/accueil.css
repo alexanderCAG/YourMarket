@@ -2,6 +2,13 @@
 /********************************
         ACCUEIL-CAROUSEL
 *********************************/
+.color_blue{
+    color:#14003f!important;
+}
+
+.bg_blue{
+    background-color:#14003f!important;
+}
 .img_carousel{
     width: 100%;
 }
@@ -142,3 +149,28 @@
     font-size: 30px;
     background-color: #f2f2f2;
 }
+
+
+
+
+
+/****************************
+            MULTI CAROUSSEL 
+*********************************/
+
+.MultiCarousel {
+    float: left; 
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+    position:relative;
+}
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left; }
+.MultiCarousel .MultiCarousel-inner .item { float: left;}
+.MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+.MultiCarousel .leftLst { left:0; }
+.MultiCarousel .rightLst { right:0; }
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
