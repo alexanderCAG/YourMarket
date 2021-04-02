@@ -23,6 +23,13 @@
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeVendeur.php' </script>";
     }
 
+    if (isset($_GET['idpanier'])){
+        $delete=$_GET['idpanier'];
+
+        $queryDeleteItem = mysqli_query($con, "delete from basket WHERE id_item='$delete'");
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
+    }
+
     // include("../../Bdd/cnx.php");
     // echo "<script language='javascript' type='text/javascript'>alert('ok');</script>";
     // if (isset($_POST['btn_submit_supprimer'])){

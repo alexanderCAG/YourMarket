@@ -31,7 +31,20 @@
 
 <body>
 
-<?php session_start(); ?>
+<?php 
+include("../../Bdd/cnx.php");
+session_start(); 
+
+$email_user = $_SESSION['email'];
+$queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+
+if($row2 = mysqli_fetch_assoc($queryBuyer)){
+    $id_buyer = $row2['id_buyer'];
+    $queryCountItems = mysqli_query($con, "select count(id_buyer) as total from basket where id_buyer='$id_buyer'");
+    if($row = mysqli_fetch_assoc($queryCountItems)){
+        $total = $row['total'];
+
+?>
 
 <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
@@ -76,7 +89,7 @@
                         <a class="nav-link" href="panier.php">Panier
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../../Image/panier.png" alt="panier"> <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"><?php echo $total ?>
                                     <span class="visually-hidden">unread messages</span></span>
                             </button>
                         </a>
@@ -99,3 +112,8 @@
         </form>
     </div>
 </nav>
+
+<?php
+    }
+}
+?>
