@@ -6,10 +6,10 @@
 
 <form action="" method="POST">
     <textarea type="text" name="message" id="message" placeholder="message"></textarea>
-    <input type="text" name="prenom" id="prenom" placeholder="prenom">
+    <button type="text" name="prenom" id="prenom" value="valider" placeholder="prenom">ok</button>
+    <!-- <input type="text" name="prenom" id="prenom" placeholder="prenom"> -->
     <button type="submit" name="submit" style="width:200px; height:40px;">OK</button>
 </form>
-
 <div id="messages"></div>
 
 <?php
@@ -17,9 +17,9 @@
 include("../Bdd/cnx.php");
 // $email_user = $_SESSION['email'];
 
-if(isset($_POST['submit'])){
+if(isset($_POST['prenom'])){
     $message = htmlspecialchars($_POST['message']);
-    $prenom = nl2br(htmlspecialchars($_POST['prenom']));
+    $prenom = 'valider';
 
     $query = mysqli_query($con, "INSERT INTO messagerie(message, user) VALUES ('$message','$prenom')");
 
