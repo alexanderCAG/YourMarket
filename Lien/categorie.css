@@ -101,7 +101,7 @@
         /********************************
                     MODAL
         *********************************/
-        .titre_modal_prix_nego{
+        /* .titre_modal_prix_nego{
             font-size: 25px;
             color: #14003f;
         }
@@ -126,7 +126,7 @@
             width: 200px;
             font-size: 9px;
             text-align: justify;
-        }
+        } */
 
 /********************************
             CARD PRODUCT
@@ -272,3 +272,59 @@
         margin-bottom: 7px;
         margin-right: 15px;
     }
+
+/********************************
+        NEGOCIATION
+*********************************/
+.nego_item_unique{
+    width: 300px;
+    /* background-color: aqua; */
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 40%;
+}
+.titre_unique_prix_nego{
+    font-size: 25px;
+    color: #14003f;
+}
+.quantite_nego{
+    width: 70px;
+    border: none;
+    text-align: center;
+    border-bottom: solid 2px black;
+}
+.prix_nego{
+    width: 50px;
+    border: none;
+    text-align: center;
+    border-bottom: solid 2px black;
+}
+#negoItemErreur{
+    color: red;
+    font-size: 12px;
+}
+.condition_prix_nego{
+    width: 200px;
+    font-size: 9px;
+    text-align: justify;
+}
+.close_nego_item{
+    cursor: pointer;
+}
+.btn_submit_nego{
+    background-color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+.btn_submit_nego:hover{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.message_nego{
+    margin-top: 50px;
+}

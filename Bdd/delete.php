@@ -27,7 +27,7 @@
         $delete=$_GET['idpanier'];
 
         $queryDeleteItem = mysqli_query($con, "delete from basket WHERE id_item='$delete'");
-        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/panier.php' </script>";
     }
 
     // include("../../Bdd/cnx.php");

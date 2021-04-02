@@ -39,7 +39,7 @@
 
             <div class="col-6">
                 <?php if($is_negotiated == 1 && $quantityCadre != 0 ){ ?>
-                    <button type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Negociate</small></button>
+                    <button onclick="propositionNego()" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Negociate</small></button>
                 <?php } ?>
 
                 <?php if($is_buying == 1 && $quantityCadre != 0 ){ ?>
@@ -62,9 +62,32 @@
     <div class="col-2"></div>
 </div>
 
+<?php
+}
+?>
+
+<div class="nego_item_unique" id="negociation_item_unique">
+    <form action="../../Bdd/panier.php" method="POST">
+        <h5 class="modal-title titre_unique_prix_nego texte_style text-uppercase" id="staticBackdropLabel">Choose a price</h5>
+        <input type="text" id="quantite_nego" name="quantite_nego" class="quantite_nego" placeholder="Quantité">
+        <input type="text" id="prix_nego" name="prix_nego" class="prix_nego">€
+        <input type="hidden" id="id_item_nego" name="id_item_nego" value="<?php echo $iditem ?>">
+        <br>
+        <span id="negoItemErreur"></span>
+        <br>
+        <span class="condition_prix_nego">If you offer a price and this price is accepted by the seller, you will be automatically charged.</span>
+        <br>
+        <button type="submit" name="btn_submit_nego" id="btn_submit_nego" class="f_right text-uppercase btn_submit_nego">Send</button>
+        <span onclick="propositionNego_hide()" class="f_right color_blue2 close_nego_item">Hide</span>
+    </form>
+
+    <div class="message_nego detail_style">
+        
+    </div>
+</div>
+
 
 
 <?php
-    }
     include("footer.php");
 ?>
