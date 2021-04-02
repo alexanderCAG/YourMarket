@@ -233,7 +233,7 @@
                         $nameSeller = $rowAllSeller['brand'];
                         $profil_pictureSeller = $rowAllSeller['profil_picture'];
                     ?>
-                <div class="item" style="background-color:#!important;">
+                <div class="item">
                     <div class="h-100">
                     &nbsp;
                         <img src="<?php echo $profil_pictureSeller ?>" class="rounded-circle float-start w-100 h-75  text-center" alt="<?php echo $nameSeller ?>">
