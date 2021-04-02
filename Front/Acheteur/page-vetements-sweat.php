@@ -4,7 +4,7 @@
         include("../../Bdd/cnx.php");
         
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Clothes' and subcategory='sweat_shirt'"); //4
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='Clothes'and subcategory='sweat_shirt' and (is_buying =1 or is_negotiated=1)");// 
+        $queryAllItems = mysqli_query($con, "select id_item,name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='Clothes'and subcategory='sweat_shirt' and (is_buying =1 or is_negotiated=1)");// 
 ?>
 
 <div class="vetement_general">
@@ -47,6 +47,7 @@
                     $subcategoryItems = $rowAllItems['subcategory'];
                     $is_negotiated = $rowAllItems['is_negotiated'];
                     $is_buying = $rowAllItems['is_buying'];
+                    $id_item = $rowAllItems['id_item'];
                     
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
@@ -63,20 +64,8 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row">
-                                    <div class="col-6 p-1 m-0">
-                                        <?php if($is_negotiated == 1){ ?>
-                                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#nego_prix_maison"> <i class="far fa-handshake"></i><small> Negociate</small></button>
-                                        <?php } ?>
-                                        
-                                    </div>
+                                <a href="item_unique.php?iditem=<?php echo $id_item ?>" type="button" class="btn btn-dark" style="margin-left:70px"><i class="fas fa-plus"></i>&nbsp;<small>View more </small></a>
 
-                                    <div class="col-6  p-1 m-0">
-                                        <?php if($is_buying == 1){ ?>
-                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
-                                        <?php } ?>
-                                    </div>
-                            </div>
                             <?php  if($quantityCadre == 0 ){?>
                                     <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> Ce produit n'est plus disponible &nbsp;</div>
                             <?php }?>

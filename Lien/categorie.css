@@ -193,6 +193,16 @@
         width: 100%;
         height: 110px;
     }
+            /********************************
+                    Affichage indé
+            *********************************/
+            .info_description_inde{
+                text-align: justify;
+                overflow: hidden;
+                overflow-y: scroll;
+                width: 100%;
+                height: 160px;
+            }
     .div_timeur_compteur{
         margin-right: 30px!important;
     }

@@ -5,7 +5,7 @@
         include("../../Bdd/cnx.php");
         
         $queryCountCadre = mysqli_query($con, "select count(id_item) as total  from item where category='House' and subcategory='sheet'"); 
-        $queryAllCadre = mysqli_query($con, "select category, name, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='House' and subcategory='sheet' and (is_buying =1 or	is_negotiated=1)");
+        $queryAllCadre = mysqli_query($con, "select id_item,category, name, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='House' and subcategory='sheet' and (is_buying =1 or	is_negotiated=1)");
 ?>
 
 <div class="vetement_general">
@@ -46,6 +46,7 @@
                     $descriptionCadre = $rowAllCadre['description'];
                     $is_negotiated = $rowAllCadre['is_negotiated'];
                     $is_buying = $rowAllCadre['is_buying'];
+                    $id_item = $rowAllCadre['id_item'];
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
@@ -62,20 +63,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row">
-                                    <div class="col-6 p-1 m-0">
-                                        <?php if($is_negotiated == 1){ ?>
-                                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#nego_prix_maison"> <i class="far fa-handshake"></i><small> Negociate</small></button>
-                                        <?php } ?>
-                                        
-                                    </div>
-
-                                    <div class="col-6  p-1 m-0">
-                                        <?php if($is_buying == 1){ ?>
-                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
-                                        <?php } ?>
-                                    </div>
-                            </div>
+                                <a href="item_unique.php?iditem=<?php echo $id_item ?>" type="button" class="btn btn-dark" style="margin-left:70px"><i class="fas fa-plus"></i>&nbsp;<small>View more </small></a>
                             <?php  if($quantityCadre == 0 ){?>
                                     <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> Ce produit n'est plus disponible &nbsp;</div>
                             <?php }?>
