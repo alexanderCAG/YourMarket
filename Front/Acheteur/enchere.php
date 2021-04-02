@@ -31,7 +31,7 @@
 </div>
 <?php
 for ($i=0; $i<=$totalEnchere;$i++){
-                if($rowAllEnchere = mysqli_fetch_assoc($queryAllEnchere)){
+            if($rowAllEnchere = mysqli_fetch_assoc($queryAllEnchere)){
                     $nameEnchere = $rowAllEnchere['name'];
                     $prixEnchere = $rowAllEnchere['price'];
                     $brandEnchere = $rowAllEnchere['brand'];
@@ -39,7 +39,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     $end_enchere = $rowAllEnchere['end_enchere'];
                     $descriptionEnchere = $rowAllEnchere['description'];
                     $is_negotiated = $rowAllEnchere['is_negotiated'];
-                    ?>
+                ?>
                     
 <div class="enchere_liste_total row">
     <!-- Ligne 1 -->
@@ -56,13 +56,11 @@ for ($i=0; $i<=$totalEnchere;$i++){
                 <div class="enchere_info_marque detail_style text-uppercase"><?php echo $brandEnchere ?></div>
                 <br>
                 <div class="enchere_info_description"><?php echo $descriptionEnchere ?></div>
-                <!-- <div><?php echo $end_enchere ?></div> -->
-                <!-- <script type="text/javascript">
-                        
+                <div><?php echo $end_enchere ?></div>
+                <script type="text/javascript">
 
-                        alert(monthEndBid2);
-                        var date2 =  dateBDD;//year, month, day, hour, minute, second, and millisecond
-                        var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);//year, month, day, hour, minute, second, and millisecond
+                        // var date2 =  dateBDD;//year, month, day, hour, minute, second, and millisecond
+                        // var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);//year, month, day, hour, minute, second, and millisecond
                         var dateBDD ='<?php echo $end_enchere ?>'
 
                         var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
@@ -73,10 +71,42 @@ for ($i=0; $i<=$totalEnchere;$i++){
                         var secondEndBid = dateBDD[17]+dateBDD[18]; 
                         var millisecondEndBid = 0; 
 
-                        var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);
-    
                         
-                </script> -->
+    
+                        function decompteur(){
+
+                        // var date1 = new Date(document.getElementById('start').value) ;
+                        // var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
+                        var date2 = new Date(yearEndBid, monthEndBid, dayEndBid, hourEndBid, minuteEndBid, secondEndBid, millisecondEndBid);
+
+                        var jours=$('.jours');
+                        var heures=$('.heures');
+                        var minutes=$('.minutes');
+                        var secondes=$('.secondes');
+
+                        // var heure1 = date1.getTime()/1000;
+                        var heure2 = date2.getTime()/1000;
+                        var heure1 = new Date()/1000;
+                        var s=heure2-heure1;
+
+                        var d=Math.floor(s/86400);
+                        jours.html('<strong><font size="6">'+d+'</font></strong> Jour'+(d>1?'s':''));
+                        s-=d*86400;
+
+                        var h=Math.floor(s/3600);
+                        heures.html('<strong><font size="6">'+h+'</font></strong> Heure'+(h>1?'s':''));
+                        s-=h*3600;
+
+                        var m=Math.floor(s/60);
+                        minutes.html('<strong><font size="6">'+m+'</font></strong> Minute'+(m>1?'s':''));
+                        s-=m*60;
+
+                        var s=Math.floor(s);
+                        secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
+
+                        setTimeout(decompteur,1000);
+                        }
+                </script>
                 <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
                         <img class="img_timeur_compteur" src="../../Image/timeur_compteur.png" alt="timeur_compteur">
@@ -84,20 +114,20 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     <div class="col-9">
                         <div class="row" id="countdown" data-time="<?php echo $end_enchere ?>">
                             <div class="enchere_compteur col-3" >
-                                <font size=6><strong id="jours"></strong></font>
-                                <em>Jours</em>
+                                <font size=6><strong class="jours"></strong></font>
+                                <!-- <em>Jours</em> -->
                             </div>
                             <div class="enchere_compteur col-3" >
-                                <font size=6><strong id="heures"></strong></font>
-                                <em>Houres</em>
+                                <font size=6><strong class="heures"></strong></font>
+                                <!-- <em>Houres</em> -->
                             </div>
                             <div class="enchere_compteur col-3" >
-                                <font size=6><strong id="minutes"></strong></font>
-                                <em>Minutes</em>
+                                <font size=6><strong class="minutes"></strong></font>
+                                <!-- <em>Minutes</em> -->
                             </div>
                             <div class="enchere_compteur col-3" >
-                                <font size=6><strong id="secondes"></strong></font>
-                                <em>Secondes</em>
+                                <font size=6><strong class="secondes"></strong></font>
+                                <!-- <em>Secondes</em> -->
                             </div>
                             <div class="col-3"></div>
                         </div>

@@ -14,21 +14,21 @@
 
 <div class="vetement_general">
     <img class="image_vetement_general position-relative" src="../../Image/maison-general.png" alt="vetement-general">
-    <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
-        <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../../Image/icon_sale.png" alt="icon_sale">
-        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">maison</p> 
-    </div>
+        <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
+            <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../../Image/icon_sale.png" alt="icon_sale">
+            <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">maison</p> 
+        </div>
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
 
 <div class="vetement_details" id="">
     <div class="navbar_vetement">
-            <ul class="navbar_listeVendeur_details detail_style centrer">
-                <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
-                <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
-                <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOWS</a></li>
-                <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATIONS</a></li>
-            </ul>
+        <ul class="navbar_listeVendeur_details detail_style centrer">
+            <li><a href="page-maison.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">All product</a> </li>
+            <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
+            <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOWS</a></li>
+            <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase">DECORATIONS</a></li>
+        </ul>
     </div>
 </div>
 
