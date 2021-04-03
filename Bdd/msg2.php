@@ -39,7 +39,7 @@
         margin-bottom : 50px;
         position: absolute;
         bottom : 0px;
-        left : 480px;
+        left : 380px;
         width: 600px;
         text-align:center;
         /* background-color: white; */

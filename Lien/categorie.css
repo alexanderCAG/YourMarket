@@ -362,12 +362,12 @@
             left: 380px;
         }
         .info_msg_bas2{
-            width: 840px;
+            width: 750px;
             height: 100px;
             background-color: white;
             position: absolute;
-            bottom: 238px;
-            left: 425px;
+            bottom: 150px;
+            left: 385px;
         }
         .message_comptenu{
             margin-left: 50px;

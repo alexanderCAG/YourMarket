@@ -9,7 +9,7 @@
         $id_seller = $row['id_seller'];
         $queryOffer = mysqli_query($con, "SELECT id_offer,id_item, id_seller, id_buyer, price_offered, quantity, nb_nego, status FROM offer WHERE id_seller='$id_seller'");
         $queryCountItems = mysqli_query($con, "select count(id_offer) as total from offer where id_seller='$id_seller'");
-        $queryItem = mysqli_query($con, "SELECT name,price,description,photo,category,subcategory FROM item,offer WHERE item.id_item=offer.id_item AND item.id_seller='$id_seller'");
+        $queryItem = mysqli_query($con, "SELECT name,price,description,photo,category,subcategory FROM item,offer WHERE item.id_item=offer.id_item AND item.id_seller='$id_seller' ORDER BY photo DESC");
 
 ?>
 
@@ -80,7 +80,9 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             </div>
 
             <div class="col-md-6">
+                
                 <a type="button" href="myOffer.php?idoffer=<?= $id_offer ?>" class="btn text-light bg_blue1 w-100">SEE OFFER <i class="fas fa-handshake"></i></a>
+                
             </div>
             
             <div class="col-md-1">
