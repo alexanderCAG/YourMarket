@@ -45,36 +45,36 @@ jQuery(document).ready(function(){
 
 });
 
-const minutes=60;
-const hours=60*minutes;
-const days=24*hours;
+// const minutes=60;
+// const hours=60*minutes;
+// const days=24*hours;
 
-function compteur(){
+// function compteur(){
     
 
-    const countdown = document.querySelector('#countdown');
-    const launchDate = Date.parse(countdown.dataset.time)/1000;
-    const difference = launchDate - Date.now() / 1000;
-    // date2 = date2 /1000;
-    // alert(date2);
-    // const difference = date2 - Date.now() / 1000;
+//     const countdown = document.querySelector('#countdown');
+//     const launchDate = Date.parse(countdown.dataset.time)/1000;
+//     const difference = launchDate - Date.now() / 1000;
+//     // date2 = date2 /1000;
+//     // alert(date2);
+//     // const difference = date2 - Date.now() / 1000;
 
-    const diff = {
-        days: Math.floor(difference/days),
-        hours: Math.floor(difference%days/hours),
-        minutes: Math.floor(difference%hours/minutes),
-        seconddes: Math.floor(difference%minutes),
-    }
+//     const diff = {
+//         days: Math.floor(difference/days),
+//         hours: Math.floor(difference%days/hours),
+//         minutes: Math.floor(difference%hours/minutes),
+//         seconddes: Math.floor(difference%minutes),
+//     }
 
-    document.getElementById('jours').innerText=diff.days;
-    document.getElementById('heures').innerText=diff.hours;
-    document.getElementById('minutes').innerText=diff.minutes;
-    document.getElementById('secondes').innerText=diff.seconddes;
+//     document.getElementById('jours').innerText=diff.days;
+//     document.getElementById('heures').innerText=diff.hours;
+//     document.getElementById('minutes').innerText=diff.minutes;
+//     document.getElementById('secondes').innerText=diff.seconddes;
 
-    window.setTimeout(()=>{
-        window.requestAnimationFrame(compteur);
-    });
-}
+//     window.setTimeout(()=>{
+//         window.requestAnimationFrame(compteur);
+//     });
+// }
 
 /********************************
             INSCRIPTION

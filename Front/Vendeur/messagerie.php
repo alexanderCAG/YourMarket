@@ -1,15 +1,15 @@
 <?php
     $title="Accueil";
     require "head.php";
-
+    include("../../Bdd/cnx.php");
     $email_user = $_SESSION['email'];
     
-    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
-    if($row = mysqli_fetch_assoc($queryBuyer)){
-        $id_buyer = $row['id_buyer'];
-        $queryOffer = mysqli_query($con, "SELECT id_offer,id_item, id_seller, id_buyer, price_offered, quantity, nb_nego, status FROM offer WHERE id_buyer='$id_buyer'");
-        $queryCountItems = mysqli_query($con, "select count(id_offer) as total from offer where id_buyer='$id_buyer'");
-        $queryItem = mysqli_query($con, "SELECT name,price,description,photo,category,subcategory FROM item,offer WHERE item.id_item=offer.id_item AND id_buyer = '$id_buyer'");
+    $querySeller = mysqli_query($con, "SELECT id_seller FROM seller WHERE email='$email_user' or brand='$email_user'");
+    if($row = mysqli_fetch_assoc($querySeller)){
+        $id_seller = $row['id_seller'];
+        $queryOffer = mysqli_query($con, "SELECT id_offer,id_item, id_seller, id_buyer, price_offered, quantity, nb_nego, status FROM offer WHERE id_seller='$id_seller'");
+        $queryCountItems = mysqli_query($con, "select count(id_offer) as total from offer where id_seller='$id_seller'");
+        $queryItem = mysqli_query($con, "SELECT name,price,description,photo,category,subcategory FROM item,offer WHERE item.id_item=offer.id_item AND item.id_seller='$id_seller' ORDER BY photo DESC");
 
 ?>
 
@@ -80,11 +80,13 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             </div>
 
             <div class="col-md-6">
-                <a type="button" href="myOffer.php?idoffer=<?= $id_offer ?>" class="btn text-light bg_blue1 w-100">MY OFFER <i class="fas fa-handshake"></i></a>
+                
+                <a type="button" href="myOffer.php?idoffer=<?= $id_offer ?>" class="btn text-light bg_blue1 w-100">SEE OFFER <i class="fas fa-handshake"></i></a>
+                
             </div>
             
             <div class="col-md-1">
-                <a type="button" href="../../Bdd/delete.php?iditempaniner=<?= $id_item; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
+                <a type="button" href="../../Bdd/delete.php?iditempaniner_vendeur=<?= $id_item; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
             </div>
 
         </div>

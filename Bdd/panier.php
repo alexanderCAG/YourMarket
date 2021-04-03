@@ -118,8 +118,27 @@ if(isset($_POST['btn_submit_nego'])){
     
         
     }
+}
 
+if(isset($_POST['btn_envoyer_enchere_prix'])){
 
+    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+
+    if($row = mysqli_fetch_assoc($queryBuyer)){
+        $id_buyer = $row['id_buyer'];
+        $proposition_prix=$_POST['proposition_prix'];
+        $idItem=$_POST['idItem'];
+
+        $querySeller = mysqli_query($con, "SELECT id_seller FROM item WHERE id_item='$idItem'");
+
+        if($row2 = mysqli_fetch_assoc($querySeller)){
+            $id_seller = $row2['id_seller'];
+            $query = mysqli_query($con, "INSERT INTO bid (id_item, id_buyer, id_seller, state, price_user) VALUES ('$idItem','$id_buyer','$id_seller','en cours','$proposition_prix')");
+            echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
+        }
+    
+        
+    }
 }
     
 

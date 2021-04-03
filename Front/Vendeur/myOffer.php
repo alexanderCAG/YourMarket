@@ -29,15 +29,12 @@
     <div id="messages" class="info_msg_haut">
         <!-- <p class="satut_nego_msg texte_style"><?php echo $status ?></p> -->
     </div>
-
     <?php if($status !="Valider"){?>
-    <div class="info_msg_bas">
+    <div class="info_msg_bas2">
         <div class="message_comptenu">
             <form action="" method="POST">
-                <input type="text" id="quantite_nego" name="quantite_nego_message" class="quantite_nego_message" placeholder="Quantité" value="<?php echo $quantity ?>">
-                <input type="text" id="prix_nego" name="prix_nego_message" class="prix_nego_message" value="<?php echo $price_offered ?>"><span style="font-size: 40px;">€</span>
-                <button type="submit" name="submit_msg_acheteur" class="btn_submit_msg_acheteur f_right">Send</button>
-                <input type="hidden" name="nb_nego" value="<?php echo $nb_nego ?>">
+                <input type="submit" name="selectionValider" class="btn text-uppercase btn_msg_vendeur" id="btn_msg_vendeur_valider" value="Valider">
+                <input type="submit" name="selectionRefuser" class="btn text-uppercase btn_msg_vendeur" id="btn_msg_vendeur_refuser" value="Refuser">
                 <input type="hidden" name="id_offer" value="<?php echo $id_offer ?>">
             </form>
         </div>
@@ -52,16 +49,22 @@
         
 include("../../Bdd/cnx.php");
 
-if(isset($_POST['submit_msg_acheteur'])){
-    $quantite_nego_message = htmlspecialchars($_POST['quantite_nego_message']);
-    $prix_nego_message = nl2br(htmlspecialchars($_POST['prix_nego_message']));
-    $nb_nego=$nb_nego+1;
+if(isset($_POST['selectionValider'])){
+    $selectionValider = $_POST['selectionValider'];
+
+
+    $query = mysqli_query($con, "UPDATE offer SET status='$selectionValider' WHERE id_offer='$idoffer'");
 
     
-    // echo "<script language='javascript' type='text/javascript'> alert('$idoffer'); </script>";
-    if($nb_nego<=5){
-        $query = mysqli_query($con, "UPDATE offer SET price_offered='$prix_nego_message',quantity='$quantite_nego_message',nb_nego='$nb_nego',status='en cours' WHERE id_offer='$idoffer'");
-    }
+    echo "<script language='javascript' type='text/javascript'> location.href='messagerie.php' </script>";
+}
+
+if(isset($_POST['selectionRefuser'])){
+    $selectionRefuser = $_POST['selectionRefuser'];
+
+
+    $query = mysqli_query($con, "UPDATE offer SET status='$selectionRefuser' WHERE id_offer='$idoffer'");
+
     
     echo "<script language='javascript' type='text/javascript'> location.href='messagerie.php' </script>";
 }
@@ -69,10 +72,10 @@ if(isset($_POST['submit_msg_acheteur'])){
 ?>
 
 <script>
-    setInterval('load_message()',500);
+    setInterval('load_message2()',500);
 
-    function load_message(){
-        $('#messages').load('../../Bdd/msg.php');
+    function load_message2(){
+        $('#messages').load('../../Bdd/msg2.php');
     }
 </script>
 

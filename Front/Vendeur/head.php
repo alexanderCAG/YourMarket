@@ -51,6 +51,9 @@
                     <li class="nav-item nav_regul">
                         <a class="nav-link" href="listeArticle.php">Liste Article</a>
                     </li>
+                    <li class="nav-item nav_regul">
+                        <a class="nav-link" href="messagerie.php">Messagerie</a>
+                    </li>
                     <li class="nav-item last_nav_title nav_regul">
                         <a class="nav-link" href="#">Statistique</a>
                     </li>

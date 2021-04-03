@@ -71,6 +71,36 @@
 
 		include("../Front/confirm_infoPerso_admin.php");
     }
+	if (isset($_POST['submit_btn_change_qte'])){
+		$qttItemSeller=$_POST['qttItemSeller'];
+	    $idItem=$_POST['idItem'];
+
+		$id="SELECT id_seller FROM item WHERE id_item='$idItem'";
+
+		$id_result=$con->query($id);
+		$row = mysqli_fetch_array($id_result);
+		$result = $row['id_seller'];
+
+        $queryQuantiteItem = mysqli_query($con, "UPDATE item SET quantity='$qttItemSeller' WHERE id_item='$idItem' and id_seller='$result'");
+
+
+		include("../Front/confirm_infoPerso_vendeur.php");
+    }
+	if (isset($_POST['submit_btn_change_qte_admin'])){
+		$qttItemSeller=$_POST['qttItemSeller'];
+	    $idItem=$_POST['idItem'];
+
+		$id="SELECT id_seller FROM item WHERE id_item='$idItem'";
+
+		$id_result=$con->query($id);
+		$row = mysqli_fetch_array($id_result);
+		$result = $row['id_seller'];
+
+        $queryQuantiteItem = mysqli_query($con, "UPDATE item SET quantity='$qttItemSeller' WHERE id_item='$idItem' and id_seller='$result'");
+
+
+		include("../Front/confirm_infoPerso_admin.php");
+    }
 	// else{
     //     echo "ERREUR";
     // }
