@@ -6,11 +6,14 @@
     include("../../Bdd/cnx.php");
     $email_user = $_SESSION['email'];
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+    $queryTotalBasket= mysqli_query($con, "SELECT email, sum(price*quantity) as total_basket FROM basket, buyer WHERE buyer.id_buyer=basket.id_buyer and email='$email_user'");
 
     if($row2 = mysqli_fetch_assoc($queryBuyer)){
         $id_buyer = $row2['id_buyer'];
         $queryCountItems = mysqli_query($con, "select count(id_basket) as total from basket where id_buyer='$id_buyer'"); //4
         $queryAllItems = mysqli_query($con, "select id_buyer, id_item, id_seller, name, price , quantity, description, photo, category, subcategory from basket where id_buyer='$id_buyer'");// 
+        
+    
     }
 ?>
 
@@ -105,9 +108,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     </div>
 
 
+    <?php if($row4 = mysqli_fetch_assoc($queryTotalBasket)){
+                    $totalBasket = $row4['total_basket'];
 
-    
-
+    ?>
     <div class="panier_navbar_div">
         <div class="navbar_panier detail_style text-uppercase">
             <form action="" method="POST">
@@ -117,17 +121,20 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                 <br>
                 <input type="radio" name="typedelivraison_panier" id="livraison_panier_domicile" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">livraison à domicile</span>
                 <hr>
-                <span class="contenu_navbar_panier detail_panier_navbar">Valeur de la commande : </span><span class="detail_panier_navbar f_right">60<span class="detail_panier_navbar_euro">€</span></span>
+                <span class="contenu_navbar_panier detail_panier_navbar">Valeur de la commande : </span><span class="detail_panier_navbar f_right"><?php echo $totalBasket ?><span class="detail_panier_navbar_euro">€</span></span>
                 <br>
                 <span class="contenu_navbar_panier detail_panier_navbar">Livraison : </span><span class="detail_panier_navbar f_right">0<span class="detail_panier_navbar_euro">€</span></span>
                <hr>
-                <span class="contenu_navbar_panier prixTotal_panier_navbar">Total :</span><span class="prixTotal_panier_navbar f_right">60<span class="detail_panier_navbar_euro">€</span></span>
+                <span class="contenu_navbar_panier prixTotal_panier_navbar">Total :</span><span class="prixTotal_panier_navbar f_right"><?php echo $totalBasket ?><span class="detail_panier_navbar_euro">€</span></span>
                 <br><br>
                 <a type="button"  href="paiement.php" class="btn rounded-0 bg_blue1 text-light  pt-3 pb-3 w-100" style="border-bottom-left-radius:15px!important;border-bottom-right-radius:15px!important;">FINALISER MA COMMANDER</a>
             </form>
         </div>
     </div>
-    
+    <?php
+        }
+
+?>
 </div>
 
 <?php

@@ -9,6 +9,18 @@
 
     $queryinfoPerso_acheteur = mysqli_query($con, "select lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country,carde,code,num_card,expiration,nom from buyer, payment where buyer.id_buyer=payment.id_buyer and (email='$email_user' or lastname='$email_user')");
 
+    $queryTotalBasket= mysqli_query($con, "SELECT email, sum(price*quantity) as total_basket FROM basket, buyer WHERE buyer.id_buyer=basket.id_buyer and email='$email_user'");
+
+    // total des produit dans le panier d'un acheteur
+    $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(`id_item`)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and email ='$email_user'");
+
+    // Listage des produits dans le panier d'un acheteur
+    $queryProductsInBasket= mysqli_query($con, "SELECT buyer.email as email , item.name as name, item.price as price , item.subcategory as sub, item.description, basket.quantity as qqt_product, item.photo as photo FROM basket, buyer ,item WHERE buyer.id_buyer=basket.id_buyer and item.id_item=basket.id_item and email ='$email_user'"); 
+
+    $queryCardUser = mysqli_query($con, "SELECT buyer.email, `carde`, `code`,`num_card`,`expiration`,`nom` FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  email='$email_user'");
+
+
+
 if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
     $lastname_acheteur = $rowinfoPerso_acheteur['lastname'];
     $firstname_acheteur = $rowinfoPerso_acheteur['firstname'];
@@ -50,16 +62,16 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
             <div class="card px-0 pt-4 pb-0 m-5 border-0">
                 <h1 id="heading">Finalisation de ma commande </h1><br>
                 <!--<p>Fill all form field to go to next step</p> #}-->
-                <form id="msform">
+                <div id="msform">
                     <!-- progressbar -->
                     <ul id="progressbar">
                         <li class="active" id="account"><strong>Total du panier</strong></li>
-                        <li id="personal"><strong>Infomation personnelle</strong></li>
+                        <li id="personal"><strong>Ma commande</strong></li>
                         <li id="payment"><strong>Paiement</strong></li>
                         <li id="confirm"><strong>Terminé</strong></li>
                     </ul>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated  bg_blue1" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> 
                     <fieldset>
                         <div class="form-card">
@@ -75,43 +87,196 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                                 <div class="col-6">
                                     <h2 class="text-uppercase float-left">Total à régler TTC </h2>
                                 </div>
-                               <div class="col-6 t">
-                                    <h1 class="text-uppercase float-right" style="float:right!important;"> 290 €</h1>
+                                <?php if($row4 = mysqli_fetch_assoc($queryTotalBasket)){
+                                        $totalBasket = $row4['total_basket'];
+                                ?>
+                            <div class="col-6 t">
+                                    <h1 class="text-uppercase float-right" style="float:right!important;"> <?php echo $totalBasket ?>  €</h1>
                                 </div>
-
+                                <?php
+                                    }
+                                ?>
                             </div>
                         </div> 
-                       
+                
                         <button type="button" name="next" class="btn next action-button bg_blue1"> Suivant <i class="fas fa-chevron-right"></i></button> 
                         <button type="button" name="next" class="btn action-button bg-dark"> <i class="fas fa-chevron-left"></i> Panier </button>
                     </fieldset>
+
+                
                     <fieldset>
-                        <div class="form-card">
+                        <div class="form-card ">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title">Personal Information:</h2>
+                                    <!-- <h2 class="fs-title">Récapitualtif de ma commande</h2> -->
+                                    <BR><BR><BR>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps">Step 2 - 4</h2>
                                 </div>
-                            </div> <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="First Name" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
-                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                            </div> 
+                           
+                              <table class="table border shadow mb-5" style="background-color:#f1f1f1">
+                              <thead class="bg_blue1 text-light" >
+                                    <tr>
+                                        <th colspan="6"> <h2 class="fs-title text-center text-light">Récapitualtif de ma commande</h2> </th>
+
+                                    </tr>
+                                    </thead>
+                                    <thead class="bg_blue1 text-light" >
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Produit</th>
+                                        <th>Categorie</th>
+                                        <!-- <th>Description</th> -->
+                                        <th>Quantité</th>
+                                        <th>Prix </th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php 
+                                    if($row_product_in_basket = mysqli_fetch_assoc($queryTotalProductsInBasket)){
+                                    $total = $row_product_in_basket['totalProduitBasket'];
+                                    for ($i=0; $i<$total;$i++){
+                                    if($rowAllProductsInBasket = mysqli_fetch_assoc($queryProductsInBasket)){
+                                           
+                                            $prixItem= $rowAllProductsInBasket['price']; 
+                                            $nameItem= $rowAllProductsInBasket['name']; 
+                                            // $brandItem= $rowAllProductsInBasket['name']; 
+                                            $catItem= $rowAllProductsInBasket['name']; 
+                                            $subItem= $rowAllProductsInBasket['sub']; 
+                                            $descItem= $rowAllProductsInBasket['description']; 
+                                            $photoItem= $rowAllProductsInBasket['photo']; 
+
+                                            $qttItem= $rowAllProductsInBasket['qqt_product']; }
+                                    ?>
+                                    <tr>
+                                        <td><img src="<?php echo $photoItem ?>" class="rounded" alt="..." style="width:100px;height:100px;important">
+                                        </td>
+                                        <td><?php echo $nameItem ?></td>
+                                        <td><?php echo $subItem ?></td>
+
+                                        <td><?php echo $qttItem ?></td>
+                                        <td><?php echo $prixItem ?> €</td>
+                                    </tr> 
+                                    <?php
+                                        }
+                                    ?>
+                                   
+
+                                    <?php 
+                                }
+                                ?>
+                                    </tbody>
+                                </table>
+
+                           
+                        </div>
+
+                         <button type="button" name="next" class="btn next action-button bg_blue1"> Paiement  <i class="fas fa-chevron-right"></i></button> 
+                        <button type="button" name="next" class="btn previous action-button-previous bg-dark"> <i class="fas fa-chevron-left"></i> Total </button>
                     </fieldset>
                     <fieldset>
-                        <div class="form-card">
+                        <div class="form-card mb-5">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title">Image Upload:</h2>
+                                    <h2 class="fs-title">Paiement en ligne</h2><br><br><br>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps">Step 3 - 4</h2>
                                 </div>
-                            </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
-                        </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
+                            </div>
+                            <div class="card shadow p-5">
+                                <div class="card-body">
+                                   
+                                        <?php if($rowCardUser = mysqli_fetch_assoc($queryCardUser)){
+                                                    $cardEmail = $rowCardUser['email'];
+                                                    $cardType = $rowCardUser['carde'];
+                                                    $cardcode = $rowCardUser['code'];
+                                                    $num_card = $rowCardUser['num_card'];
+                                                    $cardexpiration = $rowCardUser['expiration'];
+                                                    $cardNameBuyer = $rowCardUser['nom'];
+                                        ?>
+                                               
+
+                                        <div class="row">
+                                            <div class="col-md-12">   
+                                                <?php if($cardType == "carte_payement_amex"){?>
+                                                    <i class="fab fa-3x fa-cc-amex color_blue1"></i>
+                                                <?php } else{?>
+                                                    <i class="fab fa-3x fa-cc-amex"></i>
+                                                <?php } ?>
+
+                                                <?php if($cardType == "carte_payement_visa"){?>
+                                                    <i class="fab  fa-3x fa-cc-visa color_blue1"></i>
+                                                <?php } else{?>
+                                                    <i class="fab  fa-3x fa-cc-visa"></i>
+                                                <?php } ?>
+
+                                                <?php if($cardType == "carte_payement_mastercard"){?>
+                                                    <i class="fab  fa-3x fa-cc-mastercard color_blue1"></i>    
+                                                <?php }else{?>
+                                                    <i class="fab  fa-3x fa-cc-mastercard"></i>    
+                                                <?php } ?>
+
+                                                <?php if($cardType == "carte_payement_cb"){?>
+                                                    <i class="far  fa-3x fa-credit-card color_blue1"></i>
+                                                <?php }else{?>
+                                                    <i class="far  fa-3x fa-credit-card"></i>
+                                              
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    
+                                        
+                                    <hr><br>
+                                    <form action="../../Bdd/panier.php" method="POST">
+                                
+                                            <div class="mb-5">
+                                                <label for="exampleInputEmail1" class="form-label">Name </label>
+                                                <input type="text" class="form-control" name="name_nameCard">
+                                            </div>
+                                            <div class="mb-5">
+                                                <label for="exampleInputPassword1" class="form-label">Card number  </label>
+                                                <input type="text" class="form-control" name="name_cardNumber" >
+                                            </div> 
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-5">
+                                                        <label for="exampleInputPassword1" class="form-label">Expiry date   </label>
+                                                        <input type="date" class="form-control" name="name_ExpiryDate">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                <div class="mb-5">
+                                                        <label for="exampleInputPassword1" class="form-label">Security code  </label>
+                                                        <input type="text" class="form-control" name="name_SecurityCode">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="input_nameCard" value="<?= $cardNameBuyer ?> ">       
+                                            <input type="hidden" name="input_cardNumber" value="<?= $num_card ?> ">       
+                                            <input type="hidden" name="input_ExpiryDate" value="<?= $cardexpiration ?> ">       
+                                            <input type="hidden" name="input_SecurityCode" value="<?= $cardcode ?> "> 
+                                            
+                                          
+                                            <button type="submit" name="btn_submit_paiement" class="btn next action-button bg_blue1"> Regler  <i class="fas fa-chevron-right"></i></button> 
+
+                                            <button type="button" name="next" class="btn previous action-button-previous bg-dark"> <i class="fas fa-chevron-left"></i> Liste </button>
+                                    </form>
+                                        <?php }  ?>
+                                </div>
+                            </div>
+                         
+                            
+                        </div>
+                        
+                     </fieldset>
                     <fieldset>
                         <div class="form-card">
-                            <div class="row">
+                            <div class="row" id="paiementAccepte">
                                 <div class="col-7">
                                     <h2 class="fs-title">Finish:</h2>
                                 </div>

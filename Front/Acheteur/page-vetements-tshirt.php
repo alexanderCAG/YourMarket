@@ -5,6 +5,7 @@
         
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Clothes' and subcategory='tshirt'"); //4
         $queryAllItems = mysqli_query($con, "select id_item,name, price , brand,subcategory, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and category='Clothes'and subcategory='tshirt' and (is_buying =1 or is_negotiated=1)");// 
+        
 ?>
 
 <div class="vetement_general">
