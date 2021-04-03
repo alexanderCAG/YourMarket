@@ -116,16 +116,14 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                 <input type="radio" name="typedelivraison_panier" id="livraison_panier_relais" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">Point relais</span>
                 <br>
                 <input type="radio" name="typedelivraison_panier" id="livraison_panier_domicile" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">livraison à domicile</span>
-                <br>
-                <div class="separation_panier_div mb-3"></div>
+                <hr>
                 <span class="contenu_navbar_panier detail_panier_navbar">Valeur de la commande : </span><span class="detail_panier_navbar f_right">60<span class="detail_panier_navbar_euro">€</span></span>
                 <br>
                 <span class="contenu_navbar_panier detail_panier_navbar">Livraison : </span><span class="detail_panier_navbar f_right">0<span class="detail_panier_navbar_euro">€</span></span>
-                <br>
-                <div class="separation_panier_div mt-3 mb-3"></div>
+               <hr>
                 <span class="contenu_navbar_panier prixTotal_panier_navbar">Total :</span><span class="prixTotal_panier_navbar f_right">60<span class="detail_panier_navbar_euro">€</span></span>
-                <br>
-                <button type="submit" name="btn_submit_navbar_panier" id="btn_submit_navbar_panier" class="bg_blue1 white btn_final_navbar_panier mt-3">Finaliser la commande</button>
+                <br><br>
+                <a type="button"  href="paiement.php" class="btn rounded-0 bg_blue1 text-light  pt-3 pb-3 w-100" style="border-bottom-left-radius:15px!important;border-bottom-right-radius:15px!important;">FINALISER MA COMMANDER</a>
             </form>
         </div>
     </div>
