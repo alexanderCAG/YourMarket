@@ -45,6 +45,8 @@
     
 </div>
 
+
+<!-- repup et envoie dans msg v2 a essayer -->
 <!-- <?php
         
 include("../../Bdd/cnx.php");
@@ -62,14 +64,6 @@ if(isset($_POST[submit_msg_acheteur])){
 }
 
 ?> -->
-
-<!-- <script>
-    setInterval('load_message()',500);
-
-    function load_message(){
-        $('#messages').load('../../Bdd/load.php');
-    }
-</script> -->
 
 
 

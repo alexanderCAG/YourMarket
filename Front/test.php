@@ -12,7 +12,7 @@
 </form>
 <div id="messages"></div>
 
-<style>
+<!-- <style>
     #messages{
         width : 200px;
     }
@@ -27,7 +27,13 @@
     .message p{
         color : pink;
     }
-</style>
+</style> -->
+<?php
+
+    include("cnx.php");
+    // $idoffer = $_SESSION['id_offer'];
+    $sql=mysqli_query($con, "SELECT * FROM messagerie Where id='35'");
+?>
 
 <?php
 
@@ -53,6 +59,51 @@ if(isset($_POST['prenom'])){
         $('#messages').load('load.php');
     }
 </script>
+
+
+
+
+<!-- PART 2-->
+<!-- <?php
+if($row = mysqli_fetch_assoc($sql)){
+    ?>
+
+    <div class="message">
+        <h4 id="msg_h4"><?= $row['user']; ?></h4>
+        <p id="msh_p"><?= $row['message']; ?></p>
+    </div>
+
+    <div class="message2">
+        <h4 id="msg_h4"><?= $row['user']; ?></h4>
+        <p id="msh_p"><?= $row['message']; ?></p>
+    </div>
+    
+<?php
+}
+?>
+<style>
+    .message{
+        float: left;
+        position: absolute;
+        top : 30px;
+        left : 40px;
+        text-align:center;
+    }
+    .message2{
+        float: right;
+        margin-bottom : 50px;
+        position: absolute;
+        bottom : 0px;
+        right : 40px;
+        text-align:center;
+    }
+    #msg_h4{
+        font-size: 50px;
+    }
+    #msh_p{
+        font-size: 35px;
+    }
+</style> -->
 
 
 <!-- Mon code -->
