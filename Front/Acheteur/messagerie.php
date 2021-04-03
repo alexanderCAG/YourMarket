@@ -68,7 +68,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
         <hr>
         <div class="row">
             <div class="col-md-2">
-                <h4 class="texte_style text-uppercase"><?php echo $price ?> €</h4>
+                <h4 class="texte_style text-uppercase"><?php echo $price_offered ?> €</h4>
             </div>
 
             <div class="col-md-3">
@@ -82,7 +82,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             </div>
             
             <div class="col-md-1">
-                <a type="button" href="../../Bdd/delete.php?idoffer=<?= $id_item; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
+                <a type="button" href="../../Bdd/delete.php?iditempaniner=<?= $id_item; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
             </div>
 
         </div>

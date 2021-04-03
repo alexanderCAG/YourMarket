@@ -20,10 +20,10 @@
 <div class="vetement_details" >
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
-                    <li><a href="page-maison.php#menuCatMaison" class="text-uppercase" >All product</a> </li>
+                <li><a href="page-maison.php#menuCatMaison" class="text-uppercase" >All product</a> </li>
                     <li><a href="page-maison-sheet.php#menuCatMaison" class="text-uppercase">SHEETS</a></li>
-                    <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOWS<Q/a></li>
-                    <li><a href="page-maison-decoration.php#menuCatMaison" class="badge text-uppercase bg_blue1 text-light">DECORATIONS</a></li>
+                    <li><a href="page-maison-pillow.php#menuCatMaison" class="text-uppercase">PILLOWS</a></li>
+                    <li><a href="page-maison-decoration.php#menuCatMaison" class="text-uppercase bg_blue1 badge text-light">DECORATIONS</a></li>
                 </ul>
     </div>
 </div>
@@ -54,11 +54,11 @@
             
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                     <div class="detail_style_titre detail_style"><small><?php echo $nameCadre ?></small></div> 
                                 <div class="detail_style_marque detail_style"><small><?php echo $brandCadre ?></small></div> 
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixCadre ?> €</small> </p>
                                     </div>
                                 </div>

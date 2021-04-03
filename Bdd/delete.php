@@ -36,8 +36,8 @@
         }
     }
 
-    if (isset($_GET['idoffer'])){
-        $delete=$_GET['idoffer'];
+    if (isset($_GET['iditempaniner'])){
+        $delete=$_GET['iditempaniner'];
 
         $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
         if($row = mysqli_fetch_assoc($queryBuyer)){
