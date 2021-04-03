@@ -53,11 +53,11 @@
             
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                     <div class="detail_style_titre detail_style"><small><?php echo $nameCadre ?></small></div> 
                                 <div class="detail_style_marque detail_style"><small><?php echo $brandCadre ?></small></div> 
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixCadre ?> €</small> </p>
                                     </div>
                                 </div>

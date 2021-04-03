@@ -46,14 +46,16 @@
                             <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
                             <?php  if($quantityCadre == 0 ){?>
                                 <div class="bg-danger text-light w-100 text-center">Indisponible</div>
-                                <?php }?>
+                                <?php }else{?>
+                                    <div class="bg-white text-light w-100 text-center">-</div>
+                            <?php }?>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                     <div class="detail_style_titre detail_style"><small><?php echo $nameItems ?></small></div> 
                                 <div class="detail_style_marque detail_style"><small><?php echo $brandItems ?></small></div> 
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <p href="#" class="detail_style_prix texte_style f_right"><small><?php echo $prixItems ?> €</small> </p>
                                     </div>
                                 </div>
