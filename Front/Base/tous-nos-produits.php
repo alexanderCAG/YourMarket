@@ -5,7 +5,7 @@
         include("../../Bdd/cnx.php");
         
         $queryCountItems = mysqli_query($con, "select count(id_item) as total from item"); 
-        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller");
+        $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_buying from item,seller where seller.id_seller=item.id_seller and (is_buying =1 or is_negotiated=1)");
 ?>
 
 <div class="vetement_general">
@@ -39,11 +39,12 @@
                     $subcategoryItems = $rowAllItems['subcategory'];
                     $is_negotiated = $rowAllItems['is_negotiated'];
                     $is_buying = $rowAllItems['is_buying'];
+                    $photo = $rowAllItems['photo'];
                     
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
-                            <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
+                            <img class="img_listeVendeur_logo card-img-top" src="<?php echo $photo ?>" alt="oreiller">
                             <?php  if($quantityCadre == 0 ){?>
                                 <div class="bg-danger text-light w-100 text-center">Indisponible</div>
                                 <?php }else{?>

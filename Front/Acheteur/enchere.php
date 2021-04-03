@@ -5,7 +5,7 @@
         include("../../Bdd/cnx.php");
         
         $queryCountEnchere = mysqli_query($con, "select count(id_item) as total  from item where is_bidding=1"); 
-        $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, brand, quantity, description,photo is_negotiated, is_bidding 
+        $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_bidding 
         from item,bid,seller
         where bid.id_item=item.id_item
         and bid.id_seller=seller.id_seller

@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
     $('.div_deco').arctext({
         radius: 100
     });
-
+    
     /********************************
             INSCRIPTION
     *********************************/
