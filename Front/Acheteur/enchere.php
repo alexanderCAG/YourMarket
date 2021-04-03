@@ -123,7 +123,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
         <div class="enchere_payer_titre texte_style text-uppercase ">interested ?</div>
         <!-- <input class="enchere_propose_prix centrer" placeholder="Proposition (€)"> -->
         <a type="button" href="enchere_unique.php?iditem=<?= $id_item?>" class="btn_envoyer_propose_prix text-uppercase">View more</a>
-        <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
+        <!-- <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div> -->
     </div>
 
     <div class="col-1"></div>

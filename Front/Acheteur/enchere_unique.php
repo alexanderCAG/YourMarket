@@ -19,7 +19,15 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                 $subcategory = $rowItem['subcategory'];
                 $photo = $rowItem['photo'];
                 $end_enchere = $rowItem['end_enchere'];
+
+                $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+
+                if($row = mysqli_fetch_assoc($queryBuyer)){
+                    $id_buyer = $row['id_buyer'];
                 
+                $query = mysqli_query($con, "select count(DISTINCT id_buyer) as total from bid where id_buyer='$id_buyer'");
+                if($rowCount = mysqli_fetch_assoc($query)){
+                    $totalCandidat = $rowCount['total'];
                 // if($rowEnchere = mysqli_fetch_assoc($queryEnchere)){
                 //     $id_bid = $rowEnchere['id_bid'];
                 //     $id_item = $rowEnchere['id_item'];
@@ -116,7 +124,7 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
             <div class="enchere_payer_titre texte_style text-uppercase mt-4">faire une offre</div>
             <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposition (€)">
             <button type="submit" name="btn_envoyer_enchere_prix" class="btn_envoyer_propose_prix text-uppercase">Envoyer</button>
-            <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
+            <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0"><?php echo $totalCandidat ?> participant(s)</div>
             <input type="hidden" name="idItem" value="<?php echo $iditem ?>">
         </form>
     </div>
@@ -127,7 +135,8 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
 </div>
 
 <?php
-    // }
+        }
+    }
 }
 ?>
 
