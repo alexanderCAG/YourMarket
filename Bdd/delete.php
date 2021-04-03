@@ -46,4 +46,15 @@
             echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/messagerie.php' </script>";
         }
     }
+
+    if (isset($_GET['iditempaniner_vendeur'])){
+        $delete=$_GET['iditempaniner_vendeur'];
+
+        $querySeller = mysqli_query($con, "SELECT id_seller FROM seller WHERE email='$email_user'");
+        if($row = mysqli_fetch_assoc($querySeller)){
+            $id_seller = $row['id_seller'];
+            $queryDeleteItem = mysqli_query($con, "delete from offer WHERE id_item='$delete' and id_seller='$id_seller'");
+            echo "<script language='javascript' type='text/javascript'> location.href='../Front/Vendeur/messagerie.php' </script>";
+        }
+    }
 ?>
