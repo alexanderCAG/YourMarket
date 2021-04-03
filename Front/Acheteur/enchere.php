@@ -3,7 +3,7 @@
     $title="Page enchère";
     require "head.php";
         include("../../Bdd/cnx.php");
-        
+        $queryIdItem = mysqli_query($con, "select id_item from item where is_bidding=1"); 
         $queryCountEnchere = mysqli_query($con, "select count(id_item) as total  from item where is_bidding=1"); 
         $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_bidding 
         from item,bid,seller
@@ -29,6 +29,7 @@
 
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
+
 <?php
 for ($i=0; $i<=$totalEnchere;$i++){
                 if($rowAllEnchere = mysqli_fetch_assoc($queryAllEnchere)){
@@ -40,6 +41,9 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     $descriptionEnchere = $rowAllEnchere['description'];
                     $is_negotiated = $rowAllEnchere['is_negotiated'];
                     $photo = $rowAllEnchere['photo'];
+
+                    if($rowItem = mysqli_fetch_assoc($queryIdItem)){
+                        $id_item = $rowItem['id_item'];
                     ?>
                     
 <div class="enchere_liste_total row">
@@ -78,7 +82,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
     
                         
                 </script> -->
-                <div class="enchere_compteur_total centrer row">
+                <!-- <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
                         <img class="img_timeur_compteur" src="../../Image/timeur_compteur.png" alt="timeur_compteur">
                     </div>
@@ -104,7 +108,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
                         </div>
                         
                     </div>
-                </div>
+                </div> -->
             
             <div class="col-1"></div>
         </div>
@@ -114,17 +118,26 @@ for ($i=0; $i<=$totalEnchere;$i++){
 
     </div>
 
-    <div class="col-3 enchere_liste_payer centrer position-relative">
+    <!-- <div class="col-3 enchere_liste_payer centrer position-relative">
         <div class="enchere_payer_titre texte_style text-uppercase mt-4">faire une offre</div>
         <input class="enchere_propose_prix centrer" placeholder="Proposition (€)">
         <button class="btn_envoyer_propose_prix text-uppercase">Envoyer</button>
+        <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
+    </div> -->
+
+    <div class="col-3 enchere_liste_payer centrer position-relative">
+        <div class="enchere_payer_titre texte_style text-uppercase ">interested ?</div>
+        <!-- <input class="enchere_propose_prix centrer" placeholder="Proposition (€)"> -->
+        <a type="button" href="enchere_unique.php?iditem=<?= $id_item?>" class="btn_envoyer_propose_prix text-uppercase">View more</a>
         <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
     </div>
 
     <div class="col-1"></div>
 
 </div>
+
 <?php
+                    }
                 }
             }
         }

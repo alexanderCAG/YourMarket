@@ -176,6 +176,7 @@
         border-radius: 30px;
         padding: 10px 0 10px 0;
         margin-top: 40px;
+        margin-top: 50px!important;
     }
     .enchere_liste_details{
         border-left: solid 4px black;
@@ -191,7 +192,7 @@
         overflow: hidden;
         overflow-y: scroll;
         width: 100%;
-        height: 110px;
+        height: 200px;
     }
             /********************************
                     Affichage indé
@@ -210,11 +211,12 @@
         margin-top: 50px;
     }
     .enchere_compteur{
-        width: 78px;
+        width: 80px!important;
         /* width: 82px; */
         height: 80px;
         background-color: #ececec;
         margin-left: 2px;
+        text-align: center;
     }
 
             /********************************
@@ -245,9 +247,11 @@
         margin-left: 20px;
         border-radius: 30px;
         margin-top: 40px;
+        margin-top: 50px!important;
     }
     .enchere_payer_titre{
         font-size: 40px;
+        margin-top: 80px!important;
     }
     .enchere_propose_prix{
         margin-top: 40px;
@@ -261,11 +265,16 @@
         width: 200px;
         height: 50px;
         margin-top: 60px;
+        padding-top: 10px;
         border-radius: 10px;
         background-color: #3678ab;
         border: none;
         color: white;
         font-size: 20px;
+        text-decoration: none;
+    }
+    .btn_envoyer_propose_prix:hover{
+        color: white;
     }
     .enchere_nombre_participant{
         color: red;
