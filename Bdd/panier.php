@@ -33,7 +33,6 @@ if(isset($_GET['iditem'])){
         echo $iditem;
     }
 }
-
 if(isset($_POST['btn_submit_paiement'])){
 
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
@@ -62,8 +61,8 @@ if(isset($_POST['btn_submit_paiement'])){
                 if($row_product_in_basket = mysqli_fetch_assoc($queryTotalProductsInBasket)){
                     $total = $row_product_in_basket['totalProduitBasket'];
                     for ($i=0; $i<$total;$i++){
-                    // Dans le for
-                    $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,`id_item`,`id_seller`,`name`,`price`,`quantity`,`description`,`photo`,`category`,`subcategory` FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and email='$email_user'");
+                        // Dans le for
+                        $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,`id_item`,`id_seller`,`name`,`price`,`quantity`,`description`,`photo`,`category`,`subcategory` FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and email='$email_user'");
 
                         if($row7 = mysqli_fetch_assoc($querySelectBasket)){
                             $id_buyer_row7 = $row7['idB'];
@@ -82,22 +81,24 @@ if(isset($_POST['btn_submit_paiement'])){
                             if($row = mysqli_fetch_assoc($queryBuyer3)){
                                 $id_buyer = $row['id_buyer'];
 
-                                $queryInsertHistory = mysqli_query($con, "INSERT INTO `history` (`id_history`, `id_buyer`, `id_item`, `id_seller`, `name`, `price`, `quantity`, `description`, `photo`, `category`, `subcategory`) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
+                                for ($i=0; $i<$total;$i++){
+                                    $queryInsertHistory = mysqli_query($con, "INSERT INTO `history` (`id_history`, `id_buyer`, `id_item`, `id_seller`, `name`, `price`, `quantity`, `description`, `photo`, `category`, `subcategory`) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
 
-                                $queryDeleteHistory = mysqli_query($con, "DELETE FROM basket where id_buyer='$id_buyer'");
+                                    $queryDeleteHistory = mysqli_query($con, "DELETE FROM basket where id_buyer='$id_buyer'");
+                                }
                             }
                         
                         }
                     }
                 }
 
+
                 // fin for
             }
         }
        
     }
-}        
-        
+}      
 if(isset($_POST['btn_submit_nego'])){
 
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
