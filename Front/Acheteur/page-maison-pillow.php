@@ -47,10 +47,11 @@
                     $is_negotiated = $rowAllCadre['is_negotiated'];
                     $is_buying = $rowAllCadre['is_buying'];
                     $id_item = $rowAllCadre['id_item'];
+                    $photo = $rowAllCadre['photo'];
                     ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
-                            <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
+                            <img class="img_listeVendeur_logo card-img-top" src="<?php echo $photo ?>" alt="oreiller">
                             
                             <div class="card-body">
                                 <div class="row">

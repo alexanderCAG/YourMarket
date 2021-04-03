@@ -88,21 +88,23 @@
     <div class="col-md-1 col-lg-1"></div>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+    <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
+                    $nameItem = $rowdernierVetement['name'];
+                    $priceItem = $rowdernierVetement['price'];
+                    $categoryItem = $rowdernierVetement['category'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $subcategoryItem = $rowdernierVetement['subcategory'];
+                    $photo = $rowdernierVetement['photo'];
+        ?>
         <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../../Image/t-shirt_homme.png"
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photo ?>"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
             <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
         
         <div class="information_presentation_premier">
-        <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
-                    $nameItem = $rowdernierVetement['name'];
-                    $priceItem = $rowdernierVetement['price'];
-                    $categoryItem = $rowdernierVetement['category'];
-                    $brandItem = $rowdernierVetement['brand'];
-                    $subcategoryItem = $rowdernierVetement['subcategory'];
-        ?>
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -113,20 +115,22 @@
     <div class="col-md-1 col-lg-1"></div>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" src="../../Image/t-shirt_femme.png" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
-        </div>
-        
-        <div class="information_presentation_deuxieme">
-        <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
+    <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
                     $nameItem = $rowavantDernierVetement['name'];
                     $priceItem = $rowavantDernierVetement['price'];
                     $brandItem = $rowdernierVetement['brand'];
                     $categoryItem = $rowavantDernierVetement['category'];
                     $subcategoryItem = $rowavantDernierVetement['subcategory'];
+                    $photo = $rowavantDernierVetement['photo'];
         ?>
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" src="<?php echo $photo ?>" alt="t-shirt_femme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
+            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+        </div>
+        
+        <div class="information_presentation_deuxieme">
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -138,21 +142,23 @@
 <div class="row mt-4 presentation_maison">
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+    <?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
+                    $nameItem = $rowdernierMaison['name'];
+                    $priceItem = $rowdernierMaison['price'];
+                    $categoryItem = $rowdernierMaison['category'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $subcategoryItem = $rowdernierMaison['subcategory'];
+                    $photo = $rowdernierMaison['photo'];
+        ?>
         <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../../Image/t-shirt_homme.png"
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photo ?>"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
             <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
         
         <div class="information_presentation_premier">
-        <?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
-                    $nameItem = $rowdernierMaison['name'];
-                    $priceItem = $rowdernierMaison['price'];
-                    $categoryItem = $rowdernierMaison['category'];
-                    $brandItem = $rowdernierVetement['brand'];
-                    $subcategoryItem = $rowdernierMaison['subcategory'];
-        ?>
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -163,20 +169,22 @@
     <div class="col-md-1 col-lg-1"></div>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" src="../../Image/t-shirt_femme.png" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
-        </div>
-        
-        <div class="information_presentation_deuxieme">
-        <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
+    <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
                     $nameItem = $rowavantDernierMaison['name'];
                     $priceItem = $rowavantDernierMaison['price'];
                     $categoryItem = $rowavantDernierMaison['category'];
                     $brandItem = $rowavantDernierMaison['brand'];
                     $subcategoryItem = $rowavantDernierMaison['subcategory'];
+                    $photo = $rowavantDernierMaison['photo'];
         ?>
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" src="<?php echo $photo ?>" alt="t-shirt_femme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
+            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
+        </div>
+        
+        <div class="information_presentation_deuxieme">
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -205,10 +213,11 @@
                 $nameItems = $rowAllItems['name'];
                 $prixItems = $rowAllItems['price'];
                 $brandItems = $rowAllItems['brand'];
+                $photo = $rowAllItems['photo'];
     ?>
             <div class="col">
                 <div class="p-3">
-                    <p lass='text-center'><img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
+                    <p lass='text-center'><img class="image_ronde image_produit" src="<?php echo $photo ?>" alt="chaussure">
                     <small><?php echo "<p class='text-center'>".$nameItems." - ".$prixItems."€ </p>"  ?></small></p>
                 </div>
             </div>

@@ -25,7 +25,7 @@
     
     <div class="col-2"></div>
     <div class="col-3">
-        <img class="img_enchere" src="../../Image/chaussure.png" alt="chaussure">
+        <img class="img_enchere" src="<?php echo $photo ?>" alt="chaussure">
     </div>
 
     <div class="col-5 enchere_liste_details position-relative">

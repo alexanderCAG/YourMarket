@@ -57,7 +57,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-10 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="<?php echo $photo ?>" alt="chaussure"><br>
                     </div>
 
                     <div class="col-7 listeArticle_liste_details position-relative">

@@ -39,6 +39,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     $end_enchere = $rowAllEnchere['end_enchere'];
                     $descriptionEnchere = $rowAllEnchere['description'];
                     $is_negotiated = $rowAllEnchere['is_negotiated'];
+                    $photo = $rowAllEnchere['photo'];
                     ?>
                     
 <div class="enchere_liste_total row">
@@ -48,7 +49,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
     <div class="col-7 enchere_liste_un_par_un">
         <div class="row">
             <div class="col-5">
-                <img class="img_enchere" src="../../Image/chaussure.png" alt="chaussure">
+                <img class="img_enchere" src="<?php echo $photo ?>" alt="chaussure">
             </div>
 
             <div class="col-6 enchere_liste_details position-relative">
