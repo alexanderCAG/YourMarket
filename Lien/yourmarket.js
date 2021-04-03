@@ -242,7 +242,7 @@ function compteur(){
             }else if(regex_chiffre.test(telephone_acheteur.value)==false){
                 telephoneErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
                 verification_inscription_acheteur=false;
-            }else if(telephone_acheteur.value.length >= 10){
+            }else if(telephone_acheteur.value.length > 10){
                 telephoneErreur_acheteur.innerHTML = "N'existe pas, trop long";
                 verification_inscription_acheteur=false;
             }else{
@@ -378,7 +378,7 @@ function compteur(){
             }else if(regex_chiffre.test(codepostal_acheteur.value)==false){
                 codepostalErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
                 verification_inscription_acheteur=false;
-            }else if(codepostal_acheteur.value.length >= 5){
+            }else if(codepostal_acheteur.value.length > 5){
                 codepostalErreur_acheteur.innerHTML = "N'existe pas, trop long";
                 verification_inscription_acheteur=false;
             }else{

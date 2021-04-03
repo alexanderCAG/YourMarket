@@ -102,7 +102,7 @@ function infoPersoL_livraison(event){
     }else if(regex_chiffre.test(infoPerso_telephone_acheteur.value)==false){
         infoPerso_telephoneErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
         verif_infoPersoL_acheteur=false;
-    }else if(infoPerso_telephone_acheteur.value.length >= 10){
+    }else if(infoPerso_telephone_acheteur.value.length > 10){
         infoPerso_telephoneErreur_acheteur.innerHTML = "N'existe pas, trop long";
         verif_infoPersoL_acheteur=false;
     }else{
@@ -238,7 +238,7 @@ function infoPersoL_livraison(event){
     }else if(regex_chiffre.test(infoPerso_codepostal_acheteur.value)==false){
         infoPerso_codepostalErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
         verif_infoPersoL_acheteur=false;
-    }else if(infoPerso_codepostal_acheteur.value.length >= 5){
+    }else if(infoPerso_codepostal_acheteur.value.length > 5){
         infoPerso_codepostalErreur_acheteur.innerHTML = "N'existe pas, trop long";
         verif_infoPersoL_acheteur=false;
     }else{
