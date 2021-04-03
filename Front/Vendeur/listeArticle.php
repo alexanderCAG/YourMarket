@@ -46,6 +46,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $is_negotiated = $rowAllItemSeller['is_negotiated'];
             $is_buying = $rowAllItemSeller['is_buying'];
             $DescriptionItemSeller = $rowAllItemSeller['description'];
+            $photoItemSeller = $rowAllItemSeller['photo'];
             
             // $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
 ?>
@@ -56,7 +57,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-8 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="<?php echo $photoItemSeller ?>" alt="chaussure"><br>
                     </div>
                     
                     <div class="col-7 listeArticle_liste_details position-relative">
@@ -98,7 +99,8 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                             </div>
                             <div class="col-md-3">
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
+                                    <input type="number" style="width:50px!important;" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
+                                    <div class="input-group-text"><i class="fas fa-pen-square"></i></div>
                                 </div>
                             </div>
                             <div class="col-md-6">

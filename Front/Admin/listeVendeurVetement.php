@@ -53,7 +53,7 @@
                 ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card" style="width: 18rem;">
-                        <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
+                        <img class="img_listeVendeur_logo card-img-top" src="<?php echo $profil_picture_brand_Maison ?>" alt="oreiller">
         
                         <div class="card-body">
                             <div class="row">

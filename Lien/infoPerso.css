@@ -405,7 +405,7 @@
                     CHOIX-IMAGE-VENDEUR
                 *********************************/
                 #img_inscription_choix_vendeur{
-                    background-image: url("../Image/chaussure.png");
+                    /* background-image: url("../Image/chaussure.png"); */
                     width: 250px;
                     height: 250px;
                     border: solid 2px black;
@@ -725,7 +725,7 @@
                             VENDEUR-IMAGE
                     *********************************/
                     #infoPerso_img_inscription_choix_vendeur{
-                        background-image: url("../Image/chaussure.png");
+                        /* background-image: url("../Image/chaussure.png"); */
                         width: 250px;
                         height: 250px;
                         border: solid 2px black;

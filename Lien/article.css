@@ -177,7 +177,7 @@
             CREER ARTICLE-IMAGE
         *********************************/
         #img_ajoutArticle{
-            background-image: url("../Image/chaussure.png");
+            background-image: url("../Image/Bop.png");
             width: 250px;
             height: 250px;
             border: solid 2px black;
@@ -347,7 +347,7 @@
     color: white;
 }
 #img_Ajoutvendeur{
-    background-image: url("../Image/chaussure.png");
+    background-image: url("../Image/Bop.png");
     width: 250px;
     height: 250px;
     border: solid 2px black;
