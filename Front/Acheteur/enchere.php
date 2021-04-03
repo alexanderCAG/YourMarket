@@ -5,12 +5,7 @@
         include("../../Bdd/cnx.php");
         $queryIdItem = mysqli_query($con, "select id_item from item where is_bidding=1"); 
         $queryCountEnchere = mysqli_query($con, "select count(id_item) as total  from item where is_bidding=1"); 
-        $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, brand, quantity, description,photo, is_negotiated, is_bidding 
-        from item,bid,seller
-        where bid.id_item=item.id_item
-        and bid.id_seller=seller.id_seller
-        and is_bidding=1
-        ");
+        $queryAllEnchere = mysqli_query($con, "select name, end_enchere, price ,subcategory, quantity, description,photo, is_bidding from item where is_bidding=1");
 ?>
  <?php
  if($row = mysqli_fetch_assoc($queryCountEnchere)){
@@ -35,11 +30,10 @@ for ($i=0; $i<=$totalEnchere;$i++){
                 if($rowAllEnchere = mysqli_fetch_assoc($queryAllEnchere)){
                     $nameEnchere = $rowAllEnchere['name'];
                     $prixEnchere = $rowAllEnchere['price'];
-                    $brandEnchere = $rowAllEnchere['brand'];
+                    // $brandEnchere = $rowAllEnchere['brand'];
                     $quantityEnchere = $rowAllEnchere['quantity'];
-                    $end_enchere = $rowAllEnchere['end_enchere'];
+                    // $end_enchere = $rowAllEnchere['end_enchere'];
                     $descriptionEnchere = $rowAllEnchere['description'];
-                    $is_negotiated = $rowAllEnchere['is_negotiated'];
                     $photo = $rowAllEnchere['photo'];
 
                     if($rowItem = mysqli_fetch_assoc($queryIdItem)){
@@ -58,7 +52,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
 
             <div class="col-6 enchere_liste_details position-relative">
                 <div class="enchere_info_titre texte_style text-uppercase"><?php echo $nameEnchere ?></div>
-                <div class="enchere_info_marque detail_style text-uppercase"><?php echo $brandEnchere ?></div>
+                <!-- <div class="enchere_info_marque detail_style text-uppercase"><?php echo $brandEnchere ?></div> -->
                 <br>
                 <div class="enchere_info_description"><?php echo $descriptionEnchere ?></div>
                 <!-- <div><?php echo $end_enchere ?></div> -->

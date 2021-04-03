@@ -5,8 +5,8 @@
     include("../../Bdd/cnx.php");
     $iditem=$_GET['iditem'];
 
-    $queryItem = mysqli_query($con, "SELECT price,name,category,subcategory,quantity,description,photo FROM item WHERE id_item='$iditem'");
-    $queryEnchere = mysqli_query($con, "SELECT id_bid, id_item, id_buyer, id_seller, end_enchere, state, price_user FROM bid WHERE id_item='$iditem'");
+    $queryItem = mysqli_query($con, "SELECT price,name,category,subcategory,quantity,description,photo,end_enchere FROM item WHERE id_item='$iditem'");
+    // $queryEnchere = mysqli_query($con, "SELECT id_bid, id_item, id_buyer, id_seller, state, price_user FROM bid WHERE id_item='$iditem'");
 ?>
 
 <?php
@@ -18,15 +18,15 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                 $descriptionCadre = $rowItem['description'];
                 $subcategory = $rowItem['subcategory'];
                 $photo = $rowItem['photo'];
+                $end_enchere = $rowItem['end_enchere'];
                 
-                if($rowEnchere = mysqli_fetch_assoc($queryEnchere)){
-                    $id_bid = $rowEnchere['id_bid'];
-                    $id_item = $rowEnchere['id_item'];
-                    $id_buyer = $rowEnchere['id_buyer'];
-                    $id_seller = $rowEnchere['id_seller'];
-                    $end_enchere = $rowEnchere['end_enchere'];
-                    $state = $rowEnchere['state'];
-                    $price_user = $rowEnchere['price_user'];
+                // if($rowEnchere = mysqli_fetch_assoc($queryEnchere)){
+                //     $id_bid = $rowEnchere['id_bid'];
+                //     $id_item = $rowEnchere['id_item'];
+                //     $id_buyer = $rowEnchere['id_buyer'];
+                //     $id_seller = $rowEnchere['id_seller'];
+                //     $state = $rowEnchere['state'];
+                //     $price_user = $rowEnchere['price_user'];
                             ?>
 
 <div class="enchere_liste_total row">
@@ -110,19 +110,24 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
 
     </div>
 
+    
     <div class="col-3 enchere_liste_payer centrer position-relative">
-        <div class="enchere_payer_titre texte_style text-uppercase mt-4">faire une offre</div>
-        <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposition (€)">
-        <button class="btn_envoyer_propose_prix text-uppercase">Envoyer</button>
-        <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
+        <form action="../../Bdd/panier.php" method="POST">
+            <div class="enchere_payer_titre texte_style text-uppercase mt-4">faire une offre</div>
+            <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposition (€)">
+            <button type="submit" name="btn_envoyer_enchere_prix" class="btn_envoyer_propose_prix text-uppercase">Envoyer</button>
+            <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0">135 participants</div>
+            <input type="hidden" name="idItem" value="<?php echo $iditem ?>">
+        </form>
     </div>
+    
 
     <div class="col-1"></div>
 
 </div>
 
 <?php
-    }
+    // }
 }
 ?>
 
