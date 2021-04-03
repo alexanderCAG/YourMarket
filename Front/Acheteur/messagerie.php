@@ -43,6 +43,8 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $quantity = $rowAllItemyOffer['quantity'];
             $nb_nego = $rowAllItemyOffer['nb_nego'];
             $status = $rowAllItemyOffer['status'];
+
+            
                 if($row2 = mysqli_fetch_assoc($queryItem)){
                     $name = $row2['name'];
                     $price = $row2['price'];
