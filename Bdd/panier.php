@@ -9,7 +9,7 @@ $email_user = $_SESSION['email'];
 
 if(isset($_GET['iditem'])){
     $iditem=$_GET['iditem'];
-    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
     $querySeller = mysqli_query($con, "SELECT id_seller,name,price,description,photo,category,subcategory FROM item WHERE id_item='$iditem'");
 
 
@@ -35,14 +35,14 @@ if(isset($_GET['iditem'])){
 }
 if(isset($_POST['btn_submit_paiement'])){
 
-    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
     if($row4 = mysqli_fetch_assoc($queryBuyer)){
         $id_buyer = $row4['id_buyer'];
         $name_nameCard=$_POST['name_nameCard'];
         $name_cardNumber=$_POST['name_cardNumber'];
         $name_ExpiryDate=$_POST['name_ExpiryDate'];
         $name_SecurityCode=$_POST['name_SecurityCode'];
-        $queryCardUser = mysqli_query($con, "SELECT buyer.email, `carde`, `code`,`num_card`,`expiration`,`nom` FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  email='$email_user'");
+        $queryCardUser = mysqli_query($con, "SELECT buyer.email, `carde`, `code`,`num_card`,`expiration`,`nom` FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  (email='$email_user' or lastname='$email_user')");
 
         if($row5 = mysqli_fetch_assoc($queryCardUser)){
             $name_nameCard2 = $row5['nom'];
@@ -55,14 +55,14 @@ if(isset($_POST['btn_submit_paiement'])){
             else{
                 echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiementAccepte.php' </script>";
 
-                $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(`id_item`)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and email ='$email_user'");
+                $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(`id_item`)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
 
 
                 if($row_product_in_basket = mysqli_fetch_assoc($queryTotalProductsInBasket)){
                     $total = $row_product_in_basket['totalProduitBasket'];
                     for ($i=0; $i<$total;$i++){
                         // Dans le for
-                        $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,`id_item`,`id_seller`,`name`,`price`,`quantity`,`description`,`photo`,`category`,`subcategory` FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and email='$email_user'");
+                        $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,`id_item`,`id_seller`,`name`,`price`,`quantity`,`description`,`photo`,`category`,`subcategory` FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
 
                         if($row7 = mysqli_fetch_assoc($querySelectBasket)){
                             $id_buyer_row7 = $row7['idB'];
@@ -76,7 +76,7 @@ if(isset($_POST['btn_submit_paiement'])){
                             $category_row7 = $row7['category'];
                             $subcategory_row7 = $row7['subcategory'];
                             
-                            $queryBuyer3 = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+                            $queryBuyer3 = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 
                             if($row = mysqli_fetch_assoc($queryBuyer3)){
                                 $id_buyer = $row['id_buyer'];
@@ -101,7 +101,7 @@ if(isset($_POST['btn_submit_paiement'])){
 }      
 if(isset($_POST['btn_submit_nego'])){
 
-    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 
     if($row = mysqli_fetch_assoc($queryBuyer)){
         $id_buyer = $row['id_buyer'];
@@ -123,7 +123,7 @@ if(isset($_POST['btn_submit_nego'])){
 
 if(isset($_POST['btn_envoyer_enchere_prix'])){
 
-    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+    $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 
     if($row = mysqli_fetch_assoc($queryBuyer)){
         $id_buyer = $row['id_buyer'];
@@ -146,7 +146,7 @@ if (isset($_POST['submit_btn_change_qte_panier'])){
     $qtePanier=$_POST['qtePanier'];
     $idItem=$_POST['idItem'];
 
-    $id="SELECT id_buyer FROM buyer WHERE email='$email_user'";
+    $id="SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')";
 
     $id_result=$con->query($id);
     $row = mysqli_fetch_array($id_result);

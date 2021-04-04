@@ -28,7 +28,7 @@
     if (isset($_GET['idpanier'])){
         $delete=$_GET['idpanier'];
 
-        $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+        $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
         if($row = mysqli_fetch_assoc($queryBuyer)){
             $id_buyer = $row['id_buyer'];
             $queryDeleteItem = mysqli_query($con, "delete from basket WHERE id_item='$delete' and id_buyer='$id_buyer'");
@@ -39,7 +39,7 @@
     if (isset($_GET['iditempaniner'])){
         $delete=$_GET['iditempaniner'];
 
-        $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+        $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
         if($row = mysqli_fetch_assoc($queryBuyer)){
             $id_buyer = $row['id_buyer'];
             $queryDeleteItem = mysqli_query($con, "delete from offer WHERE id_item='$delete' and id_buyer='$id_buyer'");
@@ -50,7 +50,7 @@
     if (isset($_GET['iditempaniner_vendeur'])){
         $delete=$_GET['iditempaniner_vendeur'];
 
-        $querySeller = mysqli_query($con, "SELECT id_seller FROM seller WHERE email='$email_user'");
+        $querySeller = mysqli_query($con, "SELECT id_seller FROM seller WHERE (email='$email_user' or brand='$email_user')");
         if($row = mysqli_fetch_assoc($querySeller)){
             $id_seller = $row['id_seller'];
             $queryDeleteItem = mysqli_query($con, "delete from offer WHERE id_item='$delete' and id_seller='$id_seller'");

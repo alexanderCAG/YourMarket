@@ -9,15 +9,15 @@
 
     $queryinfoPerso_acheteur = mysqli_query($con, "select lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country,carde,code,num_card,expiration,nom from buyer, payment where buyer.id_buyer=payment.id_buyer and (email='$email_user' or lastname='$email_user')");
 
-    $queryTotalBasket= mysqli_query($con, "SELECT email, sum(price*quantity) as total_basket FROM basket, buyer WHERE buyer.id_buyer=basket.id_buyer and email='$email_user'");
+    $queryTotalBasket= mysqli_query($con, "SELECT email, sum(price*quantity) as total_basket FROM basket, buyer WHERE buyer.id_buyer=basket.id_buyer and (email='$email_user' or lastname='$email_user')");
 
     // total des produit dans le panier d'un acheteur
-    $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(`id_item`)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and email ='$email_user'");
+    $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(`id_item`)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
 
     // Listage des produits dans le panier d'un acheteur
-    $queryProductsInBasket= mysqli_query($con, "SELECT buyer.email as email , item.name as name, item.price as price , item.subcategory as sub, item.description, basket.quantity as qqt_product, item.photo as photo FROM basket, buyer ,item WHERE buyer.id_buyer=basket.id_buyer and item.id_item=basket.id_item and email ='$email_user'"); 
+    $queryProductsInBasket= mysqli_query($con, "SELECT buyer.email as email , item.name as name, item.price as price , item.subcategory as sub, item.description, basket.quantity as qqt_product, item.photo as photo FROM basket, buyer ,item WHERE buyer.id_buyer=basket.id_buyer and item.id_item=basket.id_item and (email='$email_user' or lastname='$email_user')"); 
 
-    $queryCardUser = mysqli_query($con, "SELECT buyer.email, `carde`, `code`,`num_card`,`expiration`,`nom` FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  email='$email_user'");
+    $queryCardUser = mysqli_query($con, "SELECT buyer.email, `carde`, `code`,`num_card`,`expiration`,`nom` FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  (email='$email_user' or lastname='$email_user')");
 
 
 ?>
