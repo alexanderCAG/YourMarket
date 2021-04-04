@@ -60,6 +60,9 @@ if(isset($_POST['btn_submit_paiement'])){
 
                 if($row_product_in_basket = mysqli_fetch_assoc($queryTotalProductsInBasket)){
                     $total = $row_product_in_basket['totalProduitBasket'];
+
+
+                    
                     for ($i=0; $i<$total;$i++){
                         // Dans le for
                         $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,id_item,id_seller,name,price,quantity,description,photo,category,subcategory FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
@@ -93,7 +96,7 @@ if(isset($_POST['btn_submit_paiement'])){
                 }
 
 
-                // fin for
+                // ici
             }
         }
        
