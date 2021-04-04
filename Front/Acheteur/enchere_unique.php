@@ -3,6 +3,7 @@
     $title="Accueil";
     require "head.php";
     include("../../Bdd/cnx.php");
+    $email_user = $_SESSION['email'];
     $iditem=$_GET['iditem'];
 
     $queryItem = mysqli_query($con, "SELECT price,name,category,subcategory,quantity,description,photo,end_enchere FROM item WHERE id_item='$iditem'");
@@ -204,6 +205,17 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
     <div class="col-1"></div>
 
 </div>
+
+<!-- <?php 
+$date = new DateTime();
+$dateFin = $date->format('Y-m-d H:i:s');
+
+if($end_enchere = $dateFin){
+    
+    $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$iditem'");
+    
+}
+?> -->
 
 <?php
         }
