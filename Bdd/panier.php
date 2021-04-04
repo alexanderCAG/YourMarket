@@ -42,55 +42,69 @@ if(isset($_POST['btn_submit_paiement'])){
         $name_cardNumber=$_POST['name_cardNumber'];
         $name_ExpiryDate=$_POST['name_ExpiryDate'];
         $name_SecurityCode=$_POST['name_SecurityCode'];
-        $queryCardUser = mysqli_query($con, "SELECT buyer.email, carde, code,num_card,expiration,nom FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  (email='$email_user' or lastname='$email_user')");
+        $queryCardUser = mysqli_query($con, "SELECT buyer.email, carde,money, code,num_card,expiration,nom FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  (email='$email_user' or lastname='$email_user')");
 
         if($row5 = mysqli_fetch_assoc($queryCardUser)){
             $name_nameCard2 = $row5['nom'];
             $name_cardNumber2 = $row5['num_card'];
             $name_ExpiryDate2 = $row5['expiration'];
             $name_SecurityCode2 = $row5['code'];
+            $name_money = $row5['money'];
             if(($name_nameCard != $name_nameCard2 ) || ($name_cardNumber != $name_cardNumber2 ) || ($name_ExpiryDate != $name_ExpiryDate2 ) || ($name_SecurityCode != $name_SecurityCode2 )) {
                 echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiement.php' </script>";
             }
             else{
-                echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiementAccepte.php' </script>";
 
                 $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(id_item)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
-
+                
 
                 if($row_product_in_basket = mysqli_fetch_assoc($queryTotalProductsInBasket)){
                     $total = $row_product_in_basket['totalProduitBasket'];
 
-
+                    $queryTotalBasket= mysqli_query($con, "SELECT email, sum(price*quantity) as total_basket FROM basket, buyer WHERE buyer.id_buyer=basket.id_buyer and (email='$email_user' or lastname='$email_user')");
                     
-                    for ($i=0; $i<$total;$i++){
-                        // Dans le for
-                        $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,id_item,id_seller,name,price,quantity,description,photo,category,subcategory FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
+                    if($row_product_TotalBasket = mysqli_fetch_assoc($queryTotalBasket)){
+                        $total_basket = $row_product_TotalBasket['total_basket'];
 
-                        if($row7 = mysqli_fetch_assoc($querySelectBasket)){
-                            $id_buyer_row7 = $row7['idB'];
-                            $id_item_row7 = $row7['id_item'];
-                            $id_seller_row7 = $row7['id_seller'];
-                            $name_row7 = $row7['name'];
-                            $price_row7 = $row7['price'];
-                            $quantity_row7 = $row7['quantity'];
-                            $description_row7 = $row7['description'];
-                            $photo_row7 = $row7['photo'];
-                            $category_row7 = $row7['category'];
-                            $subcategory_row7 = $row7['subcategory'];
+                        if($name_money>=$total_basket){
+                            echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiementAccepte.php' </script>";
                             
-                            $queryBuyer3 = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
+                            $new_money = $name_money-$total_basket;
+                            
+                            $querySelectBasket = mysqli_query($con, "UPDATE payment SET money='$new_money' WHERE id_buyer='$id_buyer'");
 
-                            if($row = mysqli_fetch_assoc($queryBuyer3)){
-                                $id_buyer = $row['id_buyer'];
+                            for ($i=0; $i<$total;$i++){
+                                // Dans le for
+                                $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,id_item,id_seller,name,price,quantity,description,photo,category,subcategory FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
 
-                                for ($i=0; $i<$total;$i++){
-                                    $queryInsertHistory = mysqli_query($con, "INSERT INTO history (id_history, id_buyer, id_item, id_seller, name, price, quantity, description, photo, category, subcategory) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
+                                if($row7 = mysqli_fetch_assoc($querySelectBasket)){
+                                    $id_buyer_row7 = $row7['idB'];
+                                    $id_item_row7 = $row7['id_item'];
+                                    $id_seller_row7 = $row7['id_seller'];
+                                    $name_row7 = $row7['name'];
+                                    $price_row7 = $row7['price'];
+                                    $quantity_row7 = $row7['quantity'];
+                                    $description_row7 = $row7['description'];
+                                    $photo_row7 = $row7['photo'];
+                                    $category_row7 = $row7['category'];
+                                    $subcategory_row7 = $row7['subcategory'];
+                                    
+                                    $queryBuyer3 = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 
-                                    $queryDeleteHistory = mysqli_query($con, "DELETE FROM basket where id_buyer='$id_buyer'");
+                                    if($row = mysqli_fetch_assoc($queryBuyer3)){
+                                        $id_buyer = $row['id_buyer'];
+
+                                        for ($i=0; $i<$total;$i++){
+                                            $queryInsertHistory = mysqli_query($con, "INSERT INTO history (id_history, id_buyer, id_item, id_seller, name, price, quantity, description, photo, category, subcategory) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
+
+                                            $queryDeleteHistory = mysqli_query($con, "DELETE FROM basket where id_buyer='$id_buyer'");
+                                        }
+                                    }
+                                
                                 }
                             }
-                        
+                        }else{
+                            echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiement.php' </script>";
                         }
                     }
                 }

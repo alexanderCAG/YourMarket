@@ -282,7 +282,8 @@
 	    $numeroCarte_acheteur=$_POST['numeroCarte_acheteur'];
 	    $nomCarte_acheteur=$_POST['nomCarte_acheteur'];
 	    $dateExpiration_acheteur=$_POST['dateExpiration_acheteur'];
-	    $codeSecret_acheteur=$_POST['codeSecret_acheteur'];
+        $codeSecret_acheteur=$_POST['codeSecret_acheteur'];
+        $money=rand(100,5000);
 
         $sql1 = "INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
 				VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')";
@@ -298,8 +299,8 @@
             echo "Error: " . $sql1 . "<br>" . $con->error;
         }
 
-		$sql2 = "INSERT INTO payment (id_buyer,carde,code,num_card,expiration,nom) 
-				VALUES ('$result','$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur')";
+		$sql2 = "INSERT INTO payment (id_buyer,carde,code,num_card,expiration,nom,money) 
+				VALUES ('$result','$carte_bancaire','$codeSecret_acheteur','$numeroCarte_acheteur','$dateExpiration_acheteur','$nomCarte_acheteur','$money')";
 
         if($con->query($sql2)===true){
             echo("");
