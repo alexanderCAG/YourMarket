@@ -4,6 +4,7 @@
 jQuery(document).ready(function(){
     $("#sousCategorie_ajoutArticle_maison").hide();
     $("#sousCategorie_ajoutArticle_vetement").hide();
+    $("#dateAjoutarticle").hide();
 });
 
 function choixCategorie(){
@@ -38,6 +39,7 @@ function ajoutArticle(event){
     let achat_nego_ajoutArticle= document.getElementById('achat_nego_ajoutArticle');
     let achat_enchere_ajoutArticle= document.getElementById('achat_enchere_ajoutArticle');
     let file_interrieur_inscription_img= document.getElementById('file_interrieur_inscription_img');
+    let dateAjoutarticle= document.getElementById('dateAjoutarticle');
     
             // span
     let nomProduitErreur_ajoutArticle= document.getElementById('nomProduitErreur_ajoutArticle');
@@ -49,6 +51,7 @@ function ajoutArticle(event){
     let choixSousCategorieErreur_ajoutArticle_vetement= document.getElementById('choixSousCategorieErreur_ajoutArticle_vetement');
     let typeAchatErreur_ajoutArticle= document.getElementById('typeAchatErreur_ajoutArticle');
     let imageErreur_ajoutArticle= document.getElementById('imageErreur_ajoutArticle');
+    let dateErreur_ajoutArticle= document.getElementById('dateErreur_ajoutArticle');
     // let imageErreur_ajoutArticle_Admin= document.getElementById('imageErreur_ajoutArticle_Admin');
 
             // reset span
@@ -61,9 +64,18 @@ function ajoutArticle(event){
     choixSousCategorieErreur_ajoutArticle_vetement.innerHTML="";
     typeAchatErreur_ajoutArticle.innerHTML="";
     imageErreur_ajoutArticle.innerHTML="";
+    dateErreur_ajoutArticle.innerHTML="";
     // imageErreur_ajoutArticle_Admin.innerHTML="";
 
     var verif_ajoutArticle=true;
+
+    // date verif
+    if(achat_enchere_ajoutArticle.checked==true && dateAjoutarticle.value.trim()==""){
+        dateErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        verif_ajoutArticle=false;
+    }else{
+        dateErreur_ajoutArticle.innerHTML = "";
+    }
 
     // image verif
     if(file_interrieur_inscription_img.value.length==""){
@@ -192,5 +204,18 @@ function reset_ajoutArticle(){
     choixSousCategorieErreur_ajoutArticle_vetement.innerHTML="";
     typeAchatErreur_ajoutArticle.innerHTML="";
     imageErreur_ajoutArticle.innerHTML="";
+    dateErreur_ajoutArticle.innerHTML="";
+    
     // imageErreur_ajoutArticle_Admin.innerHTML="";
+}
+
+document.getElementById('achat_enchere_ajoutArticle').addEventListener('click',dateAjoutarticle)
+function dateAjoutarticle(){
+    let achat_enchere_ajoutArticle= document.getElementById('achat_enchere_ajoutArticle');
+
+    if(achat_enchere_ajoutArticle.checked == true){
+        $("#dateAjoutarticle").show();
+    }else if(achat_enchere_ajoutArticle.checked == false){
+        $("#dateAjoutarticle").hide();
+    }
 }

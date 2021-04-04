@@ -122,6 +122,9 @@
                     <br>
                     <span id="typeAchatErreur_ajoutArticle"></span>
                     <br>
+                    <input type="datetime-local" class="contenu_details_Ajoutarticle" name="dateAjoutarticle" id="dateAjoutarticle">
+                    <br>
+                    <span id="dateErreur_ajoutArticle"></span>
                 </div>
 
                 <div class="col-5">
@@ -155,6 +158,8 @@
         $val1='0';
         $val2='0';
         $val3='0';
+        $dateAjoutarticle = "2000-04-04T15:12";
+        
 
         $seller_email = $_SESSION['email'];
         $id="SELECT id_seller FROM seller where email='$seller_email'";
@@ -183,11 +188,12 @@
                     }
                     if(isset($_POST['achat_enchere_ajoutArticle'])){
                         $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='pillow'){
                     
@@ -201,11 +207,12 @@
                     }
                     if(isset($_POST['achat_enchere_ajoutArticle'])){
                         $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='decoration'){
                     
@@ -219,11 +226,12 @@
                     }
                     if(isset($_POST['achat_enchere_ajoutArticle'])){
                         $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }
 
@@ -244,11 +252,12 @@
                     }
                     if(isset($_POST['achat_enchere_ajoutArticle'])){
                         $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='sweat_shirt'){
                     
@@ -262,11 +271,12 @@
                     }
                     if(isset($_POST['achat_enchere_ajoutArticle'])){
                         $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='shoes'){
                     
@@ -280,11 +290,12 @@
                     }
                     if(isset($_POST['achat_enchere_ajoutArticle'])){
                         $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }
             }

@@ -1,11 +1,24 @@
 <?php
     $title="Création d'Article";
     require "head.php";
+
+    include("../../Bdd/cnx.php");
+    $email_user = $_SESSION['email'];
+    $Seller = mysqli_query($con, "select background from seller where email='$email_user' or brand='$email_user'");
+
 ?>
 
 
-<div class="genale_newArticle position-relative">
-    <div class="texte_style position-absolute top-50 start-50 translate-middle">
+<?php if($row2 = mysqli_fetch_assoc($Seller)){
+    $bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php 
+    }
+}?>    <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_newArticle text-uppercase">
             Ajouter un article
         </p>
@@ -25,17 +38,17 @@
                 <div class="col-5">
                     <h3 class="ajout_article_titre text-uppercase detail_style">information générale</h3>
                     
-                    <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle_Admin" class="contenu_details_Ajoutarticle" placeholder="Nom du produit">
+                    <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle" class="contenu_details_Ajoutarticle" placeholder="Nom du produit">
                     <br>
                     <span id="nomProduitErreur_ajoutArticle"></span>
                     <br>
-                    <textarea id="description_ajoutArticle" name="description_ajoutArticle_Admin" placeholder="Entrer une description" cols="45" rows="6" style="background-color: #f2f2f2;"></textarea>
+                    <textarea id="description_ajoutArticle" name="description_ajoutArticle" placeholder="Entrer une description" cols="45" rows="6" style="background-color: #f2f2f2;"></textarea>
                     <br>
                     <span id="descriptionErreur_ajoutArticle"></span>
                     <br>
-                    <input id="prix_ajoutArticle" name="prix_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Prix en euro (€)"><span id="prixErreur_ajoutArticle"></span>
+                    <input id="prix_ajoutArticle" name="prix_ajoutArticle" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Prix en euro (€)"><span id="prixErreur_ajoutArticle"></span>
                     <br>
-                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatité"><span id="quantiteErreur_ajoutArticle"></span>
+                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatité"><span id="quantiteErreur_ajoutArticle"></span>
                     <br>
                 </div>
 
@@ -44,11 +57,11 @@
                     <div class="img_inscription_general">
                         <span class="file_inscription_img">
                             <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
-                                Browse <input type="file" name="img_ajoutArticle_Admin" id="file_interrieur_inscription_img">
+                                Browse <input type="file" name="img_ajoutArticle" id="file_interrieur_inscription_img">
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
-                        <span id="imageErreur_ajoutArticle_Admin"></span>
+                        <span id="imageErreur_ajoutArticle"></span>
                     </div>
                 </div>
 
@@ -61,7 +74,7 @@
                 <div class="col-1"></div>
 
                 <div class="col-5">
-                    <select onchange="choixCategorie()" name="choixCategorie_ajoutArticle_Admin" id="choixCategorie_ajoutArticle" class="contenu_details_Ajoutarticle">
+                    <select onchange="choixCategorie()" name="choixCategorie_ajoutArticle" id="choixCategorie_ajoutArticle" class="contenu_details_Ajoutarticle">
                         <option value="choix_categorie_null">--Please choose an category--</option>
                         <option value="Maison">HOUSE</option>
                         <option value="Vetement">CLOTHES</option>
@@ -73,7 +86,7 @@
                 
                 <div class="col-5">
                     <div class="choixSousCategorie_ajoutArticle_maison">
-                        <select name="sousCategorie_ajoutArticle_maison_Admin" id="sousCategorie_ajoutArticle_maison" class="contenu_details_Ajoutarticle">
+                        <select name="sousCategorie_ajoutArticle_maison" id="sousCategorie_ajoutArticle_maison" class="contenu_details_Ajoutarticle">
                             <option value="sous_categorieMaison">--Please choose an category--</option>
                             <option value="sheet">SHEETS</option>
                             <option value="pillow">PILLOW</option>
@@ -81,7 +94,7 @@
                         </select>
                     </div>
                     <div class="choixSousCategorie_ajoutArticle_vetement">
-                        <select name="sousCategorie_ajoutArticle_vetement_Admin" id="sousCategorie_ajoutArticle_vetement" class="contenu_details_Ajoutarticle">
+                        <select name="sousCategorie_ajoutArticle_vetement" id="sousCategorie_ajoutArticle_vetement" class="contenu_details_Ajoutarticle">
                             <option value="sous_categorie_vetement">--Please choose an category--</option>
                             <option value="tshirt">T-SHIRT</option>
                             <option value="sweat_shirt">PULL</option>
@@ -103,12 +116,15 @@
                 <div class="col-1"></div>
 
                 <div class="col-5 detail_style mt-4">
-                    <input type="checkbox" name="achat_direct_ajoutArticle_Admin" id="achat_direct_ajoutArticle" value="Achat Direct">Achat Direct
-                    <input type="checkbox" name="achat_nego_ajoutArticle_Admin" id="achat_nego_ajoutArticle" class="inputAchat_ajoutArticle" value="Négociation">Négociation
-                    <input type="checkbox" name="achat_enchere_ajoutArticle_Admin" id="achat_enchere_ajoutArticle" class="inputAchat_ajoutArticle" value="Enchère">Enchère
+                    <input type="checkbox" name="achat_direct_ajoutArticle" id="achat_direct_ajoutArticle" value="Achat Direct">Achat Direct
+                    <input type="checkbox" name="achat_nego_ajoutArticle" id="achat_nego_ajoutArticle" class="inputAchat_ajoutArticle" value="Négociation">Négociation
+                    <input type="checkbox" name="achat_enchere_ajoutArticle" id="achat_enchere_ajoutArticle" class="inputAchat_ajoutArticle" value="Enchère">Enchère
                     <br>
                     <span id="typeAchatErreur_ajoutArticle"></span>
                     <br>
+                    <input type="datetime-local" class="contenu_details_Ajoutarticle" name="dateAjoutarticle" id="dateAjoutarticle">
+                    <br>
+                    <span id="dateErreur_ajoutArticle"></span>
                 </div>
 
                 <div class="col-5">
@@ -130,31 +146,28 @@
         
     if (isset($_POST['submit_ajoutArticle'])){
 
-        $nomProduit_ajoutArticle=$_POST['nomProduit_ajoutArticle_Admin'];
-        $description_ajoutArticle=$_POST['description_ajoutArticle_Admin'];
-        $prix_ajoutArticle=$_POST['prix_ajoutArticle_Admin'];
-        $quatite_ajoutArticle=$_POST['quatite_ajoutArticle_Admin'];
+        $nomProduit_ajoutArticle=$_POST['nomProduit_ajoutArticle'];
+        $description_ajoutArticle=$_POST['description_ajoutArticle'];
+        $prix_ajoutArticle=$_POST['prix_ajoutArticle'];
+        $quatite_ajoutArticle=$_POST['quatite_ajoutArticle'];
         $target_path="../../Image/";
-        $target_path=$target_path.basename($_FILES['img_ajoutArticle_Admin']['name']);
-        $choixCategorie_ajoutArticle=$_POST['choixCategorie_ajoutArticle_Admin'];
-        $sousCategorie_ajoutArticle_maison=$_POST['sousCategorie_ajoutArticle_maison_Admin'];
-        $sousCategorie_ajoutArticle_vetement=$_POST['sousCategorie_ajoutArticle_vetement_Admin'];
+        $target_path=$target_path.basename($_FILES['img_ajoutArticle']['name']);
+        $choixCategorie_ajoutArticle=$_POST['choixCategorie_ajoutArticle'];
+        $sousCategorie_ajoutArticle_maison=$_POST['sousCategorie_ajoutArticle_maison'];
+        $sousCategorie_ajoutArticle_vetement=$_POST['sousCategorie_ajoutArticle_vetement'];
         $val1='0';
         $val2='0';
         $val3='0';
+        $dateAjoutarticle = "2000-04-04T15:12";
+        
 
-        $queryCountSeller = mysqli_query($con, "select count(id_seller) as totalVendeurs from seller");
-        $row = mysqli_fetch_assoc($queryCountSeller);
-        $total = $row['totalVendeurs'];
-        $total = $total-1;
-        $result=rand(1,$total);
-        // $seller_email = $_SESSION['email'];
-        // $id="SELECT id_seller FROM seller where email='$seller_email'";
-        // $id_result=$con->query($id);
-        // $row = mysqli_fetch_array($id_result);
-        // $result = $row['id_seller'];
+        $seller_email = $_SESSION['email'];
+        $id="SELECT id_seller FROM seller where email='$seller_email'";
+        $id_result=$con->query($id);
+        $row = mysqli_fetch_array($id_result);
+        $result = $row['id_seller'];
 
-        if(move_uploaded_file($_FILES['img_ajoutArticle_Admin']['tmp_name'], $target_path)){
+        if(move_uploaded_file($_FILES['img_ajoutArticle']['tmp_name'], $target_path)){
             if($choixCategorie_ajoutArticle=='choix_categorie_null'){
                 
                 return false;
@@ -165,57 +178,60 @@
                     return false;
                 }elseif($sousCategorie_ajoutArticle_maison=='sheet'){
                     
-                    if(isset($_POST['achat_direct_ajoutArticle_Admin'])){
-                        $Achat1 = $_POST['achat_direct_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_direct_ajoutArticle'])){
+                        $Achat1 = $_POST['achat_direct_ajoutArticle'];
                         $val1='1';
                     }
-                    if(isset($_POST['achat_nego_ajoutArticle_Admin'])){
-                        $Achat2 = $_POST['achat_nego_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_nego_ajoutArticle'])){
+                        $Achat2 = $_POST['achat_nego_ajoutArticle'];
                         $val2='1';
                     }
-                    if(isset($_POST['achat_enchere_ajoutArticle_Admin'])){
-                        $Achat3 = $_POST['achat_enchere_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_enchere_ajoutArticle'])){
+                        $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='pillow'){
                     
-                    if(isset($_POST['achat_direct_ajoutArticle_Admin'])){
-                        $Achat1 = $_POST['achat_direct_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_direct_ajoutArticle'])){
+                        $Achat1 = $_POST['achat_direct_ajoutArticle'];
                         $val1='1';
                     }
-                    if(isset($_POST['achat_nego_ajoutArticle_Admin'])){
-                        $Achat2 = $_POST['achat_nego_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_nego_ajoutArticle'])){
+                        $Achat2 = $_POST['achat_nego_ajoutArticle'];
                         $val2='1';
                     }
-                    if(isset($_POST['achat_enchere_ajoutArticle_Admin'])){
-                        $Achat3 = $_POST['achat_enchere_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_enchere_ajoutArticle'])){
+                        $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='decoration'){
                     
-                    if(isset($_POST['achat_direct_ajoutArticle_Admin'])){
-                        $Achat1 = $_POST['achat_direct_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_direct_ajoutArticle'])){
+                        $Achat1 = $_POST['achat_direct_ajoutArticle'];
                         $val1='1';
                     }
-                    if(isset($_POST['achat_nego_ajoutArticle_Admin'])){
-                        $Achat2 = $_POST['achat_nego_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_nego_ajoutArticle'])){
+                        $Achat2 = $_POST['achat_nego_ajoutArticle'];
                         $val2='1';
                     }
-                    if(isset($_POST['achat_enchere_ajoutArticle_Admin'])){
-                        $Achat3 = $_POST['achat_enchere_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_enchere_ajoutArticle'])){
+                        $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }
 
@@ -226,57 +242,60 @@
                     return false;
                 }elseif($sousCategorie_ajoutArticle_vetement=='tshirt'){
                     
-                    if(isset($_POST['achat_direct_ajoutArticle_Admin'])){
-                        $Achat1 = $_POST['achat_direct_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_direct_ajoutArticle'])){
+                        $Achat1 = $_POST['achat_direct_ajoutArticle'];
                         $val1='1';
                     }
-                    if(isset($_POST['achat_nego_ajoutArticle_Admin'])){
-                        $Achat2 = $_POST['achat_nego_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_nego_ajoutArticle'])){
+                        $Achat2 = $_POST['achat_nego_ajoutArticle'];
                         $val2='1';
                     }
-                    if(isset($_POST['achat_enchere_ajoutArticle_Admin'])){
-                        $Achat3 = $_POST['achat_enchere_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_enchere_ajoutArticle'])){
+                        $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='sweat_shirt'){
                     
-                    if(isset($_POST['achat_direct_ajoutArticle_Admin'])){
-                        $Achat1 = $_POST['achat_direct_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_direct_ajoutArticle'])){
+                        $Achat1 = $_POST['achat_direct_ajoutArticle'];
                         $val1='1';
                     }
-                    if(isset($_POST['achat_nego_ajoutArticle_Admin'])){
-                        $Achat2 = $_POST['achat_nego_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_nego_ajoutArticle'])){
+                        $Achat2 = $_POST['achat_nego_ajoutArticle'];
                         $val2='1';
                     }
-                    if(isset($_POST['achat_enchere_ajoutArticle_Admin'])){
-                        $Achat3 = $_POST['achat_enchere_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_enchere_ajoutArticle'])){
+                        $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='shoes'){
                     
-                    if(isset($_POST['achat_direct_ajoutArticle_Admin'])){
-                        $Achat1 = $_POST['achat_direct_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_direct_ajoutArticle'])){
+                        $Achat1 = $_POST['achat_direct_ajoutArticle'];
                         $val1='1';
                     }
-                    if(isset($_POST['achat_nego_ajoutArticle_Admin'])){
-                        $Achat2 = $_POST['achat_nego_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_nego_ajoutArticle'])){
+                        $Achat2 = $_POST['achat_nego_ajoutArticle'];
                         $val2='1';
                     }
-                    if(isset($_POST['achat_enchere_ajoutArticle_Admin'])){
-                        $Achat3 = $_POST['achat_enchere_ajoutArticle_Admin'];
+                    if(isset($_POST['achat_enchere_ajoutArticle'])){
+                        $Achat3 = $_POST['achat_enchere_ajoutArticle'];
+                        $dateAjoutarticle = $_POST['dateAjoutarticle'];
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
 
                 }
             }
@@ -288,4 +307,3 @@
 <?php
     include("footer.php");
 ?>
-
