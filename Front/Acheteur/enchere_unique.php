@@ -46,12 +46,34 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                 <hr>
                 <script>
                                         //Methode 1 
-                    // const minutes=60;
-                    // const hours=60*minutes;
-                    // const days=24*hours;
+                    const minutes=60;
+                    const hours=60*minutes;
+                    const days=24*hours;
 
                     // function compteur(){
-                        
+                        // var dateBDD ='<?php echo $end_enchere ?>'
+
+                        // var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
+                        // var yearEndBid2 = parseInt(yearEndBid);
+
+                        // var monthEndBid = dateBDD[5]+dateBDD[6]; 
+                        // var monthEndBid2 =parseInt(monthEndBid);
+
+                        // var dayEndBid = dateBDD[8]+dateBDD[9]; 
+                        // var dayEndBid2 = parseInt(dayEndBid);
+
+                        // var hourEndBid = dateBDD[11]+dateBDD[12]; 
+                        // var hourEndBid2 = parseInt(hourEndBid);
+
+                        // var minuteEndBid = dateBDD[14]+dateBDD[15]; 
+                        // var minuteEndBid2 = parseInt(minuteEndBid);
+
+                        // var secondEndBid = dateBDD[17]+dateBDD[18]; 
+                        // var secondEndBid2 = parseInt(secondEndBid);
+                        // var millisecondEndBid = 0; 
+
+                        // var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
+                        // var launchDate = Date.parse(date2)/1000
 
                     //     const countdown = document.querySelector('#countdown');
                     //     const launchDate = Date.parse(countdown.dataset.time)/1000;
@@ -75,10 +97,31 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                     // }
                                         //Methode 2
                     // function decompteur(){
-                    //     var date=<?php echo $end_enchere ?>;
+                    //     var dateBDD ='<?php echo $end_enchere ?>'
+
+                    //     var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
+                    //     var yearEndBid2 = parseInt(yearEndBid);
+
+                    //     var monthEndBid = dateBDD[5]+dateBDD[6]; 
+                    //     var monthEndBid2 =parseInt(monthEndBid);
+
+                    //     var dayEndBid = dateBDD[8]+dateBDD[9]; 
+                    //     var dayEndBid2 = parseInt(dayEndBid);
+
+                    //     var hourEndBid = dateBDD[11]+dateBDD[12]; 
+                    //     var hourEndBid2 = parseInt(hourEndBid);
+
+                    //     var minuteEndBid = dateBDD[14]+dateBDD[15]; 
+                    //     var minuteEndBid2 = parseInt(minuteEndBid);
+
+                    //     var secondEndBid = dateBDD[17]+dateBDD[18]; 
+                    //     var secondEndBid2 = parseInt(secondEndBid);
+                    //     var millisecondEndBid = 0; 
+
+                    //     var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
                         
                         
-                    //     var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
+                    //     // var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
 
                     //     var jours=$('#jours');
                     //     var heures=$('#heures');
@@ -106,7 +149,7 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                     //     secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
 
                     //     setTimeout(decompteur,1000);
-                    // }
+                    }
                 </script>
                 <div class="enchere_compteur_total centrer row">
                     <div class="col-2 div_timeur_compteur ">
