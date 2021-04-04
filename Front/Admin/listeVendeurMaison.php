@@ -4,9 +4,9 @@
         include("../../Bdd/cnx.php");
         $seller_email = $_SESSION['email'];
 
-        $queryCountMaisonBrand = mysqli_query($con, "select count(brand) as total_brand from seller, item where seller.id_seller=item.id_seller and category='House'"); 
+        $queryCountMaisonBrand = mysqli_query($con, "select count(DISTINCT brand) as total_brand from seller, item where seller.id_seller=item.id_seller and category='House'"); 
 
-        $queryAllMaisonBrand = mysqli_query($con, "select brand, phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='House'");//
+        $queryAllMaisonBrand = mysqli_query($con, "select DISTINCT(brand), phone,profil_picture, email from seller, item where seller.id_seller=item.id_seller and category='House'");//
         
         if($row = mysqli_fetch_assoc($queryCountMaisonBrand)){
                     $total = $row['total_brand'];
@@ -53,7 +53,7 @@
                 ?>
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card" style="width: 18rem;">
-                            <img class="img_listeVendeur_logo card-img-top" src="../../Image/chaussure.png" alt="oreiller">
+                            <img class="img_listeVendeur_logo card-img-top" src="<?php echo $profil_picture_brand_Maison ?>" alt="oreiller">
             
                             <div class="card-body">
                                 <div class="row">

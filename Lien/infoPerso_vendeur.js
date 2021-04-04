@@ -59,7 +59,7 @@ function infoPerso_vendeur(event){
     }else if(regex_mixte.test(infoPerso_nomMarque_vendeur.value)==false){
         infoPerso_nomMarqueErreur_vendeur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
         verif_infoPerso_vendeur=false;
-    }else if(infoPerso_nomMarque_vendeur.value.length >= 15){
+    }else if(infoPerso_nomMarque_vendeur.value.length >= 25){
         infoPerso_nomMarqueErreur_vendeur.innerHTML = "Trop long";
         verif_infoPerso_vendeur=false;
     }else{
@@ -73,7 +73,7 @@ function infoPerso_vendeur(event){
     }else if(regex_chiffre.test(infoPerso_telephone_vendeur.value)==false){
         infoPerso_telephoneErreur_vendeur.innerHTML = "Les lettres ne sont pas pris en compte";
         verif_infoPerso_vendeur=false;
-    }else if(infoPerso_telephone_vendeur.value.length >= 10){
+    }else if(infoPerso_telephone_vendeur.value.length > 10){
         infoPerso_telephoneErreur_vendeur.innerHTML = "N'existe pas, trop long";
         verif_infoPerso_vendeur=false;
     }else{

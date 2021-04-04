@@ -3,7 +3,7 @@
         VETEMENTS/MAISON
 *********************************/
 .deco_marque_general{
-    margin-top: 100px!important;
+    margin-top: 100px;
     background-color: rgb(255, 255, 255,0.5);
     width: 400px;
     height: 90px;
@@ -11,7 +11,7 @@
 }
 .texte_deco_marque_general{
     font-size: 50px;
-    margin-left: 30px!important;
+    margin-left: 30px;
 }
             /********************************
                         IMAGE
@@ -23,7 +23,7 @@
                 float: left;
                 width: 80px;
                 height: 80px;
-                margin-left: 20px!important;
+                margin-left: 20px;
             }
             .img_separation{
                 width: 100%;
@@ -55,14 +55,14 @@
 *********************************/
 .maison_liste_total,
 .vetement_liste_total{
-    margin-top: 70px!important;
+    margin-top: 70px;
 }
             /********************************
                         IMAGE
             *********************************/
             .img_maison_presentation,
             .img_vetement_presentation{
-                margin-left: 20px!important;
+                margin-left: 20px;
             }
             .img_vetement_sale{
                 width: 250px;
@@ -101,12 +101,12 @@
         /********************************
                     MODAL
         *********************************/
-        .titre_modal_prix_nego{
+        /* .titre_modal_prix_nego{
             font-size: 25px;
             color: #14003f;
         }
         .modal-body{
-            text-align: center!important;
+            text-align: center;
         }
         .quantite_nego_maison,
         .quantite_nego_vetement{
@@ -126,7 +126,7 @@
             width: 200px;
             font-size: 9px;
             text-align: justify;
-        }
+        } */
 
 /********************************
             CARD PRODUCT
@@ -175,7 +175,8 @@
         background-color: white;
         border-radius: 30px;
         padding: 10px 0 10px 0;
-        margin-top: 40px!important;
+        margin-top: 40px;
+        margin-top: 50px!important;
     }
     .enchere_liste_details{
         border-left: solid 4px black;
@@ -191,20 +192,31 @@
         overflow: hidden;
         overflow-y: scroll;
         width: 100%;
-        height: 110px;
+        height: 200px;
     }
+            /********************************
+                    Affichage indé
+            *********************************/
+            .info_description_inde{
+                text-align: justify;
+                overflow: hidden;
+                overflow-y: scroll;
+                width: 100%;
+                height: 160px;
+            }
     .div_timeur_compteur{
-        margin-right: 30px!important;
+        margin-right: 30px;
     }
     .enchere_compteur_total{
-        margin-top: 50px!important;
+        margin-top: 50px;
     }
     .enchere_compteur{
-        width: 78px!important;
-        /* width: 82px!important; */
-        height: 80px!important;
+        width: 80px!important;
+        /* width: 82px; */
+        height: 80px;
         background-color: #ececec;
         margin-left: 2px;
+        text-align: center;
     }
 
             /********************************
@@ -212,7 +224,7 @@
             *********************************/
             .img_enchere{
                 width: 350px;
-                height: 350px;
+                height: 380px;
                 border-radius: 30px;
             }
             .img_enchere_separation_info{
@@ -232,12 +244,14 @@
     *********************************/
     .enchere_liste_payer{
         background-color: white;
-        margin-left: 20px!important;
+        margin-left: 20px;
         border-radius: 30px;
-        margin-top: 40px!important;
+        margin-top: 40px;
+        margin-top: 50px!important;
     }
     .enchere_payer_titre{
         font-size: 40px;
+        margin-top: 80px!important;
     }
     .enchere_propose_prix{
         margin-top: 40px;
@@ -251,14 +265,164 @@
         width: 200px;
         height: 50px;
         margin-top: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         border-radius: 10px;
         background-color: #3678ab;
         border: none;
         color: white;
         font-size: 20px;
+        text-decoration: none;
+    }
+    .btn_envoyer_propose_prix:hover{
+        color: white;
     }
     .enchere_nombre_participant{
         color: red;
         margin-bottom: 7px;
         margin-right: 15px;
     }
+
+/********************************
+        NEGOCIATION
+*********************************/
+.nego_item_unique{
+    width: 300px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 40%;
+}
+.titre_unique_prix_nego{
+    font-size: 25px;
+    color: #14003f;
+}
+.quantite_nego{
+    width: 70px;
+    border: none;
+    text-align: center;
+    border-bottom: solid 2px black;
+}
+.prix_nego{
+    width: 50px;
+    border: none;
+    text-align: center;
+    border-bottom: solid 2px black;
+}
+#negoItemErreur{
+    color: red;
+    font-size: 12px;
+}
+.condition_prix_nego{
+    width: 200px;
+    font-size: 9px;
+    text-align: justify;
+}
+.close_nego_item{
+    cursor: pointer;
+}
+.btn_submit_nego{
+    background-color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+.btn_submit_nego:hover{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.message_nego{
+    margin-top: 50px;
+}
+
+        /********************************
+                    MESSAGERIE
+        *********************************/
+        .messarie_detail_total{
+            width: 60%;
+            height: 700px;
+            margin-top: 100px;
+            margin-left: 20%;
+        }
+        .fond_discussion{
+            width: 100%;
+            height: 100%;
+        }
+        .info_msg_haut{
+            position: absolute;
+            top: 150px;
+            left : 381px;
+            width: 756px;
+            height: 340px;
+        }
+        .satut_nego_msg{
+            font-size: 50px;
+            transform: translate(40%,50%);
+            margin-top: 80px;
+        }
+        .info_msg_bas{
+            width: 760px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            bottom: 150px;
+            left: 380px;
+        }
+        .info_msg_bas2{
+            width: 750px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            bottom: 150px;
+            left: 385px;
+        }
+        .message_comptenu{
+            margin-left: 50px;
+        }
+        .quantite_nego_message{
+            margin-top: 10px;
+            background-color: white;
+            width: 200px;
+            border: none;
+            text-align: center;
+            font-size: 40px;
+            border-bottom: solid 2px black;
+        }
+        .prix_nego_message{
+            margin-top: 10px;
+            background-color: white;
+            width: 120px;
+            border: none;
+            text-align: center;
+            font-size: 40px;
+            border-bottom: solid 2px black;
+            margin-left: 50px;
+        }
+        .btn_submit_msg_acheteur{
+            color: white;
+            background-color: #14003f;
+            font-size: 40px;
+            width: 199px;
+            height: 105px;
+            border: solid 2px black;
+        }
+        .btn_msg_vendeur{
+            border: solid 5px black!important;
+            width: 250px;
+            height: 80px;
+            font-size: 40px!important;
+            font-weight: bold!important;
+            margin-top: 15px;
+            margin-left: 70px;
+        }
+        #btn_msg_vendeur_valider:hover{
+            border: solid 5px rgb(19, 230, 19)!important;
+            color: rgb(19, 230, 19)!important;
+        }
+        #btn_msg_vendeur_refuser:hover{
+            border: solid 5px red!important;
+            color: red!important;
+        }

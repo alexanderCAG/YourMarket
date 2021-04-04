@@ -47,6 +47,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $is_negotiated = $rowAllItemSeller['is_negotiated'];
             $is_buying = $rowAllItemSeller['is_buying'];
             $DescriptionItemSeller = $rowAllItemSeller['description'];
+            $photo = $rowAllItemSeller['photo'];
             
             // $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
 ?>
@@ -57,7 +58,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-8 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="<?php echo $photo ?>" alt="chaussure"><br>
                     </div>
                     
                     <div class="col-7 listeArticle_liste_details position-relative">
@@ -84,9 +85,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                         </div>
                         <div class="listeArticle_info_marque detail_style text-uppercase"><?php echo $brandItemSeller ?></div>
                         <br>
-                        <div class="listeArticle_info_description"><?php echo utf8_encode($DescriptionItemSeller)
-                        
-                        ?></div>
+                        <div class="listeArticle_info_description"><?php echo utf8_encode($DescriptionItemSeller)?></div>
                         <br>
                         <div class="row border-bottom mb-3 pb-2">
                             <div class="col-md-2"><small class="text-uppercase ">Price</small></div>
@@ -98,9 +97,13 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 <h4 class="texte_style text-uppercase"><?php echo $PriceItemSeller ?> €</h4>
                             </div>
                             <div class="col-md-3">
-                                <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
-                                </div>
+                                <form action="../../Bdd/infoPerso_recup.php" method="POST">
+                                    <div class="input-group mb-3">
+                                        <input type="number" style="width:50px!important;" name="qttItemSeller" class="form-control w-100" min="0" value="<?php echo $qttItemSeller ?>">
+                                        <button type="submit" name="submit_btn_change_qte_admin" class="input-group-text btn bg_blue1 rounded-0" style="border-top-right-radius: 5px!important;border-bottom-right-radius: 5px!important;"><i class="fas fa-pen text-light"></i></button>
+                                        <input type="hidden" name="idItem" value="<?php echo $idItem ?>">
+                                    </div>
+                                </form>
                             </div>
                             <div class="col-md-6">
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>

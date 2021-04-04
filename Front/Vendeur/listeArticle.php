@@ -10,6 +10,7 @@
 
         //liste de tous les produits du vendeur connecté 
         $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')");// Tableau liste
+        $Seller = mysqli_query($con, "select background from seller where email='$seller_email' or brand='$seller_email'");
 
 ?>
 
@@ -20,7 +21,16 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
 
-<div class="genale_listeArticle position-relative">
+<?php if($row2 = mysqli_fetch_assoc($Seller)){
+    $bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php 
+    }
+}?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_listeArticle text-uppercase">
             Liste des articles 
@@ -46,6 +56,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $is_negotiated = $rowAllItemSeller['is_negotiated'];
             $is_buying = $rowAllItemSeller['is_buying'];
             $DescriptionItemSeller = $rowAllItemSeller['description'];
+            $photoItemSeller = $rowAllItemSeller['photo'];
             
             // $queryDeleteItem = mysqli_query($con, "delete id_item from item WHERE id_item='$idItem'");
 ?>
@@ -56,7 +67,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-8 listeArticle_liste_un_par_un">
                 <div class="row">
                     <div class="col-5">
-                        <img class="img_listeArticle" src="../../Image/chaussure.png" alt="chaussure"><br>
+                        <img class="img_listeArticle" src="<?php echo $photoItemSeller ?>" alt="chaussure"><br>
                     </div>
                     
                     <div class="col-7 listeArticle_liste_details position-relative">
@@ -97,9 +108,13 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 <h4 class="texte_style text-uppercase"><?php echo $PriceItemSeller ?> €</h4>
                             </div>
                             <div class="col-md-3">
-                                <div class="input-group mb-3">
-                                    <input type="number" class="form-control w-100" value="<?php echo $qttItemSeller ?>">
-                                </div>
+                                <form action="../../Bdd/infoPerso_recup.php" method="POST">
+                                    <div class="input-group mb-3">
+                                        <input type="number" style="width:50px!important;" name="qttItemSeller" class="form-control w-100" min="0" value="<?php echo $qttItemSeller ?>">
+                                        <button type="submit" name="submit_btn_change_qte" class="input-group-text btn bg_blue1 rounded-0" style="border-top-right-radius: 5px!important;border-bottom-right-radius: 5px!important;"><i class="fas fa-pen text-light"></i></button>
+                                        <input type="hidden" name="idItem" value="<?php echo $idItem ?>">
+                                    </div>
+                                </form>
                             </div>
                             <div class="col-md-6">
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>

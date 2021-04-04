@@ -1,11 +1,24 @@
 <?php
     $title="Création d'Article";
     require "head.php";
+
+    include("../../Bdd/cnx.php");
+    $email_user = $_SESSION['email'];
+    $Seller = mysqli_query($con, "select background from seller where email='$email_user' or brand='$email_user'");
+
 ?>
 
 
-<div class="genale_newArticle position-relative">
-    <div class="texte_style position-absolute top-50 start-50 translate-middle">
+<?php if($row2 = mysqli_fetch_assoc($Seller)){
+    $bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php 
+    }
+}?>    <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_newArticle text-uppercase">
             Ajouter un article
         </p>

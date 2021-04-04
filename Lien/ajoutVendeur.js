@@ -44,7 +44,7 @@ function ajoutvendeur(event){
     }else if(regex_mixte.test(nomMarque_Ajoutvendeur.value)==false){
         nomMarqueErreur_Ajoutvendeur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
         verif_Ajoutvendeur=false;
-    }else if(nomMarque_Ajoutvendeur.value.length >= 15){
+    }else if(nomMarque_Ajoutvendeur.value.length >= 25){
         nomMarqueErreur_Ajoutvendeur.innerHTML = "Trop long";
         verif_Ajoutvendeur=false;
     }else{
@@ -58,7 +58,7 @@ function ajoutvendeur(event){
     }else if(regex_chiffre.test(telephone_Ajoutvendeur.value)==false){
         telephoneErreur_Ajoutvendeur.innerHTML = "Les lettres ne sont pas pris en compte";
         verif_Ajoutvendeur=false;
-    }else if(telephone_Ajoutvendeur.value.length >= 10){
+    }else if(telephone_Ajoutvendeur.value.length > 10){
         telephoneErreur_Ajoutvendeur.innerHTML = "N'existe pas, trop long";
         verif_Ajoutvendeur=false;
     }else{

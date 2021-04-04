@@ -106,6 +106,9 @@
 <script src="../../Lien/article.js"></script>
 <script src="../../Lien/panier.js"></script>
 <script src="../../Lien/image.js"></script>
+<script src="../../Lien/multiCarouselAccueil.js"></script>
+<script src="../../Lien/paiement.js"></script>
+
 
 </body>
 

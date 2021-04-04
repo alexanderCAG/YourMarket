@@ -102,7 +102,7 @@ function infoPerso_admin(event){
     }else if(regex_chiffre.test(infoPerso_telephone_admin.value)==false){
         infoPerso_telephoneErreur_admin.innerHTML = "Les lettres ne sont pas pris en compte";
         verif_infoPerso_admin=false;
-    }else if(infoPerso_telephone_admin.value.length >= 10){
+    }else if(infoPerso_telephone_admin.value.length > 10){
         infoPerso_telephoneErreur_admin.innerHTML = "N'existe pas, trop long";
         verif_infoPerso_admin=false;
     }else{
@@ -238,7 +238,7 @@ function infoPerso_admin(event){
     }else if(regex_chiffre.test(infoPerso_codepostal_admin.value)==false){
         infoPerso_codepostalErreur_admin.innerHTML = "Les lettres ne sont pas pris en compte";
         verif_infoPerso_admin=false;
-    }else if(infoPerso_codepostal_admin.value.length >= 5){
+    }else if(infoPerso_codepostal_admin.value.length > 5){
         infoPerso_codepostalErreur_admin.innerHTML = "N'existe pas, trop long";
         verif_infoPerso_admin=false;
     }else{

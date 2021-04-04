@@ -5,14 +5,17 @@
         
         // $queryCountItems = mysqli_query($con, "select count(id_item) as total from item where category='Vetement' and subcategory='sweat_shirt'"); 
         $dernierVetement = mysqli_query($con, 'select id_item, brand,price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Clothes" order by id_item desc limit 1');
-       
+
         $avantDernierVetement = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="Clothes" order by id_item desc limit 1,1');
 
         $dernierMaison = mysqli_query($con, 'select id_item, brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="House" order by id_item desc limit 1');
-       
+
         $avantDernierMaison = mysqli_query($con, 'select id_item,brand, price,name,category,subcategory,quantity,description,photo,is_bidding,is_negotiated,is_buying FROM item, seller WHERE item.id_seller=seller.id_seller and category="House" order by id_item desc limit 1,1');
 
         $queryAllItems = mysqli_query($con, "select name, price , brand,subcategory,category, quantity, description,photo, is_negotiated, is_bidding from item,seller where seller.id_seller=item.id_seller order by id_item desc limit 10 ");
+
+        $queryAllSeller = mysqli_query($con, "select brand, profil_picture from seller");
+        $queryCountSeller  = mysqli_query($con, "select count(id_seller) as totalSeller from seller");
 ?>
 
 
@@ -37,7 +40,7 @@
                         <h5 class="text_carousel texte_style">ACHAT DIRECT</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
-                            <p style="font-weight: bold;">SHOPPING</p>
+                            <a type="button" href="tous-nos-produits.php" style="font-weight: bold;margin-bottom:20px!important;text-decoration:none;color:black;">SHOPPING</a>
                         </button>
                     </div>
                 </div>
@@ -51,7 +54,7 @@
                         <h5 class="text_carousel">ENCHERE</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
-                            <p style="font-weight: bold;">SHOPPING</p>
+                            <a type="button" href="enchere.php" style="font-weight: bold;margin-bottom:20px!important;text-decoration:none;color:black;">SHOPPING</a>
                         </button>
                     </div>
                 </div>
@@ -85,21 +88,23 @@
     <div class="col-md-1 col-lg-1"></div>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
+    <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
+                    $nameItem = $rowdernierVetement['name'];
+                    $priceItem = $rowdernierVetement['price'];
+                    $categoryItem = $rowdernierVetement['category'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $subcategoryItem = $rowdernierVetement['subcategory'];
+                    $photoItem = $rowdernierVetement['photo'];
+        ?>
         <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../../Image/t-shirt_homme.png"
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photoItem ?>"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
             <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
         </div>
         
         <div class="information_presentation_premier">
-        <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
-                    $nameItem = $rowdernierVetement['name'];
-                    $priceItem = $rowdernierVetement['price'];
-                    $categoryItem = $rowdernierVetement['category'];
-                    $brandItem = $rowdernierVetement['brand'];
-                    $subcategoryItem = $rowdernierVetement['subcategory'];
-        ?>
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -110,20 +115,22 @@
     <div class="col-md-1 col-lg-1"></div>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" src="../../Image/t-shirt_femme.png" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
-        </div>
-        
-        <div class="information_presentation_deuxieme">
-        <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
+    <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
                     $nameItem = $rowavantDernierVetement['name'];
                     $priceItem = $rowavantDernierVetement['price'];
                     $brandItem = $rowdernierVetement['brand'];
                     $categoryItem = $rowavantDernierVetement['category'];
                     $subcategoryItem = $rowavantDernierVetement['subcategory'];
+                    $photoItem = $rowavantDernierVetement['photo'];
         ?>
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="t-shirt_femme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
+            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
+        </div>
+        
+        <div class="information_presentation_deuxieme">
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -133,23 +140,25 @@
 </div>
 
 <div class="row mt-4 presentation_maison">
+<?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
+                    $nameItem = $rowdernierMaison['name'];
+                    $priceItem = $rowdernierMaison['price'];
+                    $categoryItem = $rowdernierMaison['category'];
+                    $brandItem = $rowdernierVetement['brand'];
+                    $subcategoryItem = $rowdernierMaison['subcategory'];
+                    $photoItem = $rowdernierMaison['photo'];
+        ?>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
         <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="../../Image/t-shirt_homme.png"
+            <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photoItem ?>"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
             <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
         </div>
         
         <div class="information_presentation_premier">
-        <?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
-                    $nameItem = $rowdernierMaison['name'];
-                    $priceItem = $rowdernierMaison['price'];
-                    $categoryItem = $rowdernierMaison['category'];
-                    $brandItem = $rowdernierVetement['brand'];
-                    $subcategoryItem = $rowdernierMaison['subcategory'];
-        ?>
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -160,20 +169,22 @@
     <div class="col-md-1 col-lg-1"></div>
 
     <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" src="../../Image/t-shirt_femme.png" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
-        </div>
-        
-        <div class="information_presentation_deuxieme">
-        <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
+    <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
                     $nameItem = $rowavantDernierMaison['name'];
                     $priceItem = $rowavantDernierMaison['price'];
                     $categoryItem = $rowavantDernierMaison['category'];
                     $brandItem = $rowavantDernierMaison['brand'];
                     $subcategoryItem = $rowavantDernierMaison['subcategory'];
+                    $photoItem = $rowavantDernierMaison['photo'];
         ?>
+        <div class="position-relative">
+            <img class="image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="t-shirt_femme">
+            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
+            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
+        </div>
+        
+        <div class="information_presentation_deuxieme">
+        
             <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
             <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
             <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
@@ -202,10 +213,11 @@
                 $nameItems = $rowAllItems['name'];
                 $prixItems = $rowAllItems['price'];
                 $brandItems = $rowAllItems['brand'];
+                $photoItems = $rowAllItems['photo'];
     ?>
             <div class="col">
                 <div class="p-3">
-                    <p lass='text-center'><img class="image_ronde image_produit" src="../../Image/chaussure.png" alt="chaussure">
+                    <p lass='text-center'><img class="image_ronde image_produit" src="<?php echo $photoItems ?>" alt="chaussure">
                     <small><?php echo "<p class='text-center'>".$nameItems." - ".$prixItems."€ </p>"  ?></small></p>
                 </div>
             </div>
@@ -218,8 +230,39 @@
         
     </div>
 </div>
+<div class="">
+	<div class="row  w-100 mt-5">
+		<div class="MultiCarousel p-0 p-0" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+            <div class="MultiCarousel-inner">
+            <?php
+            if($row = mysqli_fetch_assoc($queryCountSeller)){
+                $total = $row['totalSeller'];
+                for ($i=0; $i<=$total;$i++){
+                    if($rowAllSeller = mysqli_fetch_assoc($queryAllSeller)){
+                        $nameSeller = $rowAllSeller['brand'];
+                        $profil_pictureSeller = $rowAllSeller['profil_picture'];
+                    ?>
+                <div class="item">
+                    <div class="h-100">
+                    &nbsp;
+                        <img src="<?php echo $profil_pictureSeller ?>" class="rounded-circle float-start w-100 h-75  text-center" alt="<?php echo $nameSeller ?>">
+                        <p class="text-center lead w-75">&nbsp;</p> 
+                    </div>
+                    <p class="text-center lead w-75"><?php echo $nameSeller ?></p> 
+                </div>
+                    <?php
+                    }
+                }
+            }
+            ?>
+            </div>
+            <button class="btn btn-primary leftLst"><i class="fas fa-angle-left"></i></button>
+            <button class="btn btn-primary rightLst"><i class="fas fa-angle-right"></i></button>
+        </div>
+	</div>
+</div>
 
-<!-- <div class="information_connection pt-4 position-relative">
+<div class="information_connection pt-4 position-relative">
     <h2 class="centrer white texte_style">SE CONNECTER</h2><br><br>
     <p class="white info_connection_texte position-absolute top-50 start-50 translate-middle">Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Necessitatibus, dolores magni! A labore incidunt magnam doloribus,
@@ -233,20 +276,20 @@
             <div class="col shadow-sm">
                 <a href="#" style="text-decoration: none; color: black;">
                     <div class="info_connection_class texte_style centrer p-3 border">
-                        VENDEUR ?
+                    <a type="button" href="connexion.php" style="font-weight: bold;text-decoration:none;color:black;">VENDEUR ?</a>
                     </div>
                 </a>
             </div>
             <div class="col shadow-sm">
                 <a href="#" style="text-decoration: none; color: black;">
                     <div class="info_connection_class texte_style centrer p-3 border">
-                        ACHETEUR ?
+                        <a type="button" href="connexion.php" style="font-weight: bold;text-decoration:none;color:black;">ACHETEUR ?</a>
                     </div>
                 </a>
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <?php
     include("footer.php");

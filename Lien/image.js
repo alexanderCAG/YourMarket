@@ -70,3 +70,44 @@ function choix_image_vendeur(){
     //         window.requestAnimationFrame(compteur);
     //     });
     // }
+
+// document.getElementById('btn_submit_nego').addEventListener('click',envoieInfoNego)
+// function envoieInfoNego(event){
+//         // input
+//     let quantite_nego= document.getElementById('quantite_nego');
+//     let prix_nego= document.getElementById('prix_nego');
+
+//         // span
+//     let negoItemErreur= document.getElementById('negoItemErreur');
+
+//         // reset span
+//     negoItemErreur.innerHTML="";
+
+//     var verif_nego=true;
+
+//     // quantite verif
+//     if(quantite_nego.value.trim()==""){
+//         negoItemErreur.innerHTML = "Compléter tous les champs";
+//         verif_nego=false;
+//     }else if(regex_chiffre.test(quantite_nego.value)==false){
+//         negoItemErreur.innerHTML = "Les lettres ne sont pas pris en compte";
+//         verif_nego=false;
+//     }else{
+//         negoItemErreur.innerHTML = "";
+//     }
+
+//     // prix verif
+//     if(prix_nego.value.trim()==""){
+//         negoItemErreur.innerHTML = "Compléter tous les champs";
+//         verif_nego=false;
+//     }else if(regex_chiffre.test(prix_nego.value)==false){
+//         negoItemErreur.innerHTML = "Les lettres ne sont pas pris en compte";
+//         verif_nego=false;
+//     }else{
+//         negoItemErreur.innerHTML = "";
+//     }
+
+//     if(verif_nego == false){
+//         event.preventDefault();
+//     }
+// }
