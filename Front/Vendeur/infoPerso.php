@@ -15,10 +15,21 @@
         $email_vendeur = $rowinfoPerso_vendeur['email'];
         $passworde_vendeur = $rowinfoPerso_vendeur['passworde'];
 
+        $Seller = mysqli_query($con, "select background from seller where email='$email_user' or brand='$email_user'");
+
 ?>
 
 
-<div class="genale_page_infoPerso position-relative">
+<?php if($row2 = mysqli_fetch_assoc($Seller)){
+    $bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php 
+    }
+}?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
         <p class="titre_general_infoPerso text-uppercase centrer">
             Informations personnelles

@@ -10,7 +10,8 @@
         $queryOffer = mysqli_query($con, "SELECT id_offer,id_item, id_seller, id_buyer, price_offered, quantity, nb_nego, status FROM offer WHERE id_seller='$id_seller'");
         $queryCountItems = mysqli_query($con, "select count(id_offer) as total from offer where id_seller='$id_seller'");
         $queryItem = mysqli_query($con, "SELECT name,price,description,photo,category,subcategory FROM item,offer WHERE item.id_item=offer.id_item AND item.id_seller='$id_seller' ORDER BY photo DESC");
-
+        
+        $Seller = mysqli_query($con, "select background from seller where email='$email_user' or brand='$email_user'");
 ?>
 
 
@@ -19,7 +20,16 @@
 if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
-<div class="genale_page_enchere position-relative">
+<?php if($row2 = mysqli_fetch_assoc($Seller)){
+    $bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php 
+    }
+}?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_enchere text-uppercase">
             Messagerie

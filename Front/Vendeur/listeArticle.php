@@ -10,6 +10,7 @@
 
         //liste de tous les produits du vendeur connecté 
         $queryAllItemSeller = mysqli_query($con, "select id_item, email , name, price , brand, quantity, description,photo, is_negotiated, is_buying, is_bidding from item,seller where seller.id_seller=item.id_seller and (seller.email='$seller_email' or seller.brand='$seller_email')");// Tableau liste
+        $Seller = mysqli_query($con, "select background from seller where email='$seller_email' or brand='$seller_email'");
 
 ?>
 
@@ -20,7 +21,16 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             $total = $row['total'];
 ?>
 
-<div class="genale_listeArticle position-relative">
+<?php if($row2 = mysqli_fetch_assoc($Seller)){
+    $bg = $row2['background'];
+    if($bg != null){?>
+        <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;">
+    <?php 
+    }else{?>
+        <div class="genale_listeArticle position-relative" >
+<?php 
+    }
+}?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_listeArticle text-uppercase">
             Liste des articles 
