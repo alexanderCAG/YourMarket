@@ -28,13 +28,6 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                 $query = mysqli_query($con, "select count(DISTINCT id_buyer) as total from bid where id_item='$iditem'");
                 if($rowCount = mysqli_fetch_assoc($query)){
                     $totalCandidat = $rowCount['total'];
-                // if($rowEnchere = mysqli_fetch_assoc($queryEnchere)){
-                //     $id_bid = $rowEnchere['id_bid'];
-                //     $id_item = $rowEnchere['id_item'];
-                //     $id_buyer = $rowEnchere['id_buyer'];
-                //     $id_seller = $rowEnchere['id_seller'];
-                //     $state = $rowEnchere['state'];
-                //     $price_user = $rowEnchere['price_user'];
                             ?>
 
 <div class="enchere_liste_total row">
@@ -63,9 +56,6 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                         const countdown = document.querySelector('#countdown');
                         const launchDate = Date.parse(countdown.dataset.time)/1000;
                         const difference = launchDate - Date.now() / 1000;
-                        // date2 = date2 /1000;
-                        // alert(date2);
-                        // const difference = date2 - Date.now() / 1000;
 
                         const diff = {
                             days: Math.floor(difference/days),

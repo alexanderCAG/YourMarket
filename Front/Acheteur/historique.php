@@ -72,7 +72,7 @@ if($row = mysqli_fetch_assoc($queryCount)){
                 </div>
             </div>
             <div class="col-7 ">
-                <button id="rate_article" onclick="myRate()">Give a rate :</button>
+                <button id="rate_article" onclick="myRate()">Give a rate :
                 <form action="../../Bdd/panier.php" method="POST">
                     <button type="submit" name="note_1" class="fas fa-star" value="1"></button>
                     <button type="submit" name="note_2" class="fas fa-star" value="2"></button>
@@ -81,6 +81,7 @@ if($row = mysqli_fetch_assoc($queryCount)){
                     <button type="submit" name="note_5" class="fas fa-star" value="5"></button>
                     <input type="hidden" name="idItem" value="<?php echo $id_item ?>">
                 </form>
+                </button>
             </div>
         </div>
     
