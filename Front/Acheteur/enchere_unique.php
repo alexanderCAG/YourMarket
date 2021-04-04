@@ -6,7 +6,6 @@
     $iditem=$_GET['iditem'];
 
     $queryItem = mysqli_query($con, "SELECT price,name,category,subcategory,quantity,description,photo,end_enchere FROM item WHERE id_item='$iditem'");
-    // $queryEnchere = mysqli_query($con, "SELECT id_bid, id_item, id_buyer, id_seller, state, price_user FROM bid WHERE id_item='$iditem'");
 ?>
 
 <?php
