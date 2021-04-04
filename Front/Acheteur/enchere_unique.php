@@ -25,7 +25,7 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                 if($row = mysqli_fetch_assoc($queryBuyer)){
                     $id_buyer = $row['id_buyer'];
                 
-                $query = mysqli_query($con, "select count(DISTINCT id_buyer) as total from bid where id_buyer='$id_buyer'");
+                $query = mysqli_query($con, "select count(DISTINCT id_buyer) as total from bid where id_item='$iditem'");
                 if($rowCount = mysqli_fetch_assoc($query)){
                     $totalCandidat = $rowCount['total'];
                 // if($rowEnchere = mysqli_fetch_assoc($queryEnchere)){
