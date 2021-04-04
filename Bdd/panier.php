@@ -141,6 +141,22 @@ if(isset($_POST['btn_envoyer_enchere_prix'])){
         
     }
 }
+
+if (isset($_POST['submit_btn_change_qte_panier'])){
+    $qtePanier=$_POST['qtePanier'];
+    $idItem=$_POST['idItem'];
+
+    $id="SELECT id_buyer FROM buyer WHERE email='$email_user'";
+
+    $id_result=$con->query($id);
+    $row = mysqli_fetch_array($id_result);
+    $result = $row['id_buyer'];
+
+    $queryQuantiteItem = mysqli_query($con, "UPDATE basket SET quantity='$qtePanier' WHERE id_item='$idItem' and id_buyer='$result'");
+
+
+    include("../Front/confirm_infoPerso_acheteur.php");
+}
     
 
 ?>
