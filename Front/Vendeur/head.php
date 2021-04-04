@@ -55,7 +55,7 @@
                         <a class="nav-link" href="messagerie.php">Messagerie</a>
                     </li>
                     <li class="nav-item last_nav_title nav_regul">
-                        <a class="nav-link" href="#">Statistique</a>
+                        <a class="nav-link" href="statistique.php">Statistique</a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                         <div class="btn-group">
