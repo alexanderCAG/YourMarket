@@ -36,13 +36,24 @@
         }
     }
 
-    if (isset($_GET['iditempaniner'])){
-        $delete=$_GET['iditempaniner'];
+    if (isset($_GET['iditemoffer'])){
+        $delete=$_GET['iditemoffer'];
 
         $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
         if($row = mysqli_fetch_assoc($queryBuyer)){
             $id_buyer = $row['id_buyer'];
             $queryDeleteItem = mysqli_query($con, "delete from offer WHERE id_item='$delete' and id_buyer='$id_buyer'");
+            echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/messagerie.php' </script>";
+        }
+    }
+
+    if (isset($_GET['iditembid'])){
+        $delete=$_GET['iditembid'];
+
+        $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
+        if($row = mysqli_fetch_assoc($queryBuyer)){
+            $id_buyer = $row['id_buyer'];
+            $queryDeleteItem = mysqli_query($con, "delete from bid WHERE id_item='$delete' and id_buyer='$id_buyer'");
             echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/messagerie.php' </script>";
         }
     }

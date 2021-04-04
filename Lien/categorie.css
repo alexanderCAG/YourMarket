@@ -341,6 +341,65 @@
         /********************************
                     MESSAGERIE
         *********************************/
+        .redirection_messagerie{
+            /* background-color: red; */
+            height: 50px;
+            margin-bottom: 300px;
+            margin-top: 80px;
+        }
+        .btn_redirection_messagerie{
+            width: 400px;
+            height: 100px;
+            color: white;
+            text-decoration: none;
+            font-size: 5rem;
+            padding-bottom: 120px;
+            border-radius: 30px;
+        }
+        .btn_redirection_messagerie:hover{
+            width: 400px;
+            height: 100px;
+            color: white;
+            text-decoration: none;
+            font-size: 5rem;
+            padding-bottom: 120px;
+            border-radius: 30px;
+        }
+        .info_msg_bid{
+            font-size: 40px;
+        }
+        #win_bid{
+            -webkit-animation: color-change 1s infinite;
+            -moz-animation: color-change 1s infinite;
+            -o-animation: color-change 1s infinite;
+            -ms-animation: color-change 1s infinite;
+            animation: color-change 1s infinite;
+        }
+                @-webkit-keyframes color-change {
+                    0% { color: #fdae54; }
+                    50% { color: #fd7ca3; }
+                    100% { color: #fdae54; }
+                }
+                @-moz-keyframes color-change {
+                    0% { color: #fdae54; }
+                    50% { color: #fd7ca3; }
+                    100% { color: #fdae54; }
+                }
+                @-ms-keyframes color-change {
+                    0% { color: #fdae54; }
+                    50% { color: #fd7ca3; }
+                    100% { color: #fdae54; }
+                }
+                @-o-keyframes color-change {
+                    0% { color: #fdae54; }
+                    50% { color: #fd7ca3; }
+                    100% { color: #fdae54; }
+                }
+                @keyframes color-change {
+                    0% { color: #fdae54; }
+                    50% { color: #fd7ca3; }
+                    100% { color: #fdae54; }
+                }
         .messarie_detail_total{
             width: 60%;
             height: 700px;
