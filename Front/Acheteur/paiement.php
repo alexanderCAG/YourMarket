@@ -47,9 +47,6 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
         <p class="titre_general_panier text-uppercase">
            paiement 
         </p>
-        <p class="info_general_panier centrer detail_style">
-
-        </p>
     </div>
     
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
