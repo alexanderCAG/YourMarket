@@ -14,8 +14,8 @@ jQuery(document).ready(function(){
     /********************************
             ENCHERE-DECOMPTE
     *********************************/
-    // decompteur();
-    compteur();
+    decompteur();
+    // compteur();
     
     /********************************
             Accueil-Texte-Panier
