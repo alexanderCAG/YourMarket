@@ -71,6 +71,17 @@ if($row = mysqli_fetch_assoc($queryCount)){
                     <input type="number" class="form-control w-100" value="<?php echo $quantityCadre ?>" style="pointer-events: none; ">
                 </div>
             </div>
+            <div class="col-7 ">
+                <button id="rate_article" onclick="myRate()">Give a rate :</button>
+                <form action="../../Bdd/panier.php" method="POST">
+                    <button type="submit" name="note_1" class="fas fa-star" value="1"></button>
+                    <button type="submit" name="note_2" class="fas fa-star" value="2"></button>
+                    <button type="submit" name="note_3" class="fas fa-star" value="3"></button>
+                    <button type="submit" name="note_4" class="fas fa-star" value="4"></button>
+                    <button type="submit" name="note_5" class="fas fa-star" value="5"></button>
+                    <input type="hidden" name="idItem" value="<?php echo $id_item ?>">
+                </form>
+            </div>
         </div>
     
         <div class="col-1"></div>

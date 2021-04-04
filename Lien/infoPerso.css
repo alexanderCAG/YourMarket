@@ -511,11 +511,29 @@
             border-bottom-left-radius: 10px;
             background: #a2de96;
         }
+        .toast_deco_gauche_wrong{
+            width: 5px;
+            height: 80px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background: red;
+        }
         .toast_icon {
             margin-left: 30px;
             width: 35px;
             height: 35px;
             background: #79d70f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .toast_icon_wrong {
+            margin-left: 30px;
+            width: 35px;
+            height: 35px;
+            background: red;
             border-radius: 50%;
             display: flex;
             justify-content: center;

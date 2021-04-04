@@ -5,6 +5,7 @@ jQuery(document).ready(function(){
     $("#sousCategorie_ajoutArticle_maison").hide();
     $("#sousCategorie_ajoutArticle_vetement").hide();
     $("#dateAjoutarticle").hide();
+    $(".fa-star").hide();
 });
 
 function choixCategorie(){

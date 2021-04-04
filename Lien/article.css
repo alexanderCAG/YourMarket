@@ -378,3 +378,21 @@
     background: white;
     cursor: pointer;
 }
+
+/********************************
+        NOTE ARTICLE
+*********************************/
+.checked {
+    color: orange;
+}
+#rate_article{
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: black;
+}
+.fa-star{
+    background-color: white;
+    border: none;
+    width: 18px!important;
+}

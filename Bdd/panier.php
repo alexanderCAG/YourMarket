@@ -42,7 +42,7 @@ if(isset($_POST['btn_submit_paiement'])){
         $name_cardNumber=$_POST['name_cardNumber'];
         $name_ExpiryDate=$_POST['name_ExpiryDate'];
         $name_SecurityCode=$_POST['name_SecurityCode'];
-        $queryCardUser = mysqli_query($con, "SELECT buyer.email, `carde`, `code`,`num_card`,`expiration`,`nom` FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  (email='$email_user' or lastname='$email_user')");
+        $queryCardUser = mysqli_query($con, "SELECT buyer.email, carde, code,num_card,expiration,nom FROM payment, buyer where payment.id_buyer=buyer.id_buyer and  (email='$email_user' or lastname='$email_user')");
 
         if($row5 = mysqli_fetch_assoc($queryCardUser)){
             $name_nameCard2 = $row5['nom'];
@@ -55,14 +55,14 @@ if(isset($_POST['btn_submit_paiement'])){
             else{
                 echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiementAccepte.php' </script>";
 
-                $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(`id_item`)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
+                $queryTotalProductsInBasket= mysqli_query($con, "SELECT Count(DISTINCT(id_item)) as totalProduitBasket, email FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
 
 
                 if($row_product_in_basket = mysqli_fetch_assoc($queryTotalProductsInBasket)){
                     $total = $row_product_in_basket['totalProduitBasket'];
                     for ($i=0; $i<$total;$i++){
                         // Dans le for
-                        $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,`id_item`,`id_seller`,`name`,`price`,`quantity`,`description`,`photo`,`category`,`subcategory` FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
+                        $querySelectBasket = mysqli_query($con, "SELECT basket.id_buyer AS idB,id_item,id_seller,name,price,quantity,description,photo,category,subcategory FROM basket, buyer WHERE basket.id_buyer=buyer.id_buyer and (email='$email_user' or lastname='$email_user')");
 
                         if($row7 = mysqli_fetch_assoc($querySelectBasket)){
                             $id_buyer_row7 = $row7['idB'];
@@ -82,7 +82,7 @@ if(isset($_POST['btn_submit_paiement'])){
                                 $id_buyer = $row['id_buyer'];
 
                                 for ($i=0; $i<$total;$i++){
-                                    $queryInsertHistory = mysqli_query($con, "INSERT INTO `history` (`id_history`, `id_buyer`, `id_item`, `id_seller`, `name`, `price`, `quantity`, `description`, `photo`, `category`, `subcategory`) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
+                                    $queryInsertHistory = mysqli_query($con, "INSERT INTO history (id_history, id_buyer, id_item, id_seller, name, price, quantity, description, photo, category, subcategory) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
 
                                     $queryDeleteHistory = mysqli_query($con, "DELETE FROM basket where id_buyer='$id_buyer'");
                                 }
@@ -158,5 +158,184 @@ if (isset($_POST['submit_btn_change_qte_panier'])){
     include("../Front/confirm_infoPerso_acheteur.php");
 }
     
+
+if (isset($_POST['note_1'])){
+    $idItem=$_POST['idItem'];
+    $note_1=$_POST['note_1'];
+
+    $id="SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')";
+
+    $id_result=$con->query($id);
+    $row = mysqli_fetch_array($id_result);
+    $result = $row['id_buyer'];
+
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+
+    $rate_historique=$con->query($rate_verif);
+    $row2 = mysqli_fetch_array($rate_historique);
+    $rate = $row2['rate'];
+
+    if($rate==0){
+        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem'";
+        $rate_total=$con->query($rate_tot);
+        $row3 = mysqli_fetch_array($rate_total);
+        $rateTotal = $row3['tot_rate'];
+        $grade = $row3['grade'];
+        $rateTotal=$rateTotal+1;
+        $gardeTot=($grade + $note_1)/$rateTotal;
+        
+
+
+        $rate_item= mysqli_query($con,"UPDATE item SET grade='$gardeTot',tot_rate='$rateTotal' WHERE id_item='$idItem'");
+        $rate_change= mysqli_query($con,"UPDATE history SET rate='1' WHERE id_item='$idItem' AND id_buyer='$result'");
+        include("../Front/confirm_infoPerso_acheteur.php");
+    }else{
+        include("../Front/deny_infoPerso_acheteur.php");
+    }
+
+}
+
+if (isset($_POST['note_2'])){
+    $idItem=$_POST['idItem'];
+    $note_2=$_POST['note_2'];
+
+    $id="SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')";
+
+    $id_result=$con->query($id);
+    $row = mysqli_fetch_array($id_result);
+    $result = $row['id_buyer'];
+
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+
+    $rate_historique=$con->query($rate_verif);
+    $row2 = mysqli_fetch_array($rate_historique);
+    $rate = $row2['rate'];
+
+    if($rate==0){
+        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem'";
+        $rate_total=$con->query($rate_tot);
+        $row3 = mysqli_fetch_array($rate_total);
+        $rateTotal = $row3['tot_rate'];
+        $grade = $row3['grade'];
+        $rateTotal=$rateTotal+1;
+        $gardeTot=($grade + $note_2)/$rateTotal;
+        
+
+
+        $rate_item= mysqli_query($con,"UPDATE item SET grade='$gardeTot',tot_rate='$rateTotal' WHERE id_item='$idItem'");
+        $rate_change= mysqli_query($con,"UPDATE history SET rate='1' WHERE id_item='$idItem' AND id_buyer='$result'");
+        include("../Front/confirm_infoPerso_acheteur.php");
+    }else{
+        include("../Front/deny_infoPerso_acheteur.php");
+    }
+
+}
+
+if (isset($_POST['note_3'])){
+    $idItem=$_POST['idItem'];
+    $note_3=$_POST['note_3'];
+
+    $id="SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')";
+
+    $id_result=$con->query($id);
+    $row = mysqli_fetch_array($id_result);
+    $result = $row['id_buyer'];
+
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+
+    $rate_historique=$con->query($rate_verif);
+    $row2 = mysqli_fetch_array($rate_historique);
+    $rate = $row2['rate'];
+
+    if($rate==0){
+        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem'";
+        $rate_total=$con->query($rate_tot);
+        $row3 = mysqli_fetch_array($rate_total);
+        $rateTotal = $row3['tot_rate'];
+        $grade = $row3['grade'];
+        $rateTotal=$rateTotal+1;
+        $gardeTot=($grade + $note_3)/$rateTotal;
+        
+
+        $rate_item= mysqli_query($con,"UPDATE item SET grade='$gardeTot',tot_rate='$rateTotal' WHERE id_item='$idItem'");
+        $rate_change= mysqli_query($con,"UPDATE history SET rate='1' WHERE id_item='$idItem' AND id_buyer='$result'");
+        include("../Front/confirm_infoPerso_acheteur.php");
+    }else{
+        include("../Front/deny_infoPerso_acheteur.php");
+    }
+
+}
+
+if (isset($_POST['note_4'])){
+    $idItem=$_POST['idItem'];
+    $note_4=$_POST['note_4'];
+
+    $id="SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')";
+
+    $id_result=$con->query($id);
+    $row = mysqli_fetch_array($id_result);
+    $result = $row['id_buyer'];
+
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+
+    $rate_historique=$con->query($rate_verif);
+    $row2 = mysqli_fetch_array($rate_historique);
+    $rate = $row2['rate'];
+
+    if($rate==0){
+        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem'";
+        $rate_total=$con->query($rate_tot);
+        $row3 = mysqli_fetch_array($rate_total);
+        $rateTotal = $row3['tot_rate'];
+        $grade = $row3['grade'];
+        $rateTotal=$rateTotal+1;
+        $gardeTot=($grade + $note_4)/$rateTotal;
+        
+
+
+        $rate_item= mysqli_query($con,"UPDATE item SET grade='$gardeTot',tot_rate='$rateTotal' WHERE id_item='$idItem'");
+        $rate_change= mysqli_query($con,"UPDATE history SET rate='1' WHERE id_item='$idItem' AND id_buyer='$result'");
+        include("../Front/confirm_infoPerso_acheteur.php");
+    }else{
+        include("../Front/deny_infoPerso_acheteur.php");
+    }
+
+}
+
+if (isset($_POST['note_5'])){
+    $idItem=$_POST['idItem'];
+    $note_5=$_POST['note_5'];
+
+    $id="SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')";
+
+    $id_result=$con->query($id);
+    $row = mysqli_fetch_array($id_result);
+    $result = $row['id_buyer'];
+
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+
+    $rate_historique=$con->query($rate_verif);
+    $row2 = mysqli_fetch_array($rate_historique);
+    $rate = $row2['rate'];
+
+    if($rate==0){
+        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem'";
+        $rate_total=$con->query($rate_tot);
+        $row3 = mysqli_fetch_array($rate_total);
+        $rateTotal = $row3['tot_rate'];
+        $grade = $row3['grade'];
+        $rateTotal=$rateTotal+1;
+        $gardeTot=($grade + $note_5)/$rateTotal;
+        
+
+
+        $rate_item= mysqli_query($con,"UPDATE item SET grade='$gardeTot',tot_rate='$rateTotal' WHERE id_item='$idItem'");
+        $rate_change= mysqli_query($con,"UPDATE history SET rate='1' WHERE id_item='$idItem' AND id_buyer='$result'");
+        include("../Front/confirm_infoPerso_acheteur.php");
+    }else{
+        include("../Front/deny_infoPerso_acheteur.php");
+    }
+
+}
 
 ?>
