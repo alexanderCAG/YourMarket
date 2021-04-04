@@ -66,9 +66,10 @@
                                 <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
                                 <li><span class="dropdown-item" ><a href="infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><span class="dropdown-item" ><a href="../../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
-                                <hr class="dropdown-divider">
                                 <li><span class="dropdown-item" ><a href="parametre.php" class="text-decoration-none"> <i class="fas fa-cog"></i> Parametre </i></a> </span></li>
+                                <hr class="dropdown-divider">
+                                <li><span class="dropdown-item" ><a href="../../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
+
                             </ul>
                         </div>
                     </li>
