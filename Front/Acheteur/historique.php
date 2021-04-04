@@ -2,7 +2,6 @@
     $title="Accueil";
     require "head.php";
     include("../../Bdd/cnx.php");
-    session_start();
     $email_user = $_SESSION['email'];
     
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
