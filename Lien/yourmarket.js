@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
     /********************************
             ENCHERE-DECOMPTE
     *********************************/
-    // decompteur();
+    decompteur();
     // compteur();
     
     /********************************

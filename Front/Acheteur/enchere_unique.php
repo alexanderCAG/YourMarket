@@ -75,8 +75,8 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                         // var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
                         // var launchDate = Date.parse(date2)/1000
 
-                    //     const countdown = document.querySelector('#countdown');
-                    //     const launchDate = Date.parse(countdown.dataset.time)/1000;
+                        // const countdown = document.querySelector('#countdown');
+                        // const launchDate = Date.parse(countdown.dataset.time)/1000;
                     //     const difference = launchDate - Date.now() / 1000;
 
                     //     const diff = {
@@ -96,59 +96,59 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                     //     });
                     // }
                                         //Methode 2
-                    // function decompteur(){
-                    //     var dateBDD ='<?php echo $end_enchere ?>'
+                    function decompteur(){
+                        var dateBDD ='<?php echo $end_enchere ?>'
 
-                    //     var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
-                    //     var yearEndBid2 = parseInt(yearEndBid);
+                        var yearEndBid = dateBDD[0]+dateBDD[1]+dateBDD[2]+dateBDD[3]; 
+                        var yearEndBid2 = parseInt(yearEndBid);
 
-                    //     var monthEndBid = dateBDD[5]+dateBDD[6]; 
-                    //     var monthEndBid2 =parseInt(monthEndBid);
+                        var monthEndBid = dateBDD[5]+dateBDD[6]; 
+                        var monthEndBid2 =parseInt(monthEndBid);
 
-                    //     var dayEndBid = dateBDD[8]+dateBDD[9]; 
-                    //     var dayEndBid2 = parseInt(dayEndBid);
+                        var dayEndBid = dateBDD[8]+dateBDD[9]; 
+                        var dayEndBid2 = parseInt(dayEndBid-30);
 
-                    //     var hourEndBid = dateBDD[11]+dateBDD[12]; 
-                    //     var hourEndBid2 = parseInt(hourEndBid);
+                        var hourEndBid = dateBDD[11]+dateBDD[12]; 
+                        var hourEndBid2 = parseInt(hourEndBid);
 
-                    //     var minuteEndBid = dateBDD[14]+dateBDD[15]; 
-                    //     var minuteEndBid2 = parseInt(minuteEndBid);
+                        var minuteEndBid = dateBDD[14]+dateBDD[15]; 
+                        var minuteEndBid2 = parseInt(minuteEndBid);
 
-                    //     var secondEndBid = dateBDD[17]+dateBDD[18]; 
-                    //     var secondEndBid2 = parseInt(secondEndBid);
-                    //     var millisecondEndBid = 0; 
+                        var secondEndBid = dateBDD[17]+dateBDD[18]; 
+                        var secondEndBid2 = parseInt(secondEndBid);
+                        var millisecondEndBid = 0; 
 
-                    //     var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
+                        var date2 = new Date(yearEndBid2, monthEndBid2, dayEndBid2, hourEndBid2, minuteEndBid2, secondEndBid2, millisecondEndBid);
                         
                         
-                    //     // var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
+                        // var date2 = new Date(2022, 11, 24, 10, 33, 30, 0);//year, month, day, hour, minute, second, and millisecond
 
-                    //     var jours=$('#jours');
-                    //     var heures=$('#heures');
-                    //     var minutes=$('#minutes');
-                    //     var secondes=$('#secondes');
+                        var jours=$('#jours');
+                        var heures=$('#heures');
+                        var minutes=$('#minutes');
+                        var secondes=$('#secondes');
 
-                    //     // var heure1 = date1.getTime()/1000;
-                    //     var heure2 = date2.getTime()/1000;
-                    //     var heure1 = new Date()/1000;
-                    //     var s=heure2-heure1;
+                        // var heure1 = date1.getTime()/1000;
+                        var heure2 = date2.getTime()/1000;
+                        var heure1 = new Date()/1000;
+                        var s=heure2-heure1;
 
-                    //     var d=Math.floor(s/86400);
-                    //     jours.html('<strong><font size="6">'+d+'</font></strong> Jour'+(d>1?'s':''));
-                    //     s-=d*86400;
+                        var d=Math.floor(s/86400);
+                        jours.html('<strong><font size="6">'+d+'</font></strong><br> Jour'+(d>1?'s':''));
+                        s-=d*86400;
 
-                    //     var h=Math.floor(s/3600);
-                    //     heures.html('<strong><font size="6">'+h+'</font></strong> Heure'+(h>1?'s':''));
-                    //     s-=h*3600;
+                        var h=Math.floor(s/3600);
+                        heures.html('<strong><font size="6">'+h+'</font></strong><br> Heure'+(h>1?'s':''));
+                        s-=h*3600;
 
-                    //     var m=Math.floor(s/60);
-                    //     minutes.html('<strong><font size="6">'+m+'</font></strong> Minute'+(m>1?'s':''));
-                    //     s-=m*60;
+                        var m=Math.floor(s/60);
+                        minutes.html('<strong><font size="6">'+m+'</font></strong><br> Minute'+(m>1?'s':''));
+                        s-=m*60;
 
-                    //     var s=Math.floor(s);
-                    //     secondes.html('<strong><font size="6">'+s+'</font></strong> Seconde'+(s>1?'s':''));
+                        var s=Math.floor(s);
+                        secondes.html('<strong><font size="6">'+s+'</font></strong><br> Seconde'+(s>1?'s':''));
 
-                    //     setTimeout(decompteur,1000);
+                        setTimeout(decompteur,1000);
                     }
                 </script>
                 <div class="enchere_compteur_total centrer row">
@@ -157,7 +157,7 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                     </div>
                     <div class="col-9">
                         <div class="row" id="countdown" data-time="<?php echo $end_enchere ?>">
-                            <div class="enchere_compteur col-3" >
+                            <!-- <div class="enchere_compteur col-3" >
                                 <font size=6><strong id="jours"></strong></font>
                                 <em>Jours</em>
                             </div>
@@ -173,7 +173,11 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                                 <font size=6><strong id="secondes"></strong></font>
                                 <em>Secondes</em>
                             </div>
-                            <div class="col-3"></div>
+                            <div class="col-3"></div> -->
+                            <div class="enchere_compteur col-3" id="jours"></div>
+                            <div class="enchere_compteur col-3" id="heures"></div>
+                            <div class="enchere_compteur col-3" id="minutes"></div>
+                            <div class="enchere_compteur col-3" id="secondes"></div>
                         </div>
                         
                     </div>
