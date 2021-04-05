@@ -39,11 +39,11 @@
                 <div class="col-5">
                     <h3 class="ajout_article_titre text-uppercase detail_style">General Information</h3>
                     
-                    <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle" class="contenu_details_Ajoutarticle" placeholder="Nom du produit">
+                    <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle" class="contenu_details_Ajoutarticle" placeholder="Product name">
                     <br>
                     <span id="nomProduitErreur_ajoutArticle"></span>
                     <br>
-                    <textarea id="description_ajoutArticle" name="description_ajoutArticle" placeholder="Entrer une description" cols="45" rows="6" style="background-color: #f2f2f2;"></textarea>
+                    <textarea id="description_ajoutArticle" name="description_ajoutArticle" placeholder="Enter description" cols="45" rows="6" style="background-color: #f2f2f2;"></textarea>
                     <br>
                     <span id="descriptionErreur_ajoutArticle"></span>
                     <br>

@@ -18,8 +18,8 @@
         </div>
 
         <div class="message4">
-            <p id="msh_p">J'aimerais acheté <?= $row['quantity']; ?> de votre produit(s)</p>
-            <h4 id="msg_h4">Je vous les propose pour <?= $row['price_offered']; ?> €</h4>
+            <p id="msh_p">I would like to buy <?= $row['quantity']; ?> of your product(s)</p>
+            <h4 id="msg_h4">I suggest them to you for <?= $row['price_offered']; ?> €</h4>
         </div>
     
 <?php
