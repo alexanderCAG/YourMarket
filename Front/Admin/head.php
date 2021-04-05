@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- Define title -->
     <title>
         <?php if(isset($title)): ?>
             <?= $title; ?>
@@ -33,6 +34,7 @@
 
 <?php session_start(); ?>
 
+<!-- Navbar for the Admin -->
 <nav class="navbar navbar_menu_principal fixed-top navbar-expand-lg shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-0" id="img_logo_navbar"

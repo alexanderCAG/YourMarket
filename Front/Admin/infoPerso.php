@@ -32,7 +32,7 @@
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-<!-- Admin -->
+<!-- Admin personnal information -->
 <div class="contenu_general_infoPerso_admin row">
     <div class="col-2"></div>
 
