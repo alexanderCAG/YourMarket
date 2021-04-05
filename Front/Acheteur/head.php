@@ -87,6 +87,9 @@ if($row2 = mysqli_fetch_assoc($queryBuyer)){
                         <a class="nav-link" href="enchere.php">Bid</a>
                     </li>
                     <li class="nav-item nav_regul">
+                        <a class="nav-link" href="promotion.php">Promotion</a>
+                    </li>
+                    <li class="nav-item nav_regul">
                         <a class="nav-link" href="messagerie.php">Messaging</a>
                     </li>
                     <li class="nav-item">

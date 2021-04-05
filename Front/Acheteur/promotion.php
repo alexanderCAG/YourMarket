@@ -89,26 +89,30 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >-&nbsp;<small><?php echo $sold ?> %</small></a>
+                           
+                                <div class="card-badge rounded-circle p-3" style="background-color:#E74C3C">-&nbsp;<small><?php echo $sold ?> %</small></div>
 
-                            <?php  if($subcategoryItems == 'sheet' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
+
+                                <?php  if($subcategoryItems == 'sheet' ){?>
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Sheets</small></a>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'pillow' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Pillows &nbsp;</div>
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Pillows</small></a>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'decoration' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Decoration &nbsp;</div>
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Decoration</small></a>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'tshirt' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> T-SHIRT &nbsp;</div>
-                                <?php }?>
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >T-shirt</small></a>
+                                    <?php }?>
                                 <?php  if($subcategoryItems == 'sweat_shirt' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> SWEAT-SHIRT &nbsp;</div>
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Sweat-Shirt</small></a>
+                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i>  &nbsp;</div>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'shoes' ){?>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> SHOES &nbsp;</div>
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Shoes</small></a>
                                 <?php }?>
+
                             </div>
                             <div class="class_separation2 w-100"></div>
                             </div>
