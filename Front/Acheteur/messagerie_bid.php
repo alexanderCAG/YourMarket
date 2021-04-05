@@ -32,6 +32,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x" id="here"></div>
 </div>
 
+<!-- navbar of the messaging -->
 <div class="vetement_details" id="">
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
@@ -61,6 +62,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     $subcategory = $row2['subcategory'];
             
 ?>
+<!-- row to see my bid -->
 <div class="row" style="margin-top:120px">
 
     <div class="col-2"></div>

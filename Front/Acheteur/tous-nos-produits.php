@@ -64,6 +64,7 @@
                                 <hr>
                                 <a href="item_unique.php?iditem=<?php echo $id_item ?>" type="button" class="btn btn-dark" style="margin-left:70px"><i class="fas fa-plus"></i>&nbsp;<small>View more </small></a>
 
+                                <!-- select the subcategory -->
                             <?php  if($subcategoryItems == 'sheet' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
                                 <?php }?>

@@ -58,6 +58,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-1"></div>
 
             <div class="col-10 listeArticle_liste_un_par_un">
+                <!-- row to see my card -->
                 <div class="row">
                     <div class="col-5">
                         <img class="img_listeArticle" src="<?php echo $photo ?>" alt="chaussure"><br>
@@ -120,6 +121,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     $totalBasket = $row4['total_basket'];
 
     ?>
+    <!-- my navbar on the right -->
     <div class="panier_navbar_div">
         <div class="navbar_panier detail_style text-uppercase">
             <form action="" method="POST">

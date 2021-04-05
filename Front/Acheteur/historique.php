@@ -47,6 +47,7 @@ if($row = mysqli_fetch_assoc($queryCount)){
             $subcategoryItems = $rowMyItems['subcategory'];
             
 ?>
+<!-- row to see the history -->
 <div class="row" style="margin-top:120px">
 
     <div class="col-2"></div>
@@ -72,6 +73,7 @@ if($row = mysqli_fetch_assoc($queryCount)){
                 </div>
             </div>
             <div class="col-7 ">
+                <!-- give a rate of my product -->
                 <button id="rate_article" onclick="myRate()">Give a rate :
                 <form action="../../Bdd/panier.php" method="POST">
                     <button type="submit" name="note_1" class="fas fa-star" value="1"></button>

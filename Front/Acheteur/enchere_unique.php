@@ -45,11 +45,12 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                 <br>
                 <div class="info_description_inde"><?php echo $descriptionCadre ?></div>
                 <hr>
+                <!-- script to have end of the bid [Day - Hour - Minute - Seconde] -->
                 <script>
                                         //Methode 1 
-                    const minutes=60;
-                    const hours=60*minutes;
-                    const days=24*hours;
+                    // const minutes=60;
+                    // const hours=60*minutes;
+                    // const days=24*hours;
 
                     // function compteur(){
                         // var dateBDD ='<?php echo $end_enchere ?>'
@@ -175,6 +176,7 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                                 <em>Secondes</em>
                             </div>
                             <div class="col-3"></div> -->
+                            <!-- my end of bid -->
                             <div class="enchere_compteur col-3" id="jours"></div>
                             <div class="enchere_compteur col-3" id="heures"></div>
                             <div class="enchere_compteur col-3" id="minutes"></div>

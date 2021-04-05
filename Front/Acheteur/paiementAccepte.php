@@ -55,6 +55,8 @@
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated  bg_blue1" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+
+                    <!-- Animation of the payment -->
                     <fieldset>
                         <div class="form-card">
                             <div class="row h-75" id="paiementAccepte">
