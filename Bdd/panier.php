@@ -28,9 +28,7 @@ if(isset($_GET['iditem'])){
             echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
         }
     }else{
-        echo 'erreur';
-        echo $email_user;
-        echo $iditem;
+        include("../Front/erreur.php");
     }
 }
 if(isset($_POST['btn_submit_paiement'])){

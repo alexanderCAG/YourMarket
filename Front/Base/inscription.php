@@ -297,6 +297,7 @@
 			$result = $row['id_buyer'];
         }else{
             echo "Error: " . $sql1 . "<br>" . $con->error;
+            include("../Front/confirm_infoPerso_acheteur.php");
         }
 
 		$sql2 = "INSERT INTO payment (id_buyer,carde,code,num_card,expiration,nom,money) 
@@ -306,6 +307,7 @@
             echo("");
         }else{
             echo "Error: " . $sql2 . "<br>" . $con->error;
+            include("../Front/confirm_infoPerso_acheteur.php");
         }
     }
     if(isset($_POST['submit_inscription_vendeur'])){
@@ -326,7 +328,8 @@
 			if($con->query($sql)==true){
 				echo"<br><br>";
 			}else{
-				echo "Error:".$sql.$con->error;
+                echo "Error:".$sql.$con->error;
+                include("../Front/confirm_infoPerso_acheteur.php");
 			}
 		}
     }

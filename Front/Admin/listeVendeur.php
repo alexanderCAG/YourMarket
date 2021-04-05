@@ -178,7 +178,8 @@
 			if($con->query($sql)==true){
 				echo"<br><br>";
 			}else{
-				echo "Error:".$sql.$con->error;
+                echo "Error:".$sql.$con->error;
+                include("../Front/confirm_infoPerso_acheteur.php");
 			}
 		}
     }
