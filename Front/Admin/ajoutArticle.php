@@ -155,6 +155,14 @@
         $total = $row['totalVendeurs'];
         $total = $total-1;
         $result=rand(1,$total);
+
+        $sold_choix = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,  10 ,25, 45, 60);
+        $aleatoire = rand('0', count($sold_choix)-1);
+        $sold = $sold_choix[$aleatoire];
+
+        $grade = 0;
+        $tot_rate = 0;
+
         // $seller_email = $_SESSION['email'];
         // $id="SELECT id_seller FROM seller where email='$seller_email'";
         // $id_result=$con->query($id);
@@ -186,8 +194,8 @@
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','sheet','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='pillow'){
                     
@@ -205,8 +213,8 @@
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','pillow','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }elseif($sousCategorie_ajoutArticle_maison=='decoration'){
                     
@@ -224,8 +232,8 @@
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','House','decoration','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }
 
@@ -250,8 +258,8 @@
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='sweat_shirt'){
                     
@@ -269,8 +277,8 @@
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='shoes'){
                     
@@ -288,8 +296,8 @@
                         $val3='1';
                     }
 
-                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle')");
+                    $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','shoes','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }
             }
