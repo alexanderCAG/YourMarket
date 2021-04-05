@@ -16,9 +16,7 @@
                 <p class="titre_general_listeVendeur text-uppercase">
                     List of sellers
                 </p>
-                <!-- <p class="info_general_listeVendeur centrer detail_style">
-                    They have <?= echo $total ; ?> sellers
-                </p> -->
+                
             </div>
             
             <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
