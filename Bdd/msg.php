@@ -3,7 +3,7 @@
 <!-- <?php
         
     include("cnx.php");
-
+    session_start();
     $idOffre = $_SESSION['id_offer'];
     if(isset($_POST['submit_msg_acheteur'])){
         $quantite_nego_message = htmlspecialchars($_POST['quantite_nego_message']);
