@@ -54,7 +54,7 @@
                         <h5 class="text_carousel">ENCHERE</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
-                            <a type="button" href="enchere.php" style="font-weight: bold;margin-bottom:20px!important;text-decoration:none;color:black;">SHOPPING</a>
+                            <a type="button" href="enchere_accueil.php" style="font-weight: bold;margin-bottom:20px!important;text-decoration:none;color:black;">SHOPPING</a>
                         </button>
                     </div>
                 </div>
