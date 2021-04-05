@@ -6,7 +6,7 @@ session_start();
 $email_user = $_SESSION['email'];
 
 
-
+// insert item into the basket
 if(isset($_GET['iditem'])){
     $iditem=$_GET['iditem'];
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
@@ -31,6 +31,8 @@ if(isset($_GET['iditem'])){
         include("../Front/erreur.php");
     }
 }
+
+// verifie the payment
 if(isset($_POST['btn_submit_paiement'])){
 
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
@@ -64,6 +66,7 @@ if(isset($_POST['btn_submit_paiement'])){
                     if($row_product_TotalBasket = mysqli_fetch_assoc($queryTotalBasket)){
                         $total_basket = $row_product_TotalBasket['total_basket'];
 
+                        // verifie buyer sold
                         if($name_money>=$total_basket){
                             echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/paiementAccepte.php' </script>";
                             
@@ -114,6 +117,8 @@ if(isset($_POST['btn_submit_paiement'])){
        
     }
 }      
+
+// buyer propose offer for seller
 if(isset($_POST['btn_submit_nego'])){
 
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
@@ -136,6 +141,7 @@ if(isset($_POST['btn_submit_nego'])){
     }
 }
 
+// buyer propose bid for seller
 if(isset($_POST['btn_envoyer_enchere_prix'])){
 
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
@@ -157,6 +163,7 @@ if(isset($_POST['btn_envoyer_enchere_prix'])){
     }
 }
 
+// change the qte of one item in basket
 if (isset($_POST['submit_btn_change_qte_panier'])){
     $qtePanier=$_POST['qtePanier'];
     $idItem=$_POST['idItem'];
@@ -173,7 +180,7 @@ if (isset($_POST['submit_btn_change_qte_panier'])){
     include("../Front/confirm_infoPerso_acheteur.php");
 }
     
-
+// grade 1
 if (isset($_POST['note_1'])){
     $idItem=$_POST['idItem'];
     $note_1=$_POST['note_1'];
@@ -210,6 +217,7 @@ if (isset($_POST['note_1'])){
 
 }
 
+// grade 2
 if (isset($_POST['note_2'])){
     $idItem=$_POST['idItem'];
     $note_2=$_POST['note_2'];
@@ -246,6 +254,7 @@ if (isset($_POST['note_2'])){
 
 }
 
+// grade 3
 if (isset($_POST['note_3'])){
     $idItem=$_POST['idItem'];
     $note_3=$_POST['note_3'];
@@ -281,6 +290,7 @@ if (isset($_POST['note_3'])){
 
 }
 
+// grade 4
 if (isset($_POST['note_4'])){
     $idItem=$_POST['idItem'];
     $note_4=$_POST['note_4'];
@@ -317,6 +327,7 @@ if (isset($_POST['note_4'])){
 
 }
 
+// grade 5
 if (isset($_POST['note_5'])){
     $idItem=$_POST['idItem'];
     $note_5=$_POST['note_5'];

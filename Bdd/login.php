@@ -12,7 +12,7 @@
 		$queryacheteur = mysqli_query($con, "select * from buyer where passworde='$password' and (email='$usermail' or lastname='$usermail')");
 
 
-
+// verifie the different connection
     if (mysqli_num_rows($queryadmin) != 0){
         $_SESSION['email']=$usermail;
 		// $_SESSION['lastname']=$usermail;

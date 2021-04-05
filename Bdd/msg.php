@@ -21,6 +21,8 @@
         
 ?> -->
 
+
+<!-- loading function for intant message -->
 <?php
 
     include("cnx.php");

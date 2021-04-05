@@ -1,4 +1,4 @@
-
+<!-- loading function for intant message -->
 
 <?php
 

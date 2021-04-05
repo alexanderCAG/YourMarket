@@ -3,7 +3,8 @@
     include("cnx.php");
 	session_start();
 	$email_user = $_SESSION['email'];
-    
+	
+	// change payment information
     if (isset($_POST['submit_valider_infoPaiement_acheteur'])){
 	    $infoPerso_carte_bancaire=$_POST['infoPerso_carte_bancaire'];
 	    $infoPerso_numeroCarte_acheteur=$_POST['infoPerso_numeroCarte_acheteur'];
@@ -20,7 +21,8 @@
 		$queryinfoPerso_acheteur1 = mysqli_query($con, "UPDATE payment SET carde='$infoPerso_carte_bancaire',code='$infoPerso_codeSecret_acheteur',num_card='$infoPerso_numeroCarte_acheteur',expiration='$infoPerso_dateExpiration_acheteur',nom='$infoPerso_nomCarte_acheteur' WHERE  id_buyer='$result'");
 		
 		include("../Front/confirm_infoPerso_acheteur.php");
-    }
+	}
+	// change buyer information
 	if (isset($_POST['submit_valider_infoPersoL_acheteur'])){
         $infoPerso_nom_acheteur=$_POST['infoPerso_nom_acheteur'];
 	    $infoPerso_prenom_acheteur=$_POST['infoPerso_prenom_acheteur'];
@@ -37,7 +39,9 @@
 		$queryinfoPerso_acheteur2 = mysqli_query($con, "UPDATE buyer SET lastname='$infoPerso_nom_acheteur',firstname='$infoPerso_prenom_acheteur',phone='$infoPerso_telephone_acheteur',email='$infoPerso_mail_acheteur',passworde='$infoPerso_mdp_acheteur',adress1='$infoPerso_adresse1_acheteur',adress2='$infoPerso_adresse2_acheteur',city='$infoPerso_ville_acheteur',zip_code='$infoPerso_codepostal_acheteur', country='$infoPerso_pays_acheteur' WHERE (email='$email_user' or lastname='$email_user')");
 
 		include("../Front/confirm_infoPerso_acheteur.php");
-    }
+	}
+	
+	// change seller information
 	if (isset($_POST['submit_valider_infoPerso_vendeur'])){
 		$infoPerso_nomMarque_vendeur=$_POST['infoPerso_nomMarque_vendeur'];
 	    $infoPerso_telephone_vendeur=$_POST['infoPerso_telephone_vendeur'];
@@ -52,7 +56,9 @@
 		
 
 		include("../Front/confirm_infoPerso_vendeur.php");
-    }
+	}
+	
+	// change admin information
 	if (isset($_POST['submit_valider_infoPerso_admin'])){
 		$infoPerso_nom_admin=$_POST['infoPerso_nom_admin'];
 	    $infoPerso_prenom_admin=$_POST['infoPerso_prenom_admin'];
@@ -70,7 +76,9 @@
 
 
 		include("../Front/confirm_infoPerso_admin.php");
-    }
+	}
+	
+	// change qte item information for seller
 	if (isset($_POST['submit_btn_change_qte'])){
 		$qttItemSeller=$_POST['qttItemSeller'];
 	    $idItem=$_POST['idItem'];
@@ -85,7 +93,9 @@
 
 
 		include("../Front/confirm_infoPerso_vendeur.php");
-    }
+	}
+	
+	// change qte item information for seller by admin
 	if (isset($_POST['submit_btn_change_qte_admin'])){
 		$qttItemSeller=$_POST['qttItemSeller'];
 	    $idItem=$_POST['idItem'];
@@ -100,7 +110,9 @@
 
 
 		include("../Front/confirm_infoPerso_admin.php");
-    }
+	}
+	
+	// change background information for seller
 	if (isset($_POST['submit_valider_background'])){
 		$background_seller=$_POST['background_seller'];
         $queryBackground_seller = mysqli_query($con, "UPDATE seller SET background='$background_seller' WHERE email='$email_user'");

@@ -4,6 +4,7 @@
     session_start();
     $email_user = $_SESSION['email'];
 
+    // delete item by seller
     if (isset($_GET['id'])){
         $delete=$_GET['id'];
 
@@ -11,6 +12,7 @@
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Vendeur/listeArticle.php' </script>";
     }
 
+    // delete item by admin
     if (isset($_GET['ida'])){
         $delete=$_GET['ida'];
 
@@ -18,6 +20,7 @@
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeArticle.php' </script>";
     }
 
+    // delete seller by admin
     if (isset($_GET['ids'])){
         $delete=$_GET['ids'];
 
@@ -25,6 +28,7 @@
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeVendeur.php' </script>";
     }
 
+    // delete item from basket by buyer
     if (isset($_GET['idpanier'])){
         $delete=$_GET['idpanier'];
 
@@ -36,6 +40,7 @@
         }
     }
 
+    // delete offer by buyer
     if (isset($_GET['iditemoffer'])){
         $delete=$_GET['iditemoffer'];
 
@@ -47,6 +52,7 @@
         }
     }
 
+    // delete bid by buyer
     if (isset($_GET['iditembid'])){
         $delete=$_GET['iditembid'];
 
@@ -58,6 +64,7 @@
         }
     }
 
+    // delete offer by seller
     if (isset($_GET['iditempaniner_vendeur'])){
         $delete=$_GET['iditempaniner_vendeur'];
 
