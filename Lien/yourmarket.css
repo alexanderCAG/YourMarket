@@ -117,6 +117,12 @@
 .monfotter2{
     font-size: 15px;
 }
+.footer_menu{
+    margin-top: 5px;
+}
+.footer_menu:hover{
+    text-decoration: underline;
+}
         /********************************
                     RESEAUX
         *********************************/

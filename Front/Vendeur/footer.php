@@ -17,21 +17,23 @@
 <div class="footer">
     <div class="mon_footer1 row p-4">
         <div class="white centrer mt-4 col-md-4">
-            <h4 class="texte_style">VETEMENT</h4>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
+            <h4 class="texte_style">House</h4><br>
+            <ul style="list-style:none; margin-right:30px;">
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">Sheet</a></li>
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">Pillow</a></li>
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">Decoration</a></li>
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">All</a></li>
+            </ul>
         </div>
 
         <div class="white centrer mt-4 col-md-4">
-            <h4 class="texte_style">MAISON</h4>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
-            <p>BlaBlaBla</p>
-
+            <h4 class="texte_style">Clothes</h4><br>
+            <ul style="list-style:none; margin-right:30px;">
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">T-shirt</a></li>
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">Sweat-shirt</a></li>
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">Shoes</a></li>
+                <li class=" footer_menu"><a href="#" class="texte_style" style="text-decoration:none; color: white;cursor:pointer;">All</a></li>
+            </ul>
         </div>
 
         <div class="col-md-4 mt-4">
