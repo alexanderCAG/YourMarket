@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 05 avr. 2021 à 17:44
+-- Généré le : lun. 05 avr. 2021 à 18:48
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `basket` (
   KEY `id_basket` (`id_basket`),
   KEY `id_buyer` (`id_buyer`),
   KEY `id_item` (`id_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `basket`
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `bid` (
   KEY `id_item` (`id_item`),
   KEY `id_buyer` (`id_buyer`),
   KEY `id_seller` (`id_seller`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `bid`
@@ -119,7 +119,8 @@ INSERT INTO `bid` (`id_bid`, `id_item`, `id_buyer`, `id_seller`, `state`, `price
 (9, 3, 1, 5, 'en cours', 15),
 (11, 7, 1, 2, 'en cours', 250),
 (12, 3, 3, 5, 'en cours', 22),
-(13, 3, 22, 5, 'en cours', 1220);
+(13, 3, 22, 5, 'en cours', 1220),
+(14, 4, 4, 5, 'Winner', 30);
 
 -- --------------------------------------------------------
 
@@ -181,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `history` (
   KEY `id_history` (`id_history`),
   KEY `id_buyer` (`id_buyer`),
   KEY `id_item` (`id_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `history`
@@ -195,7 +196,10 @@ INSERT INTO `history` (`id_history`, `id_buyer`, `id_item`, `id_seller`, `name`,
 (37, 8, 58, 2, 'TestProduit', '50', '1', 'fezgfezffrza', ' ../../Image/Orme.png', 'House', 'sheet', NULL),
 (38, 8, 4, 4, 'Sweat Vert unisexe', '29,99', '1', 'Sweat-shirt vert unisexe. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', ' ../../Image/4.png', 'Clothes', 'sweat_shirt', NULL),
 (39, 8, 12, 5, 'Cadre mural rouge', '50', '1', 'descriptiontest', ' ../../Image/matay2.png', 'House', 'decoration', NULL),
-(40, 8, 4, 4, 'Sweat Vert unisexe', '29,99', '1', 'Sweat-shirt vert unisexe. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', ' ../../Image/4.png', 'Clothes', 'sweat_shirt', NULL);
+(40, 8, 4, 4, 'Sweat Vert unisexe', '29,99', '1', 'Sweat-shirt vert unisexe. On ne saurait trop le complimenter, c’est l’un des favoris de notre public. Et il sera certainement votre prochain favori !\r\n\r\n• 100 % coton peigné et filé à l’anneau\r\n• La couleur gris cendré (Ash) contient 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Les couleurs chinées contiennent 52 % de coton peigné et filé à l’anneau et 48 % de polyester\r\n• Les couleurs gris (Athletic) et noir (Black Heather) contiennent 90 % de coton peigné et filé en anneau et 10 % polyester\r\n• Les couleurs Heather Prism contiennent 99 % de coton peigné et filé en anneau et 1 % de polyester\r\n• Poids du tissu : 142 g/m² (4,2 oz/y²)\r\n• Tissu pré-rétréci\r\n• Étiquette détachable\r\n• Bande de propreté d’épaule à épaule\r\n• Couture latérale', ' ../../Image/4.png', 'Clothes', 'sweat_shirt', NULL),
+(41, 4, 3, 5, 'Pack 3 t-shirts men', '99,99', '5', 'They are the t-shirts you need. Comfy, affordable, just perfect for you!! They are so perfect there are no words to say how great they are. \r\n• 100 % coton \r\n• Weight : 142 g/m² (4,2 oz/y²)', ' ../../Image/Tshirt11.png', 'Clothes', 'tshirt', NULL),
+(42, 4, 3, 5, 'Pack 3 t-shirts men', '99,99', '5', 'They are the t-shirts you need. Comfy, affordable, just perfect for you!! They are so perfect there are no words to say how great they are. \r\n• 100 % coton \r\n• Weight : 142 g/m² (4,2 oz/y²)', ' ../../Image/Tshirt11.png', 'Clothes', 'tshirt', NULL),
+(43, 4, 3, 5, 'Pack 3 t-shirts men', '99,99', '5', 'They are the t-shirts you need. Comfy, affordable, just perfect for you!! They are so perfect there are no words to say how great they are. \r\n• 100 % coton \r\n• Weight : 142 g/m² (4,2 oz/y²)', ' ../../Image/Tshirt11.png', 'Clothes', 'tshirt', NULL);
 
 -- --------------------------------------------------------
 
@@ -219,12 +223,12 @@ CREATE TABLE IF NOT EXISTS `item` (
   `is_negotiated` tinyint(4) NOT NULL DEFAULT '0',
   `is_buying` tinyint(4) NOT NULL DEFAULT '0',
   `end_enchere` datetime DEFAULT NULL,
-  `grade` int(255) DEFAULT NULL,
+  `grade` int(255) DEFAULT '0',
   `tot_rate` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_item`),
   KEY `id_item` (`id_item`),
   KEY `id_seller` (`id_seller`)
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `item`
@@ -238,36 +242,37 @@ INSERT INTO `item` (`id_item`, `id_seller`, `price`, `name`, `sold`, `category`,
 (58, 5, '50', 'Leopard sheet', 0, 'House', 'sheet', '75', 'Welcome to the jungle. You watched tiger king and you dreamed to be like Carole Baskin, you found the right place. This bed sheet is made for you.\r\nLeopard print duvet cover in 200-thread-count percale.\r\nConcealed button fastening at the bottom.\r\n', '../../Image/sheet6.png', 0, 0, 1, NULL, 0, 0),
 (59, 5, '50', 'Jungle', 0, 'House', 'sheet', '450', 'If you like plants and tree, you need this sheet on your bed.\r\nJungle print duvet cover in 200-thread-count percale.\r\nConcealed button fastening at the bottom\r\n', '../../Image/sheet8.png', 0, 1, 1, NULL, 0, 0),
 (64, 5, '84', 'Espadrille', 45, 'Clothes', 'shoes', '60', 'Ready to go to dancing with your friends.', '../../Image/shoes7.png', 0, 1, 0, NULL, 0, 0),
-(65, 1, '35', 'T-shirt jump', 0, 'Clothes', 'tshirt', '50', 'They are the tshirts you need. They are the tshirts you need. Comfy, affordable, just perfect for you. They are so perfect there are no words to say how great they are.  ', '../../Image/Tshirt1.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(66, 1, '35', 'T-shirt logo', 0, 'Clothes', 'tshirt', '5', 'They are so perfect there are no words to say how great they are. ', '../../Image/Tshirt5.png', 1, 0, 0, '2021-04-15 21:21:00', NULL, NULL),
-(67, 1, '34', 'T-shirt men', 0, 'Clothes', 'tshirt', '25', 'They are so perfect there are no words to say how great they are. ', '../../Image/Tshirt7.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(68, 1, '59', 'Sweat Men', 0, 'Clothes', 'sweet_shirt', '50', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth.', '../../Image/sweatShirt11.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(69, 1, '59', 'Sweat Women', 0, 'Clothes', 'sweet_shirt', '50', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth', '../../Image/sweatShirt12.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(70, 1, '159', 'Amazing shoes', 0, 'Clothes', 'shoes', '1', 'Best shoes you will ever have', '../../Image/shoes4.png', 1, 0, 0, '2021-04-16 21:25:00', NULL, NULL),
-(71, 1, '29', 'Pillow Jump', 0, 'House', 'pillow', '10', 'If you like our brand. You absolutely need this pillow. Soft and cute. You can throw it. You can sit on it. It has so many different uses.', '../../Image/pillow2.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(72, 2, '29', 'Sweat children', 5, 'Clothes', 'sweet_shirt', '5', 'Our best seller.Everyone wants it. The softest sweatshirt on planet earth.\r\nNow available for small human too.', '../../Image/sweatShirt10.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(73, 2, '19', 'Soft T-shirt', 0, 'Clothes', 'tshirt', '1', 'Everyone wants it. The softest shirt on planet earth.', '../../Image/Tshirt2.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(74, 2, '100', 'dvb Sheet', 0, 'House', 'sheet', '1', 'You will never get our of your bed', '../../Image/sheet1.png', 1, 0, 0, '2021-04-24 21:49:00', NULL, NULL),
-(75, 3, '29', 'Pillow Loco', 0, 'House', 'pillow', '100', 'If you like our brand. You absolutely need this pillow. Soft and cute. ', '../../Image/pillow3.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(76, 3, '99', 'Sweat unisex', 0, 'Clothes', 'sweet_shirt', '99', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth.', '../../Image/sweatShirt6.png', 1, 0, 0, '2021-04-18 21:51:00', NULL, NULL),
-(77, 3, '120', 'Pink sweat', 5, 'Clothes', 'sweet_shirt', '1', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth', '../../Image/sweatShirt8.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(78, 3, '250', 'Art Loco', 0, 'House', 'decoration', '5', 'Best piece of art you will ever buy. All your friends will be impressed.', '../../Image/decoration1.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(79, 3, '55', 'Comfy shoes', 0, 'Clothes', 'shoes', '10', 'You will never stop walking', '../../Image/shoes5.png', 1, 0, 0, '2021-04-25 18:58:00', NULL, NULL),
-(80, 4, '45', 'Sweat Men', 20, 'Clothes', 'sweet_shirt', '10', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it, you will buy every color available.', '../../Image/sweatShirt1.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(81, 4, '99', 'Sweat unisex', 0, 'Clothes', 'sweet_shirt', '1', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.\r\n', '../../Image/sweatShirt9.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(82, 4, '15', 'T-shirt women', 0, 'Clothes', 'tshirt', '1', 'The softest shirt on planet earth. Once you try it  you will buy every color available.', '../../Image/Tshirt9.png', 1, 0, 0, '2021-04-18 19:06:00', NULL, NULL),
-(83, 4, '29', 'Cup', 0, 'House', 'decoration', '100', 'Drink all day everyday', '../../Image/decoration2.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(84, 4, '99', 'Shoes', 0, 'Clothes', 'shoes', '2', 'Run forest run', '../../Image/shoes1.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(85, 4, '99', 'Collab bed', 0, 'House', 'sheet', '50', 'All your favorite brands in one place', '../../Image/sheet2.png', 1, 0, 0, '2021-04-23 22:08:00', NULL, NULL),
-(86, 6, '15', 'Curtains', 0, 'House', 'decoration', '2', 'Nobody will see you', '../../Image/decoration3.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(87, 6, '56', 'Sweat Grey', 0, 'Clothes', 'sweet_shirt', '2', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.\r\n', '../../Image/sweatShirt2.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(88, 6, '29', 'Sweat yellow', 0, 'Clothes', 'sweet_shirt', '2', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.', '../../Image/sweatShirt3.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(89, 6, '59', 'Sweat white', 0, 'Clothes', 'sweet_shirt', '10', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.', '../../Image/sweatShirt4.png', 1, 0, 0, '2021-04-18 22:13:00', NULL, NULL),
-(90, 6, '35', 'Sweat red', 0, 'Clothes', 'sweet_shirt', '100', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.', '../../Image/sweatShirt7.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(91, 6, '15', 'Cup', 0, 'House', 'decoration', '1', 'Always wake up happy.', '../../Image/decoration4.png', 1, 0, 0, '2021-04-22 23:18:00', NULL, NULL),
-(92, 3, '29', 'T-shirt unisex', 0, 'Clothes', 'tshirt', '100', 'They are the t-shirts you need.', '../../Image/Tshirt3.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL),
-(93, 3, '59', 'T-shirt loco', 0, 'Clothes', 'tshirt', '100', 'They are the t-shirts you need.', '../../Image/Tshirt4.png', 0, 1, 0, '2000-04-04 15:12:00', NULL, NULL),
-(94, 4, '59', 'Collab', 0, 'House', 'decoration', '100', 'All your favorite brands in one product', '../../Image/decoration5.png', 0, 0, 1, '2000-04-04 15:12:00', NULL, NULL);
+(65, 1, '35', 'T-shirt jump', 0, 'Clothes', 'tshirt', '50', 'They are the tshirts you need. They are the tshirts you need. Comfy, affordable, just perfect for you. They are so perfect there are no words to say how great they are.  ', '../../Image/Tshirt1.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(66, 1, '35', 'T-shirt logo', 0, 'Clothes', 'tshirt', '5', 'They are so perfect there are no words to say how great they are. ', '../../Image/Tshirt5.png', 1, 0, 0, '2021-04-15 21:21:00', 0, 0),
+(67, 1, '34', 'T-shirt men', 0, 'Clothes', 'tshirt', '25', 'They are so perfect there are no words to say how great they are. ', '../../Image/Tshirt7.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(68, 1, '59', 'Sweat Men', 0, 'Clothes', 'sweat_shirt', '50', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth.', '../../Image/sweatShirt11.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(69, 1, '59', 'Sweat Women', 0, 'Clothes', 'swea-shirt', '50', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth', '../../Image/sweatShirt12.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(70, 1, '159', 'Amazing shoes', 0, 'Clothes', 'shoes', '1', 'Best shoes you will ever have', '../../Image/shoes4.png', 1, 0, 0, '2021-04-16 21:25:00', 0, 0),
+(71, 1, '29', 'Pillow Jump', 0, 'House', 'pillow', '10', 'If you like our brand. You absolutely need this pillow. Soft and cute. You can throw it. You can sit on it. It has so many different uses.', '../../Image/pillow2.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(72, 2, '29', 'Sweat children', 5, 'Clothes', 'sweat_shirt', '5', 'Our best seller.Everyone wants it. The softest sweatshirt on planet earth.\r\nNow available for small human too.', '../../Image/sweatShirt10.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(73, 2, '19', 'Soft T-shirt', 0, 'Clothes', 'tshirt', '1', 'Everyone wants it. The softest shirt on planet earth.', '../../Image/Tshirt2.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(74, 2, '100', 'dvb Sheet', 0, 'House', 'sheet', '1', 'You will never get our of your bed', '../../Image/sheet1.png', 1, 0, 0, '2021-04-24 21:49:00', 0, 0),
+(75, 3, '29', 'Pillow Loco', 0, 'House', 'pillow', '100', 'If you like our brand. You absolutely need this pillow. Soft and cute. ', '../../Image/pillow3.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(76, 3, '99', 'Sweat unisex', 0, 'Clothes', 'sweat_shirt', '99', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth.', '../../Image/sweatShirt6.png', 1, 0, 0, '2021-04-18 21:51:00', 0, 0),
+(77, 3, '120', 'Pink sweat', 5, 'Clothes', 'sweat_shirt', '1', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth', '../../Image/sweatShirt8.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(78, 3, '250', 'Art Loco', 0, 'House', 'decoration', '5', 'Best piece of art you will ever buy. All your friends will be impressed.', '../../Image/decoration1.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(79, 3, '55', 'Comfy shoes', 0, 'Clothes', 'shoes', '10', 'You will never stop walking', '../../Image/shoes5.png', 1, 0, 0, '2021-04-25 18:58:00', 0, 0),
+(80, 4, '45', 'Sweat Men', 20, 'Clothes', 'sweat_shirt', '10', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it, you will buy every color available.', '../../Image/sweatShirt1.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(81, 4, '99', 'Sweat unisex', 0, 'Clothes', 'sweat_shirt', '1', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.\r\n', '../../Image/sweatShirt9.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(82, 4, '15', 'T-shirt women', 0, 'Clothes', 'tshirt', '1', 'The softest shirt on planet earth. Once you try it  you will buy every color available.', '../../Image/Tshirt9.png', 1, 0, 0, '2021-04-18 19:06:00', 0, 0),
+(83, 4, '29', 'Cup', 0, 'House', 'decoration', '100', 'Drink all day everyday', '../../Image/decoration2.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(84, 4, '99', 'Shoes', 0, 'Clothes', 'shoes', '2', 'Run forest run', '../../Image/shoes1.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(85, 4, '99', 'Collab bed', 0, 'House', 'sheet', '50', 'All your favorite brands in one place', '../../Image/sheet2.png', 1, 0, 0, '2021-04-23 22:08:00', 0, 0),
+(86, 6, '15', 'Curtains', 0, 'House', 'decoration', '2', 'Nobody will see you', '../../Image/decoration3.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(87, 6, '56', 'Sweat Grey', 0, 'Clothes', 'sweet_shirt', '2', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.\r\n', '../../Image/sweatShirt2.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(88, 6, '29', 'Sweat yellow', 0, 'Clothes', 'sweat_shirt', '2', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.', '../../Image/sweatShirt3.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(89, 6, '59', 'Sweat white', 0, 'Clothes', 'sweat_shirt', '10', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.', '../../Image/sweatShirt4.png', 1, 0, 0, '2021-04-18 22:13:00', 0, 0),
+(90, 6, '35', 'Sweat red', 0, 'Clothes', 'sweat_shirt', '100', 'Our best seller. Everyone wants it. The softest sweatshirt on planet earth. Once you try it you will buy every color available.', '../../Image/sweatShirt7.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(91, 6, '15', 'Cup', 0, 'House', 'decoration', '1', 'Always wake up happy.', '../../Image/decoration4.png', 1, 0, 0, '2021-04-22 23:18:00', 0, 0),
+(92, 3, '29', 'T-shirt unisex', 0, 'Clothes', 'tshirt', '100', 'They are the t-shirts you need.', '../../Image/Tshirt3.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(93, 3, '59', 'T-shirt loco', 0, 'Clothes', 'tshirt', '100', 'They are the t-shirts you need.', '../../Image/Tshirt4.png', 0, 1, 0, '2000-04-04 15:12:00', 0, 0),
+(94, 4, '59', 'Collab', 0, 'House', 'decoration', '100', 'All your favorite brands in one product', '../../Image/decoration5.png', 0, 0, 1, '2000-04-04 15:12:00', 0, 0),
+(95, 5, '130', 'White shoes ', 60, 'Clothes', 'shoes', '20', 'Tulle and imitation leather upper\r\nLining and sockliner', '../../Image/shoes999.PNG', 0, 0, 1, '2000-04-04 15:12:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -376,14 +381,15 @@ CREATE TABLE IF NOT EXISTS `offer` (
   KEY `id_offer` (`id_offer`),
   KEY `id_item` (`id_item`),
   KEY `id_buyer` (`id_buyer`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `offer`
 --
 
 INSERT INTO `offer` (`id_offer`, `id_item`, `id_seller`, `id_buyer`, `price_offered`, `quantity`, `nb_nego`, `status`) VALUES
-(14, 12, 5, 7, '55', '2', 1, 'en cours');
+(14, 12, 5, 7, '55', '2', 1, 'Refuser'),
+(17, 64, 5, 4, '50', '2', 2, 'Valider');
 
 -- --------------------------------------------------------
 
@@ -414,7 +420,7 @@ INSERT INTO `payment` (`id_payment`, `id_buyer`, `carde`, `code`, `num_card`, `e
 (1, 1, 'carte_payement_mastercard', 800, '545454546465464654', '2021-03-30', 'Lauril', 50),
 (2, 2, 'carte_payment_cb', 123, '1234567890111213', '2021-05-13', 'Larielle', 1000),
 (3, 3, 'carte_payment_mastercard', 321, '1234567690111213', '2021-08-07', 'Marie', 1000),
-(4, 4, 'carte_payment_mastercard', 456, '12345678901111516', '2021-11-05', 'Alex', 150),
+(4, 4, 'carte_payment_mastercard', 456, '12345678901111516', '2021-11-05', 'Alex', 49389),
 (5, 5, 'carte_payment_cb', 654, '1234161790111213', '2021-04-22', 'Audrey', 2000),
 (7, 7, 'carte_payment-cb', 876, '12345985401111516', '2022-01-08', 'Hale', 100),
 (8, 8, 'carte_payement_cb', 5057, '12345678901111566', '2021-03-31', 'Richard', 20);
@@ -443,12 +449,12 @@ CREATE TABLE IF NOT EXISTS `seller` (
 --
 
 INSERT INTO `seller` (`id_seller`, `brand`, `profil_picture`, `background`, `phone`, `email`, `passworde`) VALUES
-(1, 'Jump', '../../Image/Jump.png', 'blue', '0605847007', 'jump@yahoo.fr', '@Jump1'),
-(2, 'dvb', '../../Image/dvb.png', 'blue', '0605876507', 'dvb@yahoo.com', '@Dvb1'),
-(3, 'LOCO', '../../Image/2.png', 'unTesteencoreparconséquent', '0605234007', 'loco@yahoo.com', '@Loco1'),
-(4, 'BOP', '../../Image/Bop.png', 'blue ', '0684547007', 'bop@gmail.com', '@Bop1 '),
-(5, 'Ibis', '../../Image/matay2.png', 'gold', '0123456789', 'ibis@yahoo.fr', 'Ibis1'),
-(6, 'Light', '../../Image/Light.png', 'white', '0605851007', 'light@gmail.com', '@Light1');
+(1, 'Jump', '../../Image/Jump.png', '#73C6B6', '0605847007', 'jump@yahoo.fr', '@Jump1'),
+(2, 'dvb', '../../Image/dvb.png', '#922B21', '0605876507', 'dvb@yahoo.com', '@Dvb1'),
+(3, 'LOCO', '../../Image/Loco.png', '#85929E', '0605234007', 'loco@yahoo.com', '@Loco1'),
+(4, 'BOP', '../../Image/Bop.png', '#A9DFBF', '0684547007', 'bop@gmail.com', '@Bop1 '),
+(5, 'Ibis', '../../Image/matay2.png', '#D2B4DE', '0123456789', 'ibis@yahoo.fr', 'Ibis1'),
+(6, 'Light', '../../Image/Light.png', '#BA4A00', '0605851007', 'light@gmail.com', '@Light1');
 
 --
 -- Contraintes pour les tables déchargées
