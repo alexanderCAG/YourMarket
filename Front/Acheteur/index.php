@@ -213,10 +213,9 @@
             
             <div class="row">
                 <div class="col-md-6"> 
-                    <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">ADD TO CART </a>
+                    <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;"><?php echo $priceItem ?> €</a>
                 </div>
                 <div class="col-md-6"> 
-                    <a class="float-right f_right text-decoration-none text-dark"><?php echo $priceItem ?> €</a><br>
                     <a class="float-right f_right  text-decoration-none text-dark"><?php echo $nameItem ?></a><br>
                     <a class="float-right f_right  text-decoration-none text-dark"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></a>
                 </div>
