@@ -84,7 +84,12 @@
                                              <?php echo $prixItems ?> €  &nbsp;</strike></small><br>
 
                                              <?php
-                                              echo ($prixItems-(($prixItems * $sold) / 100)); ?> €
+                                        
+                                              $prixItems = (int)$prixItems;
+                                              $result = $prixItems-(($prixItems * $sold) / 100);
+                                              
+                                              echo $result; ?> €
+                                             
                                         </p>
                                     </div>
                                 </div>
@@ -107,7 +112,7 @@
                                     <?php }?>
                                 <?php  if($subcategoryItems == 'sweat_shirt' ){?>
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Sweat-Shirt</small></a>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i>  &nbsp;</div>
+                                   
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'shoes' ){?>
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Shoes</small></a>
