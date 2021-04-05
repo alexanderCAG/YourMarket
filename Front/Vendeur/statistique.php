@@ -287,16 +287,20 @@
 
                     <div class="container h-100 pt-5"> 
                    <!-- ##### Stat pillow #######-->
-                    <?php if($row_stock_pillow = mysqli_fetch_assoc($query_stock_pillow)){
+                   
+                    <?php 
+                    if($row_stock_pillow = mysqli_fetch_assoc($query_stock_pillow)){
                             $stockPillow = $row_stock_pillow['stock_pillow'];
 
                             if($row_qtt_Pillow2 = mysqli_fetch_assoc($qtt_pillow2)){
                                 $qtt_pillow_vendu = $row_qtt_Pillow2['qttPillow'];
-                            }
 
-                            $stat_pillow = ($qtt_pillow_vendu * 100 ) / $stockPillow ;
+                            if( $stockPillow != 0){
+                                 $stat_pillow = ($qtt_pillow_vendu * 100 ) / $stockPillow ;
+                            }
+                        }
                     ?>
-                     
+
                         <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $stat_pillow ?>%; background-color:#5499C7">
                                 <span class=""> <?php echo $stat_pillow ?> %</span>
@@ -311,8 +315,11 @@
                             if($row_qtt_Decoration2 = mysqli_fetch_assoc($qtt_decoration2)){
                                 $qtt_decoration_vendu = $row_qtt_Decoration2['qttDecoration'];
                             }
+                            if(  $stockDecoration != 0){
+                                $stat_decoration = ($qtt_decoration_vendu * 100 ) / $stockDecoration ;
+                           }
 
-                            $stat_decoration = ($qtt_decoration_vendu * 100 ) / $stockDecoration ;
+                            
                     ?>
 
                         <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
@@ -329,8 +336,10 @@
                             if($row_qtt_Sheet2 = mysqli_fetch_assoc($qtt_sheet2)){
                                 $qtt_sheet_vendu = $row_qtt_Sheet2['qttSheet'];
                             }
-
-                            $stat_sheet = ($qtt_sheet_vendu * 100 ) / $stockSheet ;
+                            if( $stockSheet != 0){
+                                $stat_sheet = ($qtt_sheet_vendu * 100 ) / $stockSheet ;
+                           }
+                           
                     ?>
                         <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $stat_sheet ?>%; background-color: #52BE80;">
