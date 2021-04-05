@@ -39,7 +39,7 @@
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-<!-- Vendeur -->
+<!-- Personnal information -->
 <div class="contenu_general_infoPerso_vendeur row">
     <div class="col-2"></div>
 
@@ -75,6 +75,7 @@
                 </div>
 
                 <div class="col-5" style="margin-left:50px!important;">
+                <!-- Can change is picture profil -->
                     <img id="img_inscription_choix_vendeur" src="<?php echo $profil_picture_vendeur ?>">
                     <div class="img_inscription_general">
                         <span class="file_inscription_img">

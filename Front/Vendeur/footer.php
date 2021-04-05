@@ -76,6 +76,7 @@
     </a>
 </div>
 
+<!-- Annimation for the navbar -->
 <script>
     var nav = document.querySelector('.navbar_menu_principal'); // Identify target
 

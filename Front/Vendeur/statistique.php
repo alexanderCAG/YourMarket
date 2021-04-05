@@ -38,6 +38,7 @@
         $query_stock_tshirt = mysqli_query($con, "SELECT sum(quantity) as stock_tshirt FROM item WHERE subcategory ='tshirt' and id_seller='$id_seller'");
 ?>  
 
+<!-- Define the personnal background -->
 <?php if($row2 = mysqli_fetch_assoc($Seller)){
     $bg = $row2['background'];
     if($bg != null){?>
@@ -60,7 +61,7 @@
 <div class="w-100">
     <div class="container mt-5">
         <div class="card w-100 border-0"  >
-            <!--------------- stat----------------->
+            <!--------------- stat turnover ---------------->
             <div class="card-header bg_blue2 text-light text-uppercase rounded-0 mt-4">
                 <h5> Turnover </h5> 
             </div>
@@ -79,7 +80,7 @@
               
             </div>
 
-             <!--------------- stat----------------->
+             <!--------------- stat sale ----------------->
             <div class="card-header bg_blue2 text-light text-uppercase rounded-0 mt-5">
                 <h5> Sales by Category</h5> 
             </div>
@@ -265,7 +266,7 @@
                 ?>
             </div>
       
-            <!--------------- stat----------------->
+            <!--------------- stat sale by quantity ----------------->
             <div class="card-header bg_blue2 text-light text-uppercase rounded-0 mt-5">
                 <h5> Statistique</h5> 
             </div>
