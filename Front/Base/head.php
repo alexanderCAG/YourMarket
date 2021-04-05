@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body  style="overflow-x: hidden;" >
 
 <!-- session start -->
 <?php session_start(); ?>
