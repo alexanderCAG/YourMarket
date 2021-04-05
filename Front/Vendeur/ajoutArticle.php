@@ -47,9 +47,9 @@
                     <br>
                     <span id="descriptionErreur_ajoutArticle"></span>
                     <br>
-                    <input id="prix_ajoutArticle" name="prix_ajoutArticle" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Prix en euro (€)"><span id="prixErreur_ajoutArticle"></span>
+                    <input id="prix_ajoutArticle" name="prix_ajoutArticle" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Price in euro (€)"><span id="prixErreur_ajoutArticle"></span>
                     <br>
-                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatité"><span id="quantiteErreur_ajoutArticle"></span>
+                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatity"><span id="quantiteErreur_ajoutArticle"></span>
                     <br>
                 </div>
 

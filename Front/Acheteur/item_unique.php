@@ -71,7 +71,7 @@
 <div class="nego_item_unique" id="negociation_item_unique">
     <form action="../../Bdd/panier.php" method="POST">
         <h5 class="modal-title titre_unique_prix_nego texte_style text-uppercase" id="staticBackdropLabel">Choose a price</h5>
-        <input type="text" id="quantite_nego" name="quantite_nego" class="quantite_nego" placeholder="Quantité">
+        <input type="text" id="quantite_nego" name="quantite_nego" class="quantite_nego" placeholder="Quantity">
         <input type="text" id="prix_nego" name="prix_nego" class="prix_nego">€
         <input type="hidden" id="id_item_nego" name="id_item_nego" value="<?php echo $iditem ?>">
         <br>

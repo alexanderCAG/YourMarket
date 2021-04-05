@@ -35,7 +35,7 @@
     <div class="info_msg_bas">
         <div class="message_comptenu">
             <form action="" method="POST">
-                <input type="text" id="quantite_nego" name="quantite_nego_message" class="quantite_nego_message" placeholder="Quantité" value="<?php echo $quantity ?>">
+                <input type="text" id="quantite_nego" name="quantite_nego_message" class="quantite_nego_message" placeholder="Quantity" value="<?php echo $quantity ?>">
                 <input type="text" id="prix_nego" name="prix_nego_message" class="prix_nego_message" value="<?php echo $price_offered ?>"><span style="font-size: 40px;">€</span>
                 <button type="submit" name="submit_msg_acheteur" class="btn_submit_msg_acheteur f_right">Send</button>
                 <input type="hidden" name="nb_nego" value="<?php echo $nb_nego ?>">

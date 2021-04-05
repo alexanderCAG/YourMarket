@@ -196,7 +196,7 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
     <div class="col-3 enchere_liste_payer centrer position-relative">
         <form action="../../Bdd/panier.php" method="POST">
             <div class="enchere_payer_titre texte_style text-uppercase mt-4">Make an Offer</div>
-            <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposition (€)">
+            <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposal (€)">
             <button type="submit" name="btn_envoyer_enchere_prix" class="btn_envoyer_propose_prix text-uppercase">Send</button>
             <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0"><?php echo $totalCandidat ?> participant(s)</div>
             <input type="hidden" name="idItem" value="<?php echo $iditem ?>">

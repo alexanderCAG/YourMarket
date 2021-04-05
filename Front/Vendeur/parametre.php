@@ -39,7 +39,7 @@ if($bg != null){?>
                 <div class="col-12">
                     <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3>
                     
-                    <input id="background_seller" name="background_seller" class="infoPerso_contenu_details_vendeur" value="<?php echo $bg ?>" placeholder="Nom de la marque">
+                    <input id="background_seller" name="background_seller" class="infoPerso_contenu_details_vendeur" value="<?php echo $bg ?>" placeholder="Color">
                     <br>
 
                     <span id="infoPerso_mdp2Erreur_vendeur"></span>

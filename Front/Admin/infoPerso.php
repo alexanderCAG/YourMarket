@@ -43,15 +43,15 @@
                 <div class="col-4">
                     <h3 class="infoPerso_detail_titre1_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important;">personal information</h3>
                     
-                    <input id="infoPerso_nom_admin" name="infoPerso_nom_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $lastname_admin ?>" placeholder="Nom">
+                    <input id="infoPerso_nom_admin" name="infoPerso_nom_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $lastname_admin ?>" placeholder="Lastname">
                     <br>
                     <span id="infoPerso_nomErreur_admin"></span>
                     <br>
-                    <input id="infoPerso_prenom_admin" name="infoPerso_prenom_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $firstname_admin ?>" placeholder="Prénom">
+                    <input id="infoPerso_prenom_admin" name="infoPerso_prenom_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $firstname_admin ?>" placeholder="Firstname">
                     <br>
                     <span id="infoPerso_prenomErreur_admin"></span>
                     <br>
-                    <input id="infoPerso_telephone_admin" name="infoPerso_telephone_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $phone_admin ?>" placeholder="Téléphone">
+                    <input id="infoPerso_telephone_admin" name="infoPerso_telephone_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $phone_admin ?>" placeholder="Phone">
                     <br>
                     <span id="infoPerso_telephoneErreur_admin"></span>
                     <br>
@@ -59,11 +59,11 @@
                     <br>
                     <span id="infoPerso_mailErreur_admin"></span>
                     <br>
-                    <input id="infoPerso_mdp_admin" name="infoPerso_mdp_admin" type="password" class="infoPerso_contenu_details_admin" value="<?php echo $passworde_admin ?>" placeholder="Mot de passe">
+                    <input id="infoPerso_mdp_admin" name="infoPerso_mdp_admin" type="password" class="infoPerso_contenu_details_admin" value="<?php echo $passworde_admin ?>" placeholder="Password">
                     <br>
                     <span id="infoPerso_mdpErreur_admin"></span>
                     <br>
-                    <input id="infoPerso_mdp2_admin" name="infoPerso_mdp2_admin" type="password" class="infoPerso_contenu_details_admin" value="<?php echo $passworde_admin ?>" placeholder="Confirmation mot de passe">
+                    <input id="infoPerso_mdp2_admin" name="infoPerso_mdp2_admin" type="password" class="infoPerso_contenu_details_admin" value="<?php echo $passworde_admin ?>" placeholder="Confirm password">
                     <br>
                     <span id="infoPerso_mdp2Erreur_admin"></span>
                     <br>
@@ -80,15 +80,15 @@
                     <br>
                     <span id="infoPerso_adresse2Erreur_admin"></span>
                     <br>
-                    <input id="infoPerso_pays_admin" name="infoPerso_pays_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $country_admin ?>" placeholder="Pays">
+                    <input id="infoPerso_pays_admin" name="infoPerso_pays_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $country_admin ?>" placeholder="Country">
                     <br>
                     <span id="infoPerso_paysErreur_admin"></span>
                     <br>
-                    <input id="infoPerso_ville_admin" name="infoPerso_ville_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $city_admin ?>" placeholder="Ville">
+                    <input id="infoPerso_ville_admin" name="infoPerso_ville_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $city_admin ?>" placeholder="City">
                     <br>
                     <span id="infoPerso_villeErreur_admin"></span>
                     <br>
-                    <input id="infoPerso_codepostal_admin" name="infoPerso_codepostal_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $zip_code_admin ?>" placeholder="Code Postal">
+                    <input id="infoPerso_codepostal_admin" name="infoPerso_codepostal_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $zip_code_admin ?>" placeholder="Zip Code">
                     <br>
                     <span id="infoPerso_codepostalErreur_admin"></span>
                     <br>

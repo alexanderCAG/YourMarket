@@ -149,15 +149,15 @@
                 <div class="col-5">
                     <h3 class="infoPerso_detail_titre2_acheteur text-uppercase detail_style" style="margin-bottom:50px!important;">personal information</h3>
                     
-                    <input id="infoPerso_nom_acheteur" name="infoPerso_nom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Nom" value="<?php echo $lastname_acheteur ?>">
+                    <input id="infoPerso_nom_acheteur" name="infoPerso_nom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Lastname" value="<?php echo $lastname_acheteur ?>">
                     <br>
                     <span id="infoPerso_nomErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_prenom_acheteur" name="infoPerso_prenom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Prénom" value="<?php echo $firstname_acheteur ?>">
+                    <input id="infoPerso_prenom_acheteur" name="infoPerso_prenom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Firstname" value="<?php echo $firstname_acheteur ?>">
                     <br>
                     <span id="infoPerso_prenomErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_telephone_acheteur" name="infoPerso_telephone_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Téléphone" value="<?php echo $phone_acheteur ?>">
+                    <input id="infoPerso_telephone_acheteur" name="infoPerso_telephone_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Phone" value="<?php echo $phone_acheteur ?>">
                     <br>
                     <span id="infoPerso_telephoneErreur_acheteur"></span>
                     <br>
@@ -165,11 +165,11 @@
                     <br>
                     <span id="infoPerso_mailErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_mdp_acheteur" name="infoPerso_mdp_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Mot de passe" value="<?php echo $passworde_acheteur ?>">
+                    <input id="infoPerso_mdp_acheteur" name="infoPerso_mdp_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Password" value="<?php echo $passworde_acheteur ?>">
                     <br>
                     <span id="infoPerso_mdpErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_mdp2_acheteur" name="infoPerso_mdp2_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Confirmation mot de passe" value="<?php echo $passworde_acheteur ?>">
+                    <input id="infoPerso_mdp2_acheteur" name="infoPerso_mdp2_acheteur" type="password" class="infoPersoL_contenu_details_acheteur" placeholder="Confirm password" value="<?php echo $passworde_acheteur ?>">
                     <br>
                     <span id="infoPerso_mdp2Erreur_acheteur"></span>
                     <br>
@@ -186,15 +186,15 @@
                     <br>
                     <span id="infoPerso_adresse2Erreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_pays_acheteur" name="infoPerso_pays_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Pays" value="<?php echo $country_acheteur ?>">
+                    <input id="infoPerso_pays_acheteur" name="infoPerso_pays_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Country" value="<?php echo $country_acheteur ?>">
                     <br>
                     <span id="infoPerso_paysErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_ville_acheteur" name="infoPerso_ville_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Ville" value="<?php echo $city_acheteur ?>">
+                    <input id="infoPerso_ville_acheteur" name="infoPerso_ville_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="City" value="<?php echo $city_acheteur ?>">
                     <br>
                     <span id="infoPerso_villeErreur_acheteur"></span>
                     <br>
-                    <input id="infoPerso_codepostal_acheteur" name="infoPerso_codepostal_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Code Postal" value="<?php echo $zip_code_acheteur ?>">
+                    <input id="infoPerso_codepostal_acheteur" name="infoPerso_codepostal_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Zip Code" value="<?php echo $zip_code_acheteur ?>">
                     <br>
                     <span id="infoPerso_codepostalErreur_acheteur"></span>
                     <br>

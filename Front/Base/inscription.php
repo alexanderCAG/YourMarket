@@ -26,15 +26,15 @@
                     <div class="col-5">
                         <h3 class="inscription_detail_titre1 text-uppercase detail_style">personal information</h3>
                         
-                        <input id="nom_acheteur" name="nom_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom">
+                        <input id="nom_acheteur" name="nom_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Lastname">
                         <br>
                         <span id="nomErreur_acheteur"></span>
                         <br>
-                        <input id="prenom_acheteur" name="prenom_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Prénom">
+                        <input id="prenom_acheteur" name="prenom_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Firstname">
                         <br>
                         <span id="prenomErreur_acheteur"></span>
                         <br>
-                        <input id="telephone_acheteur" name="telephone_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Téléphone">
+                        <input id="telephone_acheteur" name="telephone_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Phone">
                         <br>
                         <span id="telephoneErreur_acheteur"></span>
                         <br>
@@ -42,11 +42,11 @@
                         <br>
                         <span id="mailErreur_acheteur"></span>
                         <br>
-                        <input id="mdp_acheteur" name="mdp_acheteur" type="password" class="inscription_contenu_details_acheteur" placeholder="Mot de passe">
+                        <input id="mdp_acheteur" name="mdp_acheteur" type="password" class="inscription_contenu_details_acheteur" placeholder="Password">
                         <br>
                         <span id="mdpErreur_acheteur"></span>
                         <br>
-                        <input id="mdp2_acheteur" name="mdp2_acheteur" type="password" class="inscription_contenu_details_acheteur" placeholder="Confirmation mot de passe">
+                        <input id="mdp2_acheteur" name="mdp2_acheteur" type="password" class="inscription_contenu_details_acheteur" placeholder="Confirm password">
                         <br>
                         <span id="mdp2Erreur_acheteur"></span>
                     </div>
@@ -62,15 +62,15 @@
                         <br>
                         <span id="adresse2Erreur_acheteur"></span>
                         <br>
-                        <input id="pays_acheteur" name="pays_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Pays">
+                        <input id="pays_acheteur" name="pays_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Country">
                         <br>
                         <span id="paysErreur_acheteur"></span>
                         <br>
-                        <input id="ville_acheteur" name="ville_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Ville">
+                        <input id="ville_acheteur" name="ville_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="City">
                         <br>
                         <span id="villeErreur_acheteur"></span>
                         <br>
-                        <input id="codepostal_acheteur" name="codepostal_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code Postal">
+                        <input id="codepostal_acheteur" name="codepostal_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Zip Code">
                         <br>
                         <span id="codepostalErreur_acheteur"></span>
                         
@@ -85,7 +85,7 @@
                             <div class="col-1"></div>
 
                             <div class="col-5" style="margin-top:10px!important;">
-                                <input id="typeCarte_acheteur" name="typeCarte_acheteur" type="text" class="inscription_contenu_details_acheteur centrer" placeholder="Type de carte">
+                                <input id="typeCarte_acheteur" name="typeCarte_acheteur" type="text" class="inscription_contenu_details_acheteur centrer" placeholder="Card type">
                                 <br>
                                 <span id="typeCarteErreur_acheteur"></span>
                                 <br>
@@ -123,21 +123,21 @@
                             </div>
 
                             <div class="col-5" style="margin-left:50px!important; margin-top:10px!important;">
-                                <input id="numeroCarte_acheteur" name="numeroCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Numéro de carte">
+                                <input id="numeroCarte_acheteur" name="numeroCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Card number">
                                 <br>
                                 <span id="numeroCarteErreur_acheteur"></span>
                                 <br>
                                 
-                                <input id="nomCarte_acheteur" name="nomCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom de carte">
+                                <input id="nomCarte_acheteur" name="nomCarte_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Card name">
                                 <br>
                                 <span id="nomCarteErreur_acheteur"></span>
                                 <br>
                                 <label style="color:#888888;">Date d'expiration</label>
-                                <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="date" class="inscription_contenu_details_acheteur" placeholder="Date d'expiration">
+                                <input id="dateExpiration_acheteur" name="dateExpiration_acheteur" type="date" class="inscription_contenu_details_acheteur" placeholder="Expiration date">
                                 <br>
                                 <span id="dateExpirationErreur_acheteur"></span>
                                 <br>
-                                <input id="codeSecret_acheteur" name="codeSecret_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Code secret">
+                                <input id="codeSecret_acheteur" name="codeSecret_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Secret code">
                                 <br>
                                 <span id="codeSecretErreur_acheteur"></span>
                                 <br>
@@ -162,11 +162,11 @@
                     <div class="col-5">
                         <h3 class="inscription_detail_titre1 text-uppercase detail_style">General Information</h3>
                         
-                        <input id="nomMarque_vendeur" name="nomMarque_vendeur" class="inscription_contenu_details_vendeur" placeholder="Nom de la marque">
+                        <input id="nomMarque_vendeur" name="nomMarque_vendeur" class="inscription_contenu_details_vendeur" placeholder="Brand name">
                         <br>
                         <span id="nomMarqueErreur_vendeur"></span>
                         <br>
-                        <input id="telephone_vendeur" name="telephone_vendeur" class="inscription_contenu_details_vendeur" placeholder="Téléphone">
+                        <input id="telephone_vendeur" name="telephone_vendeur" class="inscription_contenu_details_vendeur" placeholder="Phone">
                         <br>
                         <span id="telephoneErreur_vendeur"></span>
                         <br>
@@ -174,11 +174,11 @@
                         <br>
                         <span id="mailErreur_vendeur"></span>
                         <br>
-                        <input id="mdp_vendeur" name="mdp_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Mot de passe">
+                        <input id="mdp_vendeur" name="mdp_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Password">
                         <br>
                         <span id="mdpErreur_vendeur"></span>
                         <br>
-                        <input id="mdp2_vendeur" name="mdp2_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Confirmation mot de passe">
+                        <input id="mdp2_vendeur" name="mdp2_vendeur" type="password" class="inscription_contenu_details_vendeur" placeholder="Confirm password">
                         <br>
                         <span id="mdp2Erreur_vendeur"></span>
                         <br>

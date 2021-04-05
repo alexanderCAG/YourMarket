@@ -101,7 +101,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body mt-2">
-                    <input type="text" name="quantite_nego_maison" class="quantite_nego_maison" placeholder="Quantité">
+                    <input type="text" name="quantite_nego_maison" class="quantite_nego_maison" placeholder="Quantity">
                     <input type="text" name="prix_nego_maison" class="prix_nego_maison">€
                     <br><br>
                     <span class="condition_prix_nego">If you offer a price and this price is accepted by the seller, you will be automatically charged.</span>

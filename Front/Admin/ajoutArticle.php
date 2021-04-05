@@ -26,17 +26,17 @@
                 <div class="col-5">
                     <h3 class="ajout_article_titre text-uppercase detail_style">General Information</h3>
                     
-                    <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle_Admin" class="contenu_details_Ajoutarticle" placeholder="Nom du produit">
+                    <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle_Admin" class="contenu_details_Ajoutarticle" placeholder="Product Name">
                     <br>
                     <span id="nomProduitErreur_ajoutArticle"></span>
                     <br>
-                    <textarea id="description_ajoutArticle" name="description_ajoutArticle_Admin" placeholder="Entrer une description" cols="45" rows="6" style="background-color: #f2f2f2;"></textarea>
+                    <textarea id="description_ajoutArticle" name="description_ajoutArticle_Admin" placeholder="Enter description" cols="45" rows="6" style="background-color: #f2f2f2;"></textarea>
                     <br>
                     <span id="descriptionErreur_ajoutArticle"></span>
                     <br>
-                    <input id="prix_ajoutArticle" name="prix_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Prix en euro (€)"><span id="prixErreur_ajoutArticle"></span>
+                    <input id="prix_ajoutArticle" name="prix_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Price in euro (€)"><span id="prixErreur_ajoutArticle"></span>
                     <br>
-                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatité"><span id="quantiteErreur_ajoutArticle"></span>
+                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatity"><span id="quantiteErreur_ajoutArticle"></span>
                     <br>
                 </div>
 

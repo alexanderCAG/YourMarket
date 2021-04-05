@@ -52,11 +52,11 @@
                 <div class="col-5">
                     <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style">General Information</h3>
                     
-                    <input id="infoPerso_nomMarque_vendeur" name="infoPerso_nomMarque_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $brand_vendeur ?>" placeholder="Nom de la marque">
+                    <input id="infoPerso_nomMarque_vendeur" name="infoPerso_nomMarque_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $brand_vendeur ?>" placeholder="Brand Name">
                     <br>
                     <span id="infoPerso_nomMarqueErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_telephone_vendeur" name="infoPerso_telephone_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $phone_vendeur ?>" placeholder="Téléphone">
+                    <input id="infoPerso_telephone_vendeur" name="infoPerso_telephone_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $phone_vendeur ?>" placeholder="Phone">
                     <br>
                     <span id="infoPerso_telephoneErreur_vendeur"></span>
                     <br>
@@ -64,11 +64,11 @@
                     <br>
                     <span id="infoPerso_mailErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_mdp_vendeur" name="infoPerso_mdp_vendeur" type="password" class="infoPerso_contenu_details_vendeur" value="<?php echo $passworde_vendeur ?>" placeholder="Mot de passe">
+                    <input id="infoPerso_mdp_vendeur" name="infoPerso_mdp_vendeur" type="password" class="infoPerso_contenu_details_vendeur" value="<?php echo $passworde_vendeur ?>" placeholder="Password">
                     <br>
                     <span id="infoPerso_mdpErreur_vendeur"></span>
                     <br>
-                    <input id="infoPerso_mdp2_vendeur" name="infoPerso_mdp2_vendeur" type="password" class="infoPerso_contenu_details_vendeur" value="<?php echo $passworde_vendeur ?>" placeholder="Confirmation mot de passe">
+                    <input id="infoPerso_mdp2_vendeur" name="infoPerso_mdp2_vendeur" type="password" class="infoPerso_contenu_details_vendeur" value="<?php echo $passworde_vendeur ?>" placeholder="Confirm Password">
                     <br>
                     <span id="infoPerso_mdp2Erreur_vendeur"></span>
                     <br>

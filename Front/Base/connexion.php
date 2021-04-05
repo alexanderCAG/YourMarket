@@ -15,7 +15,7 @@
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <input class="se_connecter_email detail_style" name="mail" placeholder="Email">
                     <br>
-                    <input class="se_connecter_mdp detail_style" name="mdp" type="password" placeholder="Mot de passe">
+                    <input class="se_connecter_mdp detail_style" name="mdp" type="password" placeholder="Password">
                     <br>
                     <input type="submit" name="submit" value="Connexion" class="text-uppercase btn_se_connecter texte_style">
                     <br>

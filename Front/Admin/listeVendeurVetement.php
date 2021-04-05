@@ -108,11 +108,11 @@
                         <div class="col-5">
                             <h3 class="ajout_vendeur_titre text-uppercase detail_style">General Information</h3>
                             
-                            <input id="nomMarque_Ajoutvendeur" name="nomMarque_Ajoutvendeur" class="contenu_details_Ajoutvendeur" placeholder="Nom de la marque">
+                            <input id="nomMarque_Ajoutvendeur" name="nomMarque_Ajoutvendeur" class="contenu_details_Ajoutvendeur" placeholder="Brand name">
                             <br>
                             <span id="nomMarqueErreur_Ajoutvendeur"></span>
                             <br>
-                            <input id="telephone_Ajoutvendeur" name="telephone_Ajoutvendeur" class="contenu_details_Ajoutvendeur" placeholder="Téléphone">
+                            <input id="telephone_Ajoutvendeur" name="telephone_Ajoutvendeur" class="contenu_details_Ajoutvendeur" placeholder="Phone">
                             <br>
                             <span id="telephoneErreur_Ajoutvendeur"></span>
                             <br>
@@ -120,11 +120,11 @@
                             <br>
                             <span id="mailErreur_Ajoutvendeur"></span>
                             <br>
-                            <input id="mdp_Ajoutvendeur" name="mdp_Ajoutvendeur" type="password" class="contenu_details_Ajoutvendeur" placeholder="Mot de passe">
+                            <input id="mdp_Ajoutvendeur" name="mdp_Ajoutvendeur" type="password" class="contenu_details_Ajoutvendeur" placeholder="Password">
                             <br>
                             <span id="mdpErreur_Ajoutvendeur"></span>
                             <br>
-                            <input id="mdp2_Ajoutvendeur" name="mdp2_Ajoutvendeur" type="password" class="contenu_details_Ajoutvendeur" placeholder="Confirmation mot de passe">
+                            <input id="mdp2_Ajoutvendeur" name="mdp2_Ajoutvendeur" type="password" class="contenu_details_Ajoutvendeur" placeholder="Confirm password">
                             <br>
                             <span id="mdp2Erreur_Ajoutvendeur"></span>
                             <br>
