@@ -74,73 +74,91 @@
     </button>
 </div>
 
-<div class="row mt-4 presentation_vetement">
 
-    <div class="col-md-4 col-lg-4">
-        <br><br><br>
-        <h2 class="centrer texte_style mt-4">VETEMENT</h2><br><br>
-        <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
-            aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
-            quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
-        <a type="button"  href="page-vetements.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DECOUVRIR</a>
+<!-- row last two clothes added -->
+<div class="row p-5 mt-5">
+    <div class="col-md-4 pt-5 mt-5">
+        <h2 class="centrer texte_style mt-4">CLOTHES</h2><br><br>
+        <p class="centrer texte_presentation">Welcome into our clothing section or what we like to call it, the ali baba cave.
+        You will find everything you need and even more.
+        We work closely with the sellers to always have what is new and fresh for you.</p><br><br><br>
+        <a type="button"  href="page-vetements.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DISCOVER</a>
     </div>
+    <div class="col-md-4" style="padding-left:50px">
+        <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
+                        $nameItem = $rowdernierVetement['name'];
+                        $priceItem = $rowdernierVetement['price'];
+                        $categoryItem = $rowdernierVetement['category'];
+                        $brandItem = $rowdernierVetement['brand'];
+                        $subcategoryItem = $rowdernierVetement['subcategory'];
+                        $photoItem = $rowdernierVetement['photo'];
+            ?>
+        <div class="overlay-image">
+            <a>
+                <img class="image image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="New product" />
+                <div class="normal">
+                <div class="text"> <button type="button" class="btn btn-outline-light  btn-lg">NEW </i></button></div>
 
-    <div class="col-md-1 col-lg-1"></div>
-
-    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-    <?php if($rowdernierVetement = mysqli_fetch_assoc($dernierVetement)){
-                    $nameItem = $rowdernierVetement['name'];
-                    $priceItem = $rowdernierVetement['price'];
-                    $categoryItem = $rowdernierVetement['category'];
-                    $brandItem = $rowdernierVetement['brand'];
-                    $subcategoryItem = $rowdernierVetement['subcategory'];
-                    $photoItem = $rowdernierVetement['photo'];
-        ?>
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photoItem ?>"
-            alt="t-shirt_homme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
-            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
+                </div>
+                <div class="hover">
+                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                </div>
+            </a>
         </div>
         
-        <div class="information_presentation_premier">
-        
-            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
-            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
-            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
-            <?php } ?>
-        </div>
+        <div class="row">
+            <div class="col-md-6"> 
+                <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">ADD TO CART </a>
+            </div>
+            <div class="col-md-6"> 
+                <a class="float-right f_right text-decoration-none text-dark"><?php echo $priceItem ?> €</a><br>
+                <a class="float-right f_right  text-decoration-none text-dark"><?php echo $nameItem ?></a><br>
+                <a class="float-right f_right  text-decoration-none text-dark"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></a>
+            </div>
+        </div> 
+        <?php } ?>   
     </div>
+    <div class="col-md-4" >
+                <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
+                            $nameItem = $rowavantDernierVetement['name'];
+                            $priceItem = $rowavantDernierVetement['price'];
+                            $brandItem = $rowdernierVetement['brand'];
+                            $categoryItem = $rowavantDernierVetement['category'];
+                            $subcategoryItem = $rowavantDernierVetement['subcategory'];
+                            $photoItem = $rowavantDernierVetement['photo'];
+                ?>
+            <div class="overlay-image">
+                <a>
+                    <img class="image image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="New product" />
+                    <div class="normal">
+                    <div class="text"> <button type="button" class="btn btn-outline-light  btn-lg">NEW </i></button></div>
 
-    <div class="col-md-1 col-lg-1"></div>
-
-    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-    <?php if($rowavantDernierVetement = mysqli_fetch_assoc($avantDernierVetement)){
-                    $nameItem = $rowavantDernierVetement['name'];
-                    $priceItem = $rowavantDernierVetement['price'];
-                    $brandItem = $rowdernierVetement['brand'];
-                    $categoryItem = $rowavantDernierVetement['category'];
-                    $subcategoryItem = $rowavantDernierVetement['subcategory'];
-                    $photoItem = $rowavantDernierVetement['photo'];
-        ?>
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
-        </div>
-        
-        <div class="information_presentation_deuxieme">
-        
-            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
-            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
-            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
-            <?php } ?>
+                    </div>
+                    <div class="hover">
+                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6"> 
+                    <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">ADD TO CART </a>
+                </div>
+                <div class="col-md-6"> 
+                    <a class="float-right f_right text-decoration-none text-dark"><?php echo $priceItem ?> €</a><br>
+                    <a class="float-right f_right  text-decoration-none text-dark"><?php echo $nameItem ?></a><br>
+                    <a class="float-right f_right  text-decoration-none text-dark"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></a>
+                </div>
+            </div> 
+            <?php } ?>   
         </div>
     </div>
 </div>
-
-<div class="row mt-4 presentation_maison">
-<?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
+<!-- row last two houses added -->
+<div class="row p-5 pt-5 ">
+    
+    <div class="col-md-4" >
+        <?php if($rowdernierMaison = mysqli_fetch_assoc($dernierMaison)){
                     $nameItem = $rowdernierMaison['name'];
                     $priceItem = $rowdernierMaison['price'];
                     $categoryItem = $rowdernierMaison['category'];
@@ -148,28 +166,33 @@
                     $subcategoryItem = $rowdernierMaison['subcategory'];
                     $photoItem = $rowdernierMaison['photo'];
         ?>
+        <div class="overlay-image">
+            <a>
+                <img class="image image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="New product" />
+                <div class="normal">
+                <div class="text"> <button type="button" class="btn btn-outline-light  btn-lg">NEW </i></button></div>
 
-    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photoItem ?>"
-            alt="t-shirt_homme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
-            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
+                </div>
+                <div class="hover">
+                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                </div>
+            </a>
         </div>
         
-        <div class="information_presentation_premier">
-        
-            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
-            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
-            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
-            <?php } ?>
-        </div>
+        <div class="row">
+            <div class="col-md-6"> 
+                <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">ADD TO CART </a>
+            </div>
+            <div class="col-md-6"> 
+                <a class="float-right f_right text-decoration-none text-dark"><?php echo $priceItem ?> €</a><br>
+                <a class="float-right f_right  text-decoration-none text-dark"><?php echo $nameItem ?></a><br>
+                <a class="float-right f_right  text-decoration-none text-dark"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></a>
+            </div>
+        </div> 
+        <?php } ?>   
     </div>
-
-    <div class="col-md-1 col-lg-1"></div>
-
-    <div class="col-md-3 col-lg-3 presentation_nouveau_col">
-    <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
+    <div class="col-md-4" >
+        <?php if($rowavantDernierMaison = mysqli_fetch_assoc($avantDernierMaison)){
                     $nameItem = $rowavantDernierMaison['name'];
                     $priceItem = $rowavantDernierMaison['price'];
                     $categoryItem = $rowavantDernierMaison['category'];
@@ -177,36 +200,45 @@
                     $subcategoryItem = $rowavantDernierMaison['subcategory'];
                     $photoItem = $rowavantDernierMaison['photo'];
         ?>
-        <div class="position-relative">
-            <img class="image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="t-shirt_femme">
-            <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">AJOUTER</a>
-        </div>
-        
-        <div class="information_presentation_deuxieme">
-        
-            <div class="information_presentation_prix"><?php echo $priceItem ?> €</div>
-            <div class="information_presentation_categorie"><?php echo $nameItem ?></div>
-            <div class="information_presentation_categorie"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></div>
-            <?php } ?>
-        </div>
+            <div class="overlay-image">
+                <a>
+                    <img class="image image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="New product" />
+                    <div class="normal">
+                    <div class="text"> <button type="button" class="btn btn-outline-light  btn-lg">NEW </i></button></div>
+
+                    </div>
+                    <div class="hover">
+                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6"> 
+                    <a href="connexion.php" class="texte_style presentation_nouveau_ajout position-absolute" style="text-decoration:none; color:black;">ADD TO CART </a>
+                </div>
+                <div class="col-md-6"> 
+                    <a class="float-right f_right text-decoration-none text-dark"><?php echo $priceItem ?> €</a><br>
+                    <a class="float-right f_right  text-decoration-none text-dark"><?php echo $nameItem ?></a><br>
+                    <a class="float-right f_right  text-decoration-none text-dark"><?php echo $brandItem ?> / <?php echo $subcategoryItem ?></a>
+                </div>
+            </div> 
+            <?php } ?>   
     </div>
-
-    <div class="col-md-1 col-lg-1"></div>
-
-    <div class="col-md-4 texte_presentation_div">
-        <br><br><br>
-        <h2 class="centrer texte_style mt-4">MAISON</h2><br><br>
-        <p class="centrer texte_presentation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero,
-            aperiam natus at repellendus mollitia, modi laboriosam recusandae iusto sed inventore sunt consequatur
-            quis assumenda voluptatum sapiente unde veniam nisi.</p><br><br><br>
-            <a type="button"  href="page-maison.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DECOUVRIR</a>
+    <div class="col-md-4">
+        <h2 class="centrer texte_style pt-5 mt-5">CLOTHES</h2><br><br>
+        <p class="centrer texte_presentation">Welcome into our clothing section or what we like to call it, the ali baba cave.
+        You will find everything you need and even more.
+        We work closely with the sellers to always have what is new and fresh for you.</p><br><br><br>
+        <a type="button"  href="page-vetements.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DISCOVER</a>
     </div>
 </div>
+    
+</div>
 
-<div class="presentation_marque mt-5 position-relative">
+<div class="presentation_marque mt-5 position-relative bg_grey1" >
     <div class="container">
-        <h2 class="centrer texte_style pt-4 pb-4 text-uppercase">Nos Produits</h2>
+        <h2 class="centrer texte_style pt-4 pb-4 text-uppercase">PRODUCTS</h2>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
         <?php for ($i=0; $i<=9;$i++){
             if($rowAllItems = mysqli_fetch_assoc($queryAllItems)){
@@ -217,7 +249,8 @@
     ?>
             <div class="col">
                 <div class="p-3">
-                    <p lass='text-center'><img class="image_ronde image_produit" src="<?php echo $photoItems ?>" alt="chaussure">
+                    <p lass='text-center'>
+                        <img class=" image_produit" src="<?php echo $photoItems ?>" alt="chaussure">
                     <small><?php echo "<p class='text-center'>".$nameItems." - ".$prixItems."€ </p>"  ?></small></p>
                 </div>
             </div>
@@ -225,7 +258,7 @@
             
         </div>
 
-        <button class="position-absolute bottom-0 start-50 translate-middle-x" id="btn_presentation_produit"><a href="tous-nos-produits.php" class="text-decoration-none text-light">TOUT VOIR</a>
+        <button class="position-absolute bottom-0 start-50 translate-middle-x" id="btn_presentation_produit"><a href="tous-nos-produits.php" class="text-decoration-none text-light">SEE ALL</a>
         </button>
         
     </div>
@@ -263,7 +296,7 @@
 </div>
 
 <div class="information_connection pt-4 position-relative">
-    <h2 class="centrer white texte_style">SE CONNECTER</h2><br><br>
+    <h2 class="centrer white texte_style">LOGIN</h2><br><br>
     <p class="white info_connection_texte position-absolute top-50 start-50 translate-middle">Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Necessitatibus, dolores magni! A labore incidunt magnam doloribus,
         dolorum repudiandae consequatur corporis aut ex harum officia suscipit rem vero maxime, molestias quisquam.
@@ -276,14 +309,14 @@
             <div class="col shadow-sm">
                 <a href="#" style="text-decoration: none; color: black;">
                     <div class="info_connection_class texte_style centrer p-3 border">
-                    <a type="button" href="connexion.php" style="font-weight: bold;text-decoration:none;color:black;">VENDEUR ?</a>
+                    <a type="button" href="connexion.php" style="font-weight: bold;text-decoration:none;color:black;">SELLER ?</a>
                     </div>
                 </a>
             </div>
             <div class="col shadow-sm">
                 <a href="#" style="text-decoration: none; color: black;">
                     <div class="info_connection_class texte_style centrer p-3 border">
-                        <a type="button" href="connexion.php" style="font-weight: bold;text-decoration:none;color:black;">ACHETEUR ?</a>
+                        <a type="button" href="connexion.php" style="font-weight: bold;text-decoration:none;color:black;">BUYER ?</a>
                     </div>
                 </a>
             </div>

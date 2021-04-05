@@ -80,9 +80,9 @@
             height: 600px!important;
         }
         .image_presentation_nouveau{
-            width: 350px;
-            height: 500px;
-            opacity: 0.5;
+            width: 100%!important;
+            height: 600px!important;
+    
         }
         .image_presentation_nouveau:hover{
             opacity: 1;
