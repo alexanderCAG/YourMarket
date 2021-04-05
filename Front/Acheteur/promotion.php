@@ -107,7 +107,7 @@
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Decoration</small></a>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'tshirt' ){?>
-                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >T-shirt</small></a>
+                                    <!-- <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >T-shirt</small></a> -->
                                     <?php }?>
                                 <?php  if($subcategoryItems == 'sweat_shirt' ){?>
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Sweat-Shirt</small></a>
