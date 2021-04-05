@@ -64,6 +64,7 @@
                                 </div>
                                 <hr>
                                 <div class="row">
+                                    <!-- The user is not connected so redirect to connexion page -->
                                     <div class="col-6 p-1 m-0">
                                         <?php if($is_negotiated == 1){ ?>
                                             <a href="connexion.php" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Offer</small></a>
@@ -77,6 +78,7 @@
                                         <?php } ?>
                                     </div>
                             </div>
+                            <!-- Define the different subcategory -->
                             <?php  if($quantityCadre == 0 ){?>
                                     <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> This product is no longer available &nbsp;</div>
                             <?php }?>

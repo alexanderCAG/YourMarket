@@ -18,7 +18,7 @@
         </div>
         
         <div class="inscription_contenu position-absolute bottom-0 start-0">
-
+            <!-- Register for the Buyer -->
             <form action="" method="POST">
                 <div class="row inscription_contenu_acheteur">
                     <div class="col-1"></div>
@@ -154,6 +154,7 @@
                 </div>
             </form>
 
+            <!-- Register for the Seller -->
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="row inscription_contenu_vendeur">
                     <div class="col-1"></div>
@@ -186,6 +187,7 @@
                     </div>
 
                     <div class="col-5" style="margin-left:50px!important;">
+                        <!-- Display the seller picture -->
                         <img id="img_inscription_choix_vendeur">
                         <div class="img_inscription_general">
                             <span class="file_inscription_img">
@@ -247,6 +249,7 @@
     </div>
 </div>
 
+<!-- Background Animation -->
 <div id="Clouds">
     <div class="Cloud Foreground"></div>
     <div class="Cloud Background"></div>
@@ -260,7 +263,7 @@
     <div class="Cloud Background"></div>
 </div>
 
-<!-- register verif -->
+<!-- register verif php -->
 <?php
     include("../../Bdd/cnx.php");
     

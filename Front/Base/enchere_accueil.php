@@ -37,7 +37,8 @@ for ($i=0; $i<=$totalEnchere;$i++){
                     if($rowItem = mysqli_fetch_assoc($queryIdItem)){
                         $id_item = $rowItem['id_item'];
                     ?>
-                    
+                  
+<!-- all the bid proposition -->
 <div class="enchere_liste_total row">
     <!-- Ligne 1 -->
     <div class="col-1"></div>
@@ -63,6 +64,8 @@ for ($i=0; $i<=$totalEnchere;$i++){
 
     <div class="col-3 enchere_liste_payer centrer position-relative">
         <div class="enchere_payer_titre texte_style text-uppercase ">interested ?</div>
+        
+        <!-- The user is not connected so redirect to connexion page -->
         <a type="button" href="connexion.php" class="btn_envoyer_propose_prix text-uppercase">View more</a>
     </div>
 

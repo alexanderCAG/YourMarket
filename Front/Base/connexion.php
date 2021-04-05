@@ -28,6 +28,7 @@
     </div>
 </form>
 
+<!-- Animation on the background -->
 <div id="Clouds">
     <div class="Cloud Foreground"></div>
     <div class="Cloud Background"></div>

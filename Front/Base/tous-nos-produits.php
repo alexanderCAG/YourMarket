@@ -45,6 +45,7 @@
                     <div class="listeVendeur_un_par_un col-3 mb-5">
                         <div class="card shadow cardProduct" style="width: 18rem;" >
                             <img class="img_listeVendeur_logo card-img-top" src="<?php echo $photo ?>" alt="oreiller">
+                            <!-- If quantity is equal to 0 we tell it to the buyer -->
                             <?php  if($quantityCadre == 0 ){?>
                                 <div class="bg-danger text-light w-100 text-center">Unavailable</div>
                                 <?php }else{?>
@@ -62,19 +63,21 @@
                                 </div>
                                 <hr>
                                 <div class="row">
+                                    <!-- The user is not connected so redirect to connexion page -->
                                     <div class="col-6 p-1 m-0">
                                         <?php if($is_negotiated == 1){ ?>
-                                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#nego_prix_maison"> <i class="far fa-handshake"></i><small> Negociate</small></button>
+                                            <a href="connexion.php" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Offer</small></a>
                                         <?php } ?>
                                         
                                     </div>
 
                                     <div class="col-6  p-1 m-0">
                                         <?php if($is_buying == 1){ ?>
-                                            <button type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></button>
+                                            <a href="connexion.php" type="button" class="btn btn-dark f_right"> <i class="fas fa-shopping-cart"></i>    <small>Add to cart </small></a>
                                         <?php } ?>
                                     </div>
                             </div>
+                            <!-- Define the different subcategory -->
                                 <?php  if($subcategoryItems == 'sheet' ){?>
                                     <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i> Sheets &nbsp;</div>
                                 <?php }?>

@@ -18,7 +18,7 @@
         $queryCountSeller  = mysqli_query($con, "select count(id_seller) as totalSeller from seller");
 ?>
 
-
+<!-- the carousel presentation -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -30,6 +30,7 @@
         <div class="carousel-item active">
             <img class="img_carousel position-relative" src="../../Image/acceuil_achat.jpg" class="d-block w-100"
                 alt="acceuil_achat">
+            <!-- Design but does work wet.. -->
             <!-- <div class="bg-secondary">
                 <div class="div_deco">ACHETER MAINTENANT</div>
             </div> -->
@@ -154,6 +155,7 @@
         </div>
     </div>
 </div>
+
 <!-- row last two houses added -->
 <div class="row p-5 pt-5 ">
     
@@ -233,9 +235,8 @@
         <a type="button"  href="page-vetements.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DISCOVER</a>
     </div>
 </div>
-    
-</div>
 
+<!-- presentation 10 last product of the 2 category -->
 <div class="presentation_marque mt-5 position-relative bg_grey1" >
     <div class="container">
         <h2 class="centrer texte_style pt-4 pb-4 text-uppercase">PRODUCTS</h2>
@@ -263,6 +264,8 @@
         
     </div>
 </div>
+
+<!-- presentation brand -->
 <div class="">
 	<div class="row  w-100 mt-5">
 		<div class="MultiCarousel p-0 p-0" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
@@ -295,6 +298,7 @@
 	</div>
 </div>
 
+<!-- link to the register -->
 <div class="information_connection pt-4 position-relative">
     <h2 class="centrer white texte_style">LOGIN</h2><br><br>
     <p class="white info_connection_texte position-absolute top-50 start-50 translate-middle">Lorem ipsum dolor sit
