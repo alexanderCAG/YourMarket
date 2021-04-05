@@ -97,11 +97,11 @@
             <a>
                 <img class="image image_presentation_nouveau" src="<?php echo $photoItem ?>" alt="New product" />
                 <div class="normal">
-                <div class="text"> <button type="button" class="btn btn-outline-light  btn-lg">NEW </i></button></div>
+                <div class="text"> <button type="button" class="btn btn-outline-light  btn-lg" >NEW </i></button></div>
 
                 </div>
                 <div class="hover">
-                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="pointer-events: none!important;">NEW </button></div>
                 </div>
             </a>
         </div>
@@ -135,7 +135,7 @@
 
                     </div>
                     <div class="hover">
-                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="pointer-events: none!important;">NEW </button></div>
                     </div>
                 </a>
             </div>
@@ -174,7 +174,7 @@
 
                 </div>
                 <div class="hover">
-                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="pointer-events: none!important;">NEW </button></div>
                 </div>
             </a>
         </div>
@@ -208,7 +208,7 @@
 
                     </div>
                     <div class="hover">
-                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="pointer-events: none!important;">NEW </button></div>
                     </div>
                 </a>
             </div>

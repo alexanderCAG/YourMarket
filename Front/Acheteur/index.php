@@ -101,7 +101,7 @@
 
                 </div>
                 <div class="hover">
-                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="text-decoration:none; color:black;">NEW </button></div>
                 </div>
             </a>
         </div>
@@ -134,7 +134,7 @@
 
                     </div>
                     <div class="hover">
-                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="text-decoration:none; color:black;">NEW </button></div>
                     </div>
                 </a>
             </div>
@@ -173,7 +173,7 @@
 
                 </div>
                 <div class="hover">
-                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="text-decoration:none; color:black;">NEW </button></div>
                 </div>
             </a>
         </div>
@@ -207,7 +207,7 @@
 
                     </div>
                     <div class="hover">
-                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg">NEW </button></div>
+                    <div class="text"><button type="button" class="btn btn-outline-light  btn-lg" style="text-decoration:none; color:black;">NEW </button></div>
                     </div>
                 </a>
             </div>
