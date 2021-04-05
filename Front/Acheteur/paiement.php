@@ -79,7 +79,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                                     <!--<h2 class="fs-title">Account Information:</h2>-->
                                 </div>
                                 <div class="col-5">
-                                    <h2 class="steps">Etape 1 - 4</h2><br><br>
+                                    <h2 class="steps">Step 1 - 4</h2><br><br>
                                 </div>
                             </div>
                             <div class="row alert alert-secondary mt-5" role="alert">
