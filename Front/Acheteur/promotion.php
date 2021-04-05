@@ -84,7 +84,11 @@
                                              <?php echo $prixItems ?> €  &nbsp;</strike></small><br>
 
                                              <?php
-                                              echo ($prixItems-(($prixItems * $sold) / 100)); ?> €
+                                        
+                                              $prixItems = (int)$prixItems;
+                                              $result = $prixItems-(($prixItems * $sold) / 100);
+                                              
+                                              echo $result; ?> €
                                         </p>
                                     </div>
                                 </div>
