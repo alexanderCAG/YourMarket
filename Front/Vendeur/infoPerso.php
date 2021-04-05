@@ -32,7 +32,7 @@
 }?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
         <p class="titre_general_infoPerso text-uppercase centrer">
-            Informations personnelles
+            Personal informations
         </p>
     </div>
     
@@ -50,7 +50,7 @@
                 <div class="col-1"></div>
 
                 <div class="col-5">
-                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style">information générale</h3>
+                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style">General Information</h3>
                     
                     <input id="infoPerso_nomMarque_vendeur" name="infoPerso_nomMarque_vendeur" class="infoPerso_contenu_details_vendeur" value="<?php echo $brand_vendeur ?>" placeholder="Nom de la marque">
                     <br>
@@ -97,10 +97,10 @@
                 <div class="col-1"></div>
 
                 <div class="col-10">
-                    <button onclick="modif_infoPersoVendeur()" type="button" id="modif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Modifier</button>
-                    <button onclick="annulModif_infoPersoVendeur()" type="button" id="annulModif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="modif_infoPersoVendeur()" type="button" id="modif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Edit</button>
+                    <button onclick="annulModif_infoPersoVendeur()" type="button" id="annulModif_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Cancel Edit</button>
                     <button onclick="reset_infoPersoVendeur()" type="button" id="reset_infoPersoL_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Reset</button>
-                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPerso_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
+                    <button type="submit" id="submit_valider_infoPerso_vendeur" name="submit_valider_infoPerso_vendeur" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Validate</button>
                 </div>
 
                 <div class="col-1"></div>

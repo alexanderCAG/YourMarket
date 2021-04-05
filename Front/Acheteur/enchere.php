@@ -15,10 +15,10 @@
 <div class="genale_page_enchere position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_enchere text-uppercase">
-            enchères
+            Bid
         </p>
         <p class="info_general_enchere centrer detail_style">
-        <?php echo $totalEnchere ?> enchères en cours
+        <?php echo $totalEnchere ?> ongoing bid
         </p>
     </div>
 

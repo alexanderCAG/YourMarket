@@ -12,7 +12,7 @@
     <img class="image_vetement_general position-relative" src="../../Image/allProduct.png" alt="tous les produits">
     <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
         <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../../Image/icon_sale.png" alt="icon_sale">
-        <p class="texte_style h4 text-uppercase position-absolute top-50 start-50 translate-middle">Tous nos produits</p> 
+        <p class="texte_style h4 text-uppercase position-absolute top-50 start-50 translate-middle">All our products</p> 
     </div>
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
@@ -46,7 +46,7 @@
                         <div class="card shadow cardProduct" style="width: 18rem;" >
                             <img class="img_listeVendeur_logo card-img-top" src="<?php echo $photo ?>" alt="oreiller">
                             <?php  if($quantityCadre == 0 ){?>
-                                <div class="bg-danger text-light w-100 text-center">Indisponible</div>
+                                <div class="bg-danger text-light w-100 text-center">Unavailable</div>
                                 <?php }else{?>
                                     <div class="bg-white text-light w-100 text-center">-</div>
                             <?php }?>

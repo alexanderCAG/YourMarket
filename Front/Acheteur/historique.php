@@ -22,10 +22,10 @@ if($row = mysqli_fetch_assoc($queryCount)){
 <div class="genale_page_enchere position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_enchere text-uppercase">
-            Historique
+            History
         </p>
         <p class="info_general_listeArticle centrer detail_style">
-            Vous avez acheté <?php echo $total ?> articles
+        You bought <?php echo $total ?> articles
         </p>
     </div>
 

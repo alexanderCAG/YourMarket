@@ -33,10 +33,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
 }?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_listeArticle text-uppercase">
-            Liste des articles 
+             List of articles
         </p>
         <p class="info_general_listeArticle centrer detail_style">
-            Vous avez <?php echo $total ?> articles
+            You have <?php echo $total ?> articles
         </p>
     </div>
     
@@ -80,14 +80,14 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                     <span class="badge  badge-pill rounded-pill bg-danger f_right mr-3"><i class="fas fa-times"></i> not availale </span>
                                 <?php } ?>
                                 <?php if($isBidding == 1){ ?>
-                                    <span class="badge  badge-pill rounded-pill bg-warning f_right mr-3"> <i class="fas fa-gavel"></i> Is biding </span>
+                                    <span class="badge  badge-pill rounded-pill bg-warning f_right mr-3"> <i class="fas fa-gavel"></i> biding </span>
                                 <?php } ?>
                                 <?php if($is_negotiated == 1){ ?>
                                     
-                                    <span class="badge  badge-pill rounded-pill bg-success f_right mr-3">  <i class="far fa-handshake"></i> Is negociated </span> 
+                                    <span class="badge  badge-pill rounded-pill bg-success f_right mr-3">  <i class="far fa-handshake"></i> negociated </span> 
                                 <?php } ?>
                                 <?php if($is_buying == 1){ ?>
-                                    <span class="badge  badge-pill rounded-pill bg-secondary f_right mr-3"> <i class="far fa-money-bill-alt"></i> Is bying </span>
+                                    <span class="badge  badge-pill rounded-pill bg-secondary f_right mr-3"> <i class="far fa-money-bill-alt"></i> bying </span>
                                 <?php } ?>
                             </div>
                             
@@ -180,10 +180,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     <div class="col-8 ">
         <div class="row">
             <div class="col-md-6">
-                <a href="ajoutArticle.php" type="button" class="btn btn-lg bg_blue1 text-light w-100"> <i class="fas fa-plus"></i> Ajouter un article</a>
+                <a href="ajoutArticle.php" type="button" class="btn btn-lg bg_blue1 text-light w-100"> <i class="fas fa-plus"></i> Add item</a>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-lg bg_blue1 text-light w-100"> <i class="fas fa-pen"></i> Mettre à jours un article</button>
+                <button type="button" class="btn btn-lg bg_blue1 text-light w-100"> <i class="fas fa-pen"></i> Update an article</button>
             </div>
         </div>
     </div>

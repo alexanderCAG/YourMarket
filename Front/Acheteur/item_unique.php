@@ -39,7 +39,7 @@
 
             <div class="col-6">
                 <?php if($is_negotiated == 1 && $quantityCadre != 0 ){ ?>
-                    <button onclick="propositionNego()" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Negociate</small></button>
+                    <button onclick="propositionNego()" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Offer</small></button>
                 <?php } ?>
 
                 <?php if($is_buying == 1 && $quantityCadre != 0 ){ ?>
@@ -47,7 +47,7 @@
                 <?php } ?>
 
                 <?php  if($quantityCadre == 0 ){?>
-                    <div class="bg-danger text-light w-100 text-center">Indisponible</div>
+                    <div class="bg-danger text-light w-100 text-center">Unavailable</div>
                 <?php }?>
                 
             </div>

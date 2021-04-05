@@ -46,16 +46,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav text-uppercase">
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="ajoutArticle.php">Ajouter Article</a>
+                        <a class="nav-link" href="ajoutArticle.php">Add Item</a>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="listeArticle.php">Liste Article</a>
+                        <a class="nav-link" href="listeArticle.php">Item List</a>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="messagerie.php">Messagerie</a>
+                        <a class="nav-link" href="messagerie.php">Messaging</a>
                     </li>
                     <li class="nav-item last_nav_title nav_regul">
-                        <a class="nav-link" href="statistique.php">Statistique</a>
+                        <a class="nav-link" href="statistique.php">Statistical</a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                         <div class="btn-group">
@@ -66,7 +66,7 @@
                                 <li><button class="dropdown-item" type="button"><?php echo $_SESSION['email'];?> </button></li>
                                 <li><span class="dropdown-item" ><a href="infoPerso.php" class="text-decoration-none">My account</a></span></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><span class="dropdown-item" ><a href="parametre.php" class="text-decoration-none"> <i class="fas fa-cog"></i> Parametre </i></a> </span></li>
+                                <li><span class="dropdown-item" ><a href="parametre.php" class="text-decoration-none"> <i class="fas fa-cog"></i> Setting </i></a> </span></li>
                                 <hr class="dropdown-divider">
                                 <li><span class="dropdown-item" ><a href="../../Bdd/logout.php" class="text-decoration-none">Logout <i class="fas fa-sign-out-alt text-dark "></i></a> </span></li>
 

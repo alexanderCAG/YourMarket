@@ -20,7 +20,7 @@
     }
 }?>    <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_newArticle text-uppercase">
-            Ajouter un article
+            Add item
         </p>
     </div>
     
@@ -36,7 +36,7 @@
                 <div class="col-1"></div>
 
                 <div class="col-5">
-                    <h3 class="ajout_article_titre text-uppercase detail_style">information générale</h3>
+                    <h3 class="ajout_article_titre text-uppercase detail_style">General Information</h3>
                     
                     <input id="nomProduit_ajoutArticle" name="nomProduit_ajoutArticle" class="contenu_details_Ajoutarticle" placeholder="Nom du produit">
                     <br>
@@ -98,7 +98,7 @@
                             <option value="sous_categorie_vetement">--Please choose an category--</option>
                             <option value="tshirt">T-SHIRT</option>
                             <option value="sweat_shirt">PULL</option>
-                            <option value="shoes">CAP</option>
+                            <option value="shoes">SHOES</option>
                         </select>
                     </div>
                     <br>
@@ -116,9 +116,9 @@
                 <div class="col-1"></div>
 
                 <div class="col-5 detail_style mt-4">
-                    <input type="checkbox" name="achat_direct_ajoutArticle" id="achat_direct_ajoutArticle" value="Achat Direct">Achat Direct
-                    <input type="checkbox" name="achat_nego_ajoutArticle" id="achat_nego_ajoutArticle" class="inputAchat_ajoutArticle" value="Négociation">Négociation
-                    <input type="checkbox" name="achat_enchere_ajoutArticle" id="achat_enchere_ajoutArticle" class="inputAchat_ajoutArticle" value="Enchère">Enchère
+                    <input type="checkbox" name="achat_direct_ajoutArticle" id="achat_direct_ajoutArticle" value="Achat Direct">Buy now
+                    <input type="checkbox" name="achat_nego_ajoutArticle" id="achat_nego_ajoutArticle" class="inputAchat_ajoutArticle" value="Négociation">Offer
+                    <input type="checkbox" name="achat_enchere_ajoutArticle" id="achat_enchere_ajoutArticle" class="inputAchat_ajoutArticle" value="Enchère">Bid
                     <br>
                     <span id="typeAchatErreur_ajoutArticle"></span>
                     <br>

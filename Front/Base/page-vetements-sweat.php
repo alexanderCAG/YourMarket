@@ -11,7 +11,7 @@
     <img class="image_vetement_general position-relative" src="../../Image/vetement-general.png" alt="vetement-general">
     <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
         <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../../Image/icon_sale.png" alt="icon_sale">
-        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">vêtements</p> 
+        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">Clothes</p> 
     </div>
     <div class="class_separation"></div>
 </div>
@@ -67,7 +67,7 @@
                                 <div class="row">
                                     <div class="col-6 p-1 m-0">
                                         <?php if($is_negotiated == 1){ ?>
-                                            <a href="connexion.php" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Negociate</small></a>
+                                            <a href="connexion.php" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Offer</small></a>
                                         <?php } ?>
                                         
                                     </div>
@@ -79,7 +79,7 @@
                                     </div>
                             </div>
                             <?php  if($quantityCadre == 0 ){?>
-                                    <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> Ce produit n'est plus disponible &nbsp;</div>
+                                    <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> This product is no longer available &nbsp;</div>
                             <?php }?>
                             </div>
                             <div class="class_separation2 w-100"></div>

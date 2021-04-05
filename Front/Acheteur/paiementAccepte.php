@@ -42,15 +42,15 @@
     <div class="row justify-content-center">
         <div class="col-9 text-center m-5 mt-3 mb-2 shadow-lg ">
             <div class="card px-0 pt-4 pb-0 m-5 border-0">
-                <h1 id="heading">Paiement accépté  <i class="fas fa-check-circle"></i> <br></h1><br>
+                <h1 id="heading">Accepted payment  <i class="fas fa-check-circle"></i> <br></h1><br>
                 <!--<p>Fill all form field to go to next step</p> #}-->
                 <div id="msform">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active" id="account"><strong>Total du panier</strong></li>
-                        <li class="active" id="personal"><strong>Ma commande</strong></li>
-                        <li class="active" id="payment"><strong>Paiement</strong></li>
-                        <li class="active" id="confirm"><strong>  Terminé </strong></li>
+                        <li class="active" id="account"><strong>Cart Total</strong></li>
+                        <li class="active" id="personal"><strong>My command</strong></li>
+                        <li class="active" id="payment"><strong>Payment</strong></li>
+                        <li class="active" id="confirm"><strong>  Finish </strong></li>
                     </ul>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated  bg_blue1" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
@@ -66,8 +66,8 @@
                             </div>
                             <div class="row justify-content-center pt-2">
                                 <div class="col-7 text-center">
-                                    <p>Nous vous remercions de votre commande. Nous vous tiendrons informé par e-mail lorsque les articles de votre commande auront été expédiés.</p>
-                                    <a class="purple-text text-center h5 text-decoration-none" href="index.php">Revenir à l'accueil</a>
+                                    <p>Thank you for your order. We will keep you informed by email when the items for your order have been dispatched.</p>
+                                    <a class="purple-text text-center h5 text-decoration-none" href="index.php">Back Home</a>
                                
                                 </div>
                             </div>

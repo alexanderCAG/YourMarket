@@ -14,7 +14,7 @@
         <div class="genale_listeVendeur position-relative">
             <div class="texte_style position-absolute top-50 start-50 translate-middle">
                 <p class="titre_general_listeVendeur text-uppercase">
-                Liste des vendeurs
+                List of sellers
                 </p>
                 <!-- <p class="info_general_listeVendeur centrer detail_style">
                     Il y a <=?php echo $total ; ?> vendeur(s)
@@ -27,15 +27,15 @@
         <div class="listeVendeur_details">
             <div class="navbar_listeVendeur">
                 <ul class="navbar_listeVendeur_details detail_style centrer">
-                <li><a href="listeVendeur.php" class="text-uppercase">Toutes nos marques </a> </li>
-                    <li><a href="listeVendeurMaison.php" class="badge text-uppercase bg_blue1 text-light">Marques mobilier <span class="badge bg-light text-dark"><?php echo $total ; ?></span></a> </li>
-                    <li><a href="listeVendeurVetement.php" class="text-uppercase">marques de vêtements</a></li>
+                <li><a href="listeVendeur.php" class="text-uppercase">All our brands </a> </li>
+                    <li><a href="listeVendeurMaison.php" class="badge text-uppercase bg_blue1 text-light">Furniture brands <span class="badge bg-light text-dark"><?php echo $total ; ?></span></a> </li>
+                    <li><a href="listeVendeurVetement.php" class="text-uppercase">clothing brands</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="ajouter_vendeur">
-            <button class="btn_ajout_vendeur_par_admin text-uppercase" data-bs-toggle="modal" data-bs-target="#ajout_vendeur_par_admin">+ Ajouter</button>
+            <button class="btn_ajout_vendeur_par_admin text-uppercase" data-bs-toggle="modal" data-bs-target="#ajout_vendeur_par_admin">+ Add</button>
         </div>
 
         <div class="listeVendeur_total row">
@@ -103,7 +103,7 @@
                         <div class="col-1"></div>
 
                         <div class="col-5">
-                            <h3 class="ajout_vendeur_titre text-uppercase detail_style">information générale</h3>
+                            <h3 class="ajout_vendeur_titre text-uppercase detail_style">General Information</h3>
                             
                             <input id="nomMarque_Ajoutvendeur" name="nomMarque_Ajoutvendeur" class="contenu_details_Ajoutvendeur" placeholder="Nom de la marque">
                             <br>

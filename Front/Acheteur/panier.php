@@ -27,10 +27,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
 <div class="genale_panier position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_panier text-uppercase">
-            Panier
+            Basket
         </p>
         <p class="info_general_panier centrer detail_style">
-            Vous avez <?php echo $total ?> articles
+            You have <?php echo $total ?> articles
         </p>
     </div>
     
@@ -123,19 +123,19 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     <div class="panier_navbar_div">
         <div class="navbar_panier detail_style text-uppercase">
             <form action="" method="POST">
-                <input type="radio" name="typedelivraison_panier" id="livraison_panier_magasin" class="contenu_navbar_panier contenu_navbar_panier_premier"><span class="typedelivraison_panier_texte">Livraison en magasin</span>
+                <input type="radio" name="typedelivraison_panier" id="livraison_panier_magasin" class="contenu_navbar_panier contenu_navbar_panier_premier"><span class="typedelivraison_panier_texte">Store delivery</span>
                 <br>
-                <input type="radio" name="typedelivraison_panier" id="livraison_panier_relais" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">Point relais</span>
+                <input type="radio" name="typedelivraison_panier" id="livraison_panier_relais" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">Relay point</span>
                 <br>
-                <input type="radio" name="typedelivraison_panier" id="livraison_panier_domicile" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">livraison à domicile</span>
+                <input type="radio" name="typedelivraison_panier" id="livraison_panier_domicile" class="contenu_navbar_panier"><span class="typedelivraison_panier_texte">Home delivery</span>
                 <hr>
-                <span class="contenu_navbar_panier detail_panier_navbar">Valeur de la commande : </span><span class="detail_panier_navbar f_right"><?php echo $totalBasket ?><span class="detail_panier_navbar_euro">€</span></span>
+                <span class="contenu_navbar_panier detail_panier_navbar">Order value : </span><span class="detail_panier_navbar f_right"><?php echo $totalBasket ?><span class="detail_panier_navbar_euro">€</span></span>
                 <br>
-                <span class="contenu_navbar_panier detail_panier_navbar">Livraison : </span><span class="detail_panier_navbar f_right">0<span class="detail_panier_navbar_euro">€</span></span>
+                <span class="contenu_navbar_panier detail_panier_navbar">Delivery : </span><span class="detail_panier_navbar f_right">0<span class="detail_panier_navbar_euro">€</span></span>
                <hr>
                 <span class="contenu_navbar_panier prixTotal_panier_navbar">Total :</span><span class="prixTotal_panier_navbar f_right"><?php echo $totalBasket ?><span class="detail_panier_navbar_euro">€</span></span>
                 <br><br>
-                <a type="button"  href="paiement.php" class="btn rounded-0 bg_blue1 text-light  pt-3 pb-3 w-100" style="border-bottom-left-radius:15px!important;border-bottom-right-radius:15px!important;">FINALISER MA COMMANDER</a>
+                <a type="button"  href="paiement.php" class="btn rounded-0 bg_blue1 text-light  pt-3 pb-3 w-100" style="border-bottom-left-radius:15px!important;border-bottom-right-radius:15px!important;">FINALIZE MY ORDER</a>
             </form>
         </div>
     </div>

@@ -62,7 +62,7 @@ if($row2 = mysqli_fetch_assoc($queryBuyer)){
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison 
+                            House 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="page-maison-sheet.php">sheets</a></li>
@@ -74,7 +74,7 @@ if($row2 = mysqli_fetch_assoc($queryBuyer)){
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
+                            Clothes
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="page-vetements-tshirt.php">T-SHIRT</a></li>
@@ -84,10 +84,10 @@ if($row2 = mysqli_fetch_assoc($queryBuyer)){
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="enchere.php">Enchère</a>
+                        <a class="nav-link" href="enchere.php">Bid</a>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="messagerie.php">Messagerie</a>
+                        <a class="nav-link" href="messagerie.php">Messaging</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="panier.php">Panier

@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="monfotter2 centrer bg-light p-2">
-        @ 2121 Tous droits réservés | &copy; politique de confidentialité | conditions générales de vente 
+        @ 2121 All rights reserved | &copy; privacy policy | Terms of Sales 
     </div>
 </div>
 

@@ -21,7 +21,7 @@ if($bg != null){?>
 } ?>
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
         <p class="titre_general_infoPerso text-uppercase centrer">
-        MODIFIER COULEUR DE FOND
+            CHANGE BACKGROUND COLOR
         </p>
     </div>
     
@@ -37,7 +37,7 @@ if($bg != null){?>
         <form action="../../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
             <div class="row inscription_contenu_vendeur">
                 <div class="col-12">
-                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Couleur en Hexadecimal</h3>
+                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3>
                     
                     <input id="background_seller" name="background_seller" class="infoPerso_contenu_details_vendeur" value="<?php echo $bg ?>" placeholder="Nom de la marque">
                     <br>
@@ -50,7 +50,7 @@ if($bg != null){?>
 
             <div class="row">
                 <div class="col-10">
-                    <button type="submit" id="submit_valider_background" name="submit_valider_background" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Valider</button>
+                    <button type="submit" id="submit_valider_background" name="submit_valider_background" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Validate</button>
             
                 </div>
             </div>

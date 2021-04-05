@@ -22,7 +22,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
 <div class="genale_page_enchere position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_enchere text-uppercase">
-            Messagerie
+        Messaging
         </p>
     </div>
 

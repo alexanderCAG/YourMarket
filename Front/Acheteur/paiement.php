@@ -45,7 +45,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
 <div class="genale_panier position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle">
         <p class="titre_general_panier text-uppercase">
-           paiement 
+        payment
         </p>
     </div>
     
@@ -57,15 +57,15 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
     <div class="row justify-content-center">
         <div class="col-9 text-center m-5 mt-3 mb-2 shadow-lg ">
             <div class="card px-0 pt-4 pb-0 m-5 border-0">
-                <h1 id="heading">Finalisation de ma commande </h1><br>
+                <h1 id="heading">Finalization of my order </h1><br>
                 <!--<p>Fill all form field to go to next step</p> #}-->
                 <div id="msform">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active" id="account"><strong>Total du panier</strong></li>
-                        <li id="personal"><strong>Ma commande</strong></li>
-                        <li id="payment"><strong>Paiement</strong></li>
-                        <li id="confirm"><strong>Terminé</strong></li>
+                        <li class="active" id="account"><strong>Cart Total</strong></li>
+                        <li id="personal"><strong>My command</strong></li>
+                        <li id="payment"><strong>Payment</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
                     </ul>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated  bg_blue1" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
@@ -178,7 +178,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                         <div class="form-card mb-5">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title">Paiement en ligne</h2><br><br><br>
+                                    <h2 class="fs-title">Online payment</h2><br><br><br>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps">Step 3 - 4</h2>
@@ -259,9 +259,9 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                                             <input type="hidden" name="input_SecurityCode" value="<?= $cardcode ?> "> 
                                             
                                           
-                                            <button type="submit" name="btn_submit_paiement" class="btn next action-button bg_blue1"> Regler  <i class="fas fa-chevron-right"></i></button> 
+                                            <button type="submit" name="btn_submit_paiement" class="btn next action-button bg_blue1"> Pay  <i class="fas fa-chevron-right"></i></button> 
 
-                                            <button type="button" name="next" class="btn previous action-button-previous bg-dark"> <i class="fas fa-chevron-left"></i> Liste </button>
+                                            <button type="button" name="next" class="btn previous action-button-previous bg-dark"> <i class="fas fa-chevron-left"></i> List </button>
                                     </form>
                                         <?php }  ?>
                                 </div>

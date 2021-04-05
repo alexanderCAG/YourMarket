@@ -8,7 +8,7 @@
     <div class="se_connecter_general position-relative">
         <div class="se_connecter_div position-absolute top-50 start-50 translate-middle shadow">
             <div class="se_connecter_titre position-absolute top-0 start-50 translate-middle-x">
-                <h2 class="text-uppercase texte_style centrer">Se connecter</h2>
+                <h2 class="text-uppercase texte_style centrer">Log in</h2>
             </div>
             
             <div class="se_connecter_contenu position-absolute bottom-0 start-0">
@@ -19,9 +19,9 @@
                     <br>
                     <input type="submit" name="submit" value="Connexion" class="text-uppercase btn_se_connecter texte_style">
                     <br>
-                    <a href="#" class="connecter_mdp_oublié">Mot de passe oublié</a>
+                    <a href="#" class="connecter_mdp_oublié">Forgot your password ?</a>
                     <br><br><br><br>
-                    <a href="inscription.php" class="connecter_mais_inscription centrer position-absolute bottom-0 start-50 translate-middle-x">S'inscrire</a>
+                    <a href="inscription.php" class="connecter_mais_inscription centrer position-absolute bottom-0 start-50 translate-middle-x">Register</a>
                 </div>
             </div>
         </div>

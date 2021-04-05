@@ -12,7 +12,7 @@
     <img class="image_vetement_general position-relative" src="../../Image/maison-general.png" alt="vetement-general">
     <div class="deco_marque_general position-absolute position-absolute top-0 end-0">
         <img class="img_icon_sale position-absolute top-50 start-0 translate-middle-y" src="../../Image/icon_sale.png" alt="icon_sale">
-        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">maison</p> 
+        <p class="texte_deco_marque_general texte_style text-uppercase position-absolute top-50 start-50 translate-middle">House</p> 
     </div>
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
@@ -66,7 +66,7 @@
                                 <hr>
                                 <a href="item_unique.php?iditem=<?php echo $id_item ?>" type="button" class="btn btn-dark" style="margin-left:70px"><i class="fas fa-plus"></i>&nbsp;<small>View more </small></a>
                             <?php  if($quantityCadre == 0 ){?>
-                                    <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> Ce produit n'est plus disponible &nbsp;</div>
+                                    <div class="card-badge bg-danger  pl-5"> &nbsp; <i class="fas fa-exclamation-circle"></i> This product is no longer available &nbsp;</div>
                             <?php }?>
                                 
                             </div>

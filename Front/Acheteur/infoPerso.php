@@ -30,7 +30,7 @@
 <div class="genale_page_infoPerso position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
         <p class="titre_general_infoPerso text-uppercase centrer">
-            Informations personnelles
+        Personal informations
         </p>
     </div>
     
@@ -45,7 +45,7 @@
 
         <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div>
-                <h3 class="infoPerso_detail_titre1_acheteur text-uppercase centrer detail_style" style="margin-bottom:50px!important">Information de paiement</h3>
+                <h3 class="infoPerso_detail_titre1_acheteur text-uppercase centrer detail_style" style="margin-bottom:50px!important">Payment information</h3>
 
                 <div class="row">
 
@@ -111,7 +111,7 @@
                         <br>
                         <span id="infoPerso_nomCarteErreur_acheteur"></span>
                         <br>
-                        <label style="color:#888888;">Date d'expiration</label><br>
+                        <label style="color:#888888;">Expiration date</label><br>
                         <input id="infoPerso_dateExpiration_acheteur" name="infoPerso_dateExpiration_acheteur" type="date" class="infoPaiement_contenu_details_acheteur" placeholder="Date d'expiration" value="<?php echo $expiration_acheteur ?>">
                         <br>
                         <span id="infoPerso_dateExpirationErreur_acheteur"></span>
@@ -146,7 +146,7 @@
                 <div class="col-1"></div>
 
                 <div class="col-5">
-                    <h3 class="infoPerso_detail_titre2_acheteur text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
+                    <h3 class="infoPerso_detail_titre2_acheteur text-uppercase detail_style" style="margin-bottom:50px!important;">personal information</h3>
                     
                     <input id="infoPerso_nom_acheteur" name="infoPerso_nom_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Nom" value="<?php echo $lastname_acheteur ?>">
                     <br>
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="col-5" style="margin-left:50px!important;" >
-                    <h3 class="infoPerso_detail_titre3_acheteur text-uppercase detail_style" style="margin-bottom:50px!important">information de livraison</h3>
+                    <h3 class="infoPerso_detail_titre3_acheteur text-uppercase detail_style" style="margin-bottom:50px!important">delivery information</h3>
                     
                     <input id="infoPerso_adresse1_acheteur" name="infoPerso_adresse1_acheteur" type="text" class="infoPersoL_contenu_details_acheteur" placeholder="Adresse 1" value="<?php echo $adress1_acheteur ?>">
                     <br>
@@ -206,10 +206,10 @@
                 <div class="col-1"></div>
 
                 <div class="col-10" style="margin-top:50px!important">
-                    <button onclick="modif_infoPersoL_livraison()" type="button" id="modif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Modifier</button>
-                    <button onclick="annulModif_infoPersoL_livraison()" type="button" id="annulModif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="modif_infoPersoL_livraison()" type="button" id="modif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Edit</button>
+                    <button onclick="annulModif_infoPersoL_livraison()" type="button" id="annulModif_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Cancel Edit</button>
                     <button onclick="reset_infoPersoL_livraison()" type="button" id="reset_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Reset</button>
-                    <button type="submit" id="submit_valider_infoPersoL_acheteur" name="submit_valider_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Valider</button>
+                    <button type="submit" id="submit_valider_infoPersoL_acheteur" name="submit_valider_infoPersoL_acheteur" class="btn_infoPersoL_final_acheteur text-uppercase detail_style">Validate</button>
                 </div>
 
                 <div class="col-1"></div>

@@ -48,7 +48,7 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Maison 
+                            House 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="page-maison-sheet.php">sheets</a></li>
@@ -60,7 +60,7 @@
                     <li class="nav-item dropdown nav_regul">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Vêtement
+                            Clothes
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="page-vetements-tshirt.php">T-SHIRT</a></li>
@@ -70,7 +70,7 @@
                         </ul>
                     </li>
                     <li class="nav-item nav_regul" style="margin-right:100px!important">
-                        <a class="nav-link" href="enchere_accueil.php">Enchère</a>
+                        <a class="nav-link" href="enchere_accueil.php">Bid</a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                             <a class="nav-link" href="connexion.php">

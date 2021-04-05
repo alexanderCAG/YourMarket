@@ -1,7 +1,7 @@
 
 <div class="suivez_reseaux pt-3 pb-3">
     <div class="text-uppercase centrer texte_style">
-        Suivez nous sur
+        Follow us
         <a href="#" style="text-decoration: none;">
             <img class="image_reseau" src="../../Image/instragram.png" alt="instragram">
         </a>
@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="monfotter2 centrer bg-light p-2">
-        @ 2121 Tous droits réservés | &copy; politique de confidentialité | conditions générales de vente 
+        @ 2121 All rights reserved | &copy; privacy policy | Terms of Sales
     </div>
 </div>
 

@@ -9,11 +9,11 @@
     <div class="inscription_div position-absolute top-50 start-50 translate-middle shadow">
         <div class="inscription_titre row position-absolute top-0 start-50 translate-middle-x">
             <div id="inscription_titre_premier" class="col-6 position-relative">
-                <button class="btn_inscription_titre_premier position-absolute top-50 start-50 translate-middle text_uppercase texte_style">Acheteur</button>
+                <button class="btn_inscription_titre_premier position-absolute top-50 start-50 translate-middle text_uppercase texte_style">Buyer</button>
             </div>
 
             <div id="inscription_titre_deuxieme" class="col-6 position-relative">
-                <button class="btn_inscription_titre_deuxieme position-absolute top-50 start-50 translate-middle text_uppercase texte_style">Vendeur</button>
+                <button class="btn_inscription_titre_deuxieme position-absolute top-50 start-50 translate-middle text_uppercase texte_style">Seller</button>
             </div>
         </div>
         
@@ -24,7 +24,7 @@
                     <div class="col-1"></div>
 
                     <div class="col-5">
-                        <h3 class="inscription_detail_titre1 text-uppercase detail_style">information personnelles</h3>
+                        <h3 class="inscription_detail_titre1 text-uppercase detail_style">personal information</h3>
                         
                         <input id="nom_acheteur" name="nom_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Nom">
                         <br>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="col-5" style="margin-left:50px!important;">
-                        <h3 class="inscription_detail_titre2 text-uppercase detail_style">information de livraison</h3>
+                        <h3 class="inscription_detail_titre2 text-uppercase detail_style">delivery information</h3>
                         
                         <input id="adresse1_acheteur" name="adresse1_acheteur" type="text" class="inscription_contenu_details_acheteur" placeholder="Adresse 1">
                         <br>
@@ -79,7 +79,7 @@
                     <div class="col-1"></div>
 
                     <div class="col-12" style="margin-top:30px!important;">
-                        <h3 class="inscription_detail_titre3 text-uppercase detail_style centrer">Information de paiement</h3>
+                        <h3 class="inscription_detail_titre3 text-uppercase detail_style centrer">Payment information</h3>
 
                         <div class="row">
                             <div class="col-1"></div>
@@ -116,7 +116,7 @@
 
                                 <br>
                                 <input id="check_condition_inscription_acheteur" class="condition_inscription" type="checkbox">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accepter les condition d'inscription</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accept the registration conditions</a>
                                 <br>
                                 <a class="retour_login_inscription" href="connexion.php">Login</a>
                                 <button type="button" onclick="reset_acheteur()" class="btn_reset_inscription_acheteur text-uppercase detail_style">Reset</button>
@@ -149,7 +149,7 @@
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" id="submit_inscription_acheteur" name="submit_inscription_acheteur" class="btn text-light btn_inscription_final_acheteur text-uppercase detail_style">S'inscrire</button>
+                        <button type="submit" id="submit_inscription_acheteur" name="submit_inscription_acheteur" class="btn text-light btn_inscription_final_acheteur text-uppercase detail_style">Register </button>
                     </div>
                 </div>
             </form>
@@ -159,7 +159,7 @@
                     <div class="col-1"></div>
 
                     <div class="col-5">
-                        <h3 class="inscription_detail_titre1 text-uppercase detail_style">information générale</h3>
+                        <h3 class="inscription_detail_titre1 text-uppercase detail_style">General Information</h3>
                         
                         <input id="nomMarque_vendeur" name="nomMarque_vendeur" class="inscription_contenu_details_vendeur" placeholder="Nom de la marque">
                         <br>
@@ -199,13 +199,13 @@
                         </div>
                         <br><br>
                         <input id="check_condition_inscription_vendeur" class="condition_inscription" type="checkbox">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accepter les condition d'inscription</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#condition_contenu_inscription">Accept the registration conditions</a>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-12">
-                        <button type="submit" id="submit_inscription_vendeur" name="submit_inscription_vendeur" class="btn text-light btn_inscription_final_vendeur text-uppercase detail_style position-absolute bottom-0 start-0">S'inscrire</button>
+                        <button type="submit" id="submit_inscription_vendeur" name="submit_inscription_vendeur" class="btn text-light btn_inscription_final_vendeur text-uppercase detail_style position-absolute bottom-0 start-0">Register </button>
                     </div>
                 </div>
             </form>
@@ -219,7 +219,7 @@
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title modal_condition_inscription_titre texte_style text-uppercase" id="staticBackdropLabel">Condition d'inscription</h5>
+            <h5 class="modal-title modal_condition_inscription_titre texte_style text-uppercase" id="staticBackdropLabel">registration conditions</h5>
         </div>
         <div class="modal-body modal_condition_inscription_texte">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quasi velit eveniet, saepe harum exercitationem unde eum quisquam earum magnam vero distinctio maiores consequuntur sint itaque? Itaque nulla porro expedita.

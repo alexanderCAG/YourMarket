@@ -62,7 +62,7 @@
         <div class="card w-100 border-0"  >
             <!--------------- stat----------------->
             <div class="card-header bg_blue2 text-light text-uppercase rounded-0 mt-4">
-                <h5> Chiffre d'affaire </h5> 
+                <h5> Turnover </h5> 
             </div>
             <div class="row pt-3 pb-3">
                 <div class="col-md-12">
@@ -81,7 +81,7 @@
 
              <!--------------- stat----------------->
             <div class="card-header bg_blue2 text-light text-uppercase rounded-0 mt-5">
-                <h5> Ventes par catégorie</h5> 
+                <h5> Sales by Category</h5> 
             </div>
 
             <div class="row pt-3 pb-3 ">
@@ -103,7 +103,7 @@
                                                         ?>
                                                    <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caPillow ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Vendu: <?php echo $qttPillow ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttPillow ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                                         ?>
                                                    <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caDecoration ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Vendu: <?php echo $qttDecoration ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttDecoration ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@
                                                         ?>
                                                    <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caSheet ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Vendu: <?php echo $qttSheet ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttSheet ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -193,7 +193,7 @@
                                                         ?>
                                                    <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $cathisrt ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Vendu: <?php echo $qttTshirt ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttTshirt ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -222,7 +222,7 @@
                                                         ?>
                                                    <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caDecoration ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Vendu: <?php echo $qttDecoration ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttDecoration ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -253,7 +253,7 @@
                                                         ?>
                                                    <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caSheet ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Vendu: <?php echo $qttSheet ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttSheet ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>

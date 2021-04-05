@@ -25,7 +25,7 @@
 <div class="genale_page_infoPerso position-relative">
     <div class="texte_style position-absolute top-50 start-50 translate-middle general_infoPerso_div">
         <p class="titre_general_infoPerso text-uppercase centrer">
-            Informations personnelles
+        Personal informations
         </p>
     </div>
     
@@ -41,7 +41,7 @@
         <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
                 <div class="col-4">
-                    <h3 class="infoPerso_detail_titre1_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important;">information personnelles</h3>
+                    <h3 class="infoPerso_detail_titre1_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important;">personal information</h3>
                     
                     <input id="infoPerso_nom_admin" name="infoPerso_nom_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $lastname_admin ?>" placeholder="Nom">
                     <br>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="col-4" >
-                    <h3 class="infoPerso_detail_titre2_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important">information de livraison</h3>
+                    <h3 class="infoPerso_detail_titre2_admin centrer text-uppercase detail_style" style="margin-bottom:50px!important">delivery information</h3>
                     
                     <input id="infoPerso_adresse1_admin" name="infoPerso_adresse1_admin" type="text" class="infoPerso_contenu_details_admin" value="<?php echo $adress1_admin ?>" placeholder="Adresse 1">
                     <br>
@@ -95,10 +95,10 @@
                 </div>
 
                 <div class="col-4 centrer">
-                    <button onclick="modif_infoPersoAdmin()" type="button" id="modif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Modifier</button>
-                    <button onclick="annulModif_infoPersoAdmin()" type="button" id="annulModif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Annuler Modif</button>
+                    <button onclick="modif_infoPersoAdmin()" type="button" id="modif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Edit</button>
+                    <button onclick="annulModif_infoPersoAdmin()" type="button" id="annulModif_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Cancel Edit</button>
                     <button onclick="reset_infoPersoAdmin()" type="button" id="reset_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Reset</button>
-                    <button type="submit" id="submit_valider_infoPerso_admin" name="submit_valider_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Valider</button>
+                    <button type="submit" id="submit_valider_infoPerso_admin" name="submit_valider_infoPerso_admin" class="btn_infoPerso_final_admin text-uppercase detail_style">Validate</button>
                 </div>
             </div>
         </form>

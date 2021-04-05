@@ -51,16 +51,16 @@
                             Articles
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="ajoutArticle.php">Ajouter un article</a></li>
-                            <li><a class="dropdown-item" href="listeArticle.php">Liste des articles</a></li>
+                            <li><a class="dropdown-item" href="ajoutArticle.php">Add item</a></li>
+                            <li><a class="dropdown-item" href="listeArticle.php">List of articles</a></li>
                         </ul>
                     </li>
                     <li class="nav-item nav_regul">
-                        <a class="nav-link" href="listeVendeur.php">Liste Vendeur</a>
+                        <a class="nav-link" href="listeVendeur.php">Seller List</a>
                     </li>
 
                     <li class="nav-item last_nav_title nav_regul">
-                        <a class="nav-link" href="#">Statistique</a>
+                        <a class="nav-link" href="#">Statistical</a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                         <div class="btn-group">
