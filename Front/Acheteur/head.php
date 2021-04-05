@@ -37,7 +37,7 @@ include("../../Bdd/cnx.php");
 session_start(); 
 
 $email_user = $_SESSION['email'];
-$queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE email='$email_user'");
+$queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 
 if($row2 = mysqli_fetch_assoc($queryBuyer)){
     $id_buyer = $row2['id_buyer'];
