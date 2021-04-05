@@ -94,7 +94,7 @@ if($row2 = mysqli_fetch_assoc($queryBuyer)){
                         <a class="nav-link" href="messagerie.php">Messaging</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="panier.php">Panier
+                        <a class="nav-link" href="panier.php">Basket
                             <button type="button" class="nav_btn_panier btn position-relative">
                                 <img id="img_nav_panier" src="../../Image/panier.png" alt="panier"> <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"><?php echo $total ?>
