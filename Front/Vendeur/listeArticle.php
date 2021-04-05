@@ -118,7 +118,8 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 </form>
                             </div>
                             <div class="col-md-6">
-                                <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
+                                <a href="messagerie.php" type="button" class="btn text-light bg_blue1 w-100">SEE OFFER <i class="fas fa-handshake"></i></a>
+                                <!-- data-bs-toggle="modal" data-bs-target="#nego_total_modal" -->
                             </div>
                             
                             <!-- delete article -->
