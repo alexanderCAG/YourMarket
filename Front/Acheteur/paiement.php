@@ -98,8 +98,8 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                             </div>
                         </div> 
                 
-                        <button type="button" name="next" class="btn next action-button bg_blue1"> Suivant <i class="fas fa-chevron-right"></i></button> 
-                        <button type="button" name="next" class="btn action-button bg-dark"> <i class="fas fa-chevron-left"></i> Panier </button>
+                        <button type="button" name="next" class="btn next action-button bg_blue1"> Next <i class="fas fa-chevron-right"></i></button> 
+                        <button type="button" name="next" class="btn action-button bg-dark"> <i class="fas fa-chevron-left"></i> Basket </button>
                     </fieldset>
 
                     <!-- See the second page to see all the product the buyer will buy -->
@@ -118,18 +118,18 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                               <table class="table border shadow mb-5" style="background-color:#f1f1f1">
                               <thead class="bg_blue1 text-light" >
                                     <tr>
-                                        <th colspan="6"> <h2 class="fs-title text-center text-light">Récapitualtif de ma commande</h2> </th>
+                                        <th colspan="6"> <h2 class="fs-title text-center text-light">Summary of my order</h2> </th>
 
                                     </tr>
                                     </thead>
                                     <thead class="bg_blue1 text-light" >
                                     <tr>
-                                        <th>Image</th>
-                                        <th>Produit</th>
-                                        <th>Categorie</th>
+                                        <th>Picture</th>
+                                        <th>Product</th>
+                                        <th>Category</th>
                                         <!-- <th>Description</th> -->
-                                        <th>Quantité</th>
-                                        <th>Prix </th>
+                                        <th>Quantity</th>
+                                        <th>Price </th>
 
                                     </tr>
                                     </thead>
@@ -173,7 +173,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                            
                         </div>
 
-                         <button type="button" name="next" class="btn next action-button bg_blue1"> Paiement  <i class="fas fa-chevron-right"></i></button> 
+                         <button type="button" name="next" class="btn next action-button bg_blue1"> Payment  <i class="fas fa-chevron-right"></i></button> 
                         <button type="button" name="next" class="btn previous action-button-previous bg-dark"> <i class="fas fa-chevron-left"></i> Total </button>
                     </fieldset>
 
