@@ -1,17 +1,17 @@
 
 <div class="suivez_reseaux pt-3 pb-3">
-    <div class="text-uppercase centrer texte_style">
-        Follow us
-        <a href="#" style="text-decoration: none;">
-            <img class="image_reseau" src="../../Image/instragram.png" alt="instragram">
-        </a>
-        <a href="test.html" style="text-decoration: none;">
-            <img class="image_reseau" src="../../Image/facebook.png" alt="facebook">
-        </a>
-        <a href="#" style="text-decoration: none;">
-            <img class="image_reseau" src="../../Image/twitter.png" alt="twitter">
-        </a>
+
+<div class="row w-100">
+    <div class="col-md-6">
+        <h1 class="text-uppercase texte_style text-dark f_right">JOIN US</h1>
     </div>
+    <div class="col-md-6">
+        
+        <i class="fab fa-2x fa-facebook-square color_blue1 pr-3"></i>
+        <i class="fab fa-2x fa-instagram color_blue1"></i>
+        <i class="fab fa-2x fa-pinterest-square color_blue1"></i>
+    </div>
+</div>
 </div>
 
 <div class="footer">

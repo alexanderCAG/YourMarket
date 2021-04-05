@@ -249,7 +249,7 @@
             <div class="col">
                 <div class="p-3">
                     <p lass='text-center'>
-                        <img class=" image_produit" src="<?php echo $photoItems ?>" alt="chaussure">
+                        <img class=" rounded shadow-lg image_produit" src="<?php echo $photoItems ?>" alt="chaussure">
                     <small><?php echo "<p class='text-center'>".$nameItems." - ".$prixItems."€ </p>"  ?></small></p>
                 </div>
             </div>

@@ -72,8 +72,12 @@
                             <li><a class="dropdown-item" href="page-vetements.php">ALL</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item nav_regul" style="margin-right:100px!important">
+                    
+                    <li class="nav-item nav_regul" style="">
                         <a class="nav-link" href="enchere_accueil.php">Bid</a>
+                    </li>
+                    <li class="nav-item nav_regul" style="margin-right:100px!important">
+                        <a class="nav-link" href="promotion.php">promotion</a>
                     </li>
                     <li class="nav_user position-absolute top-0 end-0">
                             <a class="nav-link" href="connexion.php">
