@@ -107,11 +107,11 @@
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Decoration</small></a>
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'tshirt' ){?>
-                                    <!-- <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >T-shirt</small></a> -->
+                                    <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >T-shirt</small></a>
                                     <?php }?>
                                 <?php  if($subcategoryItems == 'sweat_shirt' ){?>
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Sweat-Shirt</small></a>
-                                    <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i>  &nbsp;</div>
+                                    <!-- <div class="card-badge bg_blue2  pl-5"> &nbsp;<i class="fas fa-bed"></i>  &nbsp;</div> -->
                                 <?php }?>
                                 <?php  if($subcategoryItems == 'shoes' ){?>
                                     <a class="btn btn-warning f_right rounded-0" style="fond-weight:bold!important;" >Shoes</small></a>
