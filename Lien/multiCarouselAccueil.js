@@ -103,4 +103,24 @@ $(document).ready(function () {
         ResCarousel(ell, Parent, slide);
     }
 
+    /********************************
+            INSCRIPTION
+    *********************************/
+   document.getElementById('typeCarte_acheteur').disabled=true;
+
+   /********************************
+           HIDE UNE DIV DEBUT
+   *********************************/
+   $(".inscription_contenu_vendeur").hide();
+   $(".btn_inscription_titre_premier").css("color","#FFF");
+
+   /********************************
+       CONDITION GENERAL ACCEPTER
+   *********************************/
+   document.getElementById('check_condition_inscription_acheteur').checked=true;
+   document.getElementById('check_condition_inscription_vendeur').checked=true;
+   document.getElementById('check_condition_inscription_acheteur').disabled=true;
+   document.getElementById('check_condition_inscription_vendeur').disabled=true;
+   
+
 });

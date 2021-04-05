@@ -100,7 +100,6 @@
             <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photo ?>"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
         
         <div class="information_presentation_premier">
@@ -126,7 +125,6 @@
         <div class="position-relative">
             <img class="image_presentation_nouveau" src="<?php echo $photo ?>" alt="t-shirt_femme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
         
         <div class="information_presentation_deuxieme">
@@ -154,7 +152,6 @@
             <img class="image_presentation_nouveau" id="image_premier_presentation" src="<?php echo $photo ?>"
             alt="t-shirt_homme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p>
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
         
         <div class="information_presentation_premier">
@@ -180,7 +177,6 @@
         <div class="position-relative">
             <img class="image_presentation_nouveau" src="<?php echo $photo ?>" alt="t-shirt_femme">
             <p class="white texte_style presentation_nouveau_texte position-absolute top-50 start-50 translate-middle">NOUVEAU</p> 
-            <button class="texte_style presentation_nouveau_ajout position-absolute">AJOUTER</button>
         </div>
         
         <div class="information_presentation_deuxieme">
