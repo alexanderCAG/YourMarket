@@ -40,24 +40,16 @@
             <div class="container overflow-hidden">
                 <div class="row gy-5">
                     <div class="col-6">
-                        <div class="p-3">
-                            <img class="image_payment_footer" src="../../Image/carte_payement_amex.png" alt="carte_payement_amex">
-                        </div>
+                        <i class="fab fa-4x text-light fa-cc-discover"></i>
                     </div>
                     <div class="col-6">
-                        <div class="p-3">
-                            <img class="image_payment_footer" src="../../Image/carte_payement_cb.png" alt="carte_payement_cb">
-                        </div>
+                        <i class="fab fa-4x text-light fa-cc-stripe"></i>
                     </div>
                     <div class="col-6">
-                        <div class="p-3">
-                            <img class="image_payment_footer" src="../../Image/carte_payement_mastercard.png" alt="carte_payement_mastercard">
-                        </div>
+                        <i class="fab fa-4x text-light fa-cc-mastercard"></i>
                     </div>
                     <div class="col-6">
-                        <div class="p-3">
-                            <img class="image_payment_footer" src="../../Image/carte_payement_visa.png" alt="carte_payement_visa">
-                        </div>
+                        <i class="fab fa-4x text-light fa-cc-visa"></i>
                     </div>
                 </div>
             </div>
