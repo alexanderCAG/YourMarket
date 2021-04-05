@@ -24,6 +24,7 @@
             
             ?>
 
+<!-- row to see the seller answer -->
 <div class="messarie_detail_total">
     <img class="fond_discussion position-relative" src="../../Image/ecran_fondBlanc.png" alt="ecran_fondBlanc">
     <div id="messages" class="info_msg_haut">

@@ -42,7 +42,7 @@
     <div class="col-1"></div>
 
     <div class="col-3 infoPerso_paiement">
-
+        <!-- payment information -->
         <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div>
                 <h3 class="infoPerso_detail_titre1_acheteur text-uppercase centrer detail_style" style="margin-bottom:50px!important">Payment information</h3>
@@ -59,6 +59,7 @@
 
                         <div class="row">
                             <div class="col-6">
+                                <!-- define the type of the card -->
                                 <?php if($carde_acheteur == "carte_payement_amex"){ 
                                 echo'<input type="radio" name="infoPerso_carte_bancaire" id="infoPerso_carte_payement_amex" value="carte_payement_amex" checked>';
                                 }
@@ -140,7 +141,7 @@
     <div class="col-1"></div>
 
     <div class="col-6 infoPerso_livraison">
-
+        <!-- personal information -->
         <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
                 <div class="col-1"></div>

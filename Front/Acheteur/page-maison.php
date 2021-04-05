@@ -17,6 +17,7 @@
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
 
+<!-- My navbar for switch subcotegory -->
 <div class="vetement_details" id="">
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
@@ -28,6 +29,7 @@
     </div>
 </div>
 
+<!-- row of the article -->
 <div class="maison_liste_total row">
     <!-- Premiere ligne -->
     <div class="col-1"></div>
@@ -72,6 +74,7 @@
                                     </div>
                                 </div>
                                 <hr>
+                                <!-- View specific information of the article -->
                                 <a href="item_unique.php?iditem=<?php echo $id_item ?>" type="button" class="btn btn-dark" style="margin-left:70px"><i class="fas fa-plus"></i>&nbsp;<small>View more </small></a>
 
                                 <?php  if($subcategoryItems == 'sheet' ){?>

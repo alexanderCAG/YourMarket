@@ -38,6 +38,7 @@
             <div class="col-3"></div>
 
             <div class="col-6">
+                <!-- verify the quantity and the type of sale -->
                 <?php if($is_negotiated == 1 && $quantityCadre != 0 ){ ?>
                     <button onclick="propositionNego()" type="button" class="btn btn-outline-success"> <i class="far fa-handshake"></i><small> Offer</small></button>
                 <?php } ?>
@@ -66,6 +67,7 @@
 }
 ?>
 
+<!-- propose a price for the offer -->
 <div class="nego_item_unique" id="negociation_item_unique">
     <form action="../../Bdd/panier.php" method="POST">
         <h5 class="modal-title titre_unique_prix_nego texte_style text-uppercase" id="staticBackdropLabel">Choose a price</h5>

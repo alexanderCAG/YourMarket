@@ -65,6 +65,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-2"></div>
 
             <div class="col-8 listeArticle_liste_un_par_un">
+                <!-- row of all is article -->
                 <div class="row">
                     <div class="col-5">
                         <img class="img_listeArticle" src="<?php echo $photoItemSeller ?>" alt="chaussure"><br>
@@ -120,6 +121,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
                             
+                            <!-- delete article -->
                             <div class="col-md-1">
                                 <a type="button" href="../../Bdd/delete.php?id=<?= $idItem; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
                             <!--  data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"-->
@@ -174,7 +176,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
 }
 ?> -->
 
-<!-- fin article -->
+<!-- end article -->
 <div class="listeArticle_liste_total bg_blue2 row mt-5">
     <div class="col-2"></div>
     <div class="col-8 ">

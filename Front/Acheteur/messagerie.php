@@ -29,6 +29,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
+<!-- choose what kind of message to see -->
 <div class="container">
     <div class="redirection_messagerie w-100">
         <div class="row">

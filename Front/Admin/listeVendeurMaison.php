@@ -24,6 +24,7 @@
             <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
         </div>
 
+        <!-- Different list/menu of seller -->
         <div class="listeVendeur_details">
             <div class="navbar_listeVendeur">
                 <ul class="navbar_listeVendeur_details detail_style centrer">
@@ -34,6 +35,7 @@
             </div>
         </div>
 
+        <!-- called the modal to add seller -->
         <div class="ajouter_vendeur">
             <button class="btn_ajout_vendeur_par_admin text-uppercase" data-bs-toggle="modal" data-bs-target="#ajout_vendeur_par_admin">+ Add</button>
         </div>
@@ -87,7 +89,7 @@
 
 
 
-<!-- Modal XXL-->
+<!-- Modal XXL to add seller-->
 <div class="modal fade" id="ajout_vendeur_par_admin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen taille_modal_ajout_vendeur">
         <form action="" method="POST" enctype="multipart/form-data">
@@ -99,6 +101,7 @@
                 </div>
 
                 <div class="modal-body mt-2">
+                    <!-- content modal to add seller -->
                     <div class="row ajout_vendeur_div_body">
                         <div class="col-1"></div>
 

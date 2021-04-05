@@ -31,6 +31,7 @@
     <div class="col-2"></div>
 
     <div class="col-9 mt-3">
+        <!-- form to add article -->
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="row ajout_article_div_body">
                 <div class="col-1"></div>
@@ -53,6 +54,7 @@
                 </div>
 
                 <div class="col-5">
+                    <!-- Add an image for the article -->
                     <img id="img_inscription_choix_vendeur">
                     <div class="img_inscription_general">
                         <span class="file_inscription_img">
@@ -71,6 +73,7 @@
             <br>
 
             <div class="row ajout_article_div_body">
+                <!-- Different information of the new article -->
                 <div class="col-1"></div>
 
                 <div class="col-5">

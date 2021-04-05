@@ -42,6 +42,7 @@ for ($i=0; $i<=$totalEnchere;$i++){
     <!-- Ligne 1 -->
     <div class="col-1"></div>
 
+    <!-- row to see my bid -->
     <div class="col-7 enchere_liste_un_par_un">
         <div class="row">
             <div class="col-5">

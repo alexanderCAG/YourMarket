@@ -52,7 +52,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-
+<!-- Payment information verify -->
 <div class="container-fluid mt-5">
     <div class="row justify-content-center">
         <div class="col-9 text-center m-5 mt-3 mb-2 shadow-lg ">
@@ -70,6 +70,8 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated  bg_blue1" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> 
+
+                    <!-- See first page to see total of the card -->
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
@@ -100,7 +102,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                         <button type="button" name="next" class="btn action-button bg-dark"> <i class="fas fa-chevron-left"></i> Panier </button>
                     </fieldset>
 
-                
+                    <!-- See the second page to see all the product the buyer will buy -->
                     <fieldset>
                         <div class="form-card ">
                             <div class="row">
@@ -174,6 +176,9 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                          <button type="button" name="next" class="btn next action-button bg_blue1"> Paiement  <i class="fas fa-chevron-right"></i></button> 
                         <button type="button" name="next" class="btn previous action-button-previous bg-dark"> <i class="fas fa-chevron-left"></i> Total </button>
                     </fieldset>
+
+
+                    <!-- See the third page to enter my information card -->
                     <fieldset>
                         <div class="form-card mb-5">
                             <div class="row">
@@ -271,6 +276,8 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                         </div>
                         
                      </fieldset>
+
+                     <!-- Past this one -->
                     <fieldset>
                         <div class="form-card">
                             <div class="row" id="paiementAccepte">

@@ -12,7 +12,7 @@
 
 
 
-// <!--affichage du background de l'utilisateur, sinon bleu par defaut-->
+    // <!-- affichage du background de l'utilisateur, sinon bleu par defaut -->
 
 if($bg != null){?>
     <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;"> <?php  
@@ -28,7 +28,7 @@ if($bg != null){?>
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-<!-- Vendeur -->
+<!-- Seller background choosen -->
 <div class="contenu_general_infoPerso_vendeur row ">
     <div class="col-2"></div>
 

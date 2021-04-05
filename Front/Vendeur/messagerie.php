@@ -64,6 +64,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     $subcategory = $row2['subcategory'];
             
 ?>
+<!-- is messaging of offer -->
 <div class="row" style="margin-top:120px">
 
     <div class="col-2"></div>

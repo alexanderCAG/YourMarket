@@ -18,6 +18,7 @@
     <div class="col-2"></div>
 
     <div class="col-9 mt-3">
+        <!-- Form to Add article -->
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="row ajout_article_div_body">
                 <div class="col-1"></div>
@@ -41,6 +42,7 @@
 
                 <div class="col-5">
                     <img id="img_inscription_choix_vendeur">
+                    <!-- picture of the article -->
                     <div class="img_inscription_general">
                         <span class="file_inscription_img">
                             <span onclick="choix_image_vendeur()" class="btn btn-default btn_choix_img_vendeur_inscription">
@@ -57,6 +59,7 @@
 
             <br>
 
+            <!-- Different information of the article -->
             <div class="row ajout_article_div_body">
                 <div class="col-1"></div>
 

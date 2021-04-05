@@ -17,6 +17,7 @@
     <div class="class_separation" id="menuCatMaison"></div>
 </div>
 
+<!-- My navbar for switch subcotegory -->
 <div class="vetement_details" >
     <div class="navbar_vetement">
             <ul class="navbar_listeVendeur_details detail_style centrer">
@@ -27,6 +28,8 @@
                 </ul>
     </div>
 </div>
+
+<!-- row of the article -->
 <div class="maison_liste_total row">
     <!-- Premiere ligne -->
     <div class="col-1"></div>
@@ -54,6 +57,7 @@
                             <img class="img_listeVendeur_logo card-img-top" src="<?php echo $photo ?>" alt="oreiller">
             
                             <div class="card-body">
+                                
                                 <div class="row">
                                     <div class="col-md-8">
                                     <div class="detail_style_titre detail_style"><small><?php echo $nameCadre ?></small></div> 
@@ -64,6 +68,7 @@
                                     </div>
                                 </div>
                                 <hr>
+                                <!-- View specific information of the article -->
                                 <a href="item_unique.php?iditem=<?php echo $id_item ?>" type="button" class="btn btn-dark" style="margin-left:70px"><i class="fas fa-plus"></i>&nbsp;<small>View more </small></a>
 
                             <?php  if($quantityCadre == 0 ){?>

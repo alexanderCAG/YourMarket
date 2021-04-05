@@ -24,6 +24,7 @@
             
             ?>
 
+<!-- personnal offer -->
 <div class="messarie_detail_total">
     <img class="fond_discussion position-relative" src="../../Image/ecran_fondBlanc.png" alt="ecran_fondBlanc">
     <div id="messages" class="info_msg_haut">
@@ -44,7 +45,7 @@
 </div>
 
 
-<!-- repup et envoie dans msg v2 a essayer -->
+<!-- repup et send the message v2 -->
 <?php
         
 include("../../Bdd/cnx.php");

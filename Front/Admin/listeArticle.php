@@ -34,7 +34,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
     <div class="class_separation position-absolute bottom-0 start-50 translate-middle-x"></div>
 </div>
 
-<!-- Article 1-->
+<!-- Article 1 -->
 <?php
     for ($i=0; $i<=$total;$i++){
         if($rowAllItemSeller = mysqli_fetch_assoc($queryAllItemSeller)){
@@ -67,6 +67,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 <div class="listeArticle_info_titre texte_style text-uppercase"><?php echo $nameItemSeller ?></div>
                             </div>
                             <div class="col-md-6">
+                                <!-- Define the type of the article -->
                                 <?php if($qttItemSeller == 0){ ?>
                                     <span class="badge  badge-pill rounded-pill bg-danger f_right mr-3"><i class="fas fa-times"></i> not availale </span>
                                 <?php } ?>
@@ -109,6 +110,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 <button type="button" class="btn text-light bg_blue1 w-100" data-bs-toggle="modal" data-bs-target="#nego_total_modal">SEE OFFER <i class="fas fa-handshake"></i></button>
                             </div>
                             
+                            <!-- Delete the article -->
                             <div class="col-md-1">
                                 <a type="button" href="../../Bdd/delete.php?ida=<?= $idItem; ?>" class="btn btn-outline-danger f_right" name="deleteItem"><i class="fas fa-times"></i></a>
                             <!--  data-bs-toggle="modal" data-bs-target="#confirmDeleteItem"-->
