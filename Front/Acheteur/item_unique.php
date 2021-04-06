@@ -31,6 +31,7 @@
     <div class="col-5 enchere_liste_details position-relative">
         <div class="enchere_info_titre texte_style text-uppercase"><?php echo $nameCadre ?></div>
         <div class="enchere_info_marque detail_style text-uppercase"><?php echo $categoryCadre ?> - <?php echo $subcategory ?></div>
+        <div class="enchere_info_marque detail_style text-uppercase" style="font-weight:bold;"><?php echo $prixCadre ?> €</div>
         <br>
         <div class="info_description_inde"><?php echo $descriptionCadre ?></div>
         <hr>
