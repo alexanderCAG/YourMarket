@@ -1,4 +1,5 @@
-
+Alexander Colle-Abbey
+Alice Combernoux
 
 The first thing to do is to change your login, password and database name. You can do it in the
 file ../Bdd/cnx.php
