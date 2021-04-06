@@ -12,7 +12,7 @@
 
 
 
-    // <!-- affichage du background de l'utilisateur, sinon bleu par defaut -->
+    // <!-- display user backer, background default: blue -->
 
 if($bg != null){?>
     <div class="genale_listeArticle position-relative" style="background-color:<?php echo $bg ?>!important;"> <?php  
@@ -32,68 +32,80 @@ if($bg != null){?>
 <div class="contenu_general_infoPerso_vendeur row ">
     <div class="col-2"></div>
 
-    <div class="col-8 infoPerso_vendeur shadow-lg">
+        <style>
+            label {
+            font-family: sans-serif;
+            width: 300px;
+            display: block;
+            position: relative;
+            }
+            input {
+            padding: 5px 15px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            }
+            input[type=color] {
+            padding: 0;
+            border: 0;
+            height: 40px;
+            }
+            input[type=color]:after {
+            content: attr(data-value);
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            color: #fffff5;
+            display: block;
+            width: 100%;
+            }
+            .color-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #666;
+            }
+        </style>
 
-<style>
-label {
-  font-family: sans-serif;
-  width: 300px;
-  display: block;
-  position: relative;
-}
-input {
-  padding: 5px 15px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-input[type=color] {
-  padding: 0;
-  border: 0;
-  height: 40px;
-}
-input[type=color]:after {
-  content: attr(data-value);
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  color: #fffff5;
-  display: block;
-  width: 100%;
-}
-.color-icon {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #666;
-}</style>
+        
 
-        <form action="../../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
-            <div class="row inscription_contenu_vendeur">
-                <div class="col-12">
-                    <!-- <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3> -->
+    <form action="../../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
+
+        <center>
+            <div class="row w-50 ">
+            <div class="col-12">
+            <div class="card w-100 shadow-lg">
+                <div class="card-body pt-5 pb-5 w-100 " style="background-color: <?php echo $bg ?>;">
+                    <h3 class="card-text text-center p-5 text-uppercase text-light">My background color</h3>
+                </div>
+                
+               
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item ">
+                        <div class="row mt-5">
+                            <div class="col-md-4 text-center">Change your background color here</div>
+                            <div class="col-md-8">
+                                <label class="w-100">
+                                    <input class="color form-control-file"name="background_seller" placeholder="Color" data-value="#xxxxxx" value="<?php echo $bg ?>"/>
+                                </label> 
+                            </div>
+                        </div>
+                        <br>
+                        <span id="infoPerso_mdp2Erreur_vendeur"></span>
+                        <br>
+                    </li>
+                    <li class="list-group-item pt-4 pb-4"> 
+                        <button type="submit" id="submit_valider_background" name="submit_valider_background" class="btn btn-outline-dark  w-100">Validate</button>
+                    </li>
                     
-                    <label>
-                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3>
-                    <br />
-                    <input class="color" name="background_seller" placeholder="Color" data-value="#xxxxxx" value="<?php echo $bg ?>"/>
-                    </label>                    
-                    <!-- <input id="background_seller" name="background_seller" class="infoPerso_contenu_details_vendeur" value="<?php echo $bg ?>" placeholder="Color"> -->
-                    <br>
-
-                    <span id="infoPerso_mdp2Erreur_vendeur"></span>
-                    <br>
+                </ul>
+                
                 </div>
+                
+        </div></center>
+        
 
-            </div>
-
-            <div class="row">
-                <div class="col-10">
-                    <button type="submit" id="submit_valider_background" name="submit_valider_background" class="btn_infoPerso_final_vendeur text-uppercase detail_style">Validate</button>
-            
-                </div>
-            </div>
-        </form>
+    </form>
 
     </div>
 
