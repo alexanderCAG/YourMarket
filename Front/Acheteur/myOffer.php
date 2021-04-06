@@ -1,8 +1,9 @@
 <?php
     $title="Accueil";
     require "head.php";
-    // $email_user = $_SESSION['email'];
     include("../../Bdd/cnx.php");
+    // session_start();
+    $email_user = $_SESSION['email'];
     $idoffer=$_GET['idoffer'];
     $_SESSION['id_offer']=$idoffer;
     // $_SESSION['id_offer']=$idoffer;
@@ -28,7 +29,6 @@
 <div class="messarie_detail_total">
     <img class="fond_discussion position-relative" src="../../Image/ecran_fondBlanc.png" alt="ecran_fondBlanc">
     <div id="messages" class="info_msg_haut">
-        <!-- <p class="satut_nego_msg texte_style"><?php echo $status ?></p> -->
     </div>
 
     <?php if($status !="Valider"){?>
@@ -43,7 +43,26 @@
             </form>
         </div>
     </div>
-    <?php } ?>
+    <?php } elseif($status =="Valider"){
+
+        $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
+
+        if($row = mysqli_fetch_assoc($queryBuyer)){
+            $id_buyer = $row['id_buyer'];
+            $queryMoney = mysqli_query($con, "SELECT money FROM payment WHERE id_buyer='$id_buyer'");
+
+            if($rowMoney = mysqli_fetch_assoc($queryMoney)){
+                $money = $rowMoney['money'];
+                $quantity=(int)$quantity;
+                $myNewMoney = $money-($quantity*$price_offered);
+
+                $queryMoney = mysqli_query($con, "UPDATE payment SET money='$myNewMoney' WHERE id_buyer='$id_buyer'");
+                $queryDeleteOffer = mysqli_query($con, "DELETE FROM offer WHERE id_offer='$idoffer'");
+            
+            }
+        }
+
+    } ?>
     
 </div>
 
