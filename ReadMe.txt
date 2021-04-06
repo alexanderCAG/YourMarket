@@ -80,3 +80,4 @@ Here is a list of the bonuses we have done:
 		2- Product
 		3- Seller
 	- Balance page
+	- Try to do responsive
