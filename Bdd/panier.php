@@ -89,6 +89,7 @@ if(isset($_POST['btn_submit_paiement'])){
                                     $photo_row7 = $row7['photo'];
                                     $category_row7 = $row7['category'];
                                     $subcategory_row7 = $row7['subcategory'];
+                                    $rate=0;
                                     
                                     $queryBuyer3 = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 
@@ -96,7 +97,7 @@ if(isset($_POST['btn_submit_paiement'])){
                                         $id_buyer = $row['id_buyer'];
 
                                         for ($i=0; $i<$total;$i++){
-                                            $queryInsertHistory = mysqli_query($con, "INSERT INTO history (id_history, id_buyer, id_item, id_seller, name, price, quantity, description, photo, category, subcategory) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7');");
+                                            $queryInsertHistory = mysqli_query($con, "INSERT INTO history (id_history, id_buyer, id_item, id_seller, name, price, quantity, description, photo, category, subcategory,rate) VALUES (NULL, '$id_buyer_row7', '$id_item_row7', '$id_seller_row7', '$name_row7', '$price_row7', '$quantity_row7', '$description_row7', ' $photo_row7', '$category_row7', '$subcategory_row7','$rate');");
 
                                             $queryDeleteHistory = mysqli_query($con, "DELETE FROM basket where id_buyer='$id_buyer'");
                                         }
