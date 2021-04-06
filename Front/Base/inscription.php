@@ -326,7 +326,7 @@
 
 		if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)){
 			// enregistrer dans sql
-			$sql = "INSERT INTO seller (brand,profil_picture,background,phone,email,passworde) VALUES ('$nomMarque_vendeur','$target_path','white','$telephone_vendeur','$mail_vendeur','$mdp_vendeur')";
+			$sql = "INSERT INTO seller (brand,profil_picture,background,phone,email,passworde) VALUES ('$nomMarque_vendeur','$target_path','blue','$telephone_vendeur','$mail_vendeur','$mdp_vendeur')";
 			// $sql="insert into upload_image (path,nom) values ('$target_path','$nom')";
 			if($con->query($sql)==true){
 				echo"<br><br>";
