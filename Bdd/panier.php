@@ -10,11 +10,12 @@ $email_user = $_SESSION['email'];
 if(isset($_GET['iditem'])){
     $iditem=$_GET['iditem'];
     $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
-    $querySeller = mysqli_query($con, "SELECT id_seller,name,price,description,photo,category,subcategory FROM item WHERE id_item='$iditem'");
+    
 
 
     if($row = mysqli_fetch_assoc($queryBuyer)){
         $id_buyer = $row['id_buyer'];
+        $querySeller = mysqli_query($con, "SELECT id_seller,name,price,description,photo,category,subcategory FROM item WHERE id_item='$iditem'");
         if($row2 = mysqli_fetch_assoc($querySeller)){
             $id_seller = $row2['id_seller'];
             $name = $row2['name'];

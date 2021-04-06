@@ -9,7 +9,7 @@
 <div class="text_error position-absolute bottom-0 start-0" style="margin-bottom: 50px!important;margin-left: 50px!important;">
     <h1 style="color: white; font-size: 25px;">You should not pass !!</h1>
     <h2 style="color: white; font-size: 20px;">But seriously what are you doing here, you are not supposed to be here</h2><br>
-    <a href="Base/index.php" style="color: white; text-decoration:none; font-size:20px; border:solid 2px white; padding: 7px;">Go back Home</a>
+    <a href="../Front/Base/index.php" style="color: white; text-decoration:none; font-size:20px; border:solid 2px white; padding: 7px;">Go back Home</a>
 </div>
 
 

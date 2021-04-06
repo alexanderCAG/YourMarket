@@ -165,7 +165,7 @@
         
 
         $seller_email = $_SESSION['email'];
-        $id="SELECT id_seller FROM seller where email='$seller_email'";
+        $id="SELECT id_seller FROM seller where email='$seller_email' or brand='$seller_email'";
         $id_result=$con->query($id);
         $row = mysqli_fetch_array($id_result);
         $result = $row['id_seller'];
@@ -174,8 +174,8 @@
         $aleatoire = rand('0', count($sold_choix)-1);
         $sold = $sold_choix[$aleatoire];
 
-        $grade = 0;
-        $tot_rate = 0;
+        $grade = '0';
+        $tot_rate = '0';
 
         if(move_uploaded_file($_FILES['img_ajoutArticle']['tmp_name'], $target_path)){
             if($choixCategorie_ajoutArticle=='choix_categorie_null'){
