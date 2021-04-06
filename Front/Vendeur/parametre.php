@@ -34,12 +34,51 @@ if($bg != null){?>
 
     <div class="col-8 infoPerso_vendeur shadow-lg">
 
+<style>
+label {
+  font-family: sans-serif;
+  width: 300px;
+  display: block;
+  position: relative;
+}
+input {
+  padding: 5px 15px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type=color] {
+  padding: 0;
+  border: 0;
+  height: 40px;
+}
+input[type=color]:after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  color: #fffff5;
+  display: block;
+  width: 100%;
+}
+.color-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #666;
+}</style>
+
         <form action="../../Bdd/infoPerso_recup.php" method="POST" enctype="multipart/form-data">
             <div class="row inscription_contenu_vendeur">
                 <div class="col-12">
-                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3>
+                    <!-- <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3> -->
                     
-                    <input id="background_seller" name="background_seller" class="infoPerso_contenu_details_vendeur" value="<?php echo $bg ?>" placeholder="Color">
+                    <label>
+                    <h3 class="infoPerso_detail_titre1_vendeur text-uppercase detail_style"> Color in Hexadecimal</h3>
+                    <br />
+                    <input class="color" name="background_seller" placeholder="Color" data-value="#xxxxxx" value="<?php echo $bg ?>"/>
+                    </label>                    
+                    <!-- <input id="background_seller" name="background_seller" class="infoPerso_contenu_details_vendeur" value="<?php echo $bg ?>" placeholder="Color"> -->
                     <br>
 
                     <span id="infoPerso_mdp2Erreur_vendeur"></span>

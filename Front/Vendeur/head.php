@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="../../Lien/article.css">
     <link rel="stylesheet" href="../../Lien/panier.css">
     <link rel="shortcut icon" href="../../Image/logo.png">
+
+
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Boostrap CSS -->
@@ -26,6 +28,8 @@
     <!-- Icon Fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet" />
 
 </head>
 
