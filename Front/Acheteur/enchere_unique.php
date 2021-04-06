@@ -208,16 +208,6 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
 
 </div>
 
-<!-- <?php 
-$date = new DateTime();
-$dateFin = $date->format('Y-m-d H:i:s');
-
-if($end_enchere = $dateFin){
-    
-    $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$iditem'");
-    
-}
-?> -->
 
 <?php
         }
