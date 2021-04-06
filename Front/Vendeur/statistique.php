@@ -1,5 +1,5 @@
 <?php
-    $title="Accueil";
+    $title="Statistical";
     require "head.php";
     include("../../Bdd/cnx.php");
     $email_user = $_SESSION['email'];
@@ -11,24 +11,32 @@
         $id_seller = $row['id_seller'];
 
         $Seller = mysqli_query($con, "select background from seller where email='$email_user' or brand='$email_user'");
-        $ca_seller = mysqli_query($con, "SELECT sum(price*quantity) as CA FROM history WHERE `id_seller`= '$id_seller'");
+        $ca_seller = mysqli_query($con, "SELECT sum(price*quantity) as CA FROM history WHERE id_seller= '$id_seller'");
 
-        $qtt_pillow = mysqli_query($con, "SELECT sum(quantity) as qttPillow FROM history WHERE `id_seller`='$id_seller' and subcategory='pillow'");
-        $qtt_pillow2 = mysqli_query($con, "SELECT sum(quantity) as qttPillow FROM history WHERE `id_seller`='$id_seller' and subcategory='pillow'");
+        $qtt_pillow = mysqli_query($con, "SELECT sum(quantity) as qttPillow FROM history WHERE id_seller='$id_seller' and subcategory='pillow'");
+        $qtt_pillow2 = mysqli_query($con, "SELECT sum(quantity) as qttPillow FROM history WHERE id_seller='$id_seller' and subcategory='pillow'");
 
-        $qtt_sheet = mysqli_query($con, "SELECT sum(quantity) as qttSheet FROM history WHERE `id_seller`='$id_seller' and subcategory='sheet'");
-        $qtt_sheet2 = mysqli_query($con, "SELECT sum(quantity) as qttSheet FROM history WHERE `id_seller`='$id_seller' and subcategory='sheet'");
+        $qtt_sheet = mysqli_query($con, "SELECT sum(quantity) as qttSheet FROM history WHERE id_seller='$id_seller' and subcategory='sheet'");
+        $qtt_sheet2 = mysqli_query($con, "SELECT sum(quantity) as qttSheet FROM history WHERE id_seller='$id_seller' and subcategory='sheet'");
 
-        $qtt_decoration = mysqli_query($con, "SELECT sum(quantity) as qttDecoration FROM history WHERE `id_seller`='$id_seller' and subcategory='decoration'");
-        $qtt_decoration2 = mysqli_query($con, "SELECT sum(quantity) as qttDecoration FROM history WHERE `id_seller`='$id_seller' and subcategory='decoration'");
+        $qtt_decoration = mysqli_query($con, "SELECT sum(quantity) as qttDecoration FROM history WHERE id_seller='$id_seller' and subcategory='decoration'");
+        $qtt_decoration2 = mysqli_query($con, "SELECT sum(quantity) as qttDecoration FROM history WHERE id_seller='$id_seller' and subcategory='decoration'");
 
-        $qtt_tshirt = mysqli_query($con, "SELECT sum(quantity) as qttTshirt FROM history WHERE `id_seller`='$id_seller' and subcategory='tshirt'");
-        $qtt_tshirt2 = mysqli_query($con, "SELECT sum(quantity) as qttTshirt FROM history WHERE `id_seller`='$id_seller' and subcategory='tshirt'");
+        $qtt_tshirt = mysqli_query($con, "SELECT sum(quantity) as qttTshirt FROM history WHERE id_seller='$id_seller' and subcategory='tshirt'");
+        $qtt_tshirt2 = mysqli_query($con, "SELECT sum(quantity) as qttTshirt FROM history WHERE id_seller='$id_seller' and subcategory='tshirt'");
+
+        $qtt_shoes = mysqli_query($con, "SELECT sum(quantity) as qttShoes FROM history WHERE id_seller='$id_seller' and subcategory='shoes'");
+        $qtt_shoes2 = mysqli_query($con, "SELECT sum(quantity) as qttShoes FROM history WHERE id_seller='$id_seller' and subcategory='shoes'");
+
+        $qtt_sweatshirt = mysqli_query($con, "SELECT sum(quantity) as qttSweatshirt FROM history WHERE id_seller='$id_seller' and subcategory='sweat_shirt'");
+        $qtt_sweatshirt2 = mysqli_query($con, "SELECT sum(quantity) as qttSweatshirt FROM history WHERE id_seller='$id_seller' and subcategory='sweat_shirt'");
        
         $totalChiffre_pillow = mysqli_query($con, "SELECT sum(price*quantity) as caPillow FROM history WHERE subcategory='pillow' and id_seller='$id_seller'");
         $totalChiffre_sheet = mysqli_query($con, "SELECT sum(price*quantity) as caSheet FROM history WHERE subcategory='sheet' and id_seller='$id_seller'");
         $totalChiffre_decoration = mysqli_query($con, "SELECT sum(price*quantity) as caDecoration FROM history WHERE subcategory='decoration' and id_seller='$id_seller'");
         $totalChiffre_tshirt = mysqli_query($con, "SELECT sum(price*quantity) as caTshirt FROM history WHERE subcategory='tshirt' and id_seller='$id_seller'");
+        $totalChiffre_shoes = mysqli_query($con, "SELECT sum(price*quantity) as caShoes FROM history WHERE subcategory='shoes' and id_seller='$id_seller'");
+        $totalChiffre_sweatshirt = mysqli_query($con, "SELECT sum(price*quantity) as caSweatshirt FROM history WHERE subcategory='sweat_shirt' and id_seller='$id_seller'");
       
 
         // Statistique %
@@ -36,6 +44,8 @@
         $query_stock_decoration = mysqli_query($con, "SELECT sum(quantity) as stock_decoration FROM item WHERE subcategory ='decoration' and id_seller='$id_seller'");
         $query_stock_sheet = mysqli_query($con, "SELECT sum(quantity) as stock_sheet FROM item WHERE subcategory ='sheet' and id_seller='$id_seller'");
         $query_stock_tshirt = mysqli_query($con, "SELECT sum(quantity) as stock_tshirt FROM item WHERE subcategory ='tshirt' and id_seller='$id_seller'");
+        $query_stock_shoes = mysqli_query($con, "SELECT sum(quantity) as stock_shoes FROM item WHERE subcategory ='shoes' and id_seller='$id_seller'");
+        $query_stock_sweatshirt = mysqli_query($con, "SELECT sum(quantity) as stock_sweatshirt FROM item WHERE subcategory ='sweat_shirt' and id_seller='$id_seller'");
 ?>  
 
 <!-- Define the personnal background -->
@@ -84,7 +94,7 @@
             <div class="card-header bg_blue2 text-light text-uppercase rounded-0 mt-5">
                 <h5> Sales by Category</h5> 
             </div>
-
+<!-------------{# Pillow #}--------->
             <div class="row pt-3 pb-3 ">
                 <?php
                 if($row4 = mysqli_fetch_assoc($qtt_pillow)){
@@ -116,8 +126,8 @@
                 ?>
                 <!-------------{# DECORATI0N #}--------->
                 <?php
-                if($row5 = mysqli_fetch_assoc($qtt_decoration)){
-                        $qttDecoration = $row5['qttDecoration'];
+                if($row20 = mysqli_fetch_assoc($qtt_decoration)){
+                        $qttDecoration = $row20['qttDecoration'];
                         if($qttDecoration != 0){ ?>
                             <div class="col-md-4">
                                 <div class="card bg_blue1  text-light rounded-0 p-5  shadow-lg">
@@ -175,6 +185,8 @@
                 }
                 ?>
             </div>
+
+            <!-------------{# T-shirt #}--------->
             <div class="row pt-3 pb-3 ">
                 <?php
                 if($row14 = mysqli_fetch_assoc($qtt_tshirt)){
@@ -204,26 +216,26 @@
                         }
                 }
                 ?>
-                <!-------------{# DECORATI0N #}--------->
+                <!-------------{# swaet-shirt #}--------->
                 <?php
-                if($row5 = mysqli_fetch_assoc($qtt_decoration)){
-                        $qttDecoration = $row5['qttDecoration'];
-                        if($qttDecoration != 0){ ?>
+                if($row20 = mysqli_fetch_assoc($qtt_sweatshirt)){
+                        $qttSweatshirt = $row20['qttSweatshirt'];
+                        if($qttSweatshirt != 0){ ?>
                             <div class="col-md-4">
                                 <div class="card bg_blue1  text-light rounded-0 p-5  shadow-lg">
                                     <div class="row ">
                                         <div class="col-md-4">
-                                            <p class="text-center" ><i class="fas fa-3x fa-home"></i> <a class=" text-decoration-none text-light"><small>DECORATION</small></a></p> 
+                                            <p class="text-center" ><i class="fas fa-3x fa-tshirt"></i> <a class=" text-decoration-none text-light"><small>Sweat-shirt</small></a></p> 
                                         </div>
                                         <div class="col-md-8">
                                             <p class="f_right" >
                                                 <?php 
-                                                if($row_totalChiffre_Decoraiton = mysqli_fetch_assoc($totalChiffre_decoration)){
-                                                        $caDecoration = $row_totalChiffre_Decoraiton['caDecoration'];
+                                                if($row_totalChiffre_sweatshirt = mysqli_fetch_assoc($totalChiffre_sweatshirt)){
+                                                        $caSweatshirt = $row_totalChiffre_sweatshirt['caSweatshirt'];
                                                         ?>
-                                                   <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caDecoration ?> €</a><br> 
+                                                   <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caSweatshirt ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttDecoration ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttSweatshirt ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -233,28 +245,28 @@
                         }
                 }
                 ?>
-                <!-------------{# Sheet #}--------->
+                <!-------------{# shoes #}--------->
 
 
                 <?php
-                if($row6 = mysqli_fetch_assoc($qtt_sheet)){
-                        $qttSheet = $row6['qttSheet'];
-                        if($qttSheet != 0){ ?>
+                if($row60 = mysqli_fetch_assoc($qtt_shoes)){
+                        $qttShoes = $row60['qttShoes'];
+                        if($qttShoes != 0){ ?>
                             <div class="col-md-4">
                                 <div class="card bg_blue1  text-light rounded-0 p-5  shadow-lg">
                                     <div class="row ">
                                         <div class="col-md-4">
-                                            <p class="text-center" ><i class="fas fa-3x fa-home"></i> <a class=" text-decoration-none text-light"><br><small>SHEET</small></a></p> 
+                                            <p class="text-center" ><i class="fas fa-3x fa-tshirt"></i> <a class=" text-decoration-none text-light"><br><small>Shoes</small></a></p> 
                                         </div>
                                         <div class="col-md-8">
                                             <p class="f_right" >
                                                 <?php 
-                                                if($row_totalChiffre_Sheet = mysqli_fetch_assoc($totalChiffre_sheet)){
-                                                        $caSheet = $row_totalChiffre_Sheet['caSheet'];
+                                                if($row_totalChiffre_Shoes = mysqli_fetch_assoc($totalChiffre_shoes)){
+                                                        $caShoes = $row_totalChiffre_Shoes['caShoes'];
                                                         ?>
-                                                   <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caSheet ?> €</a><br> 
+                                                   <a class="h3 f_right text-decoration-none text-light mb-0"><?php echo $caShoes ?> €</a><br> 
                                                     <?php  } ?>
-                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttSheet ?> </small></a>
+                                                <a class="f_right text-decoration-none text-light"><small>Sell: <?php echo $qttShoes ?> </small></a>
                                             </p> 
                                         </div>
                                     </div>
@@ -284,8 +296,8 @@
                             <span class="m-2 pl-4 p-2  text-light" style="background-color:#935116">Shoes</span>
                         </div>
                     </div>
-
-                    <div class="container h-100 pt-5"> 
+                
+                    <div class="container h-100 pt-5" style="margin-left:15%;"> 
                    <!-- ##### Stat pillow #######-->
                    
                     <?php 
@@ -348,9 +360,64 @@
                         </div>
                     <?php } ?>
 
-                  
+                  <!-- ##### Stat Tshirt #######-->
+                  <?php if($row_stock_tshirt = mysqli_fetch_assoc($query_stock_tshirt)){
+                            $stockTshirt = $row_stock_tshirt['stock_tshirt'];
 
+                            if($row_qtt_Tshirt2 = mysqli_fetch_assoc($qtt_tshirt2)){
+                                $qtt_tshirt_vendu = $row_qtt_Tshirt2['qttTshirt'];
+                            }
+                            if( $stockTshirt != 0){
+                                $stat_tshirt = ($qtt_tshirt_vendu * 100 ) / $stockTshirt ;
+                           }
+                           
+                    ?>
+                        <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $stat_tshirt ?>%; background-color: #A569BD;">
+                                <span class=""><?php echo $stat_tshirt ?> %</span>
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                     <!-- ##### Stat Sweat-shirt #######-->
+                  <?php if($row_stock_sweatshirt = mysqli_fetch_assoc($query_stock_sweatshirt)){
+                            $stockSweatshirt = $row_stock_sweatshirt['stock_sweatshirt'];
+
+                            if($row_qtt_Sweatshirt2 = mysqli_fetch_assoc($qtt_sweatshirt2)){
+                                $qtt_sweatshirt_vendu = $row_qtt_Sweatshirt2['qttSweatshirt'];
+                            }
+                            if( $stockSweatshirt != 0){
+                                $stat_sweatshirt = ($qtt_sweatshirt_vendu * 100 ) / $stockSweatshirt ;
+                           }
+                           
+                    ?>
+                        <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $stat_sweatshirt ?>%; background-color: #B03A2E;">
+                                <span class=""><?php echo $stat_sweatshirt ?> %</span>
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                    <!-- ##### Stat Shoes #######-->
+                  <?php if($row_stock_shoes = mysqli_fetch_assoc($query_stock_shoes)){
+                            $stockShoes = $row_stock_shoes['stock_shoes'];
+
+                            if($row_qtt_Shoes2 = mysqli_fetch_assoc($qtt_shoes2)){
+                                $qtt_shoes_vendu = $row_qtt_Shoes2['qttShoes'];
+                            }
+                            if( $stockShoes != 0){
+                                $stat_shoes = ($qtt_shoes_vendu * 100 ) / $stockShoes ;
+                           }
+                           
+                    ?>
+                        <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $stat_shoes ?>%; background-color: #935116;">
+                                <span class=""><?php echo $stat_shoes ?> %</span>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
+                
                    
                 </div>
                 </div>

@@ -100,7 +100,7 @@
                         <select name="sousCategorie_ajoutArticle_vetement" id="sousCategorie_ajoutArticle_vetement" class="contenu_details_Ajoutarticle">
                             <option value="sous_categorie_vetement">--Please choose an category--</option>
                             <option value="tshirt">T-SHIRT</option>
-                            <option value="sweat_shirt">PULL</option>
+                            <option value="sweatshirt">SWEAT-SHIRT</option>
                             <option value="shoes">SHOES</option>
                         </select>
                     </div>
@@ -269,7 +269,7 @@
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
                         VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','tshirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
-                }elseif($sousCategorie_ajoutArticle_vetement=='sweat_shirt'){
+                }elseif($sousCategorie_ajoutArticle_vetement=='sweatshirt'){
                     
                     if(isset($_POST['achat_direct_ajoutArticle'])){
                         $Achat1 = $_POST['achat_direct_ajoutArticle'];
@@ -286,7 +286,7 @@
                     }
 
                     $sql= mysqli_query($con,"INSERT INTO item(id_seller, price, name, category, subcategory, quantity, description, photo, is_bidding, is_negotiated, is_buying, end_enchere,sold,grade,tot_rate) 
-                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweet_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
+                        VALUES ('$result','$prix_ajoutArticle','$nomProduit_ajoutArticle','Clothes','sweat_shirt','$quatite_ajoutArticle','$description_ajoutArticle','$target_path','$val3','$val2','$val1','$dateAjoutarticle','$sold','$grade','$tot_rate')");
 
                 }elseif($sousCategorie_ajoutArticle_vetement=='shoes'){
                     
