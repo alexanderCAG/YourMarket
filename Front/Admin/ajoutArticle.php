@@ -36,7 +36,7 @@
                     <br>
                     <input id="prix_ajoutArticle" name="prix_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Price in euro (€)"><span id="prixErreur_ajoutArticle"></span>
                     <br>
-                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quatity"><span id="quantiteErreur_ajoutArticle"></span>
+                    <input id="quatite_ajoutArticle" name="quatite_ajoutArticle_Admin" class="contenu_details_Ajoutarticle contenu_details_Ajoutarticle_double_div" placeholder="Quantity"><span id="quantiteErreur_ajoutArticle"></span>
                     <br>
                 </div>
 
