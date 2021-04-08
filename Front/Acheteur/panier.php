@@ -54,6 +54,10 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                     $photo = $rowAllItems['photo'];
                     $category = $rowAllItems['category'];
                     $subcategoryItems = $rowAllItems['subcategory'];
+
+                    $queryQteTotal = mysqli_query($con, "SELECT quantity FROM item WHERE id_item='$id_item'");
+                    if($rowQteTotal = mysqli_fetch_assoc($queryQteTotal)){
+                        $quantityTotal = $rowQteTotal['quantity'];
             ?>
             <div class="col-1"></div>
 
@@ -90,7 +94,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
                                 </div> -->
                                 <form action="../../Bdd/panier.php" method="POST">
                                     <div class="input-group mb-3">
-                                        <input type="number" style="width:50px!important;" name="qtePanier" class="form-control w-100" min="0" value="<?php echo $quantityCadre ?>">
+                                        <input type="number" style="width:50px!important;" name="qtePanier" class="form-control w-100" min="0" value="<?php echo $quantityCadre ?>" max="<?php echo $quantityTotal ?>">
                                         <button type="submit" name="submit_btn_change_qte_panier" class="input-group-text btn bg_blue1 rounded-0" style="border-top-right-radius: 5px!important;border-bottom-right-radius: 5px!important;"><i class="fas fa-pen text-light"></i></button>
                                         <input type="hidden" name="idItem" value="<?php echo $id_item ?>">
                                     </div>
@@ -109,6 +113,7 @@ if($row = mysqli_fetch_assoc($queryCountItems)){
             <div class="col-1"></div>
 
         <?php
+            }
         }
     }
 }
