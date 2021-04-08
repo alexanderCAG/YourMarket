@@ -36,7 +36,7 @@
 <div class="contenu_general_infoPerso_admin row">
     <div class="col-2"></div>
 
-    <div class="col-8 infoPerso_livraison">
+    <div class="col-8 infoPerso_livraison shadow">
 
         <form action="../../Bdd/infoPerso_recup.php" method="POST">
             <div class="row">
