@@ -24,7 +24,10 @@
     if (isset($_GET['ids'])){
         $delete=$_GET['ids'];
 
-        $queryDeleteItem = mysqli_query($con, "delete from seller WHERE id_seller='$delete'");
+        $queryDeleteOffer = mysqli_query($con, "delete from offer WHERE id_seller='$delete'");
+        $queryDeleteBid = mysqli_query($con, "delete from bid WHERE id_seller='$delete'");
+        $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_seller='$delete'");
+        $queryDeleteSeller = mysqli_query($con, "delete from seller WHERE id_seller='$delete'");
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeVendeur.php' </script>";
     }
 
