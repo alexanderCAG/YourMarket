@@ -116,7 +116,6 @@ if(isset($_POST['btn_submit_paiement'])){
                 // ici
             }
         }
-       
     }
 }      
 
