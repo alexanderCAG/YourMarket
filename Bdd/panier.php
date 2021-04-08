@@ -162,15 +162,24 @@ if(isset($_POST['btn_envoyer_enchere_prix'])){
         $proposition_prix=$_POST['proposition_prix'];
         $idItem=$_POST['idItem'];
 
-        $querySeller = mysqli_query($con, "SELECT id_seller FROM item WHERE id_item='$idItem'");
+        $queryMoney = mysqli_query($con, "SELECT money FROM payment WHERE id_buyer='$id_buyer'");
 
-        if($row2 = mysqli_fetch_assoc($querySeller)){
-            $id_seller = $row2['id_seller'];
-            $query = mysqli_query($con, "INSERT INTO bid (id_item, id_buyer, id_seller, state, price_user) VALUES ('$idItem','$id_buyer','$id_seller','en cours','$proposition_prix')");
-            echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
+        if($rowMoney = mysqli_fetch_assoc($queryMoney)){
+            $money = $rowMoney['money'];
+
+            if($money<$proposition_prix){
+                echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
+            }else{
+                $querySeller = mysqli_query($con, "SELECT id_seller FROM item WHERE id_item='$idItem'");
+
+                if($row2 = mysqli_fetch_assoc($querySeller)){
+                    $id_seller = $row2['id_seller'];
+                    $query = mysqli_query($con, "INSERT INTO bid (id_item, id_buyer, id_seller, state, price_user) VALUES ('$idItem','$id_buyer','$id_seller','en cours','$proposition_prix')");
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
+                }
+            }
+
         }
-    
-        
     }
 }
 

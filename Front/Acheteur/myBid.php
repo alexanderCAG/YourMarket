@@ -1,8 +1,8 @@
 <?php
     $title="Accueil";
     require "head.php";
-    // $email_user = $_SESSION['email'];
     include("../../Bdd/cnx.php");
+    $email_user = $_SESSION['email'];
     $idBid=$_GET['idBid'];
     $_SESSION['id_bid']=$idBid;
     // $_SESSION['id_offer']=$idoffer;
@@ -33,7 +33,23 @@
             <?php } elseif($state == "Winner"){?>
                 <h4 class="info_msg_bid texte_style" id="win_bid">You Win</h4>
                 <img class="rounded-circle shadow-lg" src="../../Image/win_bid.gif" alt="past_bid">
-            <?php } elseif($state == "Loser"){?>
+            <?php 
+
+                $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
+
+                if($row = mysqli_fetch_assoc($queryBuyer)){
+                    $id_buyer = $row['id_buyer'];
+                    $queryMoney = mysqli_query($con, "SELECT money FROM payment WHERE id_buyer='$id_buyer'");
+
+                    if($rowMoney = mysqli_fetch_assoc($queryMoney)){
+                        $money = $rowMoney['money'];
+                        $myNewMoney = $money-$price_user;
+
+                        $queryMoney = mysqli_query($con, "UPDATE payment SET money='$myNewMoney' WHERE id_buyer='$id_buyer'");                    
+                    }
+                }
+
+            } elseif($state == "Loser"){?>
                 <h4 class="info_msg_bid texte_style">You Lose</h4>
                 <img class="rounded-circle shadow-lg" src="../../Image/lose_bid.gif" alt="past_bid">
             <?php }?>

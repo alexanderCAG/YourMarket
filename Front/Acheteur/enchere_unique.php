@@ -136,21 +136,33 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                         var s=heure2-heure1;
 
                         var d=Math.floor(s/86400);
-                        jours.html('<strong><font size="6">'+d+'</font></strong><br> Jour'+(d>1?'s':''));
-                        s-=d*86400;
-
                         var h=Math.floor(s/3600);
-                        heures.html('<strong><font size="6">'+h+'</font></strong><br> Heure'+(h>1?'s':''));
-                        s-=h*3600;
-
                         var m=Math.floor(s/60);
-                        minutes.html('<strong><font size="6">'+m+'</font></strong><br> Minute'+(m>1?'s':''));
-                        s-=m*60;
-
                         var s=Math.floor(s);
-                        secondes.html('<strong><font size="6">'+s+'</font></strong><br> Seconde'+(s>1?'s':''));
 
-                        setTimeout(decompteur,1000);
+                        if(d<=0 && h<=0 && m<=0 && s<=0){
+                            jours.html('<strong><font size="6">'+0+'</font></strong><br> Jour'+(d>1?'s':''));
+                            heures.html('<strong><font size="6">'+0+'</font></strong><br> Heure'+(h>1?'s':''));
+                            minutes.html('<strong><font size="6">'+0+'</font></strong><br> Minute'+(m>1?'s':''));
+                            secondes.html('<strong><font size="6">'+0+'</font></strong><br> Seconde'+(s>1?'s':''));
+                        }else{
+                            var d=Math.floor(s/86400);
+                            jours.html('<strong><font size="6">'+d+'</font></strong><br> Jour'+(d>1?'s':''));
+                            s-=d*86400;
+
+                            var h=Math.floor(s/3600);
+                            heures.html('<strong><font size="6">'+h+'</font></strong><br> Heure'+(h>1?'s':''));
+                            s-=h*3600;
+
+                            var m=Math.floor(s/60);
+                            minutes.html('<strong><font size="6">'+m+'</font></strong><br> Minute'+(m>1?'s':''));
+                            s-=m*60;
+
+                            var s=Math.floor(s);
+                            secondes.html('<strong><font size="6">'+s+'</font></strong><br> Seconde'+(s>1?'s':''));
+
+                            setTimeout(decompteur,1000);
+                        }
                     }
                 </script>
                 <div class="enchere_compteur_total centrer row">
@@ -196,8 +208,24 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
     <div class="col-3 enchere_liste_payer centrer position-relative">
         <form action="../../Bdd/panier.php" method="POST">
             <div class="enchere_payer_titre texte_style text-uppercase mt-4">Make an Offer</div>
-            <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposal (€)">
-            <button type="submit" name="btn_envoyer_enchere_prix" class="btn_envoyer_propose_prix text-uppercase">Send</button>
+            <?php 
+                $now = new DateTime();
+                $endEnchere = new DateTime($end_enchere);
+                if($endEnchere>$now){
+            ?>
+                <input class="enchere_propose_prix centrer" name="proposition_prix" placeholder="Proposal (€)">
+                <button type="submit" name="btn_envoyer_enchere_prix" class="btn_envoyer_propose_prix text-uppercase">Send</button>
+            <?php }else{ ?>
+                <div class="bg-danger text-light w-100 text-center" style="margin-top:80px;">Unavailable</div>
+            <?php 
+                $querySelect = mysqli_query($con, "UPDATE bid SET state='Loser' WHERE id_item='$iditem'");
+
+                $querySelectMax = mysqli_query($con, "SELECT MAX(price_user) as price FROM bid WHERE id_item='$iditem'");
+                if($row = mysqli_fetch_assoc($querySelectMax)){
+                    $price = $row['price'];
+                    $querySelectWinner = mysqli_query($con, "UPDATE bid SET state='Winner' WHERE price_user='$price'");
+                }
+            } ?>
             <div class="enchere_nombre_participant detail_style position-absolute bottom-0 end-0"><?php echo $totalCandidat ?> participant(s)</div>
             <input type="hidden" name="idItem" value="<?php echo $iditem ?>">
         </form>
