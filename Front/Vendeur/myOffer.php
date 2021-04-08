@@ -34,8 +34,8 @@
     <div class="info_msg_bas2">
         <div class="message_comptenu">
             <form action="" method="POST">
-                <input type="submit" name="selectionValider" class="btn text-uppercase btn_msg_vendeur" id="btn_msg_vendeur_valider" value="Valider">
-                <input type="submit" name="selectionRefuser" class="btn text-uppercase btn_msg_vendeur" id="btn_msg_vendeur_refuser" value="Refuser">
+                <input type="submit" name="selectionValider" class="btn text-uppercase btn_msg_vendeur" id="btn_msg_vendeur_valider" value="Validate">
+                <input type="submit" name="selectionRefuser" class="btn text-uppercase btn_msg_vendeur" id="btn_msg_vendeur_refuser" value="Refuse">
                 <input type="hidden" name="id_offer" value="<?php echo $id_offer ?>">
             </form>
         </div>
