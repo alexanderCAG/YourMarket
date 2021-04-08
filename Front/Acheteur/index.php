@@ -37,7 +37,7 @@
                 <div class="col-md-5"></div>
                 <div class="col-md-7">
                     <div class="carouseul_info">
-                        <h5 class="text_carousel texte_style">ACHAT DIRECT</h5>
+                        <h5 class="text_carousel texte_style">Buy now</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
                             <a type="button" href="tous-nos-produits.php" style="font-weight: bold;margin-bottom:20px!important;text-decoration:none;color:black;">SHOPPING</a>
@@ -51,7 +51,7 @@
             <div class="row w-100 carousel-caption" style="top: 320px">
                 <div class="col-md-10">
                     <div class="carouseul_info">
-                        <h5 class="text_carousel">ENCHERE</h5>
+                        <h5 class="text_carousel">Bid</h5>
                         <button class="btn_carousel">
                             <img id="img_carousel_panier" src="../../Image/panier.png" alt="panier">
                             <a type="button" href="enchere.php" style="font-weight: bold;margin-bottom:20px!important;text-decoration:none;color:black;">SHOPPING</a>
