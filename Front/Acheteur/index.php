@@ -30,9 +30,9 @@
         <div class="carousel-item active">
             <img class="img_carousel position-relative" src="../../Image/acceuil_achat.jpg" class="d-block w-100"
                 alt="acceuil_achat">
-            <div class="bg-secondary">
+            <!-- <div class="bg-secondary">
                 <div class="div_deco">ACHETER MAINTENANT</div>
-            </div>
+            </div> -->
             <div class="row w-100 carousel-caption" style="top: 200px">
                 <div class="col-md-5"></div>
                 <div class="col-md-7">
