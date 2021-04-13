@@ -15,7 +15,7 @@
                     </div>
                     <div class="toast_text">
                         <p class="toast_text_titre">Success</p>
-                        <p class="toast_text_message">Inscription valider</p>
+                        <p class="toast_text_message">Registration validate</p>
                     </div>
                 </div>
             </div>
@@ -24,13 +24,13 @@
 
     <div class="confirm_register_div position-absolute top-50 start-50 translate-middle shadow">
         <div class="confirm_register_titre position-absolute top-0 start-50 translate-middle-x">
-            <h2 class="text-uppercase texte_style centrer">BIENVENUE</h2>
+            <h2 class="text-uppercase texte_style centrer">Welcome</h2>
         </div>
         
         <div class="confirm_register_contenu position-absolute bottom-0 start-0">
             <div class="confirm_register_contenu2 position-absolute top-50 start-50 translate-middle">
                 <p class="text-uppercase msg_confirm_register">
-                    Vous êtes maintenant inscrit
+                    You are now registered
                 </p>
                 <br><br>
                 <a href="../Front/Base/connexion.php" class="confirm_register_to_connexion">Sign up</a>
