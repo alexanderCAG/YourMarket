@@ -173,7 +173,7 @@ if(isset($_POST['btn_envoyer_enchere_prix'])){
 
                 if($row2 = mysqli_fetch_assoc($querySeller)){
                     $id_seller = $row2['id_seller'];
-                    $query = mysqli_query($con, "INSERT INTO bid (id_item, id_buyer, id_seller, state, price_user) VALUES ('$idItem','$id_buyer','$id_seller','en cours','$proposition_prix')");
+                    $query = mysqli_query($con, "INSERT INTO bid (id_item, id_buyer, id_seller, state, price_user) VALUES ('$idItem','$id_buyer','$id_seller','in progress','$proposition_prix')");
                     echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
                 }
             }

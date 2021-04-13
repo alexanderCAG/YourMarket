@@ -80,7 +80,7 @@ if(isset($_POST['submit_msg_acheteur'])){
     
     // echo "<script language='javascript' type='text/javascript'> alert('$idoffer'); </script>";
     if($nb_nego<=5){
-        $query = mysqli_query($con, "UPDATE offer SET price_offered='$prix_nego_message',quantity='$quantite_nego_message',nb_nego='$nb_nego',status='en cours' WHERE id_offer='$idoffer'");
+        $query = mysqli_query($con, "UPDATE offer SET price_offered='$prix_nego_message',quantity='$quantite_nego_message',nb_nego='$nb_nego',status='in progress' WHERE id_offer='$idoffer'");
     }
     
     echo "<script language='javascript' type='text/javascript'> location.href='messagerie.php' </script>";

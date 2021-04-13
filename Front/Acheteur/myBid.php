@@ -27,7 +27,7 @@
 <div class="container">
     <div class="row" style="margin-top:120px">
         <div class="col-12 centrer">
-            <?php if($state == "en cours"){?>
+            <?php if($state == "in progress"){?>
                 <h4 class="info_msg_bid texte_style">Wait until the end</h4>
                 <img class="rounded-circle shadow-lg" src="../../Image/past_bid.gif" alt="past_bid">
             <?php } elseif($state == "Winner"){?>
