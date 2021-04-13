@@ -217,7 +217,7 @@ if (isset($_POST['note_1'])){
     $rate = $row2['rate'];
 
     if($rate==0){
-        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem'";
+        $rate_tot="SELECT grade,tot_rate FROM item WHERE id_item='$idItem' and id_item='$idItem'";
         $rate_total=$con->query($rate_tot);
         $row3 = mysqli_fetch_array($rate_total);
         $rateTotal = $row3['tot_rate'];
@@ -247,7 +247,7 @@ if (isset($_POST['note_2'])){
     $row = mysqli_fetch_array($id_result);
     $result = $row['id_buyer'];
 
-    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result' and id_item='$idItem'";
 
     $rate_historique=$con->query($rate_verif);
     $row2 = mysqli_fetch_array($rate_historique);
@@ -284,7 +284,7 @@ if (isset($_POST['note_3'])){
     $row = mysqli_fetch_array($id_result);
     $result = $row['id_buyer'];
 
-    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result' and id_item='$idItem'";
 
     $rate_historique=$con->query($rate_verif);
     $row2 = mysqli_fetch_array($rate_historique);
@@ -320,7 +320,7 @@ if (isset($_POST['note_4'])){
     $row = mysqli_fetch_array($id_result);
     $result = $row['id_buyer'];
 
-    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result' and id_item='$idItem'";
 
     $rate_historique=$con->query($rate_verif);
     $row2 = mysqli_fetch_array($rate_historique);
@@ -357,7 +357,7 @@ if (isset($_POST['note_5'])){
     $row = mysqli_fetch_array($id_result);
     $result = $row['id_buyer'];
 
-    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result'";
+    $rate_verif="SELECT rate FROM history WHERE id_buyer='$result' and id_item='$idItem'";
 
     $rate_historique=$con->query($rate_verif);
     $row2 = mysqli_fetch_array($rate_historique);
