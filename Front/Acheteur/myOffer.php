@@ -31,7 +31,7 @@
     <div id="messages" class="info_msg_haut">
     </div>
 
-    <?php if($status !="Valider"){?>
+    <?php if($status !="Validate"){?>
     <div class="info_msg_bas">
         <div class="message_comptenu">
             <form action="" method="POST">
@@ -43,7 +43,7 @@
             </form>
         </div>
     </div>
-    <?php } elseif($status =="Valider"){
+    <?php } elseif($status =="Validate"){
 
         $queryBuyer = mysqli_query($con, "SELECT id_buyer FROM buyer WHERE (email='$email_user' or lastname='$email_user')");
 

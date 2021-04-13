@@ -30,7 +30,7 @@
     <div id="messages" class="info_msg_haut">
         <!-- <p class="satut_nego_msg texte_style"><?php echo $status ?></p> -->
     </div>
-    <?php if($status !="Valider"){?>
+    <?php if($status !="Validate"){?>
     <div class="info_msg_bas2">
         <div class="message_comptenu">
             <form action="" method="POST">
