@@ -142,7 +142,7 @@ if(isset($_POST['btn_submit_nego'])){
 
                 if($row2 = mysqli_fetch_assoc($querySeller)){
                     $id_seller = $row2['id_seller'];
-                    $queryBuyer = mysqli_query($con, "INSERT INTO offer(id_item, id_buyer, id_seller, price_offered, quantity, nb_nego, status) VALUES ('$id_item_nego','$id_buyer','$id_seller','$prix_nego','$quantite_nego','1','en cours')");
+                    $queryBuyer = mysqli_query($con, "INSERT INTO offer(id_item, id_buyer, id_seller, price_offered, quantity, nb_nego, status) VALUES ('$id_item_nego','$id_buyer','$id_seller','$prix_nego','$quantite_nego','1','in progress')");
                     echo "<script language='javascript' type='text/javascript'> location.href='../Front/Acheteur/index.php' </script>";
                 }
             }
