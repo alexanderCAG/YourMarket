@@ -31,7 +31,7 @@ function ajoutvendeur(event){
 
     // image verif
     if(file_interrieur_inscription_img.value.length==""){
-        imageErreur_listeVendeur.innerHTML = "Compléter ce champs";
+        imageErreur_listeVendeur.innerHTML = "Complete this field";
         verif_Ajoutvendeur=false;
     }else{
         imageErreur_listeVendeur.innerHTML = "";
@@ -39,13 +39,13 @@ function ajoutvendeur(event){
 
     // nom marque verif
     if(nomMarque_Ajoutvendeur.value.trim()==""){
-        nomMarqueErreur_Ajoutvendeur.innerHTML = "Compléter ce champs";
+        nomMarqueErreur_Ajoutvendeur.innerHTML = "Complete this field";
         verif_Ajoutvendeur=false;
     }else if(regex_mixte.test(nomMarque_Ajoutvendeur.value)==false){
-        nomMarqueErreur_Ajoutvendeur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+        nomMarqueErreur_Ajoutvendeur.innerHTML = "Special characters are ignored";
         verif_Ajoutvendeur=false;
     }else if(nomMarque_Ajoutvendeur.value.length >= 25){
-        nomMarqueErreur_Ajoutvendeur.innerHTML = "Trop long";
+        nomMarqueErreur_Ajoutvendeur.innerHTML = "Too long";
         verif_Ajoutvendeur=false;
     }else{
         nomMarqueErreur_Ajoutvendeur.innerHTML = "";
@@ -53,13 +53,13 @@ function ajoutvendeur(event){
 
     // telephone verif
     if(telephone_Ajoutvendeur.value.trim()==""){
-        telephoneErreur_Ajoutvendeur.innerHTML = "Compléter ce champs";
+        telephoneErreur_Ajoutvendeur.innerHTML = "Complete this field";
         verif_Ajoutvendeur=false;
     }else if(regex_chiffre.test(telephone_Ajoutvendeur.value)==false){
-        telephoneErreur_Ajoutvendeur.innerHTML = "Les lettres ne sont pas pris en compte";
+        telephoneErreur_Ajoutvendeur.innerHTML = "Letters are not taken into account";
         verif_Ajoutvendeur=false;
     }else if(telephone_Ajoutvendeur.value.length > 10){
-        telephoneErreur_Ajoutvendeur.innerHTML = "N'existe pas, trop long";
+        telephoneErreur_Ajoutvendeur.innerHTML = "Does not exist, Too long";
         verif_Ajoutvendeur=false;
     }else{
         telephoneErreur_Ajoutvendeur.innerHTML = "";
@@ -67,27 +67,27 @@ function ajoutvendeur(event){
 
     // mdp verif
     if(mdp_Ajoutvendeur.value.trim()==""){
-        mdpErreur_Ajoutvendeur.innerHTML = "Compléter ce champs";
+        mdpErreur_Ajoutvendeur.innerHTML = "Complete this field";
         mdpErreur_Ajoutvendeur.setAttribute("style","color:red");
         verif_Ajoutvendeur=false;
     }else if(!/[a-z]/.test(mdp_Ajoutvendeur.value)){
-        mdpErreur_Ajoutvendeur.innerHTML = "minuscule obligatoire";
+        mdpErreur_Ajoutvendeur.innerHTML = "lowercase required";
         verif_Ajoutvendeur=false;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:red");
     }else if(!/[A-Z]/.test(mdp_Ajoutvendeur.value)){
-        mdpErreur_Ajoutvendeur.innerHTML = "majuscule obligatoire";
+        mdpErreur_Ajoutvendeur.innerHTML = "uppercase required";
         verif_Ajoutvendeur=false;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:red");
     }else if(!/[1-9]/.test(mdp_Ajoutvendeur.value)){
-        mdpErreur_Ajoutvendeur.innerHTML = "chiffre obligatoire";
+        mdpErreur_Ajoutvendeur.innerHTML = "number required";
         verif_Ajoutvendeur=false;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:red");
     }else if(/[1-9]/.test(mdp_Ajoutvendeur.value) && regex_mdp.test(mdp_Ajoutvendeur.value)==false){
-        mdpErreur_Ajoutvendeur.innerHTML = "Moyen";
+        mdpErreur_Ajoutvendeur.innerHTML = "Average";
         // verif_Ajoutvendeur=true;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:green");
     }else if(regex_mdp.test(mdp_Ajoutvendeur.value)){
-        mdpErreur_Ajoutvendeur.innerHTML = "Fort";
+        mdpErreur_Ajoutvendeur.innerHTML = "Strong";
         // verif_Ajoutvendeur=true;
         mdpErreur_Ajoutvendeur.setAttribute("style","color:green");
     }else{
@@ -95,11 +95,11 @@ function ajoutvendeur(event){
     }
 
     if(mdp2_Ajoutvendeur.value.trim()==""){
-        mdp2Erreur_Ajoutvendeur.innerHTML = "Compléter ce champs";
+        mdp2Erreur_Ajoutvendeur.innerHTML = "Complete this field";
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:red");
         verif_Ajoutvendeur=false;
     }else if(mdp_Ajoutvendeur.value.trim() != mdp2_Ajoutvendeur.value.trim()){
-        mdp2Erreur_Ajoutvendeur.innerHTML = "Mot de passe différent";
+        mdp2Erreur_Ajoutvendeur.innerHTML = "Different password";
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:red");
         verif_Ajoutvendeur=false;
     }else if(mdp_Ajoutvendeur.value.trim() == mdp2_Ajoutvendeur.value.trim()){
@@ -107,11 +107,11 @@ function ajoutvendeur(event){
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:green");
         // verif_Ajoutvendeur=true;
     }else if(regex_mdp.test(mdp_Ajoutvendeur.value) != regex_mdp.test(mdp2_Ajoutvendeur.value)){
-        mdp2Erreur_Ajoutvendeur.innerHTML = "Mot de passe pas sécurisé";
+        mdp2Erreur_Ajoutvendeur.innerHTML = "Password not secure";
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:red");
         verif_Ajoutvendeur=false;
     }else if(/[1-9]/.test(mdp_Ajoutvendeur.value) && regex_mdp.test(mdp_Ajoutvendeur.value)==false != /[1-9]/.test(mdp2_Ajoutvendeur.value) && regex_mdp.test(mdp2_Ajoutvendeur.value)==false){
-        mdp2Erreur_Ajoutvendeur.innerHTML = "Mot de passe pas sécurisé";
+        mdp2Erreur_Ajoutvendeur.innerHTML = "Password not secure";
         mdp2Erreur_Ajoutvendeur.setAttribute("style","color:red");
         verif_Ajoutvendeur=false;
     }else{
@@ -120,13 +120,13 @@ function ajoutvendeur(event){
 
     // mail verif
     if(mail_Ajoutvendeur.value.trim()==""){
-        mailErreur_Ajoutvendeur.innerHTML = "Compléter ce champs";
+        mailErreur_Ajoutvendeur.innerHTML = "Complete this field";
         verif_Ajoutvendeur=false;
     }else if(regex_mail.test(mail_Ajoutvendeur.value)==false){
-        mailErreur_Ajoutvendeur.innerHTML = "Le mail n'est pas correct";
+        mailErreur_Ajoutvendeur.innerHTML = "The email is not correct";
         verif_Ajoutvendeur=false;
     }else if(mail_Ajoutvendeur.value.length >= 25){
-        mailErreur_Ajoutvendeur.innerHTML = "Trop long";
+        mailErreur_Ajoutvendeur.innerHTML = "Too long";
         verif_Ajoutvendeur=false;
     }else{
         mailErreur_Ajoutvendeur.innerHTML = "";

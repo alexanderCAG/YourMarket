@@ -46,7 +46,7 @@ function infoPerso_vendeur(event){
 
     // image verif
     if(file_interrieur_inscription_img.value.length==""){
-        imageErreur_infoPersovendeur.innerHTML = "Compléter ce champs";
+        imageErreur_infoPersovendeur.innerHTML = "Complete this field";
         verif_infoPerso_vendeur=false;
     }else{
         imageErreur_infoPersovendeur.innerHTML = "";
@@ -54,13 +54,13 @@ function infoPerso_vendeur(event){
 
     // nom marque verif
     if(infoPerso_nomMarque_vendeur.value.trim()==""){
-        infoPerso_nomMarqueErreur_vendeur.innerHTML = "Compléter ce champs";
+        infoPerso_nomMarqueErreur_vendeur.innerHTML = "Complete this field";
         verif_infoPerso_vendeur=false;
     }else if(regex_mixte.test(infoPerso_nomMarque_vendeur.value)==false){
-        infoPerso_nomMarqueErreur_vendeur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+        infoPerso_nomMarqueErreur_vendeur.innerHTML = "Special characters are ignored";
         verif_infoPerso_vendeur=false;
     }else if(infoPerso_nomMarque_vendeur.value.length >= 25){
-        infoPerso_nomMarqueErreur_vendeur.innerHTML = "Trop long";
+        infoPerso_nomMarqueErreur_vendeur.innerHTML = "Too long";
         verif_infoPerso_vendeur=false;
     }else{
         infoPerso_nomMarqueErreur_vendeur.innerHTML = "";
@@ -68,13 +68,13 @@ function infoPerso_vendeur(event){
 
     // telephone verif
     if(infoPerso_telephone_vendeur.value.trim()==""){
-        infoPerso_telephoneErreur_vendeur.innerHTML = "Compléter ce champs";
+        infoPerso_telephoneErreur_vendeur.innerHTML = "Complete this field";
         verif_infoPerso_vendeur=false;
     }else if(regex_chiffre.test(infoPerso_telephone_vendeur.value)==false){
-        infoPerso_telephoneErreur_vendeur.innerHTML = "Les lettres ne sont pas pris en compte";
+        infoPerso_telephoneErreur_vendeur.innerHTML = "Letters are not taken into account";
         verif_infoPerso_vendeur=false;
     }else if(infoPerso_telephone_vendeur.value.length > 10){
-        infoPerso_telephoneErreur_vendeur.innerHTML = "N'existe pas, trop long";
+        infoPerso_telephoneErreur_vendeur.innerHTML = "Does not exist, Too long";
         verif_infoPerso_vendeur=false;
     }else{
         infoPerso_telephoneErreur_vendeur.innerHTML = "";
@@ -82,27 +82,27 @@ function infoPerso_vendeur(event){
 
     // mdp verif
     if(infoPerso_mdp_vendeur.value.trim()==""){
-        infoPerso_mdpErreur_vendeur.innerHTML = "Compléter ce champs";
+        infoPerso_mdpErreur_vendeur.innerHTML = "Complete this field";
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:red");
         verif_infoPerso_vendeur=false;
     }else if(!/[a-z]/.test(infoPerso_mdp_vendeur.value)){
-        infoPerso_mdpErreur_vendeur.innerHTML = "minuscule obligatoire";
+        infoPerso_mdpErreur_vendeur.innerHTML = "lowercase required";
         verif_infoPerso_vendeur=false;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:red");
     }else if(!/[A-Z]/.test(infoPerso_mdp_vendeur.value)){
-        infoPerso_mdpErreur_vendeur.innerHTML = "majuscule obligatoire";
+        infoPerso_mdpErreur_vendeur.innerHTML = "uppercase required";
         verif_infoPerso_vendeur=false;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:red");
     }else if(!/[1-9]/.test(infoPerso_mdp_vendeur.value)){
-        infoPerso_mdpErreur_vendeur.innerHTML = "chiffre obligatoire";
+        infoPerso_mdpErreur_vendeur.innerHTML = "number required";
         verif_infoPerso_vendeur=false;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:red");
     }else if(/[1-9]/.test(infoPerso_mdp_vendeur.value) && regex_mdp.test(infoPerso_mdp_vendeur.value)==false){
-        infoPerso_mdpErreur_vendeur.innerHTML = "Moyen";
+        infoPerso_mdpErreur_vendeur.innerHTML = "Average";
         // verif_infoPerso_vendeur=true;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:green");
     }else if(regex_mdp.test(infoPerso_mdp_vendeur.value)){
-        infoPerso_mdpErreur_vendeur.innerHTML = "Fort";
+        infoPerso_mdpErreur_vendeur.innerHTML = "Strong";
         // verif_infoPerso_vendeur=true;
         infoPerso_mdpErreur_vendeur.setAttribute("style","color:green");
     }else{
@@ -110,11 +110,11 @@ function infoPerso_vendeur(event){
     }
 
     if(infoPerso_mdp2_vendeur.value.trim()==""){
-        infoPerso_mdp2Erreur_vendeur.innerHTML = "Compléter ce champs";
+        infoPerso_mdp2Erreur_vendeur.innerHTML = "Complete this field";
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:red");
         verif_infoPerso_vendeur=false;
     }else if(infoPerso_mdp_vendeur.value.trim() != infoPerso_mdp2_vendeur.value.trim()){
-        infoPerso_mdp2Erreur_vendeur.innerHTML = "Mot de passe différent";
+        infoPerso_mdp2Erreur_vendeur.innerHTML = "Different password";
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:red");
         verif_infoPerso_vendeur=false;
     }else if(infoPerso_mdp_vendeur.value.trim() == infoPerso_mdp2_vendeur.value.trim()){
@@ -122,11 +122,11 @@ function infoPerso_vendeur(event){
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:green");
         // verif_infoPerso_vendeur=true;
     }else if(regex_mdp.test(infoPerso_mdp_vendeur.value) != regex_mdp.test(infoPerso_mdp2_vendeur.value)){
-        infoPerso_mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
+        infoPerso_mdp2Erreur_vendeur.innerHTML = "Password not secure";
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:red");
         verif_infoPerso_vendeur=false;
     }else if(/[1-9]/.test(infoPerso_mdp_vendeur.value) && regex_mdp.test(infoPerso_mdp_vendeur.value)==false != /[1-9]/.test(infoPerso_mdp2_vendeur.value) && regex_mdp.test(infoPerso_mdp2_vendeur.value)==false){
-        infoPerso_mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
+        infoPerso_mdp2Erreur_vendeur.innerHTML = "Password not secure";
         infoPerso_mdp2Erreur_vendeur.setAttribute("style","color:red");
         verif_infoPerso_vendeur=false;
     }else{
@@ -135,13 +135,13 @@ function infoPerso_vendeur(event){
 
     // mail verif
     if(infoPerso_mail_vendeur.value.trim()==""){
-        infoPerso_mailErreur_vendeur.innerHTML = "Compléter ce champs";
+        infoPerso_mailErreur_vendeur.innerHTML = "Complete this field";
         verif_infoPerso_vendeur=false;
     }else if(regex_mail.test(infoPerso_mail_vendeur.value)==false){
-        infoPerso_mailErreur_vendeur.innerHTML = "Le mail n'est pas correct";
+        infoPerso_mailErreur_vendeur.innerHTML = "The email is not correct";
         verif_infoPerso_vendeur=false;
     }else if(infoPerso_mail_vendeur.value.length >= 25){
-        infoPerso_mailErreur_vendeur.innerHTML = "Trop long";
+        infoPerso_mailErreur_vendeur.innerHTML = "Too long";
         verif_infoPerso_vendeur=false;
     }else{
         infoPerso_mailErreur_vendeur.innerHTML = "";

@@ -192,13 +192,13 @@ jQuery(document).ready(function(){
 
             // nom verif
             if(nom_acheteur.value.trim()==""){
-                nomErreur_acheteur.innerHTML = "Compléter ce champs";
+                nomErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_lettre.test(nom_acheteur.value)==false){
-                nomErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+                nomErreur_acheteur.innerHTML = "Numbers are ignored";
                 verification_inscription_acheteur=false;
             }else if(nom_acheteur.value.length >= 20){
-                nomErreur_acheteur.innerHTML = "Trop long";
+                nomErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 nomErreur_acheteur.innerHTML = "";
@@ -206,13 +206,13 @@ jQuery(document).ready(function(){
 
             // prenom verif
             if(prenom_acheteur.value.trim()==""){
-                prenomErreur_acheteur.innerHTML = "Compléter ce champs";
+                prenomErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_lettre.test(prenom_acheteur.value)==false){
-                prenomErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+                prenomErreur_acheteur.innerHTML = "Numbers are ignored";
                 verification_inscription_acheteur=false;
             }else if(prenom_acheteur.value.length >= 20){
-                prenomErreur_acheteur.innerHTML = "Trop long";
+                prenomErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 prenomErreur_acheteur.innerHTML = "";
@@ -220,13 +220,13 @@ jQuery(document).ready(function(){
 
             // Téléphone verif
             if(telephone_acheteur.value.trim()==""){
-                telephoneErreur_acheteur.innerHTML = "Compléter ce champs";
+                telephoneErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_chiffre.test(telephone_acheteur.value)==false){
-                telephoneErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+                telephoneErreur_acheteur.innerHTML = "Letters are not taken into account";
                 verification_inscription_acheteur=false;
             }else if(telephone_acheteur.value.length > 10){
-                telephoneErreur_acheteur.innerHTML = "N'existe pas, trop long";
+                telephoneErreur_acheteur.innerHTML = "Does not exist, Too long";
                 verification_inscription_acheteur=false;
             }else{
                 telephoneErreur_acheteur.innerHTML = "";
@@ -234,13 +234,13 @@ jQuery(document).ready(function(){
 
             // mail verif
             if(mail_acheteur.value.trim()==""){
-                mailErreur_acheteur.innerHTML = "Compléter ce champs";
+                mailErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_mail.test(mail_acheteur.value)==false){
-                mailErreur_acheteur.innerHTML = "Le mail n'est pas correct";
+                mailErreur_acheteur.innerHTML = "The email is not correct";
                 verification_inscription_acheteur=false;
             }else if(mail_acheteur.value.length >= 25){
-                mailErreur_acheteur.innerHTML = "Trop long";
+                mailErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 mailErreur_acheteur.innerHTML = "";
@@ -248,27 +248,27 @@ jQuery(document).ready(function(){
 
             // mdp verif
             if(mdp_acheteur.value.trim()==""){
-                mdpErreur_acheteur.innerHTML = "Compléter ce champs";
+                mdpErreur_acheteur.innerHTML = "Complete this field";
                 mdpErreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else if(!/[a-z]/.test(mdp_acheteur.value)){
-                mdpErreur_acheteur.innerHTML = "minuscule obligatoire";
+                mdpErreur_acheteur.innerHTML = "lowercase required";
                 verification_inscription_acheteur=false;
                 mdpErreur_acheteur.setAttribute("style","color:red");
             }else if(!/[A-Z]/.test(mdp_acheteur.value)){
-                mdpErreur_acheteur.innerHTML = "majuscule obligatoire";
+                mdpErreur_acheteur.innerHTML = "uppercase required";
                 verification_inscription_acheteur=false;
                 mdpErreur_acheteur.setAttribute("style","color:red");
             }else if(!/[1-9]/.test(mdp_acheteur.value)){
-                mdpErreur_acheteur.innerHTML = "chiffre obligatoire";
+                mdpErreur_acheteur.innerHTML = "number required";
                 verification_inscription_acheteur=false;
                 mdpErreur_acheteur.setAttribute("style","color:red");
             }else if(/[1-9]/.test(mdp_acheteur.value) && regex_mdp.test(mdp_acheteur.value)==false){
-                mdpErreur_acheteur.innerHTML = "Moyen";
+                mdpErreur_acheteur.innerHTML = "Average";
                 // verification_inscription_acheteur=true;
                 mdpErreur_acheteur.setAttribute("style","color:green");
             }else if(regex_mdp.test(mdp_acheteur.value)){
-                mdpErreur_acheteur.innerHTML = "Fort";
+                mdpErreur_acheteur.innerHTML = "Strong";
                 // verification_inscription_acheteur=true;
                 mdpErreur_acheteur.setAttribute("style","color:green");
             }else{
@@ -276,11 +276,11 @@ jQuery(document).ready(function(){
             }
 
             if(mdp2_acheteur.value.trim()==""){
-                mdp2Erreur_acheteur.innerHTML = "Compléter ce champs";
+                mdp2Erreur_acheteur.innerHTML = "Complete this field";
                 mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else if(mdp_acheteur.value.trim() != mdp2_acheteur.value.trim()){
-                mdp2Erreur_acheteur.innerHTML = "Mot de passe différent";
+                mdp2Erreur_acheteur.innerHTML = "Different password";
                 mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else if(mdp_acheteur.value.trim() == mdp2_acheteur.value.trim()){
@@ -288,11 +288,11 @@ jQuery(document).ready(function(){
                 mdp2Erreur_acheteur.setAttribute("style","color:green");
                 // verification_inscription_acheteur=true;
             }else if(regex_mdp.test(mdp_acheteur.value) != regex_mdp.test(mdp2_acheteur.value)){
-                mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_acheteur.innerHTML = "Password not secure";
                 mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else if(/[1-9]/.test(mdp_acheteur.value) && regex_mdp.test(mdp_acheteur.value)==false != /[1-9]/.test(mdp2_acheteur.value) && regex_mdp.test(mdp2_acheteur.value)==false){
-                mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_acheteur.innerHTML = "Password not secure";
                 mdp2Erreur_acheteur.setAttribute("style","color:red");
                 verification_inscription_acheteur=false;
             }else{
@@ -301,26 +301,26 @@ jQuery(document).ready(function(){
 
             // adresse verif
             if(adresse1_acheteur.value.trim()==""){
-                adresse1Erreur_acheteur.innerHTML = "Compléter ce champs";
+                adresse1Erreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_tot.test(adresse1_acheteur.value)==false){
-                adresse1Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+                adresse1Erreur_acheteur.innerHTML = "Special characters are ignored";
                 verification_inscription_acheteur=false;
             }else if(adresse1_acheteur.value.length >= 50){
-                adresse1Erreur_acheteur.innerHTML = "Trop long";
+                adresse1Erreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 adresse1Erreur_acheteur.innerHTML = "";
             }
 
             // if(adresse2_acheteur.value.trim()==""){
-            //     adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
+            //     adresse2Erreur_acheteur.innerHTML = "Complete this field";
             //     verification_inscription_acheteur=false;
             // }else if(regex_tot.test(adresse2_acheteur.value)==false){
-            //     adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+            //     adresse2Erreur_acheteur.innerHTML = "Special characters are ignored";
             //     verification_inscription_acheteur=false;
             // }else if(adresse2_acheteur.value.length >= 50){
-            //     adresse2Erreur_acheteur.innerHTML = "Trop long";
+            //     adresse2Erreur_acheteur.innerHTML = "Too long";
             //     verification_inscription_acheteur=false;
             // }else{
             //     adresse2Erreur_acheteur.innerHTML = "";
@@ -328,13 +328,13 @@ jQuery(document).ready(function(){
 
             // Pays verif
             if(pays_acheteur.value.trim()==""){
-                paysErreur_acheteur.innerHTML = "Compléter ce champs";
+                paysErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_lettre.test(pays_acheteur.value)==false){
-                paysErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+                paysErreur_acheteur.innerHTML = "Numbers are ignored";
                 verification_inscription_acheteur=false;
             }else if(pays_acheteur.value.length >= 15){
-                paysErreur_acheteur.innerHTML = "Trop long";
+                paysErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 paysErreur_acheteur.innerHTML = "";
@@ -342,13 +342,13 @@ jQuery(document).ready(function(){
 
             // Ville verif
             if(ville_acheteur.value.trim()==""){
-                villeErreur_acheteur.innerHTML = "Compléter ce champs";
+                villeErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_lettre.test(ville_acheteur.value)==false){
-                villeErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+                villeErreur_acheteur.innerHTML = "Numbers are ignored";
                 verification_inscription_acheteur=false;
             }else if(ville_acheteur.value.length >= 15){
-                villeErreur_acheteur.innerHTML = "Trop long";
+                villeErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 villeErreur_acheteur.innerHTML = "";
@@ -356,13 +356,13 @@ jQuery(document).ready(function(){
 
             // Code Postal verif
             if(codepostal_acheteur.value.trim()==""){
-                codepostalErreur_acheteur.innerHTML = "Compléter ce champs";
+                codepostalErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_chiffre.test(codepostal_acheteur.value)==false){
-                codepostalErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+                codepostalErreur_acheteur.innerHTML = "Letters are not taken into account";
                 verification_inscription_acheteur=false;
             }else if(codepostal_acheteur.value.length > 5){
-                codepostalErreur_acheteur.innerHTML = "N'existe pas, trop long";
+                codepostalErreur_acheteur.innerHTML = "Does not exist, Too long";
                 verification_inscription_acheteur=false;
             }else{
                 codepostalErreur_acheteur.innerHTML = "";
@@ -371,7 +371,7 @@ jQuery(document).ready(function(){
             // Choix carte verif
             if(carte_payement_amex.checked==false && carte_payement_cb.checked==false
             && carte_payement_mastercard.checked==false && carte_payement_visa.checked==false){
-                typeCarteErreur_acheteur.innerHTML="Choisissez une carte";
+                typeCarteErreur_acheteur.innerHTML="Choose a card";
                 verification_inscription_acheteur=false;
             }else{
                 typeCarteErreur_acheteur.innerHTML="";
@@ -379,16 +379,16 @@ jQuery(document).ready(function(){
 
             // Numéro de carte verif
             if(numeroCarte_acheteur.value.trim()==""){
-                numeroCarteErreur_acheteur.innerHTML="Compléter ce champs";
+                numeroCarteErreur_acheteur.innerHTML="Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_chiffre.test(numeroCarte_acheteur.value)==false){
-                numeroCarteErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+                numeroCarteErreur_acheteur.innerHTML = "Letters are not taken into account";
                 verification_inscription_acheteur=false;
             }else if(numeroCarte_acheteur.value.length >= 20){
-                numeroCarteErreur_acheteur.innerHTML = "Trop long";
+                numeroCarteErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else if(numeroCarte_acheteur.value.length < 5){
-                numeroCarteErreur_acheteur.innerHTML = "Trop court";
+                numeroCarteErreur_acheteur.innerHTML = "Too short";
                 verification_inscription_acheteur=false;
             }else{
                 numeroCarteErreur_acheteur.innerHTML = "";
@@ -396,13 +396,13 @@ jQuery(document).ready(function(){
 
             // Nom de carte verif
             if(nomCarte_acheteur.value.trim()==""){
-                nomCarteErreur_acheteur.innerHTML = "Compléter ce champs";
+                nomCarteErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(regex_lettre.test(nomCarte_acheteur.value)==false){
-                nomCarteErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+                nomCarteErreur_acheteur.innerHTML = "Numbers are ignored";
                 verification_inscription_acheteur=false;
             }else if(nomCarte_acheteur.value.length >= 20){
-                nomCarteErreur_acheteur.innerHTML = "Trop long";
+                nomCarteErreur_acheteur.innerHTML = "Too long";
                 verification_inscription_acheteur=false;
             }else{
                 nomCarteErreur_acheteur.innerHTML = "";
@@ -410,7 +410,7 @@ jQuery(document).ready(function(){
 
             // Date d'expiration verif
             if(dateExpiration_acheteur.value.trim()==""){
-                dateExpirationErreur_acheteur.innerHTML = "Compléter ce champs";
+                dateExpirationErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else{
                 dateExpirationErreur_acheteur.innerHTML="";
@@ -418,13 +418,13 @@ jQuery(document).ready(function(){
 
             // Code secret verif
             if(codeSecret_acheteur.value.trim()==""){
-                codeSecretErreur_acheteur.innerHTML = "Compléter ce champs";
+                codeSecretErreur_acheteur.innerHTML = "Complete this field";
                 verification_inscription_acheteur=false;
             }else if(codeSecret_acheteur.value.length != 4){
-                codeSecretErreur_acheteur.innerHTML = "N'existe pas";
+                codeSecretErreur_acheteur.innerHTML = "Does not exist";
                 verification_inscription_acheteur=false;
             }else if(regex_chiffre.test(codeSecret_acheteur.value)==false){
-                codeSecretErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+                codeSecretErreur_acheteur.innerHTML = "Letters are not taken into account";
                 verification_inscription_acheteur=false;
             }else{
                 codeSecretErreur_acheteur.innerHTML="";
@@ -466,7 +466,7 @@ jQuery(document).ready(function(){
 
             // image verif
             if(file_interrieur_inscription_img.value.length==""){
-                imageErreur_vendeur.innerHTML = "Compléter ce champs";
+                imageErreur_vendeur.innerHTML = "Complete this field";
                 verification_inscription_vendeur=false;
             }else{
                 imageErreur_vendeur.innerHTML = "";
@@ -474,13 +474,13 @@ jQuery(document).ready(function(){
 
             // nom marque verif
             if(nomMarque_vendeur.value.trim()==""){
-                nomMarqueErreur_vendeur.innerHTML = "Compléter ce champs";
+                nomMarqueErreur_vendeur.innerHTML = "Complete this field";
                 verification_inscription_vendeur=false;
             }else if(regex_mixte.test(nomMarque_vendeur.value)==false){
-                nomMarqueErreur_vendeur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+                nomMarqueErreur_vendeur.innerHTML = "Special characters are ignored";
                 verification_inscription_vendeur=false;
             }else if(nomMarque_vendeur.value.length >= 15){
-                nomMarqueErreur_vendeur.innerHTML = "Trop long";
+                nomMarqueErreur_vendeur.innerHTML = "Too long";
                 verification_inscription_vendeur=false;
             }else{
                 nomMarqueErreur_vendeur.innerHTML = "";
@@ -488,13 +488,13 @@ jQuery(document).ready(function(){
 
             // telephone verif
             if(telephone_vendeur.value.trim()==""){
-                telephoneErreur_vendeur.innerHTML = "Compléter ce champs";
+                telephoneErreur_vendeur.innerHTML = "Complete this field";
                 verification_inscription_vendeur=false;
             }else if(regex_chiffre.test(telephone_vendeur.value)==false){
-                telephoneErreur_vendeur.innerHTML = "Les lettres ne sont pas pris en compte";
+                telephoneErreur_vendeur.innerHTML = "Letters are not taken into account";
                 verification_inscription_vendeur=false;
             }else if(telephone_vendeur.value.length >= 10){
-                telephoneErreur_vendeur.innerHTML = "N'existe pas, trop long";
+                telephoneErreur_vendeur.innerHTML = "Does not exist, Too long";
                 verification_inscription_vendeur=false;
             }else{
                 telephoneErreur_vendeur.innerHTML = "";
@@ -502,27 +502,27 @@ jQuery(document).ready(function(){
 
             // mdp verif
             if(mdp_vendeur.value.trim()==""){
-                mdpErreur_vendeur.innerHTML = "Compléter ce champs";
+                mdpErreur_vendeur.innerHTML = "Complete this field";
                 mdpErreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else if(!/[a-z]/.test(mdp_vendeur.value)){
-                mdpErreur_vendeur.innerHTML = "minuscule obligatoire";
+                mdpErreur_vendeur.innerHTML = "lowercase required";
                 verification_inscription_vendeur=false;
                 mdpErreur_vendeur.setAttribute("style","color:red");
             }else if(!/[A-Z]/.test(mdp_vendeur.value)){
-                mdpErreur_vendeur.innerHTML = "majuscule obligatoire";
+                mdpErreur_vendeur.innerHTML = "uppercase required";
                 verification_inscription_vendeur=false;
                 mdpErreur_vendeur.setAttribute("style","color:red");
             }else if(!/[1-9]/.test(mdp_vendeur.value)){
-                mdpErreur_vendeur.innerHTML = "chiffre obligatoire";
+                mdpErreur_vendeur.innerHTML = "number required";
                 verification_inscription_vendeur=false;
                 mdpErreur_vendeur.setAttribute("style","color:red");
             }else if(/[1-9]/.test(mdp_vendeur.value) && regex_mdp.test(mdp_vendeur.value)==false){
-                mdpErreur_vendeur.innerHTML = "Moyen";
+                mdpErreur_vendeur.innerHTML = "Average";
                 // verification_inscription_vendeur=true;
                 mdpErreur_vendeur.setAttribute("style","color:green");
             }else if(regex_mdp.test(mdp_vendeur.value)){
-                mdpErreur_vendeur.innerHTML = "Fort";
+                mdpErreur_vendeur.innerHTML = "Strong";
                 // verification_inscription_vendeur=true;
                 mdpErreur_vendeur.setAttribute("style","color:green");
             }else{
@@ -530,11 +530,11 @@ jQuery(document).ready(function(){
             }
 
             if(mdp2_vendeur.value.trim()==""){
-                mdp2Erreur_vendeur.innerHTML = "Compléter ce champs";
+                mdp2Erreur_vendeur.innerHTML = "Complete this field";
                 mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else if(mdp_vendeur.value.trim() != mdp2_vendeur.value.trim()){
-                mdp2Erreur_vendeur.innerHTML = "Mot de passe différent";
+                mdp2Erreur_vendeur.innerHTML = "Different password";
                 mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else if(mdp_vendeur.value.trim() == mdp2_vendeur.value.trim()){
@@ -542,11 +542,11 @@ jQuery(document).ready(function(){
                 mdp2Erreur_vendeur.setAttribute("style","color:green");
                 // verification_inscription_vendeur=true;
             }else if(regex_mdp.test(mdp_vendeur.value) != regex_mdp.test(mdp2_vendeur.value)){
-                mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_vendeur.innerHTML = "Password not secure";
                 mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else if(/[1-9]/.test(mdp_vendeur.value) && regex_mdp.test(mdp_vendeur.value)==false != /[1-9]/.test(mdp2_vendeur.value) && regex_mdp.test(mdp2_acheteur.value)==false){
-                mdp2Erreur_vendeur.innerHTML = "Mot de passe pas sécurisé";
+                mdp2Erreur_vendeur.innerHTML = "Password not secure";
                 mdp2Erreur_vendeur.setAttribute("style","color:red");
                 verification_inscription_vendeur=false;
             }else{
@@ -555,13 +555,13 @@ jQuery(document).ready(function(){
 
             // mail verif
             if(mail_vendeur.value.trim()==""){
-                mailErreur_vendeur.innerHTML = "Compléter ce champs";
+                mailErreur_vendeur.innerHTML = "Complete this field";
                 verification_inscription_vendeur=false;
             }else if(regex_mail.test(mail_vendeur.value)==false){
-                mailErreur_vendeur.innerHTML = "Le mail n'est pas correct";
+                mailErreur_vendeur.innerHTML = "The email is not correct";
                 verification_inscription_vendeur=false;
             }else if(mail_vendeur.value.length >= 25){
-                mailErreur_vendeur.innerHTML = "Trop long";
+                mailErreur_vendeur.innerHTML = "Too long";
                 verification_inscription_vendeur=false;
             }else{
                 mailErreur_vendeur.innerHTML = "";

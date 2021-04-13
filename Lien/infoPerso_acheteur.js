@@ -52,7 +52,7 @@ jQuery(document).ready(function(){
         // Choix carte verif
         if(infoPerso_carte_payement_amex.checked==false && infoPerso_carte_payement_cb.checked==false
         && infoPerso_carte_payement_mastercard.checked==false && infoPerso_carte_payement_visa.checked==false){
-            infoPerso_typeCarteErreur_acheteur.innerHTML="Choisissez une carte";
+            infoPerso_typeCarteErreur_acheteur.innerHTML="Choose a card";
             verif_infoPaiement_acheteur=false;
         }else{
             verif_infoPaiement_acheteur.innerHTML="";
@@ -60,16 +60,16 @@ jQuery(document).ready(function(){
 
         // Numéro de carte verif
         if(infoPerso_numeroCarte_acheteur.value.trim()==""){
-            infoPerso_numeroCarteErreur_acheteur.innerHTML="Compléter ce champs";
+            infoPerso_numeroCarteErreur_acheteur.innerHTML="Complete this field";
             verif_infoPaiement_acheteur=false;
         }else if(regex_chiffre.test(infoPerso_numeroCarte_acheteur.value)==false){
-            infoPerso_numeroCarteErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+            infoPerso_numeroCarteErreur_acheteur.innerHTML = "Letters are not taken into account";
             verif_infoPaiement_acheteur=false;
         }else if(infoPerso_numeroCarte_acheteur.value.length >= 20){
-            infoPerso_numeroCarteErreur_acheteur.innerHTML = "Trop long";
+            infoPerso_numeroCarteErreur_acheteur.innerHTML = "Too long";
             verif_infoPaiement_acheteur=false;
         }else if(infoPerso_numeroCarte_acheteur.value.length < 5){
-            infoPerso_numeroCarteErreur_acheteur.innerHTML = "Trop court";
+            infoPerso_numeroCarteErreur_acheteur.innerHTML = "Too short";
             verif_infoPaiement_acheteur=false;
         }else{
             infoPerso_numeroCarteErreur_acheteur.innerHTML = "";
@@ -77,13 +77,13 @@ jQuery(document).ready(function(){
 
         // Nom de carte verif
         if(infoPerso_nomCarte_acheteur.value.trim()==""){
-            infoPerso_nomCarteErreur_acheteur.innerHTML = "Compléter ce champs";
+            infoPerso_nomCarteErreur_acheteur.innerHTML = "Complete this field";
             verif_infoPaiement_acheteur=false;
         }else if(regex_lettre.test(infoPerso_nomCarte_acheteur.value)==false){
-            infoPerso_nomCarteErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+            infoPerso_nomCarteErreur_acheteur.innerHTML = "Numbers are ignored";
             verif_infoPaiement_acheteur=false;
         }else if(infoPerso_nomCarte_acheteur.value.length >= 20){
-            infoPerso_nomCarteErreur_acheteur.innerHTML = "Trop long";
+            infoPerso_nomCarteErreur_acheteur.innerHTML = "Too long";
             verif_infoPaiement_acheteur=false;
         }else{
             infoPerso_nomCarteErreur_acheteur.innerHTML = "";
@@ -91,7 +91,7 @@ jQuery(document).ready(function(){
 
         // Date d'expiration verif
         if(infoPerso_dateExpiration_acheteur.value.trim()==""){
-            infoPerso_dateExpirationErreur_acheteur.innerHTML = "Compléter ce champs";
+            infoPerso_dateExpirationErreur_acheteur.innerHTML = "Complete this field";
             verif_infoPaiement_acheteur=false;
         }else{
             infoPerso_dateExpirationErreur_acheteur.innerHTML="";
@@ -99,13 +99,13 @@ jQuery(document).ready(function(){
 
         // Code secret verif
         if(infoPerso_codeSecret_acheteur.value.trim()==""){
-            infoPerso_codeSecretErreur_acheteur.innerHTML = "Compléter ce champs";
+            infoPerso_codeSecretErreur_acheteur.innerHTML = "Complete this field";
             verif_infoPaiement_acheteur=false;
         }else if(infoPerso_codeSecret_acheteur.value.length != 4){
-            infoPerso_codeSecretErreur_acheteur.innerHTML = "N'existe pas";
+            infoPerso_codeSecretErreur_acheteur.innerHTML = "Does not exist";
             verif_infoPaiement_acheteur=false;
         }else if(regex_chiffre.test(infoPerso_codeSecret_acheteur.value)==false){
-            infoPerso_codeSecretErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+            infoPerso_codeSecretErreur_acheteur.innerHTML = "Letters are not taken into account";
             verif_infoPaiement_acheteur=false;
         }else{
             infoPerso_codeSecretErreur_acheteur.innerHTML="";

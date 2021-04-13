@@ -72,7 +72,7 @@ function ajoutArticle(event){
 
     // date verif
     if(achat_enchere_ajoutArticle.checked==true && dateAjoutarticle.value.trim()==""){
-        dateErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        dateErreur_ajoutArticle.innerHTML = "Complete this field";
         verif_ajoutArticle=false;
     }else{
         dateErreur_ajoutArticle.innerHTML = "";
@@ -80,8 +80,8 @@ function ajoutArticle(event){
 
     // image verif
     if(file_interrieur_inscription_img.value.length==""){
-        imageErreur_ajoutArticle.innerHTML = "Compléter ce champs";
-        // imageErreur_ajoutArticle_Admin.innerHTML = "Compléter ce champs";
+        imageErreur_ajoutArticle.innerHTML = "Complete this field";
+        // imageErreur_ajoutArticle_Admin.innerHTML = "Complete this field";
         verif_ajoutArticle=false;
     }else{
         imageErreur_ajoutArticle.innerHTML = "";
@@ -90,13 +90,13 @@ function ajoutArticle(event){
     
     // nom produit verif
     if(nomProduit_ajoutArticle.value.trim()==""){
-        nomProduitErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        nomProduitErreur_ajoutArticle.innerHTML = "Complete this field";
         verif_ajoutArticle=false;
     }else if(regex_tot.test(nomProduit_ajoutArticle.value)==false){
-        nomProduitErreur_ajoutArticle.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+        nomProduitErreur_ajoutArticle.innerHTML = "Special characters are ignored";
         verif_ajoutArticle=false;
     }else if(nomProduit_ajoutArticle.value.length >= 15){
-        nomProduitErreur_ajoutArticle.innerHTML = "Trop long";
+        nomProduitErreur_ajoutArticle.innerHTML = "Too long";
         verif_ajoutArticle=false;
     }else{
         nomProduitErreur_ajoutArticle.innerHTML = "";
@@ -104,16 +104,16 @@ function ajoutArticle(event){
 
     // description verif
     if(description_ajoutArticle.value.trim()==""){
-        descriptionErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        descriptionErreur_ajoutArticle.innerHTML = "Complete this field";
         verif_ajoutArticle=false;
     }else if(regex_tot.test(description_ajoutArticle.value)==false){
-        descriptionErreur_ajoutArticle.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+        descriptionErreur_ajoutArticle.innerHTML = "Special characters are ignored";
         verif_ajoutArticle=false;
     }else if(description_ajoutArticle.value.length <= 10){
-        descriptionErreur_ajoutArticle.innerHTML = "Trop court";
+        descriptionErreur_ajoutArticle.innerHTML = "Too short";
         verif_ajoutArticle=false;
     }else if(description_ajoutArticle.value.length >= 250){
-        descriptionErreur_ajoutArticle.innerHTML = "Trop long";
+        descriptionErreur_ajoutArticle.innerHTML = "Too long";
         verif_ajoutArticle=false;
     }else{
         descriptionErreur_ajoutArticle.innerHTML = "";
@@ -121,20 +121,20 @@ function ajoutArticle(event){
     
     // categorie verif
     if(choixCategorie_ajoutArticle.value == "choix_categorie_null"){
-        choixCategorieErreur_ajoutArticle.innerHTML = "Choisir une catégorie";
+        choixCategorieErreur_ajoutArticle.innerHTML = "Choose a category";
         verif_ajoutArticle=false;
     }else{
         choixCategorieErreur_ajoutArticle.innerHTML = "";
 
         if(choixCategorie_ajoutArticle.value == "house" && sousCategorie_ajoutArticle_maison.value == "sous_categorieMaison"){
-            choixSousCategorieErreur_ajoutArticle_maison.innerHTML = "Choisir une catégorie";
+            choixSousCategorieErreur_ajoutArticle_maison.innerHTML = "Choose a category";
             verif_ajoutArticle=false;
         }else{
             choixSousCategorieErreur_ajoutArticle_maison.innerHTML = "";
         }
     
         if(choixCategorie_ajoutArticle.value == "clothes" && sousCategorie_ajoutArticle_vetement.value == "sous_categorie_vetement"){
-            choixSousCategorieErreur_ajoutArticle_vetement.innerHTML = "Choisir une catégorie";
+            choixSousCategorieErreur_ajoutArticle_vetement.innerHTML = "Choose a category";
             verif_ajoutArticle=false;
         }else{
             choixSousCategorieErreur_ajoutArticle_vetement.innerHTML = "";
@@ -143,10 +143,10 @@ function ajoutArticle(event){
 
     // prix verif
     if(prix_ajoutArticle.value.trim()==""){
-        prixErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        prixErreur_ajoutArticle.innerHTML = "Complete this field";
         verif_ajoutArticle=false;
     }else if(regex_chiffre.test(prix_ajoutArticle.value)==false){
-        prixErreur_ajoutArticle.innerHTML = "Les lettres ne sont pas pris en compte";
+        prixErreur_ajoutArticle.innerHTML = "Letters are not taken into account";
         verif_ajoutArticle=false;
     }else{
         prixErreur_ajoutArticle.innerHTML = "";
@@ -154,10 +154,10 @@ function ajoutArticle(event){
 
     // quantité verif
     if(quatite_ajoutArticle.value.trim()==""){
-        quantiteErreur_ajoutArticle.innerHTML = "Compléter ce champs";
+        quantiteErreur_ajoutArticle.innerHTML = "Complete this field";
         verif_ajoutArticle=false;
     }else if(regex_chiffre.test(quatite_ajoutArticle.value)==false){
-        quantiteErreur_ajoutArticle.innerHTML = "Les lettres ne sont pas pris en compte";
+        quantiteErreur_ajoutArticle.innerHTML = "Letters are not taken into account";
         verif_ajoutArticle=false;
     }else{
         quantiteErreur_ajoutArticle.innerHTML = "";
@@ -166,13 +166,13 @@ function ajoutArticle(event){
     // type achat verif
     if(achat_direct_ajoutArticle.checked==false && achat_nego_ajoutArticle.checked==false
         && achat_enchere_ajoutArticle.checked==false){
-        typeAchatErreur_ajoutArticle.innerHTML = "Choisir un type d'achat";
+        typeAchatErreur_ajoutArticle.innerHTML = "Choose a type of purchase";
         verif_ajoutArticle=false;
     }else if(achat_nego_ajoutArticle.checked==true && achat_enchere_ajoutArticle.checked==true){
         typeAchatErreur_ajoutArticle.innerHTML = "Impossible";
         verif_ajoutArticle=false;
     }else if(achat_direct_ajoutArticle.checked==true && parseInt(prix_ajoutArticle.value) <= "19"){
-        typeAchatErreur_ajoutArticle.innerHTML = "Augmenter le prix de l'article";
+        typeAchatErreur_ajoutArticle.innerHTML = "Increase the price of the item";
         verif_ajoutArticle=false;
     }else{
         typeAchatErreur_ajoutArticle.innerHTML = "";

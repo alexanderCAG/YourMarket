@@ -69,13 +69,13 @@ function infoPersoL_livraison(event){
 
     // nom verif
     if(infoPerso_nom_acheteur.value.trim()==""){
-        infoPerso_nomErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_nomErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_lettre.test(infoPerso_nom_acheteur.value)==false){
-        infoPerso_nomErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+        infoPerso_nomErreur_acheteur.innerHTML = "Numbers are ignored";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_nom_acheteur.value.length >= 20){
-        infoPerso_nomErreur_acheteur.innerHTML = "Trop long";
+        infoPerso_nomErreur_acheteur.innerHTML = "Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_nomErreur_acheteur.innerHTML = "";
@@ -83,13 +83,13 @@ function infoPersoL_livraison(event){
 
     // prenom verif
     if(infoPerso_prenom_acheteur.value.trim()==""){
-        infoPerso_prenomErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_prenomErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_lettre.test(infoPerso_prenom_acheteur.value)==false){
-        infoPerso_prenomErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+        infoPerso_prenomErreur_acheteur.innerHTML = "Numbers are ignored";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_prenom_acheteur.value.length >= 20){
-        infoPerso_prenomErreur_acheteur.innerHTML = "Trop long";
+        infoPerso_prenomErreur_acheteur.innerHTML = "Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_prenomErreur_acheteur.innerHTML = "";
@@ -97,13 +97,13 @@ function infoPersoL_livraison(event){
 
     // Téléphone verif
     if(infoPerso_telephone_acheteur.value.trim()==""){
-        infoPerso_telephoneErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_telephoneErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_chiffre.test(infoPerso_telephone_acheteur.value)==false){
-        infoPerso_telephoneErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+        infoPerso_telephoneErreur_acheteur.innerHTML = "Letters are not taken into account";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_telephone_acheteur.value.length > 10){
-        infoPerso_telephoneErreur_acheteur.innerHTML = "N'existe pas, trop long";
+        infoPerso_telephoneErreur_acheteur.innerHTML = "Does not exist, Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_telephoneErreur_acheteur.innerHTML = "";
@@ -111,13 +111,13 @@ function infoPersoL_livraison(event){
 
     // mail verif
     if(infoPerso_mail_acheteur.value.trim()==""){
-        infoPerso_mailErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_mailErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_mail.test(infoPerso_mail_acheteur.value)==false){
-        infoPerso_mailErreur_acheteur.innerHTML = "Le mail n'est pas correct";
+        infoPerso_mailErreur_acheteur.innerHTML = "The email is not correct";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_mail_acheteur.value.length >= 25){
-        infoPerso_mailErreur_acheteur.innerHTML = "Trop long";
+        infoPerso_mailErreur_acheteur.innerHTML = "Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_mailErreur_acheteur.innerHTML = "";
@@ -125,27 +125,27 @@ function infoPersoL_livraison(event){
 
     // mdp verif
     if(infoPerso_mdp_acheteur.value.trim()==""){
-        infoPerso_mdpErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_mdpErreur_acheteur.innerHTML = "Complete this field";
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:red");
         verif_infoPersoL_acheteur=false;
     }else if(!/[a-z]/.test(infoPerso_mdp_acheteur.value)){
-        infoPerso_mdpErreur_acheteur.innerHTML = "minuscule obligatoire";
+        infoPerso_mdpErreur_acheteur.innerHTML = "lowercase required";
         verif_infoPersoL_acheteur=false;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:red");
     }else if(!/[A-Z]/.test(infoPerso_mdp_acheteur.value)){
-        infoPerso_mdpErreur_acheteur.innerHTML = "majuscule obligatoire";
+        infoPerso_mdpErreur_acheteur.innerHTML = "uppercase required";
         verif_infoPersoL_acheteur=false;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:red");
     }else if(!/[1-9]/.test(infoPerso_mdp_acheteur.value)){
-        infoPerso_mdpErreur_acheteur.innerHTML = "chiffre obligatoire";
+        infoPerso_mdpErreur_acheteur.innerHTML = "number required";
         verif_infoPersoL_acheteur=false;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:red");
     }else if(/[1-9]/.test(infoPerso_mdp_acheteur.value) && regex_mdp.test(infoPerso_mdp_acheteur.value)==false){
-        infoPerso_mdpErreur_acheteur.innerHTML = "Moyen";
+        infoPerso_mdpErreur_acheteur.innerHTML = "Average";
         // verif_infoPersoL_acheteur=true;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:green");
     }else if(regex_mdp.test(infoPerso_mdp_acheteur.value)){
-        infoPerso_mdpErreur_acheteur.innerHTML = "Fort";
+        infoPerso_mdpErreur_acheteur.innerHTML = "Strong";
         // verif_infoPersoL_acheteur=true;
         infoPerso_mdpErreur_acheteur.setAttribute("style","color:green");
     }else{
@@ -153,11 +153,11 @@ function infoPersoL_livraison(event){
     }
 
     if(infoPerso_mdp2_acheteur.value.trim()==""){
-        infoPerso_mdp2Erreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_mdp2Erreur_acheteur.innerHTML = "Complete this field";
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:red");
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_mdp_acheteur.value.trim() != infoPerso_mdp2_acheteur.value.trim()){
-        infoPerso_mdp2Erreur_acheteur.innerHTML = "Mot de passe différent";
+        infoPerso_mdp2Erreur_acheteur.innerHTML = "Different password";
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:red");
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_mdp_acheteur.value.trim() == infoPerso_mdp2_acheteur.value.trim()){
@@ -165,11 +165,11 @@ function infoPersoL_livraison(event){
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:green");
         // verif_infoPersoL_acheteur=true;
     }else if(regex_mdp.test(infoPerso_mdp_acheteur.value) != regex_mdp.test(infoPerso_mdp2_acheteur.value)){
-        infoPerso_mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
+        infoPerso_mdp2Erreur_acheteur.innerHTML = "Password not secure";
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:red");
         verif_infoPersoL_acheteur=false;
     }else if(/[1-9]/.test(infoPerso_mdp_acheteur.value) && regex_mdp.test(infoPerso_mdp_acheteur.value)==false != /[1-9]/.test(infoPerso_mdp2_acheteur.value) && regex_mdp.test(mdp2_acheteur.value)==false){
-        infoPerso_mdp2Erreur_acheteur.innerHTML = "Mot de passe pas sécurisé";
+        infoPerso_mdp2Erreur_acheteur.innerHTML = "Password not secure";
         infoPerso_mdp2Erreur_acheteur.setAttribute("style","color:red");
         verif_infoPersoL_acheteur=false;
     }else{
@@ -178,26 +178,26 @@ function infoPersoL_livraison(event){
 
     // adresse verif
     if(infoPerso_adresse1_acheteur.value.trim()==""){
-        infoPerso_adresse1Erreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_adresse1Erreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_tot.test(infoPerso_adresse1_acheteur.value)==false){
-        infoPerso_adresse1Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+        infoPerso_adresse1Erreur_acheteur.innerHTML = "Special characters are ignored";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_adresse1_acheteur.value.length >= 50){
-        infoPerso_adresse1Erreur_acheteur.innerHTML = "Trop long";
+        infoPerso_adresse1Erreur_acheteur.innerHTML = "Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_adresse1Erreur_acheteur.innerHTML = "";
     }
 
     // if(infoPerso_adresse2_acheteur.value.trim()==""){
-    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Compléter ce champs";
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Complete this field";
     //     verif_infoPersoL_acheteur=false;
     // }else if(regex_tot.test(infoPerso_adresse2_acheteur.value)==false){
-    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Les caractères spéciaux ne sont pas pris en compte";
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Special characters are ignored";
     //     verif_infoPersoL_acheteur=false;
     // }else if(infoPerso_adresse2_acheteur.value.length >= 50){
-    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Trop long";
+    //     infoPerso_adresse2Erreur_acheteur.innerHTML = "Too long";
     //     verif_infoPersoL_acheteur=false;
     // }else{
     //     infoPerso_adresse2Erreur_acheteur.innerHTML = "";
@@ -205,13 +205,13 @@ function infoPersoL_livraison(event){
 
     // Pays verif
     if(infoPerso_pays_acheteur.value.trim()==""){
-        infoPerso_paysErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_paysErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_lettre.test(infoPerso_pays_acheteur.value)==false){
-        infoPerso_paysErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+        infoPerso_paysErreur_acheteur.innerHTML = "Numbers are ignored";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_pays_acheteur.value.length >= 15){
-        infoPerso_paysErreur_acheteur.innerHTML = "Trop long";
+        infoPerso_paysErreur_acheteur.innerHTML = "Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_paysErreur_acheteur.innerHTML = "";
@@ -219,13 +219,13 @@ function infoPersoL_livraison(event){
 
     // Ville verif
     if(infoPerso_ville_acheteur.value.trim()==""){
-        infoPerso_villeErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_villeErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_lettre.test(infoPerso_ville_acheteur.value)==false){
-        infoPerso_villeErreur_acheteur.innerHTML = "Les chiffres ne sont pas pris en compte";
+        infoPerso_villeErreur_acheteur.innerHTML = "Numbers are ignored";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_ville_acheteur.value.length >= 15){
-        infoPerso_villeErreur_acheteur.innerHTML = "Trop long";
+        infoPerso_villeErreur_acheteur.innerHTML = "Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_villeErreur_acheteur.innerHTML = "";
@@ -233,13 +233,13 @@ function infoPersoL_livraison(event){
 
     // Code Postal verif
     if(infoPerso_codepostal_acheteur.value.trim()==""){
-        infoPerso_codepostalErreur_acheteur.innerHTML = "Compléter ce champs";
+        infoPerso_codepostalErreur_acheteur.innerHTML = "Complete this field";
         verif_infoPersoL_acheteur=false;
     }else if(regex_chiffre.test(infoPerso_codepostal_acheteur.value)==false){
-        infoPerso_codepostalErreur_acheteur.innerHTML = "Les lettres ne sont pas pris en compte";
+        infoPerso_codepostalErreur_acheteur.innerHTML = "Letters are not taken into account";
         verif_infoPersoL_acheteur=false;
     }else if(infoPerso_codepostal_acheteur.value.length > 5){
-        infoPerso_codepostalErreur_acheteur.innerHTML = "N'existe pas, trop long";
+        infoPerso_codepostalErreur_acheteur.innerHTML = "Does not exist, Too long";
         verif_infoPersoL_acheteur=false;
     }else{
         infoPerso_codepostalErreur_acheteur.innerHTML = "";
