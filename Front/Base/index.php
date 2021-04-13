@@ -228,7 +228,7 @@
             <?php } ?>   
     </div>
     <div class="col-md-4">
-        <h2 class="centrer texte_style pt-5 mt-5">HOME</h2><br><br>
+        <h2 class="centrer texte_style pt-5 mt-5">HOUSE</h2><br><br>
         <p class="centrer texte_presentation">Welcome into our home section. You will step into a world of wonder where you will find the perfect items to decorate your rooms. We want to help you make your house your home by giving you the best options available on the market.</p><br><br><br>
         <a type="button"  href="page-maison.php" class="btn bg_blue1 text-light  pt-3 pb-3 w-100">DISCOVER</a>
     </div>
