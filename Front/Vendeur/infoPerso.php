@@ -83,7 +83,7 @@
                                 Browse <input type="file" name="infoPerso_img" id="file_interrieur_inscription_img" accept="image/png, image/jpg, image/jpeg">
                             </span>
                         </span>
-                        <input type="text" class="form-control" readonly>
+                        <input type="text" class="form-control" readonly value="<?php echo $profil_picture_vendeur ?>">
                         <span id="imageErreur_infoPersovendeur"></span>
                         <br>
                     </div>
