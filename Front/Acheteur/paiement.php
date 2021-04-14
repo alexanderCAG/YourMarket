@@ -84,7 +84,7 @@ if($rowinfoPerso_acheteur = mysqli_fetch_assoc($queryinfoPerso_acheteur)){
                             </div>
                             <div class="row alert alert-secondary mt-5" role="alert">
                                 <div class="col-6">
-                                    <h2 class="text-uppercase float-left">Total à régler TTC </h2>
+                                    <h2 class="text-uppercase float-left">Total </h2>
                                 </div>
                                 <?php if($row4 = mysqli_fetch_assoc($queryTotalBasket)){
                                         $totalBasket = $row4['total_basket'];

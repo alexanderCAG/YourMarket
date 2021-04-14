@@ -147,11 +147,11 @@ if($rowItem = mysqli_fetch_assoc($queryItem)){
                             secondes.html('<strong><font size="6">'+0+'</font></strong><br> Seconde'+(s>1?'s':''));
                         }else{
                             var d=Math.floor(s/86400);
-                            jours.html('<strong><font size="6">'+d+'</font></strong><br> Jour'+(d>1?'s':''));
+                            jours.html('<strong><font size="6">'+d+'</font></strong><br> Day'+(d>1?'s':''));
                             s-=d*86400;
 
                             var h=Math.floor(s/3600);
-                            heures.html('<strong><font size="6">'+h+'</font></strong><br> Heure'+(h>1?'s':''));
+                            heures.html('<strong><font size="6">'+h+'</font></strong><br> Hour'+(h>1?'s':''));
                             s-=h*3600;
 
                             var m=Math.floor(s/60);
