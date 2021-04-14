@@ -9,6 +9,9 @@
         $delete=$_GET['id'];
 
         $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$delete'");
+        $queryDeleteHistory = mysqli_query($con, "delete from history WHERE id_item='$delete'");
+
+        // $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$delete'");
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Vendeur/listeArticle.php' </script>";
     }
 
@@ -17,6 +20,9 @@
         $delete=$_GET['ida'];
 
         $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$delete'");
+        $queryDeleteHistory = mysqli_query($con, "delete from history WHERE id_item='$delete'");
+
+        // $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_item='$delete'");
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeArticle.php' </script>";
     }
 
@@ -28,6 +34,7 @@
         $queryDeleteBid = mysqli_query($con, "delete from bid WHERE id_seller='$delete'");
         $queryDeleteItem = mysqli_query($con, "delete from item WHERE id_seller='$delete'");
         $queryDeleteSeller = mysqli_query($con, "delete from seller WHERE id_seller='$delete'");
+        $queryDeleteHistory = mysqli_query($con, "delete from history WHERE id_seller='$delete'");
         echo "<script language='javascript' type='text/javascript'> location.href='../Front/Admin/listeVendeur.php' </script>";
     }
 
