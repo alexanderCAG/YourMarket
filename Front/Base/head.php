@@ -84,6 +84,9 @@
                                 <img id="img_nav_user" src="../../Image/user.png" alt="user">
                             </a>
                     </li>
+                    <li class="nav-item nav_regul" style="margin-right:100px!important">
+                        <a class="nav-link" href="recette.php">Recette</a>
+                    </li>
                 </ul>
             </div>
         </form>
