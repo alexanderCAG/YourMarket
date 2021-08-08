@@ -4,12 +4,13 @@
     require "head.php";
     include("../../Bdd/cnx.php");
 
-    $titreRecette = mysqli_query($con, 'select titre_recette from recette');
+    $titreRecette = mysqli_query($con, 'select titre_recette, id_recette from recette');
     $queryCountRecette = mysqli_query($con, "select count(id_recette) as total_recette from recette"); 
+    // $queryId = mysqli_query($con, "select id_recette from recette");
     
 ?>
 
-<form method="post">
+<form method="POST">
   <div class="card" style="width:1200px;background-color: #EBEDEF;border:none;margin:auto;margin-top:120px;padding:40px">
       <?php
         if($row = mysqli_fetch_assoc($queryCountRecette)){
@@ -19,53 +20,50 @@
         <!-- -------------------  COL 1 ------------------>
           <div class="col-md-4">
             <footer class="blockquote-footer h1">Selectionnez une ou plusieurs  <cite title="Source Title">Recette</cite></footer> 
-              <select name="LISTE1">
+              <!-- <select name="LISTE1"> -->
                   <?php
                         // Total recettes
                             
                             for ($i=0; $i<=$totalRecette;$i++){
                                 if($rowAllRecette = mysqli_fetch_assoc($titreRecette)){
                                     $titre = $rowAllRecette['titre_recette'];
-                                    echo    '<option value="3">'.$titre.'</option>';
+                                    $id_recette = $rowAllRecette['id_recette'];
+                                    // echo    '<option>'.$titre.'</option>';
+                                    echo  $titre;
+                                    ?>
+                                    <input type="hidden" name="id_hid" value="<?php echo $id_recette?>">
+                                    <button name="affiche_titre" value="Choisir">Ok</button>
+                                    <br>
+                                    <?php
                                 }
                             } 
 
                   ?>
-              </select> 
-              <input type="submit" name="affiche_titre" value="Choisir">
+              <!-- </select>  -->
+              <!-- <input type="submit" name="affiche_titre" value="Choisir"> -->
               <?php
               
               if(isset($_POST['affiche_titre']))
               {
-                $queryIngredient = mysqli_query($con, "select * from recette");
+                $Id_hidden = $_POST['id_hid'];
+                $queryIngredient = mysqli_query($con, "select * from recette where id_recette='$Id_hidden'");
                 if($rowIng = mysqli_fetch_assoc($queryIngredient)){
                   $Ingredient = $rowIng['Sucre_blanc'];
+                  $Ingredient = $rowIng['farine_T45'];
+                  $Ingredient = $rowIng['Vanille'];
 
                 ?>
-                 
-                L'utilisateur sélectionné à l'identifiant n° <?php echo $rowIng['Sucre_blanc'];
+                
+                <br>
+                Sucre <?php echo $rowIng['Sucre_blanc'];?>
+                <br>
+                Farine <?php echo $rowIng['farine_T45'];?>
+                <br>
+                Vanille <?php echo $rowIng['Vanille'];
 
-              }
+
+              }?>
               
-                // $recette_select= isset($_POST['affiche_titre']);
-
-                // $liste_ingredient= mysqli_query($con, 'select * from recette where titre_recette ='.$recette_select);
-                // // $liste_ingredient= mysqli_query($con, 'select * from recette where titre_recette = "Matay recette"');
-                // $queryCountInredientRecette = mysqli_query($con, "select count(id_recette) as total_ingredient  from recette"); 
-
-                // if($row_ingredient = mysqli_fetch_assoc($queryCountInredientRecette)){
-                //   $totalIngredient = $row_ingredient['total_ingredient']; 
-                //   if($recette_select){
-                //     for ($i=0; $i<=$totalIngredient;$i++){ 
-                //       echo   $recette_select;
-                //       if($rowAllingredient = mysqli_fetch_assoc($liste_ingredient)){
-                //           $nb_oeuf = $rowAllingredient['nb_oeuf'];
-                //           echo   "yvi";
-                //       }
-                //     }
-                //   } 
-                // }
-              ?>
           </div>
         <!-- -------------------  COL 2 ------------------>
           <div class="col-md-8 pl-4" style="border-top:none!important;border-bottom:none!important;border-right:none!important;border-style:solid">
