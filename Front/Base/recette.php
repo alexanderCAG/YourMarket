@@ -5,7 +5,7 @@
     include("../../Bdd/cnx.php");
 
     $titreRecette = mysqli_query($con, 'select titre_recette from recette');
-    $queryCountRecette = mysqli_query($con, "select count(id_recette) as total_recette  from recette"); 
+    $queryCountRecette = mysqli_query($con, "select count(id_recette) as total_recette from recette"); 
     
 ?>
 
@@ -37,13 +37,14 @@
               
               if(isset($_POST['affiche_titre']))
               {
-                $requser = $con->prepare("SELECT * FROM recette WHERE titre_recette = ?");
-                $requser->execute(array($_POST['LISTE1']));
-                $userinfo = $requser->fetch();
+                $queryIngredient = mysqli_query($con, "select * from recette");
+                if($rowIng = mysqli_fetch_assoc($queryIngredient)){
+                  $Ingredient = $rowIng['Sucre_blanc'];
+
                 ?>
                  
-                L'utilisateur sélectionné à l'identifiant n° <?php echo $userinfo['nb_oeuf'];
- 
+                L'utilisateur sélectionné à l'identifiant n° <?php echo $rowIng['Sucre_blanc'];
+
               }
               
                 // $recette_select= isset($_POST['affiche_titre']);
@@ -90,12 +91,14 @@
                         <td><a href="#"> <?php ?></a></td>
                         <td>Paragon</td>
                         <td>1/5/2021</td>
+                        <td>test</td>
 
                       </tr>
                 </tr>
               </table>
           </div>
-          <?php } ?>
+          <?php   }
+                } ?>
       </div>  
   </div>
 
